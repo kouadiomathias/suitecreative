@@ -1,0 +1,728 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peluche Personnalisée · Transformez une Photo en Doudou</title>
+    <meta name="description" content="Créez une peluche unique à partir de votre photo. Texture laineuse, coutures, yeux brillants. Téléchargez votre doudou personnalisé en PNG. Gratuit et privé.">
+    <meta name="keywords" content="peluche personnalisée, générateur de doudou, photo en peluche, peluche animal, doudou personnalisé, texture laine, couture, yeux brillants, outil gratuit">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://suitecreative.fintoolsbox.com/fr/peluche/">
+    <!-- Hreflang -->
+    <link rel="alternate" hreflang="fr" href="https://suitecreative.fintoolsbox.com/fr/peluche/">
+    <link rel="alternate" hreflang="en" href="https://suitecreative.fintoolsbox.com/plush-customizer/">
+    <link rel="alternate" hreflang="x-default" href="https://suitecreative.fintoolsbox.com/plush-customizer/">
+
+    <meta property="og:title" content="Peluche Personnalisée · Transformez une Photo en Doudou">
+    <meta property="og:description" content="Offrez-vous un doudou unique à partir de votre photo. Texture laine, coutures visibles et yeux de peluche. Téléchargement gratuit.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta property="og:image" content="https://suitecreative.fintoolsbox.com/plush-customizer.webp">
+    <meta property="og:url" content="https://suitecreative.fintoolsbox.com/fr/peluche/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Peluche Personnalisée">
+    <meta name="twitter:description" content="Transformez n'importe quelle photo en peluche doudou avec coutures et texture laine.">
+    <meta name="twitter:image" content="https://suitecreative.fintoolsbox.com/plush-customizer.webp">
+    <meta name="author" content="SuiteCreative">
+    <meta name="theme-color" content="#f9f4ea">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..700&family=Playfair+Display:ital,wght@0,500;0,700;1,500&display=swap" rel="stylesheet">
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            "name": "Peluche Personnalisée",
+            "applicationCategory": "DesignApplication",
+            "operatingSystem": "All",
+            "description": "Application web de création de peluche personnalisée à partir d'une photo, avec texture laine, coutures et yeux de doudou.",
+            "url": "https://suitecreative.fintoolsbox.com/fr/peluche/",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+            "featureList": [
+  "Transformation photo en peluche",
+  "Texture laineuse",
+  "Coutures visibles",
+  "Yeux de doudou automatiques",
+  "Cœur brodé",
+  "Export PNG transparent",
+  "Traitement local dans le navigateur",
+  "Effet peluche kawaii"
+],
+        }
+    </script>
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+                { "@type": "Question", "name": "Comment créer une peluche à partir de ma photo ?", "acceptedAnswer": { "@type": "Answer", "text": "Importez une photo, activez l'effet peluche et les yeux automatiques si vous le souhaitez. L'outil applique une texture laineuse, des coutures et des reflets brillants pour un rendu doudou." } },
+                { "@type": "Question", "name": "Puis-je ajouter des yeux de peluche ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui, cochez la case « Yeux de peluche ». L'outil essaie de détecter automatiquement l'emplacement des yeux. Vous pouvez aussi choisir l'emplacement manuellement." } },
+                { "@type": "Question", "name": "Mes données sont-elles en sécurité ?", "acceptedAnswer": { "@type": "Answer", "text": "Tout le traitement se fait dans votre navigateur. Aucune image n'est envoyée sur un serveur." } }
+            ]
+        }
+    </script>
+    <style>
+        :root {
+            --cream: #f9f4ea;
+            --paper: #fffdf7;
+            --ink: #2c2416;
+            --ink-light: #5e5340;
+            --accent: #945d3b;
+            --accent-soft: #f2e3d5;
+            --border: #d9cdb0;
+            --radius: 24px;
+            --radius-sm: 16px;
+            --shadow: 0 8px 30px rgba(0,0,0,0.05), 0 2px 8px rgba(0,0,0,0.03);
+            --transition: 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+            --font-body: 'Inter', system-ui, sans-serif;
+            --font-heading: 'Playfair Display', Georgia, serif;
+        }
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body {
+            font-family: var(--font-body);
+            background: var(--cream);
+            color: var(--ink);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            line-height: 1.6;
+            background-image: radial-gradient(circle at 30% 40%, rgba(148,93,59,0.03) 0%, transparent 50%),
+                              radial-gradient(circle at 70% 80%, rgba(148,93,59,0.02) 0%, transparent 50%);
+        }
+        .container { width:100%; max-width:1200px; padding:28px 20px 40px; }
+        header {
+            display: flex; align-items: center; justify-content: space-between;
+            padding-bottom: 20px; border-bottom: 1px solid var(--border);
+            flex-wrap: wrap; gap: 12px;
+        }
+        .logo { font-family: var(--font-heading); font-size: 1.8rem; font-weight: 700; color: var(--accent); }
+        .logo span { color: #b8860b; }
+        .back-link { font-weight: 500; color: var(--accent); text-decoration: none; transition: var(--transition); }
+        .back-link:hover { text-decoration: underline; }
+        .hero { text-align: center; margin: 36px 0 24px; }
+        .hero h1 { font-family: var(--font-heading); font-size: clamp(2rem, 5vw, 2.8rem); color: var(--ink); margin-bottom: 8px; }
+        .hero p { color: var(--ink-light); font-size: 1.1rem; max-width: 600px; margin: 0 auto; }
+        .main-grid { display: flex; gap: 28px; flex-wrap: wrap; margin-top: 16px; }
+        .preview-box {
+            flex:2; min-width:340px; background: var(--paper); border-radius: var(--radius);
+            border: 1px solid var(--border); box-shadow: var(--shadow); display: flex; flex-direction: column;
+            overflow: hidden;
+        }
+        .canvas-wrapper {
+            flex:1; display: flex; align-items: center; justify-content: center;
+            padding: 20px; background: #faf7f2; border-bottom: 1px solid var(--border);
+            min-height: 380px; position: relative;
+        }
+        .canvas-wrapper canvas { max-width:100%; max-height:100%; border-radius:12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); background:#fff; }
+        .placeholder { position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; pointer-events:none; color:var(--ink-light); gap:12px; transition: opacity 0.3s; }
+        .placeholder.hidden { opacity:0; }
+        .controls-panel {
+            flex:1; min-width:280px; background: var(--paper); border-radius: var(--radius);
+            border: 1px solid var(--border); box-shadow: var(--shadow); padding:24px;
+            display:flex; flex-direction:column; gap:20px;
+        }
+        .upload-area {
+            border:2px dashed var(--border); border-radius: var(--radius-sm);
+            padding:22px; text-align:center; cursor:pointer; transition: var(--transition);
+            background: #fdfbf6;
+        }
+        .upload-area:hover, .upload-area.drag-over {
+            border-color: var(--accent); background: var(--accent-soft);
+            box-shadow:0 0 0 3px rgba(148,93,59,0.1);
+        }
+        .upload-area input { display:none; }
+        .file-name { margin-top:8px; font-weight:600; color:var(--accent); font-size:0.85rem; }
+        .slider-group { margin-bottom:12px; }
+        .slider-group label { display:flex; justify-content:space-between; font-weight:500; font-size:0.9rem; }
+        input[type="range"] { width:100%; accent-color: var(--accent); }
+        .badge { background: var(--accent-soft); color: var(--accent); padding:2px 10px; border-radius:20px; font-weight:600; font-size:0.8rem; }
+        .toggle-row { display:flex; align-items:center; justify-content:space-between; }
+        .btn {
+            font-family:var(--font-body); font-weight:600; font-size:0.95rem; padding:12px 22px;
+            border-radius:40px; border:none; cursor:pointer; display:inline-flex;
+            align-items:center; justify-content:center; gap:8px;
+            background:var(--paper); color:var(--ink); border:1px solid var(--border);
+            box-shadow:0 2px 6px rgba(0,0,0,0.02); transition: var(--transition);
+        }
+        .btn-primary { background:var(--accent); color:white; border:none; box-shadow:0 6px 18px rgba(148,93,59,0.35); }
+        .btn-primary:hover { background:#7d4c30; transform:translateY(-1px); }
+        .btn-outline:hover { border-color:var(--accent); background: var(--accent-soft); }
+        .actions-row { display:flex; flex-wrap:wrap; gap:10px; }
+        .faq-section { margin-top:48px; }
+        .faq-section h2 { font-family: var(--font-heading); font-size:2rem; margin-bottom:24px; text-align:center; }
+        .faq-item { border-bottom:1px solid var(--border); padding:16px 0; cursor:pointer; }
+        .faq-question { font-weight:600; display:flex; justify-content:space-between; align-items:center; }
+        .faq-answer { max-height:0; overflow:hidden; transition:max-height 0.3s; color:var(--ink-light); font-size:0.95rem; }
+        .faq-item.open .faq-answer { max-height:200px; margin-top:12px; }
+        .faq-question::after { content:'+'; font-size:1.5rem; color:var(--accent); transition:0.3s; }
+        .faq-item.open .faq-question::after { transform:rotate(45deg); }
+        footer { text-align:center; margin-top:40px; padding-top:20px; border-top:1px solid var(--border); color:var(--ink-light); font-size:0.85rem; }
+        a { color:var(--accent); text-decoration:none; }
+        @media (max-width:750px) { .main-grid { flex-direction:column; } }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">Plushify<span> AI</span></div>
+            <a href="/" class="back-link">← Retour à l'accueil</a>
+        </header>
+
+        <section class="hero">
+            <h1>🧸 Peluche Personnalisée</h1>
+            <p>Importez la photo de votre animal (ou même un objet) et transformez-la en adorable doudou avec texture laineuse, coutures et yeux brillants.</p>
+        </section>
+
+        <div class="main-grid">
+            <div class="preview-box">
+                <div class="canvas-wrapper" id="canvasWrapper">
+                    <canvas id="outputCanvas"></canvas>
+                    <div class="placeholder" id="placeholderBox">
+                        <span style="font-size:48px;">🐾✨</span>
+                        <span>Importez une image pour commencer</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="controls-panel">
+                <div class="upload-area" id="uploadArea">
+                    <div> <strong>Cliquez ou déposez votre photo</strong></div>
+                    <div style="font-size:0.85rem;">JPG, PNG, WebP · Animal ou objet</div>
+                    <div class="file-name" id="fileNameDisplay" style="display:none;"></div>
+                    <input type="file" id="fileInput" accept="image/*">
+                </div>
+
+                <div class="slider-group">
+                    <label>Intensité texture laine <span class="badge" id="textureVal">60%</span></label>
+                    <input type="range" id="textureSlider" min="10" max="100" value="60" step="1">
+                </div>
+                <div class="slider-group">
+                    <label>Détail du contour <span class="badge" id="contourVal">Moyen</span></label>
+                    <input type="range" id="contourSlider" min="0" max="2" value="1" step="1">
+                </div>
+                <div class="toggle-row">
+                    <span> Coutures visibles</span>
+                    <input type="checkbox" id="stitchCheck" checked>
+                </div>
+                <div class="toggle-row">
+                    <span>👁️ Yeux de peluche</span>
+                    <input type="checkbox" id="eyesCheck" checked>
+                </div>
+                <div class="toggle-row">
+                    <span> Ajouter un cœur brodé</span>
+                    <input type="checkbox" id="heartCheck">
+                </div>
+
+                <div class="actions-row">
+                    <button class="btn btn-primary" id="downloadBtn">⬇️ Télécharger PNG</button>
+                    <button class="btn btn-outline" id="resetBtn">↺ Reset</button>
+                </div>
+                <p style="font-size:0.8rem; color:var(--ink-light); text-align:center;">Traitement 100% local. Aucune image n'est envoyée.</p>
+            </div>
+        </div>
+        <!-- ========================= -->
+<!-- SECTION SEO -->
+<!-- ========================= -->
+
+<section class="seo-content">
+
+    <div class="seo-inner">
+
+        <h2>Comment transformer une photo en peluche personnalisée</h2>
+
+        <p>
+            Les générateurs de peluches personnalisées permettent de transformer une simple photo en adorable doudou numérique avec texture laineuse, coutures et yeux brillants. Ce type d’effet est devenu très populaire sur Pinterest, TikTok et Instagram grâce à son côté chaleureux, kawaii et émotionnel.
+        </p>
+
+        <p>
+            Plushify AI applique automatiquement une texture inspirée de la laine et des tissus de peluche afin de donner un rendu proche d’un vrai doudou cousu à la main. L’effet fonctionne particulièrement bien avec les photos d’animaux, les portraits et même certains objets.
+        </p>
+
+        <h3>Créer un effet doudou kawaii à partir d’une photo</h3>
+
+        <p>
+            Les effets peluche kawaii utilisent généralement des contours doux, des textures moelleuses et des yeux brillants pour donner une apparence plus mignonne et plus expressive aux images.
+        </p>
+
+        <p>
+            Les photos les plus adaptées sont :
+        </p>
+
+        <ul class="seo-list">
+            <li>Chats et chiens</li>
+            <li>Peluches existantes</li>
+            <li>Portraits d’enfants</li>
+            <li>Animaux de compagnie</li>
+            <li>Objets décoratifs</li>
+            <li>Personnages kawaii</li>
+            <li>Dessins et illustrations</li>
+        </ul>
+
+        <h3>Pourquoi les effets peluche sont populaires sur Pinterest</h3>
+
+        <p>
+            Les contenus “cute” et chaleureux génèrent souvent beaucoup d’engagement sur les réseaux sociaux. Les transformations avant/après de photos en peluches attirent naturellement l’attention grâce à leur aspect doux et émotionnel.
+        </p>
+
+        <p>
+            Beaucoup de créateurs utilisent également ces effets pour :
+        </p>
+
+        <ul class="seo-list">
+            <li>Photos de profil TikTok</li>
+            <li>Stickers kawaii</li>
+            <li>Wallpapers téléphone</li>
+            <li>Visuels Etsy</li>
+            <li>Cartes personnalisées</li>
+            <li>Discord avatars</li>
+        </ul>
+
+        <h3>Traitement 100% privé dans le navigateur</h3>
+
+        <p>
+            Toutes les images sont traitées localement avec HTML5 Canvas et JavaScript. Aucune photo n’est envoyée vers un serveur externe, ce qui permet de garder un contrôle total sur les fichiers importés.
+        </p>
+
+    </div>
+
+</section>
+
+<style>
+.seo-content{
+    margin-top:60px;
+    background:var(--paper);
+    border:1px solid var(--border);
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+    padding:55px 42px;
+    position:relative;
+    overflow:hidden;
+}
+
+.seo-content::before{
+    content:'';
+    position:absolute;
+    inset:0;
+    background:
+        radial-gradient(circle at top right, rgba(148,93,59,0.05), transparent 35%),
+        radial-gradient(circle at bottom left, rgba(184,134,11,0.04), transparent 40%);
+    pointer-events:none;
+}
+
+.seo-inner{
+    position:relative;
+    z-index:2;
+    max-width:920px;
+    margin:0 auto;
+}
+
+.seo-content h2{
+    font-family:var(--font-heading);
+    font-size:2.2rem;
+    line-height:1.2;
+    margin-bottom:24px;
+    color:var(--ink);
+}
+
+.seo-content h3{
+    font-family:var(--font-heading);
+    font-size:1.35rem;
+    margin-top:38px;
+    margin-bottom:16px;
+    color:var(--accent);
+}
+
+.seo-content p{
+    color:var(--ink-light);
+    line-height:1.95;
+    margin-bottom:22px;
+    font-size:1rem;
+}
+
+.seo-list{
+    padding-left:24px;
+    margin-bottom:24px;
+}
+
+.seo-list li{
+    color:var(--ink-light);
+    line-height:1.8;
+    margin-bottom:10px;
+}
+
+@media(max-width:768px){
+
+    .seo-content{
+        padding:38px 24px;
+    }
+
+    .seo-content h2{
+        font-size:1.8rem;
+    }
+
+    .seo-content h3{
+        font-size:1.2rem;
+    }
+
+}
+</style>
+<p>
+Découvrez comment utiliser cet outil dans notre 
+<a href="/fr/blog/generateur-meckup/">guide complet des stickers</a>.
+</p>
+        <section class="faq-section">
+            <h2>Questions fréquentes</h2>
+            <div class="faq-item">
+                <div class="faq-question">Comment transformer une photo en peluche ?</div>
+                <div class="faq-answer">Importez votre photo, réglez l'intensité de la texture laine, le contour et activez les yeux de peluche. L'outil génère un rendu doudou en quelques secondes.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Les yeux sont-ils placés automatiquement ?</div>
+                <div class="faq-answer">Oui, si vous cochez « Yeux de peluche », l'outil tente de détecter la position des yeux en se basant sur les zones sombres. Pour un meilleur résultat, utilisez une photo de face bien éclairée.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Puis-je enlever les coutures ?</div>
+                <div class="faq-answer">Bien sûr, décochez simplement « Coutures visibles » pour un rendu plus lisse.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Mon image reste-t-elle privée ?</div>
+                <div class="faq-answer">Absolument, tout le traitement est effectué dans votre navigateur. Nous n'envoyons ni ne stockons aucune image.</div>
+            </div>
+        </section>
+
+        <footer>
+            <p>© 2025 Suite Créative · <a href="/">Accueil</a> · <a href="https://suitecreative.fintoolsbox.com/fr/confidentialite/">Confidentialité</a> · <a href="https://www.suitecreative.fintoolsbox.com/fr/mentions-legales/">Mentions légales</a></p>
+        </footer>
+    </div>
+
+    <script>
+        (function() {
+            const outputCanvas = document.getElementById('outputCanvas');
+            const ctx = outputCanvas.getContext('2d');
+            const canvasWrapper = document.getElementById('canvasWrapper');
+            const placeholderBox = document.getElementById('placeholderBox');
+            const uploadArea = document.getElementById('uploadArea');
+            const fileInput = document.getElementById('fileInput');
+            const fileNameDisplay = document.getElementById('fileNameDisplay');
+            const textureSlider = document.getElementById('textureSlider');
+            const textureVal = document.getElementById('textureVal');
+            const contourSlider = document.getElementById('contourSlider');
+            const contourVal = document.getElementById('contourVal');
+            const stitchCheck = document.getElementById('stitchCheck');
+            const eyesCheck = document.getElementById('eyesCheck');
+            const heartCheck = document.getElementById('heartCheck');
+            const downloadBtn = document.getElementById('downloadBtn');
+            const resetBtn = document.getElementById('resetBtn');
+
+            let originalImage = null;
+            const MAX_SIZE = 800;
+
+            function generateTexturePattern(intensity) {
+                const patternCanvas = document.createElement('canvas');
+                patternCanvas.width = 200;
+                patternCanvas.height = 200;
+                const pCtx = patternCanvas.getContext('2d');
+                // Fond légèrement texturé
+                pCtx.fillStyle = '#fdfbf7';
+                pCtx.fillRect(0,0,200,200);
+                // Générer des petites taches pour simuler la laine
+                const steps = Math.floor(20 + intensity * 2);
+                for(let i=0; i<steps; i++) {
+                    for(let j=0; j<steps; j++) {
+                        const x = (i/steps)*200 + Math.random()*10-5;
+                        const y = (j/steps)*200 + Math.random()*10-5;
+                        const radius = Math.random() * 3 + 1;
+                        pCtx.beginPath();
+                        pCtx.arc(x, y, radius, 0, Math.PI*2);
+                        pCtx.fillStyle = `rgba(200,180,160,${Math.random()*0.4*intensity/100})`;
+                        pCtx.fill();
+                    }
+                }
+                // Ajouter des filaments (petites lignes courbes)
+                pCtx.strokeStyle = `rgba(180,160,140,${0.3*intensity/100})`;
+                pCtx.lineWidth = 0.5;
+                for(let i=0; i<300; i++) {
+                    pCtx.beginPath();
+                    const x1 = Math.random()*200, y1 = Math.random()*200;
+                    const x2 = x1 + (Math.random()-0.5)*15;
+                    const y2 = y1 + (Math.random()-0.5)*15;
+                    pCtx.moveTo(x1,y1);
+                    pCtx.lineTo(x2,y2);
+                    pCtx.stroke();
+                }
+                return patternCanvas;
+            }
+
+            function detectEyes(imageData, width, height) {
+                // Recherche les deux zones les plus sombres dans le tiers supérieur, séparées horizontalement
+                const gray = new Uint8Array(width*height);
+                const data = imageData.data;
+                for(let i=0; i<data.length; i+=4) {
+                    const idx = i/4;
+                    gray[idx] = 0.299*data[i] + 0.587*data[i+1] + 0.114*data[i+2];
+                }
+                const topLimit = Math.floor(height*0.55);
+                const candidates = [];
+                for(let y=Math.floor(height*0.15); y<topLimit; y++) {
+                    for(let x=0; x<width; x++) {
+                        if(x > width*0.2 && x < width*0.8) { // milieu
+                            const val = gray[y*width+x];
+                            if(val < 80) {
+                                candidates.push({x,y,val});
+                            }
+                        }
+                    }
+                }
+                if(candidates.length < 2) return null;
+                // Regrouper les pixels proches
+                // Méthode simple : choisir les deux clusters les plus éloignés l'un de l'autre
+                candidates.sort((a,b)=>a.val - b.val);
+                const eye1 = candidates[0];
+                let eye2 = null;
+                for(const c of candidates) {
+                    const dist = Math.hypot(c.x - eye1.x, c.y - eye1.y);
+                    if(dist > width*0.1) {
+                        eye2 = c;
+                        break;
+                    }
+                }
+                if(!eye2) eye2 = candidates[Math.floor(candidates.length/2)];
+                return { eye1: {x: eye1.x, y: eye1.y}, eye2: {x: eye2.x, y: eye2.y} };
+            }
+
+            function drawStitchLine(ctx, x1, y1, x2, y2, color, width) {
+                ctx.save();
+                ctx.strokeStyle = color;
+                ctx.lineWidth = width;
+                ctx.setLineDash([4, 4]);
+                ctx.beginPath();
+                ctx.moveTo(x1, y1);
+                ctx.lineTo(x2, y2);
+                ctx.stroke();
+                ctx.setLineDash([]);
+                ctx.restore();
+            }
+
+            function applyPlushEffect(image, textureIntensity, contourLevel, showStitch, showEyes, showHeart) {
+                const w = image.naturalWidth || image.width;
+                const h = image.naturalHeight || image.height;
+                const scale = Math.min(1, MAX_SIZE/w, MAX_SIZE/h);
+                const canvasW = Math.floor(w*scale);
+                const canvasH = Math.floor(h*scale);
+                outputCanvas.width = canvasW;
+                outputCanvas.height = canvasH;
+
+                // Offscreen canvas pour l'image source
+                const srcCanvas = document.createElement('canvas');
+                srcCanvas.width = canvasW;
+                srcCanvas.height = canvasH;
+                const srcCtx = srcCanvas.getContext('2d');
+                srcCtx.drawImage(image, 0, 0, canvasW, canvasH);
+                const srcData = srcCtx.getImageData(0,0,canvasW, canvasH);
+
+                // 1. Appliquer un flou + seuillage pour créer une silhouette "peluche"
+                const blurredCanvas = document.createElement('canvas');
+                blurredCanvas.width = canvasW;
+                blurredCanvas.height = canvasH;
+                const bCtx = blurredCanvas.getContext('2d');
+                bCtx.filter = `blur(${8 + textureIntensity/10}px)`;
+                bCtx.drawImage(srcCanvas, 0, 0);
+                bCtx.filter = 'none';
+
+                // 2. Mélanger l'original avec la texture laine
+                const patternCanvas = generateTexturePattern(textureIntensity);
+                const finalCanvas = document.createElement('canvas');
+                finalCanvas.width = canvasW;
+                finalCanvas.height = canvasH;
+                const fCtx = finalCanvas.getContext('2d');
+                fCtx.drawImage(blurredCanvas, 0,0);
+                fCtx.globalCompositeOperation = 'multiply';
+                fCtx.drawImage(patternCanvas, 0,0, canvasW, canvasH);
+                fCtx.globalCompositeOperation = 'source-over';
+
+                // Récupérer l'image combinée
+                const combinedData = fCtx.getImageData(0,0,canvasW,canvasH);
+
+                // Appliquer un contour doux si nécessaire
+                if(contourLevel > 0) {
+                    const edgeCanvas = document.createElement('canvas');
+                    edgeCanvas.width = canvasW;
+                    edgeCanvas.height = canvasH;
+                    const eCtx = edgeCanvas.getContext('2d');
+                    eCtx.drawImage(blurredCanvas, 0,0);
+                    const edgeData = eCtx.getImageData(0,0,canvasW,canvasH);
+                    // Détection de bord simple : pixels où la différence avec le voisin est grande après flou
+                    for(let y=1; y<canvasH-1; y++) {
+                        for(let x=1; x<canvasW-1; x++) {
+                            const i = (y*canvasW+x)*4;
+                            const g = 0.299*edgeData.data[i] + 0.587*edgeData.data[i+1] + 0.114*edgeData.data[i+2];
+                            const gRight = 0.299*edgeData.data[i+4] + 0.587*edgeData.data[i+5] + 0.114*edgeData.data[i+6];
+                            const diff = Math.abs(g - gRight);
+                            if(diff > 40) {
+                                combinedData.data[i] = Math.min(255, combinedData.data[i]+30);
+                                combinedData.data[i+1] = Math.min(255, combinedData.data[i+1]+20);
+                                combinedData.data[i+2] = Math.min(255, combinedData.data[i+2]+10);
+                            }
+                        }
+                    }
+                }
+
+                ctx.putImageData(combinedData, 0, 0);
+
+                // Ajouter les coutures si activé
+                if(showStitch) {
+                    const stitchColor = '#8B5A2B';
+                    const stitchWidth = 2;
+                    // Couture autour de la silhouette : on peut tracer un rectangle arrondi approximatif
+                    const margin = 15;
+                    ctx.beginPath();
+                    ctx.strokeStyle = stitchColor;
+                    ctx.lineWidth = stitchWidth;
+                    ctx.setLineDash([6, 6]);
+                    ctx.rect(margin, margin, canvasW - 2*margin, canvasH - 2*margin);
+                    ctx.stroke();
+                    // Coutures supplémentaires en croix sur les coins
+                    drawStitchLine(ctx, margin, margin, margin+20, margin+20, stitchColor, stitchWidth);
+                    drawStitchLine(ctx, canvasW-margin, margin, canvasW-margin-20, margin+20, stitchColor, stitchWidth);
+                    drawStitchLine(ctx, margin, canvasH-margin, margin+20, canvasH-margin-20, stitchColor, stitchWidth);
+                    drawStitchLine(ctx, canvasW-margin, canvasH-margin, canvasW-margin-20, canvasH-margin-20, stitchColor, stitchWidth);
+                    ctx.setLineDash([]);
+                }
+
+                // Yeux de peluche
+                if(showEyes) {
+                    const eyesPos = detectEyes(srcData, canvasW, canvasH);
+                    if(eyesPos) {
+                        const drawEye = (x, y) => {
+                            ctx.save();
+                            ctx.beginPath();
+                            ctx.arc(x, y, 12, 0, Math.PI*2);
+                            ctx.fillStyle = '#1a1a1a';
+                            ctx.fill();
+                            ctx.beginPath();
+                            ctx.arc(x-3, y-3, 4, 0, Math.PI*2);
+                            ctx.fillStyle = 'white';
+                            ctx.fill();
+                            ctx.beginPath();
+                            ctx.arc(x-4, y-4, 1.5, 0, Math.PI*2);
+                            ctx.fillStyle = 'white';
+                            ctx.fill();
+                            ctx.restore();
+                        };
+                        drawEye(eyesPos.eye1.x, eyesPos.eye1.y);
+                        drawEye(eyesPos.eye2.x, eyesPos.eye2.y);
+                    }
+                }
+
+                // Cœur brodé
+                if(showHeart) {
+                    const heartX = canvasW - 50;
+                    const heartY = 50;
+                    ctx.save();
+                    ctx.fillStyle = '#d44';
+                    ctx.beginPath();
+                    ctx.moveTo(heartX, heartY+8);
+                    ctx.bezierCurveTo(heartX, heartY, heartX-10, heartY-6, heartX-6, heartY-14);
+                    ctx.bezierCurveTo(heartX+2, heartY-22, heartX+8, heartY-14, heartX+12, heartY-6);
+                    ctx.bezierCurveTo(heartX+16, heartY+2, heartX+6, heartY+12, heartX, heartY+16);
+                    ctx.bezierCurveTo(heartX-6, heartY+12, heartX-16, heartY+2, heartX-12, heartY-6);
+                    ctx.fill();
+                    ctx.restore();
+                }
+
+                // Mise à jour de l'affichage
+                const maxW = canvasWrapper.clientWidth - 40;
+                const maxH = canvasWrapper.clientHeight - 40;
+                const displayScale = Math.min(1, maxW/canvasW, maxH/canvasH);
+                outputCanvas.style.width = canvasW * displayScale + 'px';
+                outputCanvas.style.height = canvasH * displayScale + 'px';
+            }
+
+            function updateOutput() {
+                if(!originalImage) return;
+                const texture = parseInt(textureSlider.value);
+                const contour = parseInt(contourSlider.value);
+                const stitch = stitchCheck.checked;
+                const eyes = eyesCheck.checked;
+                const heart = heartCheck.checked;
+                applyPlushEffect(originalImage, texture, contour, stitch, eyes, heart);
+            }
+
+            // Listeners
+            uploadArea.addEventListener('click', ()=>fileInput.click());
+            fileInput.addEventListener('change', e=>{ if(e.target.files[0]) handleFile(e.target.files[0]); });
+            uploadArea.addEventListener('dragover', e=>{ e.preventDefault(); uploadArea.classList.add('drag-over'); });
+            uploadArea.addEventListener('dragleave', ()=>uploadArea.classList.remove('drag-over'));
+            uploadArea.addEventListener('drop', e=>{
+                e.preventDefault(); uploadArea.classList.remove('drag-over');
+                if(e.dataTransfer.files[0]) handleFile(e.dataTransfer.files[0]);
+            });
+
+            function handleFile(file) {
+                if(!file.type.startsWith('image/')) return;
+                const reader = new FileReader();
+                reader.onload = ev => {
+                    const img = new Image();
+                    img.onload = () => {
+                        originalImage = img;
+                        fileNameDisplay.textContent = file.name;
+                        fileNameDisplay.style.display = 'block';
+                        placeholderBox.classList.add('hidden');
+                        updateOutput();
+                    };
+                    img.src = ev.target.result;
+                };
+                reader.readAsDataURL(file);
+            }
+
+            textureSlider.addEventListener('input', ()=>{
+                textureVal.textContent = textureSlider.value + '%';
+                updateOutput();
+            });
+            contourSlider.addEventListener('input', ()=>{
+                const val = parseInt(contourSlider.value);
+                contourVal.textContent = val===0 ? 'Doux' : (val===1 ? 'Moyen' : 'Fort');
+                updateOutput();
+            });
+            stitchCheck.addEventListener('change', updateOutput);
+            eyesCheck.addEventListener('change', updateOutput);
+            heartCheck.addEventListener('change', updateOutput);
+
+            downloadBtn.addEventListener('click', ()=>{
+                if(!originalImage) { alert('Veuillez importer une image.'); return; }
+                const dataUrl = outputCanvas.toDataURL('image/png');
+                const a = document.createElement('a');
+                a.href = dataUrl;
+                a.download = 'peluche-personnalisee.png';
+                a.click();
+            });
+
+            resetBtn.addEventListener('click', ()=>{
+                originalImage = null;
+                outputCanvas.width = 600; outputCanvas.height = 400;
+                ctx.clearRect(0,0,600,400);
+                outputCanvas.style.width = ''; outputCanvas.style.height = '';
+                placeholderBox.classList.remove('hidden');
+                fileNameDisplay.style.display = 'none';
+                fileInput.value = '';
+                textureSlider.value = 60; textureVal.textContent = '60%';
+                contourSlider.value = 1; contourVal.textContent = 'Moyen';
+                stitchCheck.checked = true;
+                eyesCheck.checked = true;
+                heartCheck.checked = false;
+            });
+
+            // FAQ
+            document.querySelectorAll('.faq-item').forEach(item=>{
+                item.addEventListener('click', ()=>item.classList.toggle('open'));
+            });
+
+            outputCanvas.width = 600;
+            outputCanvas.height = 400;
+        })();
+    </script>
+</body>
+</html>

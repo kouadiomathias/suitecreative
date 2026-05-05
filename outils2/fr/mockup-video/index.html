@@ -1,0 +1,1776 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MockupStudio Pro – T-Shirt Video Mockup Animé Gratuit | Wind, Float, Spin, Hanging</title>
+<meta name="description" content="Créez des mockups vidéo de T-shirts professionnels gratuitement. 7 modes d'animation : vent, flottement, ondulation, mannequin, rotation 3D, suspension, étirement. Export MP4/WebM.">
+<meta name="keywords" content="mockup t-shirt gratuit, video mockup tshirt, animation t-shirt, print on demand mockup, mockup vent t-shirt, mockup animé, générateur mockup, POD mockup, t-shirt floating animation, t-shirt wind effect, mannequin virtuel t-shirt, mockup spin, mockup 3D tshirt">
+<link rel="canonical" href="https://suitecreative.fintoolsbox.com/fr/mockup-video/">
+<!-- Hreflang -->
+<link rel="alternate" hreflang="fr" href="https://suitecreative.fintoolsbox.com/fr/mockup-video/">
+<link rel="alternate" hreflang="en" href="https://suitecreative.fintoolsbox.com/meckup-generator/">
+<link rel="alternate" hreflang="x-default" href="https://suitecreative.fintoolsbox.com/meckup-generator/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "MockupStudio Pro",
+  "applicationCategory": "DesignApplication",
+  "operatingSystem": "All",
+  "description": "Générateur gratuit de mockups vidéo T-shirt animés avec export MP4 et WebM.",
+  "url": "https://suitecreative.fintoolsbox.com/fr/mockup-video/",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "featureList": [
+    "Mockup vidéo T-shirt",
+    "Animation vent tissu",
+    "Mockup flottant",
+    "Rotation 3D T-shirt",
+    "Export MP4",
+    "Export WebM",
+    "Simulation mannequin",
+    "Animation ondulation textile",
+    "Traitement local dans le navigateur",
+    "Compatible Etsy et Shopify"
+  ],
+  "author": {
+    "@type": "Organization",
+    "name": "SuiteCreative",
+    "url": "https://suitecreative.fintoolsbox.com/fr/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {
+      "@type":"Question",
+      "name":"Comment créer un mockup vidéo de T-shirt gratuitement ?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"Importez votre image, choisissez un mode d’animation puis exportez votre vidéo en MP4 ou WebM directement dans le navigateur."
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"Puis-je utiliser les vidéos pour Etsy ou Shopify ?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"Oui. Les mockups vidéo créés peuvent être utilisés librement pour les boutiques Etsy, Shopify, Amazon Merch ou les réseaux sociaux."
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"Mes images sont-elles envoyées sur un serveur ?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"Non. Tout le traitement vidéo se fait localement dans votre navigateur."
+      }
+    }
+  ]
+}
+</script>
+<style>
+  :root {
+    --bg: #07080f;
+    --surface: #0e0f1c;
+    --surface-2: #13152a;
+    --surface-3: #191b32;
+    --border: #1f2140;
+    --border-2: #252750;
+    --text: #e2e4f8;
+    --text-secondary: #7a7da8;
+    --text-muted: #484b70;
+    --accent: #5b4cff;
+    --accent-2: #9b6bff;
+    --accent-glow: rgba(91,76,255,0.25);
+    --accent-hover: #7060ff;
+    --neon: #00f5d4;
+    --neon-glow: rgba(0,245,212,0.2);
+    --warm: #ff8c42;
+    --danger: #ff4560;
+    --success: #00e396;
+    --gold: #ffd166;
+    --r: 14px;
+    --r-sm: 10px;
+    --r-xs: 7px;
+    --transition: 0.22s cubic-bezier(0.4,0,0.2,1);
+    --font-display: 'Syne', sans-serif;
+    --font-body: 'DM Sans', sans-serif;
+  }
+  *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+
+  body {
+    font-family: var(--font-body);
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  /* ── HEADER ── */
+  .site-header {
+    background: rgba(14,15,28,0.9);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border);
+    padding: 12px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+  }
+  .logo {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 20px;
+    letter-spacing: -0.02em;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .logo-icon {
+    width: 32px; height: 32px;
+    background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 16px;
+  }
+  .logo span { color: var(--neon); }
+  .header-badges {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+  .hbadge {
+    font-size: 10px; font-weight: 600;
+    letter-spacing: 0.06em; text-transform: uppercase;
+    padding: 5px 11px;
+    border-radius: 20px;
+    border: 1px solid var(--border-2);
+    color: var(--text-secondary);
+  }
+  .hbadge.pro {
+    background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    color: #fff;
+    border-color: transparent;
+  }
+
+  /* ── APP LAYOUT ── */
+  .app-wrap {
+    display: flex;
+    gap: 20px;
+    padding: 20px 24px;
+    max-width: 1340px;
+    margin: 0 auto;
+    align-items: flex-start;
+  }
+
+  /* ── PREVIEW PANEL ── */
+  .preview-panel {
+    flex: 1;
+    min-width: 0;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--r);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 0 24px 80px rgba(0,0,0,0.6), inset 0 0 0 1px rgba(255,255,255,0.03);
+    min-height: 580px;
+    position: sticky;
+    top: 76px;
+  }
+  .preview-header {
+    padding: 14px 18px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-shrink: 0;
+  }
+  .preview-left {
+    display: flex; align-items: center; gap: 10px;
+  }
+  .status-ring {
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    background: var(--success);
+    box-shadow: 0 0 0 3px rgba(0,227,150,0.2);
+    animation: ring-pulse 2s ease-in-out infinite;
+    flex-shrink: 0;
+  }
+  .status-ring.paused { background: var(--gold); box-shadow: 0 0 0 3px rgba(255,209,102,0.2); }
+  .status-ring.recording { background: var(--danger); box-shadow: 0 0 0 3px rgba(255,69,96,0.2); animation: ring-blink 0.8s linear infinite; }
+  @keyframes ring-pulse {
+    0%,100% { box-shadow: 0 0 0 3px rgba(0,227,150,0.2); }
+    50% { box-shadow: 0 0 0 6px rgba(0,227,150,0.1); }
+  }
+  @keyframes ring-blink {
+    0%,100% { opacity:1; } 50% { opacity:0.3; }
+  }
+  .preview-title {
+    font-family: var(--font-display);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
+  .mode-indicator {
+    font-size: 10px; font-weight: 600;
+    letter-spacing: 0.06em; text-transform: uppercase;
+    padding: 5px 12px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, rgba(91,76,255,0.2), rgba(155,107,255,0.15));
+    color: var(--accent-2);
+    border: 1px solid rgba(91,76,255,0.3);
+  }
+
+  .canvas-wrapper {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    position: relative;
+    background:
+      radial-gradient(circle at 40% 60%, rgba(91,76,255,0.04) 0%, transparent 60%),
+      repeating-linear-gradient(0deg, transparent, transparent 38px, rgba(255,255,255,0.006) 38px, rgba(255,255,255,0.006) 39px),
+      repeating-linear-gradient(90deg, transparent, transparent 38px, rgba(255,255,255,0.006) 38px, rgba(255,255,255,0.006) 39px);
+  }
+  #mainCanvas {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: var(--r-sm);
+    box-shadow: 0 16px 60px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,255,255,0.06);
+    object-fit: contain;
+    transition: box-shadow 0.3s ease;
+  }
+  .canvas-placeholder {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+  }
+  .canvas-placeholder.hidden { opacity: 0; }
+  .ph-icon {
+    width: 72px; height: 72px;
+    border-radius: 50%;
+    background: var(--surface-2);
+    border: 2px dashed var(--border-2);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 30px;
+    animation: ph-float 3s ease-in-out infinite;
+  }
+  @keyframes ph-float {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+  }
+  .ph-text {
+    font-size: 13px; color: var(--text-secondary);
+    text-align: center; line-height: 1.6;
+  }
+  .ph-hint {
+    font-size: 11px; color: var(--text-muted);
+    background: var(--surface-2);
+    padding: 6px 14px; border-radius: 20px;
+    border: 1px solid var(--border);
+  }
+
+  /* ── CONTROLS PANEL ── */
+  .controls-panel {
+    width: 340px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-height: calc(100vh - 120px);
+    overflow-y: auto;
+    padding-right: 4px;
+  }
+  .controls-panel::-webkit-scrollbar { width: 3px; }
+  .controls-panel::-webkit-scrollbar-track { background: transparent; }
+  .controls-panel::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+
+  /* ── SECTION CARD ── */
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--r);
+    padding: 16px;
+    transition: border-color var(--transition);
+  }
+  .card:hover { border-color: var(--border-2); }
+  .card-label {
+    font-family: var(--font-display);
+    font-size: 10px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.09em;
+    color: var(--text-muted);
+    margin-bottom: 14px;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .card-label .icon { font-size: 12px; }
+  .card-label::after {
+    content: ''; flex: 1; height: 1px;
+    background: linear-gradient(to right, var(--border), transparent);
+  }
+
+  /* ── UPLOAD ── */
+  .upload-zone {
+    border: 2px dashed var(--border-2);
+    border-radius: var(--r-sm);
+    padding: 22px 16px;
+    text-align: center;
+    cursor: pointer;
+    transition: var(--transition);
+    position: relative;
+  }
+  .upload-zone:hover,
+  .upload-zone.drag-active {
+    border-color: var(--accent);
+    background: rgba(91,76,255,0.05);
+  }
+  .upload-zone.has-file {
+    border-color: var(--success);
+    border-style: solid;
+    background: rgba(0,227,150,0.03);
+  }
+  .upload-zone input { display: none; }
+  .uz-icon { font-size: 30px; margin-bottom: 6px; }
+  .uz-title { font-size: 12px; font-weight: 500; margin-bottom: 3px; }
+  .uz-sub { font-size: 10px; color: var(--text-muted); }
+  .uz-filename {
+    font-size: 11px; font-weight: 600;
+    color: var(--success);
+    margin-top: 6px; word-break: break-all;
+    display: none;
+  }
+  .btn-remove {
+    display: none; margin-top: 8px;
+    font-size: 11px; padding: 5px 14px;
+    border-radius: 20px;
+    border: 1px solid var(--danger);
+    background: transparent;
+    color: var(--danger);
+    cursor: pointer;
+    font-family: var(--font-body);
+    transition: var(--transition);
+  }
+  .btn-remove:hover { background: rgba(255,69,96,0.08); }
+
+  /* ── MODE GRID ── */
+  .mode-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 7px;
+  }
+  .mode-btn {
+    font-family: var(--font-body);
+    font-size: 11px; font-weight: 500;
+    padding: 10px 8px;
+    border-radius: var(--r-xs);
+    border: 1px solid var(--border-2);
+    background: var(--surface-2);
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex; align-items: center;
+    gap: 6px;
+    white-space: nowrap;
+  }
+  .mode-btn:hover {
+    border-color: var(--accent);
+    color: var(--text);
+    background: rgba(91,76,255,0.06);
+  }
+  .mode-btn.active {
+    border-color: var(--accent);
+    background: linear-gradient(135deg, rgba(91,76,255,0.18), rgba(155,107,255,0.1));
+    color: #fff;
+    box-shadow: 0 0 20px rgba(91,76,255,0.15);
+  }
+  .mode-btn .mb-icon { font-size: 14px; flex-shrink: 0; }
+
+  /* ── SLIDERS ── */
+  .ctrl-group { margin-bottom: 12px; }
+  .ctrl-group:last-child { margin-bottom: 0; }
+  .ctrl-label {
+    display: flex; justify-content: space-between; align-items: center;
+    font-size: 11px; font-weight: 500;
+    margin-bottom: 7px; color: var(--text-secondary);
+  }
+  .ctrl-val {
+    font-size: 10px; font-weight: 700;
+    color: var(--neon);
+    background: rgba(0,245,212,0.08);
+    border: 1px solid rgba(0,245,212,0.2);
+    padding: 2px 8px; border-radius: 10px;
+    min-width: 38px; text-align: center;
+  }
+  input[type="range"] {
+    -webkit-appearance: none;
+    width: 100%; height: 4px;
+    border-radius: 2px;
+    background: var(--border-2);
+    outline: none; cursor: pointer;
+  }
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 18px; height: 18px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    cursor: pointer;
+    box-shadow: 0 2px 12px rgba(91,76,255,0.5);
+    transition: transform 0.15s;
+  }
+  input[type="range"]::-webkit-slider-thumb:hover {
+    transform: scale(1.2);
+  }
+
+  /* ── COLORS ── */
+  .color-row { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+  input[type="color"] {
+    -webkit-appearance: none;
+    width: 34px; height: 34px;
+    border-radius: 50%;
+    border: 2px solid var(--border-2);
+    cursor: pointer; background: transparent; padding: 3px;
+    transition: border-color 0.2s;
+  }
+  input[type="color"]::-webkit-color-swatch-wrapper { padding: 0; }
+  input[type="color"]::-webkit-color-swatch { border-radius: 50%; border: none; }
+  input[type="color"]:hover { border-color: var(--accent); }
+  .color-label { font-size: 11px; color: var(--text-secondary); }
+  .presets { display: flex; gap: 6px; flex-wrap: wrap; }
+  .cp {
+    width: 24px; height: 24px;
+    border-radius: 50%; cursor: pointer;
+    border: 2px solid transparent;
+    transition: var(--transition); flex-shrink: 0;
+  }
+  .cp:hover { border-color: rgba(255,255,255,0.6); transform: scale(1.2); }
+  .cp.active { border-color: #fff; box-shadow: 0 0 0 2px rgba(255,255,255,0.3); }
+
+  /* ── BUTTONS ── */
+  .btn {
+    font-family: var(--font-display);
+    font-weight: 700; font-size: 12px;
+    padding: 12px 18px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: var(--transition);
+    border: none;
+    display: flex; align-items: center; justify-content: center;
+    gap: 7px; letter-spacing: 0.01em;
+    width: 100%;
+    position: relative; overflow: hidden;
+  }
+  .btn-export-mp4 {
+    background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    color: #fff;
+    box-shadow: 0 8px 28px rgba(91,76,255,0.4);
+  }
+  .btn-export-mp4:hover {
+    box-shadow: 0 12px 36px rgba(91,76,255,0.6);
+    transform: translateY(-1px);
+  }
+  .btn-export-mp4:disabled {
+    opacity: 0.4; cursor: not-allowed;
+    pointer-events: none;
+  }
+  .btn-export-webm {
+    background: var(--surface-2);
+    color: var(--text);
+    border: 1px solid var(--border-2);
+  }
+  .btn-export-webm:hover { border-color: var(--neon); color: var(--neon); }
+  .btn-export-webm:disabled { opacity: 0.4; cursor: not-allowed; pointer-events: none; }
+  .btn-recording {
+    background: linear-gradient(135deg, var(--danger), #ff6b6b) !important;
+    animation: btn-rec-pulse 1.2s ease-in-out infinite;
+    box-shadow: 0 8px 28px rgba(255,69,96,0.5) !important;
+  }
+  @keyframes btn-rec-pulse {
+    0%,100% { box-shadow: 0 8px 28px rgba(255,69,96,0.4); }
+    50% { box-shadow: 0 8px 40px rgba(255,69,96,0.7); }
+  }
+  .btn-row { display: flex; gap: 8px; }
+  .btn-row .btn { flex: 1; }
+  .export-note {
+    font-size: 10px; color: var(--text-muted);
+    text-align: center; margin-top: 8px; line-height: 1.5;
+  }
+
+  /* ── PRESETS ── */
+  .preset-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+  .preset-btn {
+    font-family: var(--font-body);
+    font-size: 11px; font-weight: 500;
+    padding: 8px 10px;
+    border-radius: var(--r-xs);
+    border: 1px solid var(--border-2);
+    background: var(--surface-2);
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex; align-items: center; gap: 5px;
+  }
+  .preset-btn:hover {
+    border-color: var(--border);
+    color: var(--text);
+    background: var(--surface-3);
+  }
+
+  /* ── PROGRESS BAR ── */
+  .export-progress {
+    height: 3px;
+    background: var(--border);
+    border-radius: 2px;
+    overflow: hidden;
+    margin-top: 8px;
+    display: none;
+  }
+  .export-progress.visible { display: block; }
+  .export-progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, var(--accent), var(--neon));
+    border-radius: 2px;
+    width: 0%;
+    transition: width 0.1s linear;
+  }
+
+  /* ── FORMAT SELECTOR ── */
+  .format-tabs {
+    display: flex;
+    gap: 4px;
+    background: var(--surface-2);
+    border-radius: 8px;
+    padding: 4px;
+    margin-bottom: 10px;
+  }
+  .format-tab {
+    flex: 1;
+    font-family: var(--font-body);
+    font-size: 11px; font-weight: 600;
+    padding: 7px 10px;
+    border-radius: 6px;
+    border: none;
+    background: transparent;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex; align-items: center; justify-content: center; gap: 5px;
+  }
+  .format-tab.active {
+    background: var(--surface-3);
+    color: var(--text);
+    border: 1px solid var(--border-2);
+  }
+  .format-tab .badge-new {
+    font-size: 8px; font-weight: 800;
+    background: var(--neon);
+    color: #000;
+    padding: 1px 5px;
+    border-radius: 4px;
+    letter-spacing: 0.04em;
+  }
+
+  /* ── TOAST ── */
+  .toast {
+    position: fixed;
+    bottom: 28px; left: 50%;
+    transform: translateX(-50%) translateY(100px);
+    background: var(--surface-3);
+    color: var(--text);
+    padding: 12px 22px;
+    border-radius: 30px;
+    font-size: 12px; font-weight: 500;
+    z-index: 200;
+    border: 1px solid var(--border-2);
+    box-shadow: 0 16px 50px rgba(0,0,0,0.7);
+    transition: transform 0.4s cubic-bezier(0.175,0.885,0.32,1.275);
+    pointer-events: none;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .toast.show { transform: translateX(-50%) translateY(0); }
+  .toast.success { border-color: var(--success); }
+  .toast.error { border-color: var(--danger); }
+  .toast.info { border-color: var(--accent); }
+
+  /* ── SEO SECTION ── */
+  .seo-section {
+    background: var(--surface);
+    border-top: 1px solid var(--border);
+    padding: 64px 24px;
+    margin-top: 8px;
+  }
+  .seo-inner { max-width: 1100px; margin: 0 auto; }
+  .seo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; }
+
+  .seo-title {
+    font-family: var(--font-display);
+    font-size: 36px; font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+    margin-bottom: 16px;
+  }
+  .seo-title .hl { color: var(--neon); }
+  .seo-desc {
+    font-size: 15px; color: var(--text-secondary);
+    line-height: 1.7; margin-bottom: 28px;
+  }
+  .feature-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+  .feature-list li {
+    display: flex; align-items: flex-start; gap: 10px;
+    font-size: 13px; color: var(--text-secondary);
+    line-height: 1.5;
+  }
+  .feature-list li .fi {
+    width: 20px; height: 20px;
+    border-radius: 50%;
+    background: rgba(0,245,212,0.1);
+    border: 1px solid rgba(0,245,212,0.3);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 10px; flex-shrink: 0; margin-top: 1px;
+  }
+
+  /* ── FAQ ── */
+  .faq-section {
+    background: var(--bg);
+    padding: 64px 24px;
+  }
+  .faq-inner { max-width: 800px; margin: 0 auto; }
+  .faq-header {
+    text-align: center; margin-bottom: 44px;
+  }
+  .faq-header h2 {
+    font-family: var(--font-display);
+    font-size: 32px; font-weight: 800;
+    letter-spacing: -0.03em;
+    margin-bottom: 10px;
+  }
+  .faq-header p { font-size: 14px; color: var(--text-secondary); }
+
+  .faq-item {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--r-sm);
+    margin-bottom: 8px;
+    overflow: hidden;
+    transition: border-color var(--transition);
+  }
+  .faq-item:hover { border-color: var(--border-2); }
+  .faq-item.open { border-color: rgba(91,76,255,0.4); }
+  .faq-q {
+    padding: 18px 20px;
+    font-size: 13px; font-weight: 600;
+    cursor: pointer;
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 12px;
+    user-select: none;
+    font-family: var(--font-display);
+    letter-spacing: -0.01em;
+  }
+  .faq-q:hover { color: var(--accent-2); }
+  .faq-icon {
+    width: 20px; height: 20px;
+    border-radius: 50%;
+    background: var(--surface-2);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 12px; flex-shrink: 0;
+    transition: transform 0.25s ease;
+    color: var(--text-secondary);
+  }
+  .faq-item.open .faq-icon { transform: rotate(45deg); color: var(--accent-2); }
+  .faq-a {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.3s ease;
+  }
+  .faq-a-inner {
+    padding: 0 20px 18px;
+    font-size: 13px; color: var(--text-secondary);
+    line-height: 1.7;
+  }
+  .faq-item.open .faq-a { max-height: 400px; }
+
+  /* ── KEYWORD TAGS ── */
+  .kw-section {
+    background: var(--surface);
+    border-top: 1px solid var(--border);
+    padding: 40px 24px;
+  }
+  .kw-inner { max-width: 1100px; margin: 0 auto; }
+  .kw-title {
+    font-family: var(--font-display);
+    font-size: 13px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.06em;
+    color: var(--text-muted);
+    margin-bottom: 16px;
+  }
+  .kw-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+  .kw-tag {
+    font-size: 11px; color: var(--text-secondary);
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 20px;
+    cursor: default;
+    transition: var(--transition);
+  }
+  .kw-tag:hover { border-color: var(--accent); color: var(--accent-2); }
+
+  /* ── FOOTER ── */
+  .site-footer {
+    background: var(--bg);
+    border-top: 1px solid var(--border);
+    padding: 24px;
+    text-align: center;
+    font-size: 11px; color: var(--text-muted);
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 960px) {
+    .app-wrap { flex-direction: column; padding: 12px; }
+    .preview-panel { min-height: 360px; position: static; }
+    .controls-panel { width: 100%; max-height: none; }
+    .seo-grid { grid-template-columns: 1fr; gap: 32px; }
+    .mode-grid { grid-template-columns: repeat(4, 1fr); }
+  }
+  @media (max-width: 600px) {
+    .mode-grid { grid-template-columns: 1fr 1fr; }
+    .site-header { padding: 10px 16px; }
+    .seo-title { font-size: 26px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="logo">
+    <div class="logo-icon">👕</div>
+    Mockup<span>Studio</span>
+  </div>
+  <div class="header-badges">
+    <span class="hbadge">7 modes</span>
+    <span class="hbadge">MP4 + WebM</span>
+    <span class="hbadge pro">100% Gratuit</span>
+  </div>
+</header>
+
+<!-- APP -->
+<div class="app-wrap">
+
+  <!-- PREVIEW -->
+  <div class="preview-panel">
+    <div class="preview-header">
+      <div class="preview-left">
+        <div class="status-ring" id="statusRing"></div>
+        <span class="preview-title">Aperçu en direct</span>
+      </div>
+      <div class="mode-indicator" id="modeIndicator">🌬️ Wind Effect</div>
+    </div>
+    <div class="canvas-wrapper" id="canvasWrapper">
+      <canvas id="mainCanvas"></canvas>
+      <div class="canvas-placeholder" id="placeholder">
+        <div class="ph-icon">👕</div>
+        <p class="ph-text">Importez un T-shirt<br>pour lancer l'animation</p>
+        <span class="ph-hint">PNG transparent recommandé</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTROLS -->
+  <div class="controls-panel">
+
+    <!-- Upload -->
+    <div class="card">
+      <div class="card-label"><span class="icon">📷</span> Image T-shirt</div>
+      <div class="upload-zone" id="uploadZone">
+        <div class="uz-icon">📤</div>
+        <p class="uz-title"><strong>Cliquez ou déposez votre image</strong></p>
+        <p class="uz-sub">PNG · JPG · WebP · Transparence recommandée</p>
+        <div class="uz-filename" id="fileName"></div>
+        <input type="file" id="fileInput" accept="image/png,image/jpeg,image/webp">
+      </div>
+      <button class="btn-remove" id="btnRemove">✕ Retirer l'image</button>
+    </div>
+
+    <!-- Animation Mode -->
+    <div class="card">
+      <div class="card-label"><span class="icon">🎭</span> Mode d'animation</div>
+      <div class="mode-grid">
+        <button class="mode-btn active" data-mode="wind">
+          <span class="mb-icon">🌬️</span> Vent
+        </button>
+        <button class="mode-btn" data-mode="floating">
+          <span class="mb-icon">✈️</span> Flottement
+        </button>
+        <button class="mode-btn" data-mode="waving">
+          <span class="mb-icon">〰️</span> Ondulation
+        </button>
+        <button class="mode-btn" data-mode="mannequin">
+          <span class="mb-icon">🗿</span> Mannequin
+        </button>
+        <button class="mode-btn" data-mode="spinning">
+          <span class="mb-icon">🔄</span> Rotation 3D
+        </button>
+        <button class="mode-btn" data-mode="hanging">
+          <span class="mb-icon">🪝</span> Suspension
+        </button>
+        <button class="mode-btn" data-mode="stretch">
+          <span class="mb-icon">↔️</span> Étirement
+        </button>
+      </div>
+    </div>
+
+    <!-- Parameters -->
+    <div class="card">
+      <div class="card-label"><span class="icon">⚙️</span> Paramètres</div>
+      <div class="ctrl-group">
+        <div class="ctrl-label">Intensité <span class="ctrl-val" id="vStrength">50%</span></div>
+        <input type="range" id="sStrength" min="0" max="100" value="50">
+      </div>
+      <div class="ctrl-group">
+        <div class="ctrl-label">Vitesse <span class="ctrl-val" id="vSpeed">50%</span></div>
+        <input type="range" id="sSpeed" min="5" max="100" value="50">
+      </div>
+      <div class="ctrl-group" id="dirGroup">
+        <div class="ctrl-label">Direction <span class="ctrl-val" id="vDirection">Droite →</span></div>
+        <input type="range" id="sDirection" min="-100" max="100" value="100">
+      </div>
+      <div class="ctrl-group">
+        <div class="ctrl-label">Turbulence <span class="ctrl-val" id="vTurbulence">30%</span></div>
+        <input type="range" id="sTurbulence" min="0" max="100" value="30">
+      </div>
+    </div>
+
+    <!-- Background -->
+    <div class="card">
+      <div class="card-label"><span class="icon">🎨</span> Fond</div>
+      <div class="color-row">
+        <input type="color" id="bgColor" value="#f5f5f0">
+        <span class="color-label">Couleur de fond</span>
+      </div>
+      <div class="presets" id="presets">
+        <span class="cp active" data-c="#f5f5f0" style="background:#f5f5f0;"></span>
+        <span class="cp" data-c="#ffffff" style="background:#ffffff;border:1px solid #ddd;"></span>
+        <span class="cp" data-c="#1a1a2e" style="background:#1a1a2e;"></span>
+        <span class="cp" data-c="#0f0f0f" style="background:#0f0f0f;border:1px solid #333;"></span>
+        <span class="cp" data-c="#e8f4e8" style="background:#e8f4e8;"></span>
+        <span class="cp" data-c="#fdf0e0" style="background:#fdf0e0;"></span>
+        <span class="cp" data-c="#e0e8f8" style="background:#e0e8f8;"></span>
+        <span class="cp" data-c="#2d1b4e" style="background:#2d1b4e;"></span>
+      </div>
+    </div>
+
+    <!-- Export -->
+    <div class="card">
+      <div class="card-label"><span class="icon">🎬</span> Export Vidéo</div>
+      <div class="ctrl-group">
+        <div class="ctrl-label">Durée <span class="ctrl-val" id="vDuration">4s</span></div>
+        <input type="range" id="sDuration" min="2" max="12" value="4">
+      </div>
+      <div class="format-tabs">
+        <button class="format-tab active" data-fmt="mp4">
+           MP4 <span class="badge-new">NEW</span>
+        </button>
+        <button class="format-tab" data-fmt="webm">
+           WebM
+        </button>
+      </div>
+      <button class="btn btn-export-mp4" id="btnExport">
+        ⬇️ Exporter la vidéo
+      </button>
+      <div class="export-progress" id="exportProgress">
+        <div class="export-progress-bar" id="exportBar"></div>
+      </div>
+      <p class="export-note" id="exportNote">800×1000 px · 30 fps · MP4 / WebM</p>
+    </div>
+
+    <!-- Quick Presets -->
+    <div class="card">
+      <div class="card-label"><span class="icon">⚡</span> Présets rapides</div>
+      <div class="preset-grid">
+        <button class="preset-btn" data-p="breeze">🍃 Brise douce</button>
+        <button class="preset-btn" data-p="windy">💨 Venteux</button>
+        <button class="preset-btn" data-p="storm">🌪️ Tempête</button>
+        <button class="preset-btn" data-p="float">🎈 Flottement doux</button>
+        <button class="preset-btn" data-p="spin">🔄 Rotation lente</button>
+        <button class="preset-btn" data-p="calm">✨ Calme</button>
+      </div>
+    </div>
+
+  </div><!-- /controls -->
+</div><!-- /app-wrap -->
+
+<!-- Toast -->
+<div class="toast" id="toast"></div>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- SEO SECTION -->
+<!-- ═══════════════════════════════════════════════════════ -->
+
+<section class="seo-section">
+  <div class="seo-inner">
+    <div class="seo-grid">
+      <div>
+        <h1 class="seo-title">Mockup Vidéo T-Shirt<br><span class="hl">Professionnel & Gratuit</span></h1>
+        <p class="seo-desc">
+          MockupStudio Pro est le générateur de mockup vidéo animé le plus complet pour vos designs de T-shirts.
+          Idéal pour le <strong>print on demand (POD)</strong>, les boutiques Etsy, Shopify, Amazon Merch,
+          Redbubble et les réseaux sociaux. Importez votre design, choisissez votre animation et exportez
+          une vidéo MP4 ou WebM en quelques secondes — aucune compétence technique requise.
+        </p>
+        <ul class="feature-list">
+          <li><span class="fi">✓</span> <span>7 modes d'animation uniques : vent, flottement, ondulation, mannequin, rotation 3D, suspension et étirement</span></li>
+          <li><span class="fi">✓</span> <span>Export vidéo MP4 (H.264) et WebM (VP9) — compatible Instagram, TikTok, Shopify</span></li>
+          <li><span class="fi">✓</span> <span>Résolution 800×1000 px à 30 fps — qualité broadcast sans compression</span></li>
+          <li><span class="fi">✓</span> <span>Fond personnalisable : couleurs preset ou picker libre pour correspondre à votre marque</span></li>
+          <li><span class="fi">✓</span> <span>100% dans le navigateur — aucune installation, aucun compte, aucune donnée envoyée</span></li>
+          <li><span class="fi">✓</span> <span>Présets rapides pour démarrer immédiatement (Brise, Tempête, Flottement, Rotation...)</span></li>
+          <li><span class="fi">✓</span> <span>Raccourcis clavier Espace (pause), Ctrl+E (export) pour les power users</span></li>
+        </ul>
+      </div>
+      <div>
+        <h2 style="font-family:var(--font-display);font-size:22px;font-weight:800;letter-spacing:-0.02em;margin-bottom:16px;">Les 7 modes d'animation expliqués</h2>
+        <div style="display:flex;flex-direction:column;gap:12px;">
+          <div style="padding:14px;background:var(--surface-2);border-radius:var(--r-sm);border:1px solid var(--border);">
+            <strong style="font-size:12px;font-family:var(--font-display);">🌬️ Mode Vent (Wind Effect)</strong>
+            <p style="font-size:12px;color:var(--text-secondary);margin-top:4px;line-height:1.5;">Simulation physique réaliste du tissu face au vent. Déplacement horizontal bande par bande avec ondes de turbulence multicouches. Idéal pour les photos produits dynamiques.</p>
+          </div>
+          <div style="padding:14px;background:var(--surface-2);border-radius:var(--r-sm);border:1px solid var(--border);">
+            <strong style="font-size:12px;font-family:var(--font-display);">✈️ Mode Flottement (Floating)</strong>
+            <p style="font-size:12px;color:var(--text-secondary);margin-top:4px;line-height:1.5;">Le T-shirt lévite avec un mouvement doux sinusoïdal vertical et une légère rotation respiratoire. Parfait pour les mockups lifestyle et les visuels premium.</p>
+          </div>
+          <div style="padding:14px;background:var(--surface-2);border-radius:var(--r-sm);border:1px solid var(--border);">
+            <strong style="font-size:12px;font-family:var(--font-display);">🗿 Mode Mannequin (Virtual Model)</strong>
+            <p style="font-size:12px;color:var(--text-secondary);margin-top:4px;line-height:1.5;">Simule un mannequin fantôme avec le T-shirt porté et un léger balancement naturel. Le mode le plus réaliste pour les fiches produit e-commerce.</p>
+          </div>
+          <div style="padding:14px;background:var(--surface-2);border-radius:var(--r-sm);border:1px solid var(--border);">
+            <strong style="font-size:12px;font-family:var(--font-display);">🔄 Rotation 3D (Spinning)</strong>
+            <p style="font-size:12px;color:var(--text-secondary);margin-top:4px;line-height:1.5;">Simulation de rotation sur axe vertical avec effet de perspective et shading de profondeur. Idéal pour les stories Instagram et les annonces TikTok.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section">
+  <div class="faq-inner">
+    <div class="faq-header">
+      <h2>Questions fréquentes <span style="color:var(--neon)">FAQ</span></h2>
+      <p>Tout ce que vous devez savoir sur les mockups vidéo de T-shirts</p>
+    </div>
+
+    <div class="faq-item open" onclick="toggleFaq(this)">
+      <div class="faq-q">
+        Qu'est-ce qu'un mockup vidéo de T-shirt et pourquoi en ai-je besoin ?
+        <span class="faq-icon">+</span>
+      </div>
+      <div class="faq-a"><div class="faq-a-inner">
+        Un <strong>mockup vidéo de T-shirt</strong> est une présentation animée de votre design sur un t-shirt virtuel, sans avoir besoin d'imprimer ou de photographier un produit réel. Les vidéos génèrent jusqu'à <strong>300% plus d'engagement</strong> que les images statiques sur les réseaux sociaux. Pour les vendeurs POD (print on demand), c'est indispensable : vos listings Etsy, Amazon Merch, Redbubble ou Shopify se démarquent immédiatement face aux simples photos produit. Les algorithmes TikTok et Instagram Reels favorisent aussi fortement les contenus vidéo.
+      </div></div>
+    </div>
+
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-q">
+        Comment créer un mockup vidéo de T-shirt gratuitement ?
+        <span class="faq-icon">+</span>
+      </div>
+      <div class="faq-a"><div class="faq-a-inner">
+        C'est très simple avec MockupStudio Pro : <strong>(1)</strong> Importez votre image de T-shirt (PNG transparent de préférence) en cliquant sur la zone d'upload ou en glissant-déposant votre fichier. <strong>(2)</strong> Choisissez votre mode d'animation parmi les 7 disponibles (Vent, Flottement, Ondulation, Mannequin, Rotation 3D, Suspension, Étirement). <strong>(3)</strong> Ajustez l'intensité, la vitesse et la turbulence selon vos préférences. <strong>(4)</strong> Cliquez sur "Exporter la vidéo" et choisissez le format MP4 ou WebM. Tout se passe dans votre navigateur, sans inscription requise.
+      </div></div>
+    </div>
+
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-q">
+        Quelle est la différence entre le format MP4 et WebM pour mes mockups ?
+        <span class="faq-icon">+</span>
+      </div>
+      <div class="faq-a"><div class="faq-a-inner">
+        <strong>MP4 (H.264)</strong> est le format universel : compatible avec tous les appareils, plateformes sociales (Instagram, Facebook, TikTok, YouTube), Windows, macOS, et iOS. C'est le meilleur choix pour partager votre mockup. <strong>WebM (VP9)</strong> offre une meilleure compression à qualité égale (fichiers plus légers) et est idéal pour l'intégration web ou les plateformes qui l'acceptent. MockupStudio Pro détecte automatiquement ce que supporte votre navigateur et offre le meilleur codec disponible. Note : la disponibilité du MP4 dépend des capacités de votre navigateur.
+      </div></div>
+    </div>
+
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-q">
+        Quel format d'image dois-je utiliser pour obtenir le meilleur rendu ?
+        <span class="faq-icon">+</span>
+      </div>
+      <div class="faq-a"><div class="faq-a-inner">
+        Pour un résultat optimal, utilisez un <strong>PNG avec fond transparent (canal alpha)</strong>. Cela permet à l'animation de voir à travers les zones vides du tissu et donne un aspect beaucoup plus réaliste. La résolution idéale est entre 800×1000 px et 2400×3000 px. Les images trop petites seront légèrement floues. Vous pouvez aussi utiliser JPG ou WebP, mais le fond blanc sera alors visible. Des outils gratuits comme remove.bg ou Canva permettent de supprimer facilement le fond de vos photos de T-shirts.
+      </div></div>
+    </div>
+
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-q">
+        Puis-je utiliser ces mockups pour mes boutiques Etsy, Shopify ou Amazon Merch ?
+        <span class="faq-icon">+</span>
+      </div>
+      <div class="faq-a"><div class="faq-a-inner">
+        Oui, absolument ! Les vidéos créées avec MockupStudio Pro sont <strong>100% libres d'utilisation commerciale</strong>. Elles sont parfaitement adaptées aux fiches produit Etsy (les vidéos produit augmentent les conversions de 60% en moyenne), aux pages Shopify, aux listings Amazon Merch et Redbubble, aux stories Instagram et TikTok de votre boutique. La résolution 800×1000 px correspond exactement aux recommandations d'Etsy pour les vidéos produit. Aucun watermark, aucun filigrane.
+      </div></div>
+    </div>
+
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-q">
+        Combien de temps dure l'export vidéo ? La vidéo est-elle sauvegardée quelque part ?
+        <span class="faq-icon">+</span>
+      </div>
+      <div class="faq-a"><div class="faq-a-inner">
+        L'export prend généralement <strong>entre 5 et 20 secondes</strong> selon la durée sélectionnée (2 à 12 secondes) et les performances de votre ordinateur. Tout se passe <strong>localement dans votre navigateur</strong> : aucune donnée n'est envoyée à nos serveurs, votre image de T-shirt reste privée. La vidéo est automatiquement téléchargée dans votre dossier "Téléchargements" une fois l'enregistrement terminé. Vous pouvez créer autant de vidéos que vous voulez sans limitation.
+      </div></div>
+    </div>
+
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-q">
+        Quel mode d'animation choisir selon mon cas d'usage ?
+        <span class="faq-icon">+</span>
+      </div>
+      <div class="faq-a"><div class="faq-a-inner">
+        <strong>🌬️ Vent</strong> : idéal pour les T-shirts lifestyle, les marques outdoor et sportswear. <strong>✈️ Flottement</strong> : parfait pour les marques premium, les designs artistiques, les produits haut de gamme. <strong>〰️ Ondulation</strong> : excellent pour montrer la qualité du tissu et la fluidité du matériau. <strong>🗿 Mannequin</strong> : le plus réaliste pour les fiches produit e-commerce et les presentations B2B. <strong>🔄 Rotation 3D</strong> : accrocheur pour les réseaux sociaux, stories et publicités payantes. <strong>🪝 Suspension</strong> : naturel et élégant, idéal pour les boutiques minimalistes. <strong>↔️ Étirement</strong> : original et créatif, pour se démarquer sur les feeds saturés.
+      </div></div>
+    </div>
+
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-q">
+        Le site fonctionne-t-il sur mobile et tablette ?
+        <span class="faq-icon">+</span>
+      </div>
+      <div class="faq-a"><div class="faq-a-inner">
+        MockupStudio Pro est entièrement <strong>responsive et fonctionne sur tous les appareils</strong> modernes : PC, Mac, iPhone, Android, iPad. L'interface s'adapte automatiquement à la taille de votre écran. Notez que l'export vidéo MP4 peut ne pas être disponible sur tous les navigateurs mobiles (Safari iOS en particulier) : dans ce cas, le format WebM sera utilisé automatiquement. Pour une expérience optimale, nous recommandons Chrome ou Edge sur desktop.
+      </div></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- KEYWORD CLOUD -->
+<div class="kw-section">
+  <div class="kw-inner">
+    <p class="kw-title">Mots-clés associés</p>
+    <div class="kw-tags">
+      <span class="kw-tag">mockup t-shirt gratuit</span>
+      <span class="kw-tag">video mockup tshirt</span>
+      <span class="kw-tag">animation t-shirt</span>
+      <span class="kw-tag">print on demand mockup</span>
+      <span class="kw-tag">t-shirt wind effect</span>
+      <span class="kw-tag">mockup animé gratuit</span>
+      <span class="kw-tag">générateur mockup POD</span>
+      <span class="kw-tag">mockup étsy boutique</span>
+      <span class="kw-tag">t-shirt floating animation</span>
+      <span class="kw-tag">mannequin virtuel t-shirt</span>
+      <span class="kw-tag">mockup spin 3D</span>
+      <span class="kw-tag">export vidéo tshirt</span>
+      <span class="kw-tag">mockup shopify gratuit</span>
+      <span class="kw-tag">amazon merch mockup video</span>
+      <span class="kw-tag">redbubble mockup animé</span>
+      <span class="kw-tag">t-shirt mockup MP4</span>
+      <span class="kw-tag">mockup WebM gratuit</span>
+      <span class="kw-tag">mockup vetement en ligne</span>
+      <span class="kw-tag">mockup tissu animation</span>
+      <span class="kw-tag">t-shirt suspension mockup</span>
+      <span class="kw-tag">mockup vent tissu</span>
+      <span class="kw-tag">fabric animation online</span>
+      <span class="kw-tag">t-shirt video maker free</span>
+      <span class="kw-tag">mockup apparel animation</span>
+      <span class="kw-tag">mockup ondulation tissu</span>
+      <span class="kw-tag">Instagram mockup tshirt</span>
+      <span class="kw-tag">TikTok mockup clothes</span>
+    </div>
+  </div>
+</div>
+<p>
+Découvrez comment utiliser cet outil dans notre 
+<a href="/fr/blog/generateur-flipbook/">guide complet des stickers</a>.
+</p>
+<!-- FOOTER -->
+<footer class="site-footer">
+  <p>MockupStudio Pro — Outil de mockup vidéo T-shirt gratuit · Fonctionne 100% dans votre navigateur · Aucune donnée collectée</p>
+</footer>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- JAVASCRIPT -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<script>
+(function(){
+'use strict';
+
+// ── DOM ──
+const canvas    = document.getElementById('mainCanvas');
+const ctx       = canvas.getContext('2d');
+const wrapper   = document.getElementById('canvasWrapper');
+const pholder   = document.getElementById('placeholder');
+const upZone    = document.getElementById('uploadZone');
+const fileInput = document.getElementById('fileInput');
+const fileNameEl = document.getElementById('fileName');
+const btnRemove = document.getElementById('btnRemove');
+const statusRing= document.getElementById('statusRing');
+const modeInd   = document.getElementById('modeIndicator');
+const toast     = document.getElementById('toast');
+const btnExport = document.getElementById('btnExport');
+const exportProgress = document.getElementById('exportProgress');
+const exportBar = document.getElementById('exportBar');
+const exportNote = document.getElementById('exportNote');
+
+// Sliders
+const sStrength  = document.getElementById('sStrength');
+const sSpeed     = document.getElementById('sSpeed');
+const sDirection = document.getElementById('sDirection');
+const sTurbulence= document.getElementById('sTurbulence');
+const sDuration  = document.getElementById('sDuration');
+const bgColorIn  = document.getElementById('bgColor');
+const presetsEl  = document.getElementById('presets');
+const modeBtns   = document.querySelectorAll('.mode-btn');
+const presetBtns = document.querySelectorAll('.preset-btn');
+const formatTabs = document.querySelectorAll('.format-tab');
+
+// ── CONSTANTS ──
+const CW = 800, CH = 1000, FPS = 30, BAND = 2;
+
+// ── STATE ──
+let img = null, imgW=0, imgH=0, drawX=0, drawY=0, drawW=0, drawH=0;
+let strength=50, speed=50, direction=100, turbulence=30, duration=4;
+let bgColor = '#f5f5f0';
+let animMode = 'wind';
+let exportFormat = 'mp4';
+let t = 0;
+let raf = null;
+let isExporting = false;
+let mediaRec = null, chunks = [], exportStartT = 0;
+
+const MODE_LABELS = {
+  wind: '🌬️ Wind Effect',
+  floating: '✈️ Flottement',
+  waving: '〰️ Ondulation',
+  mannequin: '🗿 Mannequin',
+  spinning: '🔄 Rotation 3D',
+  hanging: '🪝 Suspension',
+  stretch: '↔️ Étirement'
+};
+
+// ── CANVAS SETUP ──
+canvas.width = CW; canvas.height = CH;
+
+function fitCanvas() {
+  const aw = wrapper.clientWidth - 48;
+  const ah = wrapper.clientHeight - 48;
+  const sc = Math.min(aw/CW, ah/CH, 1);
+  canvas.style.width  = (CW*sc)+'px';
+  canvas.style.height = (CH*sc)+'px';
+}
+fitCanvas();
+window.addEventListener('resize', fitCanvas);
+if (window.ResizeObserver) new ResizeObserver(fitCanvas).observe(wrapper);
+
+// ── IMAGE HANDLING ──
+function loadImage(file) {
+  if (!file || !file.type.startsWith('image/')) { showToast('Image invalide', 'error'); return; }
+  const reader = new FileReader();
+  reader.onload = e => {
+    const image = new Image();
+    image.onload = () => {
+      img = image; imgW = image.naturalWidth; imgH = image.naturalHeight;
+      calcPlacement();
+      fileNameEl.textContent = file.name;
+      fileNameEl.style.display = 'block';
+      upZone.classList.add('has-file');
+      btnRemove.style.display = 'block';
+      pholder.classList.add('hidden');
+      upZone.querySelector('.uz-icon').textContent = '✅';
+      t = 0;
+      if (!raf && !isExporting) startLoop();
+      showToast('Image chargée !', 'success');
+    };
+    image.onerror = () => showToast('Erreur de chargement', 'error');
+    image.src = e.target.result;
+  };
+  reader.readAsDataURL(file);
+}
+
+function calcPlacement() {
+  const pad = 80;
+  const aW = CW - pad*2, aH = CH - pad*2;
+  const sc = Math.min(aW/imgW, aH/imgH, 1.4);
+  drawW = imgW*sc; drawH = imgH*sc;
+  drawX = (CW-drawW)/2; drawY = (CH-drawH)/2;
+}
+
+function clearImage() {
+  img=null; imgW=imgH=drawX=drawY=drawW=drawH=0;
+  fileNameEl.style.display='none'; fileNameEl.textContent='';
+  upZone.classList.remove('has-file');
+  btnRemove.style.display='none';
+  pholder.classList.remove('hidden');
+  upZone.querySelector('.uz-icon').textContent='📤';
+  fileInput.value='';
+  t=0; renderFrame(0);
+}
+
+// ── DRAG & DROP ──
+upZone.addEventListener('click', e => {
+  if (!e.target.closest('.btn-remove')) fileInput.click();
+});
+fileInput.addEventListener('change', e => { if (e.target.files[0]) loadImage(e.target.files[0]); });
+btnRemove.addEventListener('click', e => { e.stopPropagation(); clearImage(); showToast('Image retirée'); });
+['dragover','dragenter'].forEach(ev => upZone.addEventListener(ev, e => { e.preventDefault(); upZone.classList.add('drag-active'); }));
+['dragleave','dragend'].forEach(ev => upZone.addEventListener(ev, () => upZone.classList.remove('drag-active')));
+upZone.addEventListener('drop', e => {
+  e.preventDefault(); upZone.classList.remove('drag-active');
+  if (e.dataTransfer.files[0]) loadImage(e.dataTransfer.files[0]);
+});
+
+// ── ANIMATION MODES ──
+
+// Wind: horizontal band displacement
+function renderWind(time) {
+  if (!img) return;
+  const scY = imgH/drawH, scX = imgW/drawW;
+  for (let cy = drawY; cy < drawY+drawH; cy += BAND) {
+    const bh = Math.min(BAND, drawY+drawH-cy);
+    if (bh <= 0) break;
+    const nY = (cy-drawY)/drawH;
+    const amp = Math.pow(nY, 1.5) * (strength/100) * 70;
+    const dirSign = direction >= 0 ? 1 : -1;
+    const dirAmt = Math.abs(direction)/100;
+    const effAmp = amp * dirAmt * dirSign;
+    const spd = 0.8 + (speed/100)*3;
+    const freq = 1.8 + (speed/100)*4;
+    const tb = (turbulence/100)*0.6;
+    let ox = effAmp * Math.sin(freq*nY*Math.PI*2 + time*spd);
+    ox += effAmp*tb * Math.sin(freq*2.7*nY*Math.PI*2 + time*spd*1.7 + 1.3);
+    ox += effAmp*tb*0.5 * Math.sin(freq*5.1*nY*Math.PI*2 + time*spd*2.3 + 2.7);
+    const srcY = (cy-drawY)*scY;
+    const srcH = Math.min(bh*scY, imgH-srcY);
+    if (srcH <= 0) continue;
+    try { ctx.drawImage(img, 0, srcY, imgW, srcH, drawX+ox, cy, drawW, bh); } catch(_){}
+  }
+}
+
+// Floating: bob up/down + gentle rotation + breath scale
+function renderFloating(time) {
+  if (!img) return;
+  const amp = (strength/100)*45;
+  const spd = 0.4 + (speed/100)*1.8;
+  const floatY = amp * Math.sin(time*spd);
+  const floatX = amp*0.3 * Math.sin(time*spd*0.7 + 1);
+  const rot = (strength/100)*0.035 * Math.sin(time*spd*0.8 + 0.5);
+  const breathe = 1 + (strength/100)*0.025 * Math.sin(time*1.4);
+  const cx = drawX+drawW/2, cy = drawY+drawH/2;
+  ctx.save();
+  ctx.translate(cx+floatX, cy+floatY);
+  ctx.rotate(rot);
+  ctx.scale(breathe, breathe);
+  ctx.drawImage(img, -drawW/2, -drawH/2, drawW, drawH);
+  ctx.restore();
+}
+
+// Waving: fluid 2D wave through fabric
+function renderWaving(time) {
+  if (!img) return;
+  const scY = imgH/drawH;
+  const spd = 0.6 + (speed/100)*2.8;
+  const freq = 2 + (speed/100)*3;
+  const dirSign = direction >= 0 ? 1 : -1;
+  for (let cy = drawY; cy < drawY+drawH; cy += BAND) {
+    const bh = Math.min(BAND, drawY+drawH-cy);
+    if (bh<=0) break;
+    const nY = (cy-drawY)/drawH;
+    const baseAmp = (strength/100)*50 * Math.pow(nY, 0.7);
+    const ox = baseAmp * dirSign * Math.sin(freq*nY*Math.PI*2 + time*spd);
+    const ox2 = baseAmp*0.4*(turbulence/100) * Math.sin(freq*2.3*nY*Math.PI*2 + time*spd*1.5+1);
+    const totalOx = ox + ox2;
+    const srcY = (cy-drawY)*scY;
+    const srcH = Math.min(bh*scY, imgH-srcY);
+    if (srcH<=0) continue;
+    // Slight vertical compression for wave depth
+    const scaleW = 1 + (strength/100)*0.08 * Math.cos(freq*nY*Math.PI*2 + time*spd);
+    const dstW = drawW * scaleW;
+    const dstX = drawX + (drawW-dstW)/2 + totalOx;
+    try { ctx.drawImage(img, 0, srcY, imgW, srcH, dstX, cy, dstW, bh); } catch(_){}
+  }
+}
+
+// Mannequin: draw subtle body + gentle sway from shoulders
+function renderMannequin(time) {
+  if (!img) return;
+  const spd = 0.35 + (speed/100)*0.8;
+  const swayAngle = (strength/100)*0.018 * Math.sin(time*spd);
+  const breatheScale = 1 + (strength/100)*0.012 * Math.sin(time*1.2);
+
+  // Draw ghost mannequin lines
+  const cx = drawX+drawW/2;
+  const shY = drawY + drawH*0.18;
+  const waistY = drawY + drawH*0.68;
+  const shW = drawW*0.88;
+  ctx.save();
+  ctx.globalAlpha = 0.18;
+  ctx.strokeStyle = '#a0a0c0';
+  ctx.lineWidth = 2.5;
+  ctx.lineCap = 'round';
+  // Neck
+  ctx.beginPath(); ctx.moveTo(cx, drawY-10); ctx.lineTo(cx, shY); ctx.stroke();
+  // Shoulders
+  ctx.beginPath(); ctx.moveTo(cx-shW/2, shY); ctx.lineTo(cx+shW/2, shY); ctx.stroke();
+  // Torso sides
+  ctx.beginPath(); ctx.moveTo(cx-shW/2, shY); ctx.bezierCurveTo(cx-shW/2+5, (shY+waistY)/2, cx-shW*0.38, (shY+waistY)/2, cx-shW*0.34, waistY); ctx.stroke();
+  ctx.beginPath(); ctx.moveTo(cx+shW/2, shY); ctx.bezierCurveTo(cx+shW/2-5, (shY+waistY)/2, cx+shW*0.38, (shY+waistY)/2, cx+shW*0.34, waistY); ctx.stroke();
+  // Waist
+  ctx.beginPath(); ctx.moveTo(cx-shW*0.34, waistY); ctx.lineTo(cx+shW*0.34, waistY); ctx.stroke();
+  ctx.globalAlpha = 1;
+  ctx.restore();
+
+  // Draw shirt swaying from shoulder pivot
+  ctx.save();
+  ctx.translate(cx, drawY);
+  ctx.rotate(swayAngle);
+  ctx.scale(breatheScale, 1);
+  ctx.drawImage(img, -drawW/2, 0, drawW, drawH);
+  ctx.restore();
+}
+
+// Spinning: 3D axis rotation via scaleX perspective
+function renderSpinning(time) {
+  if (!img) return;
+  const spd = 0.5 + (speed/100)*2.2;
+  const angle = time * spd;
+  const scaleX = Math.cos(angle);
+  const absScale = Math.abs(scaleX);
+  const cx = drawX+drawW/2, cy = drawY+drawH/2;
+
+  ctx.save();
+  ctx.translate(cx, cy);
+
+  // Perspective: slight height change when edge-on
+  const perspH = 1 - (1-absScale)*0.08;
+
+  ctx.scale(scaleX, perspH);
+
+  // When "behind" (scaleX < 0) flip image for back side feel
+  if (scaleX < 0) {
+    ctx.scale(-1, 1);
+  }
+
+  ctx.drawImage(img, -drawW/2, -drawH/2, drawW, drawH);
+
+  // Add depth shading overlay
+  if (absScale < 0.9) {
+    const shadowAlpha = (1-absScale) * (strength/100) * 0.45;
+    const grad = ctx.createLinearGradient(-drawW/2, 0, drawW/2, 0);
+    if (scaleX > 0) {
+      grad.addColorStop(0, 'rgba(0,0,0,0)');
+      grad.addColorStop(1, `rgba(0,0,0,${shadowAlpha})`);
+    } else {
+      grad.addColorStop(0, `rgba(0,0,0,${shadowAlpha})`);
+      grad.addColorStop(1, 'rgba(0,0,0,0)');
+    }
+    ctx.fillStyle = grad;
+    ctx.fillRect(-drawW/2, -drawH/2, drawW, drawH);
+  }
+
+  // Reflective edge highlight
+  if (absScale < 0.3) {
+    const hl = (0.3-absScale)/0.3 * 0.25;
+    ctx.fillStyle = `rgba(255,255,255,${hl})`;
+    ctx.fillRect(-drawW/2, -drawH/2, drawW, drawH);
+  }
+
+  ctx.restore();
+}
+
+// Hanging: pendulum swing from top anchor + internal fabric deformation
+function renderHanging(time) {
+  if (!img) return;
+  const spd = 0.3 + (speed/100)*1.4;
+  const freq = spd;
+  // Decay-like oscillation
+  const maxAngle = (strength/100) * 0.22;
+  const swingAngle = maxAngle * Math.sin(time*freq);
+  // Secondary micro-vibration in fabric
+  const vibAmp = (strength/100) * (turbulence/100) * 15;
+  const pivotX = drawX + drawW/2;
+  const pivotY = drawY; // hang from top
+
+  ctx.save();
+  ctx.translate(pivotX, pivotY);
+  ctx.rotate(swingAngle);
+
+  // Draw band by band with internal hanging deformation
+  const scY = imgH/drawH;
+  for (let relY = 0; relY <= drawH; relY += BAND) {
+    const bh = Math.min(BAND, drawH-relY);
+    if (bh<=0) break;
+    const nY = relY/drawH;
+    // Fabric deforms more at the bottom (longer pendulum length)
+    const internalSwing = nY*nY * vibAmp * Math.sin(time*freq*2.1 + 1.8);
+    const dirSign = direction >= 0 ? 1 : -1;
+    const ox = internalSwing * dirSign;
+    const srcY = relY*scY;
+    const srcH = Math.min(bh*scY, imgH-srcY);
+    if (srcH<=0) continue;
+    try { ctx.drawImage(img, 0, srcY, imgW, srcH, -drawW/2+ox, relY, drawW, bh); } catch(_){}
+  }
+  ctx.restore();
+}
+
+// Stretch: accordion fabric stretch both horizontal and vertical
+function renderStretch(time) {
+  if (!img) return;
+  const scY = imgH/drawH;
+  const spd = 0.5 + (speed/100)*2.2;
+  const dirSign = direction>=0 ? 1 : -1;
+  for (let relY = 0; relY <= drawH; relY += BAND) {
+    const bh = Math.min(BAND, drawH-relY);
+    if (bh<=0) break;
+    const nY = relY/drawH;
+    // Stretch factor: creates accordion wave
+    const stretchAmt = (strength/100) * 0.38;
+    const wave1 = Math.sin(nY*Math.PI*3.5 + time*spd);
+    const wave2 = (turbulence/100)*0.5 * Math.sin(nY*Math.PI*6 + time*spd*1.6 + 1.2);
+    const stretchX = 1 + stretchAmt * (wave1 + wave2);
+    const ox = (strength/100) * 28 * dirSign * Math.sin(nY*Math.PI*2 + time*spd*0.8);
+    const srcY = relY*scY;
+    const srcH = Math.min(bh*scY, imgH-srcY);
+    if (srcH<=0) continue;
+    const dstW = drawW*stretchX;
+    const dstX = drawX + (drawW-dstW)/2 + ox;
+    try { ctx.drawImage(img, 0, srcY, imgW, srcH, dstX, drawY+relY, dstW, bh); } catch(_){}
+  }
+}
+
+// ── RENDER FRAME ──
+function renderFrame(time) {
+  ctx.clearRect(0,0,CW,CH);
+  ctx.fillStyle = bgColor;
+  ctx.fillRect(0,0,CW,CH);
+
+  if (!img) {
+    // Ghost placeholder
+    ctx.save();
+    ctx.strokeStyle = 'rgba(255,255,255,0.05)';
+    ctx.lineWidth = 2;
+    ctx.setLineDash([8,18]);
+    const cxc=CW/2, cyc=CH/2;
+    ctx.beginPath(); ctx.roundRect(cxc-110, cyc-160, 220, 320, 18); ctx.stroke();
+    ctx.setLineDash([]);
+    ctx.restore();
+    return;
+  }
+
+  switch(animMode) {
+    case 'wind':     renderWind(time); break;
+    case 'floating': renderFloating(time); break;
+    case 'waving':   renderWaving(time); break;
+    case 'mannequin':renderMannequin(time); break;
+    case 'spinning': renderSpinning(time); break;
+    case 'hanging':  renderHanging(time); break;
+    case 'stretch':  renderStretch(time); break;
+    default:         renderWind(time);
+  }
+
+  // Ground shadow (modes where it makes sense)
+  if (['wind','waving','floating','mannequin'].includes(animMode) && strength > 8) {
+    const alpha = Math.min(0.07, (strength/100)*0.07);
+    const botY = drawY+drawH;
+    const sg = ctx.createLinearGradient(0, botY-20, 0, botY+60);
+    sg.addColorStop(0,'rgba(0,0,0,0)');
+    sg.addColorStop(0.5,`rgba(0,0,0,${alpha})`);
+    sg.addColorStop(1,'rgba(0,0,0,0)');
+    ctx.fillStyle = sg;
+    ctx.fillRect(drawX-30, botY-20, drawW+60, 80);
+  }
+}
+
+// ── ANIMATION LOOP ──
+function startLoop() {
+  if (raf) return;
+  let last = null;
+  function loop(ts) {
+    if (!last) last = ts;
+    let dt = Math.min((ts-last)/1000, 0.1);
+    last = ts;
+    if (!isExporting) {
+      t += dt * (0.5 + (speed/100)*2.5);
+    }
+    renderFrame(t);
+    raf = requestAnimationFrame(loop);
+  }
+  raf = requestAnimationFrame(loop);
+}
+function stopLoop() {
+  if (raf) { cancelAnimationFrame(raf); raf=null; }
+}
+
+// ── EXPORT ──
+function getBestMime(preferMp4) {
+  if (preferMp4) {
+    const mp4s = ['video/mp4;codecs=h264','video/mp4;codecs=avc1','video/mp4'];
+    for (const m of mp4s) {
+      if (MediaRecorder.isTypeSupported(m)) return m;
+    }
+    showToast('MP4 non supporté, utilisation de WebM', 'info');
+  }
+  const webms = ['video/webm;codecs=vp9','video/webm;codecs=vp8','video/webm'];
+  for (const m of webms) {
+    if (MediaRecorder.isTypeSupported(m)) return m;
+  }
+  return 'video/webm';
+}
+
+async function doExport() {
+  if (!img) { showToast('Importez d\'abord une image', 'error'); return; }
+  if (isExporting) return;
+
+  isExporting = true;
+  chunks = [];
+  exportStartT = t;
+
+  const mime = getBestMime(exportFormat === 'mp4');
+  const isMp4 = mime.includes('mp4');
+  const ext = isMp4 ? 'mp4' : 'webm';
+
+  btnExport.textContent = '⏺️ Enregistrement 0%...';
+  btnExport.classList.add('btn-recording');
+  btnExport.disabled = true;
+  exportProgress.classList.add('visible');
+  exportBar.style.width = '0%';
+  statusRing.className = 'status-ring recording';
+
+  const stream = canvas.captureStream(FPS);
+  mediaRec = new MediaRecorder(stream, {
+    mimeType: mime,
+    videoBitsPerSecond: 6_000_000
+  });
+
+  mediaRec.ondataavailable = e => { if (e.data && e.data.size>0) chunks.push(e.data); };
+  mediaRec.onstop = () => {
+    const blob = new Blob(chunks, { type: mime });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    const ts = new Date().toISOString().replace(/[:.]/g,'-').slice(0,19);
+    a.download = `tshirt-mockup-${animMode}-${ts}.${ext}`;
+    document.body.appendChild(a); a.click(); document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+
+    isExporting = false; mediaRec = null;
+    btnExport.textContent = '⬇️ Exporter la vidéo';
+    btnExport.classList.remove('btn-recording');
+    btnExport.disabled = false;
+    exportProgress.classList.remove('visible');
+    statusRing.className = 'status-ring';
+    t = exportStartT;
+    showToast(`✅ ${ext.toUpperCase()} exporté · ${duration}s · ${(blob.size/1048576).toFixed(1)} Mo`, 'success');
+  };
+  mediaRec.onerror = () => {
+    isExporting=false; mediaRec=null;
+    btnExport.textContent='⬇️ Exporter la vidéo';
+    btnExport.classList.remove('btn-recording');
+    btnExport.disabled=false;
+    exportProgress.classList.remove('visible');
+    statusRing.className='status-ring';
+    showToast('Erreur d\'export. Réessayez.', 'error');
+  };
+
+  mediaRec.start();
+  const recStart = performance.now();
+  const totalMs = duration*1000;
+
+  function recLoop(now) {
+    const elapsed = now - recStart;
+    if (elapsed >= totalMs) {
+      if (mediaRec && mediaRec.state==='recording') mediaRec.stop();
+      return;
+    }
+    const pct = elapsed/totalMs;
+    t = exportStartT + pct * duration * (0.5+(speed/100)*2.5);
+    renderFrame(t);
+    exportBar.style.width = Math.round(pct*100)+'%';
+    btnExport.textContent = `⏺️ ${Math.round(pct*100)}%...`;
+    requestAnimationFrame(recLoop);
+  }
+  requestAnimationFrame(recLoop);
+}
+
+btnExport.addEventListener('click', doExport);
+
+// ── UI CONTROLS ──
+sStrength.addEventListener('input',  () => { strength  = +sStrength.value;  document.getElementById('vStrength').textContent=strength+'%'; });
+sSpeed.addEventListener('input',     () => { speed     = +sSpeed.value;     document.getElementById('vSpeed').textContent=speed+'%'; });
+sTurbulence.addEventListener('input',() => { turbulence= +sTurbulence.value; document.getElementById('vTurbulence').textContent=turbulence+'%'; });
+sDuration.addEventListener('input',  () => { duration  = +sDuration.value;  document.getElementById('vDuration').textContent=duration+'s'; });
+
+sDirection.addEventListener('input', () => {
+  direction = +sDirection.value;
+  const vd = document.getElementById('vDirection');
+  if (direction > 80)      vd.textContent = 'Droite →';
+  else if (direction < -80) vd.textContent = '← Gauche';
+  else if (direction > 10)  vd.textContent = 'Lég. droite';
+  else if (direction < -10) vd.textContent = 'Lég. gauche';
+  else                       vd.textContent = 'Centre';
+});
+
+bgColorIn.addEventListener('input', () => {
+  bgColor = bgColorIn.value;
+  syncColorPreset(bgColor);
+  if (!raf && !isExporting) renderFrame(t);
+});
+
+presetsEl.addEventListener('click', e => {
+  const cp = e.target.closest('.cp');
+  if (!cp) return;
+  bgColor = cp.dataset.c;
+  bgColorIn.value = bgColor;
+  syncColorPreset(bgColor);
+  if (!raf && !isExporting) renderFrame(t);
+});
+
+function syncColorPreset(color) {
+  document.querySelectorAll('.cp').forEach(p => {
+    p.classList.toggle('active', p.dataset.c.toLowerCase()===color.toLowerCase());
+  });
+}
+
+// Mode buttons
+modeBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    animMode = btn.dataset.mode;
+    modeBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    modeInd.textContent = MODE_LABELS[animMode] || animMode;
+    t = 0;
+    // Show/hide direction slider for spinning (no direction)
+    const dirGroup = document.getElementById('dirGroup');
+    dirGroup.style.opacity = animMode==='spinning' ? '0.3' : '1';
+    showToast(`Mode : ${MODE_LABELS[animMode]}`, 'info');
+  });
+});
+
+// Format tabs
+formatTabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    exportFormat = tab.dataset.fmt;
+    formatTabs.forEach(t=>t.classList.remove('active'));
+    tab.classList.add('active');
+    exportNote.textContent = exportFormat==='mp4'
+      ? '800×1000 px · 30 fps · MP4 H.264 (selon navigateur)'
+      : '800×1000 px · 30 fps · WebM VP9 · Fichiers légers';
+    btnExport.className = exportFormat==='mp4'
+      ? 'btn btn-export-mp4'
+      : 'btn btn-export-webm';
+    btnExport.textContent = exportFormat==='mp4'
+      ? '⬇️ Exporter en MP4'
+      : '⬇️ Exporter en WebM';
+  });
+});
+
+// Presets
+const PRESETS = {
+  breeze:  { s:28, sp:32, d:70,  tb:12 },
+  windy:   { s:68, sp:62, d:100, tb:42 },
+  storm:   { s:96, sp:90, d:100, tb:82 },
+  float:   { s:35, sp:28, d:0,   tb:8  },
+  spin:    { s:50, sp:45, d:0,   tb:20 },
+  calm:    { s:10, sp:18, d:30,  tb:5  },
+};
+const PRESET_MODES = { breeze:'wind', windy:'wind', storm:'wind', float:'floating', spin:'spinning', calm:'waving' };
+
+presetBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const p = PRESETS[btn.dataset.p];
+    if (!p) return;
+    strength=p.s; speed=p.sp; direction=p.d; turbulence=p.tb;
+    sStrength.value=p.s; sSpeed.value=p.sp; sDirection.value=p.d; sTurbulence.value=p.tb;
+    document.getElementById('vStrength').textContent=p.s+'%';
+    document.getElementById('vSpeed').textContent=p.sp+'%';
+    document.getElementById('vTurbulence').textContent=p.tb+'%';
+    document.getElementById('vDirection').textContent = p.d>80?'Droite →':p.d<-80?'← Gauche':p.d>10?'Lég. droite':p.d<-10?'Lég. gauche':'Centre';
+    // Switch to relevant mode
+    const m = PRESET_MODES[btn.dataset.p];
+    if (m) {
+      animMode = m;
+      modeBtns.forEach(b=>b.classList.remove('active'));
+      document.querySelector(`[data-mode="${m}"]`)?.classList.add('active');
+      modeInd.textContent = MODE_LABELS[m];
+    }
+    t = 0;
+    showToast(`Préset appliqué : ${btn.textContent.trim()}`, 'success');
+  });
+});
+
+// ── KEYBOARD SHORTCUTS ──
+document.addEventListener('keydown', e => {
+  if (e.target.tagName==='INPUT' && e.target.type!=='range') return;
+  if (e.key===' ') {
+    e.preventDefault();
+    if (!isExporting) {
+      if (raf) {
+        stopLoop(); statusRing.className='status-ring paused';
+        showToast('Animation en pause (Espace)', 'info');
+      } else {
+        startLoop(); statusRing.className='status-ring';
+        showToast('Animation en cours', 'success');
+      }
+    }
+  }
+  if ((e.ctrlKey||e.metaKey) && e.key==='e') { e.preventDefault(); doExport(); }
+  if ((e.ctrlKey||e.metaKey) && e.key==='r') { e.preventDefault(); clearImage(); }
+});
+
+// ── TOAST ──
+let toastTm;
+function showToast(msg, type='success') {
+  clearTimeout(toastTm);
+  toast.textContent = msg;
+  toast.className = 'toast '+type+' show';
+  toastTm = setTimeout(()=>toast.classList.remove('show'), 3000);
+}
+
+// ── PAGE VISIBILITY ──
+document.addEventListener('visibilitychange', ()=>{
+  if (document.hidden && !isExporting) stopLoop();
+  else if (!document.hidden && !isExporting && !raf && img) startLoop();
+});
+
+// ── FAQ ──
+window.toggleFaq = function(el) {
+  const wasOpen = el.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(f=>f.classList.remove('open'));
+  if (!wasOpen) el.classList.add('open');
+};
+
+// ── INIT ──
+renderFrame(0);
+startLoop();
+document.getElementById('vStrength').textContent  = strength+'%';
+document.getElementById('vSpeed').textContent     = speed+'%';
+document.getElementById('vTurbulence').textContent= turbulence+'%';
+document.getElementById('vDuration').textContent  = duration+'s';
+document.getElementById('vDirection').textContent = 'Droite →';
+bgColorIn.value = bgColor;
+
+console.log('%c🌬️ MockupStudio Pro', 'font-size:16px;font-weight:bold;color:#5b4cff');
+console.log('Modes: wind, floating, waving, mannequin, spinning, hanging, stretch');
+console.log('Shortcuts: Space=pause | Ctrl+E=export | Ctrl+R=reset');
+
+})();
+</script>
+</body>
+</html>

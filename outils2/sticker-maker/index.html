@@ -1,0 +1,950 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticker Maker Pro · Custom Shape Cutter & Text Sticker Generator</title>
+    <meta name="description" content="Create custom stickers from your photos. 12+ shapes, text overlay, shadow & outline styles, background removal, export PNG sheet/strip. Free, private, browser-based.">
+    <meta name="keywords" content="sticker maker, custom sticker generator, shape cutter, pet sticker, text sticker, PNG sticker, transparent background, outline sticker, print sticker sheet, free sticker creator">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://suitecreative.fintoolsbox.com/sticker-maker/">
+    <!-- Hreflang -->
+    <link rel="alternate" hreflang="en" href="https://suitecreative.fintoolsbox.com/sticker-maker/">
+    <link rel="alternate" hreflang="fr" href="https://suitecreative.fintoolsbox.com/fr/generateur-stickers/">
+    <link rel="alternate" hreflang="x-default" href="https://suitecreative.fintoolsbox.com/sticker-maker/">
+
+    <meta property="og:title" content="Sticker Maker Pro · Custom Shape Cutter & Text Sticker Generator">
+    <meta property="og:description" content="Turn photos into stickers with shapes, text, outlines & shadows. Export PNG or print-ready sheets. No data is ever uploaded.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="fr_FR">
+    <meta name="author" content="SuiteCreative">
+    <meta property="og:image" content="https://suitecreative.fintoolsbox.com/sticker-maker.webp">
+    <meta property="og:url" content="https://suitecreative.fintoolsbox.com/sticker-maker/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sticker Maker Pro">
+    <meta name="twitter:description" content="Custom shapes, text, shadows, outlines. Free & private.">
+    <meta name="twitter:image" content="https://suitecreative.fintoolsbox.com/sticker-maker.webp">
+    <meta name="theme-color" content="#f5f2eb">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..600..700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..600..700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            "name": "Sticker Maker Pro",
+            "applicationCategory": "DesignApplication",
+            "operatingSystem": "All",
+            "description": "Browser-based tool to create custom stickers from photos with shapes, text, shadows, and outline effects. All processing is local.",
+            "url": "https://suitecreative.fintoolsbox.com/sticker-maker/",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+            "featureList": [
+  "Custom sticker generator",
+  "Shape cutter",
+  "Transparent PNG export",
+  "Printable sticker sheet export",
+  "Sticker strip export",
+  "Outline and shadow effects",
+  "Background removal",
+  "Text sticker creator",
+  "Private browser-based processing"
+],
+        }
+    </script>
+    <script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {
+      "@type":"Question",
+      "name":"How do I make a sticker?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"Upload a photo, choose a shape, customize the outline and shadow, then export your transparent PNG sticker."
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"Can I add text to my sticker?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"Yes. You can add custom text, choose font size, colors and optional text outlines."
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"Is my image uploaded to a server?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"No. All image processing happens directly in your browser for maximum privacy."
+      }
+    }
+  ]
+}
+</script>
+    <style>
+        :root {
+            --bg: #f5f2eb;
+            --surface: #ffffff;
+            --border: #e0dbd0;
+            --text: #2c2822;
+            --text2: #6b645a;
+            --accent: #d4753c;
+            --accent-light: #fdf2ea;
+            --accent-dark: #b85c1f;
+            --radius: 20px;
+            --radius-sm: 14px;
+            --shadow: 0 6px 22px rgba(0,0,0,0.04), 0 2px 6px rgba(0,0,0,0.02);
+            --shadow-lg: 0 14px 36px rgba(0,0,0,0.07), 0 4px 12px rgba(0,0,0,0.03);
+            --font: 'Inter', system-ui, -apple-system, sans-serif;
+            --font-heading: 'Playfair Display', serif;
+            --transition: 0.2s ease;
+        }
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body {
+            font-family: var(--font);
+            background: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            line-height: 1.5;
+            background-image: radial-gradient(at 30% 20%, rgba(212,117,60,0.04) 0%, transparent 50%),
+                              radial-gradient(at 70% 80%, rgba(180,160,140,0.03) 0%, transparent 50%);
+        }
+        .container { width:100%; max-width:1260px; padding:24px 20px 40px; }
+        header { text-align:center; margin-bottom: 32px; }
+        header h1 {
+            font-family: var(--font-heading);
+            font-size: clamp(2rem, 4.5vw, 2.8rem);
+            font-weight: 700;
+            color: var(--accent-dark);
+            letter-spacing: -0.3px;
+        }
+        header p { color:var(--text2); max-width:600px; margin:8px auto 0; font-size:1rem; }
+        .main-grid { display:flex; gap:28px; flex-wrap:wrap; align-items:flex-start; }
+        .preview-box {
+            flex:2.2; min-width:360px; background:var(--surface); border-radius:var(--radius);
+            border:1px solid var(--border); box-shadow:var(--shadow); display:flex; flex-direction:column;
+            overflow:hidden; transition:var(--transition);
+        }
+        .preview-box:hover { box-shadow:var(--shadow-lg); }
+        .canvas-toolbar {
+            display:flex; align-items:center; gap:6px; padding:6px 10px;
+            background:#fafaf8; border-bottom:1px solid var(--border); flex-wrap:wrap;
+        }
+        .canvas-toolbar .tbtn {
+            background:transparent; border:1px solid transparent; color:var(--text2);
+            padding:6px 12px; border-radius:20px; cursor:pointer; font-size:0.75rem;
+            font-weight:500; transition:var(--transition); white-space:nowrap;
+            font-family:var(--font);
+        }
+        .canvas-toolbar .tbtn:hover { background:#fff; border-color:var(--border); color:#000; }
+        .canvas-toolbar .tbtn.active { background:var(--accent-light); border-color:var(--accent); color:var(--accent-dark); }
+        .canvas-container {
+            flex:1; display:flex; align-items:center; justify-content:center; padding:20px;
+            background:#fcfcf9; min-height:380px; position:relative;
+        }
+        .canvas-container canvas {
+            max-width:100%; max-height:100%; border-radius:8px;
+            background-image: linear-gradient(45deg, #d0d0d0 25%, transparent 25%),
+                              linear-gradient(-45deg, #d0d0d0 25%, transparent 25%),
+                              linear-gradient(45deg, transparent 75%, #d0d0d0 75%),
+                              linear-gradient(-45deg, transparent 75%, #d0d0d0 75%);
+            background-size: 18px 18px;
+            background-position: 0 0, 0 9px, 9px -9px, -9px 0px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+        }
+        .placeholder-overlay {
+            position:absolute; inset:0; display:flex; flex-direction:column; align-items:center;
+            justify-content:center; pointer-events:none; color:var(--text2); gap:10px;
+            transition:opacity 0.3s; opacity:1; z-index:2;
+        }
+        .placeholder-overlay.hidden { opacity:0; }
+        .controls-panel {
+            flex:1; min-width:290px; max-width:380px; background:var(--surface); border-radius:var(--radius);
+            border:1px solid var(--border); box-shadow:var(--shadow); padding:20px 18px;
+            display:flex; flex-direction:column; gap:16px;
+        }
+        .section-label {
+            font-size:0.65rem; text-transform:uppercase; letter-spacing:1.2px;
+            color:var(--text2); font-weight:600; margin-bottom:-6px;
+        }
+        .upload-area {
+            border:2px dashed var(--border); border-radius:var(--radius-sm); padding:18px;
+            text-align:center; cursor:pointer; transition:var(--transition); background:#fafaf8;
+        }
+        .upload-area:hover, .upload-area.drag-over {
+            border-color:var(--accent); background:var(--accent-light);
+            box-shadow: 0 0 0 3px rgba(212,117,60,0.12);
+        }
+        .upload-area input { display:none; }
+        .file-name { margin-top:6px; font-weight:600; color:var(--accent-dark); font-size:0.8rem; word-break:break-all; }
+        .shape-grid { display:grid; grid-template-columns: repeat(4,1fr); gap:8px; }
+        .shape-chip {
+            aspect-ratio:1; border:2px solid var(--border); border-radius:10px; cursor:pointer;
+            display:flex; align-items:center; justify-content:center; transition:var(--transition);
+            background:#fafaf8; position:relative;
+        }
+        .shape-chip.active { border-color:var(--accent); box-shadow:0 0 0 3px rgba(212,117,60,0.2); background:var(--accent-light); }
+        .shape-chip canvas { width:65%; height:65%; }
+        .slider-row { display:flex; flex-direction:column; gap:4px; margin-bottom:4px; }
+        .slider-row label { display:flex; justify-content:space-between; font-weight:500; font-size:0.8rem; }
+        input[type="range"] { width:100%; accent-color:var(--accent); height:5px; }
+        .badge { background:var(--accent-light); color:var(--accent-dark); padding:2px 9px; border-radius:14px; font-weight:600; font-size:0.7rem; font-family:var(--font); }
+        .color-inline { display:flex; align-items:center; gap:6px; }
+        input[type="color"] { width:30px; height:30px; border-radius:50%; border:2px solid var(--border); cursor:pointer; padding:2px; background:#fff; }
+        .select-style { font-family:var(--font); border:1px solid var(--border); border-radius:6px; padding:4px 8px; background:#fff; font-size:0.8rem; color:var(--text); }
+        .btn {
+            font-family:var(--font); font-weight:600; font-size:0.85rem; padding:10px 18px; border-radius:28px;
+            border:none; cursor:pointer; display:inline-flex; align-items:center; justify-content:center;
+            gap:6px; transition:var(--transition); white-space:nowrap;
+        }
+        .btn-primary { background:var(--accent); color:#fff; box-shadow:0 6px 16px rgba(212,117,60,0.3); }
+        .btn-primary:hover { background:var(--accent-dark); transform:translateY(-1px); }
+        .btn-outline { background:transparent; color:var(--text); border:1.5px solid var(--border); }
+        .btn-outline:hover { border-color:var(--accent); background:var(--accent-light); }
+        .btn-sm { padding:6px 12px; font-size:0.73rem; border-radius:20px; }
+        .actions-row { display:flex; flex-wrap:wrap; gap:6px; }
+        .history-strip { display:flex; gap:6px; overflow-x:auto; padding:6px 0; scrollbar-width:thin; scrollbar-color:var(--border) transparent; min-height:44px; align-items:center; }
+        .history-strip::-webkit-scrollbar { height:3px; }
+        .history-strip::-webkit-scrollbar-thumb { background:var(--border); border-radius:6px; }
+        .history-thumb { flex-shrink:0; width:38px; height:38px; border-radius:6px; overflow:hidden; cursor:pointer; border:2px solid transparent; transition:var(--transition); background:#fafaf8; }
+        .history-thumb:hover { border-color:var(--accent); transform:scale(1.05); }
+        .history-thumb canvas { width:100%; height:100%; }
+        .gallery-strip { display:flex; gap:8px; overflow-x:auto; padding:8px 2px 12px; scrollbar-width:thin; scrollbar-color:var(--border) transparent; }
+        .gallery-strip::-webkit-scrollbar { height:4px; }
+        .gallery-strip::-webkit-scrollbar-thumb { background:var(--border); border-radius:6px; }
+        .gallery-item { flex-shrink:0; width:90px; height:90px; border-radius:10px; overflow:hidden; cursor:pointer; border:2px solid transparent; transition:var(--transition); background:#f0ede5; }
+        .gallery-item:hover { border-color:var(--accent); transform:translateY(-2px); box-shadow:var(--shadow); }
+        .gallery-item img { width:100%; height:100%; object-fit:cover; }
+        .faq-section { margin-top:40px; max-width:700px; margin-left:auto; margin-right:auto; }
+        .faq-section h2 { font-size:1.6rem; margin-bottom:16px; text-align:center; }
+        .faq-item { border-bottom:1px solid var(--border); padding:12px 0; cursor:pointer; }
+        .faq-question { font-weight:600; display:flex; justify-content:space-between; }
+        .faq-answer { max-height:0; overflow:hidden; transition:max-height 0.3s; color:var(--text2); font-size:0.85rem; }
+        .faq-item.open .faq-answer { max-height:150px; margin-top:8px; }
+        .faq-question::after { content:'+'; font-size:1.3rem; color:var(--accent); }
+        .faq-item.open .faq-question::after { transform:rotate(45deg); }
+        footer { text-align:center; margin-top:36px; color:var(--text2); font-size:0.8rem; }
+        @media (max-width:800px) { .main-grid { flex-direction:column; } .controls-panel { max-width:100%; } }
+    </style>
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1> Sticker Maker Pro</h1>
+        <p>Turn your photos into custom stickers with shapes, text, shadows & outlines. Export transparent PNGs or printable sheets – all private and free.</p>
+    </header>
+
+    <div class="main-grid">
+        <div class="preview-box">
+            <div class="canvas-toolbar">
+                <button class="tbtn active" data-mode="result" id="btnResult">🎨 Sticker</button>
+                <button class="tbtn" data-mode="original" id="btnOriginal">🖼️ Original</button>
+                <span style="flex:1;"></span>
+                <span style="font-size:0.7rem;color:var(--text2);" id="dimDisplay"></span>
+            </div>
+            <div class="canvas-container" id="canvasContainer">
+                <canvas id="outputCanvas"></canvas>
+                <canvas id="originalCanvas" style="display:none;"></canvas>
+                <div class="placeholder-overlay" id="placeholderBox">
+                    <span style="font-size:44px;">🖼️</span>
+                    <span>Upload an image or pick from gallery</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="controls-panel">
+            <div class="upload-area" id="uploadArea">
+                <span style="font-size:26px;">📤</span>
+                <strong>Click or Drop Image</strong>
+                <div style="font-size:0.75rem;color:var(--text2);">JPG, PNG, WebP · Transparent works best</div>
+                <div class="file-name" id="fileNameDisplay" style="display:none;"></div>
+                <input type="file" id="fileInput" accept="image/*">
+            </div>
+
+            <div>
+                <span class="section-label"> Shape</span>
+                <div class="shape-grid" id="shapeGrid"></div>
+            </div>
+
+            <div class="slider-row">
+                <label>Scale <span class="badge" id="scaleVal">100%</span></label>
+                <input type="range" id="scaleSlider" min="50" max="150" value="100" step="1">
+            </div>
+            <div class="slider-row">
+                <label>Rotation <span class="badge" id="rotateVal">0°</span></label>
+                <input type="range" id="rotateSlider" min="-180" max="180" value="0" step="1">
+            </div>
+
+            <div>
+                <span class="section-label"> Outline</span>
+                <div class="slider-row"><label>Thickness <span class="badge" id="borderThickVal">12px</span></label><input type="range" id="borderThick" min="2" max="30" value="12" step="0.5"></div>
+                <div class="color-inline" style="justify-content:space-between;">
+                    <span>Color</span>
+                    <input type="color" id="borderColor" value="#ffffff">
+                </div>
+                <div style="display:flex; align-items:center; justify-content:space-between; margin-top:4px;">
+                    <span>Style</span>
+                    <select class="select-style" id="borderStyleSelect">
+                        <option value="solid">Solid</option>
+                        <option value="dashed">Dashed</option>
+                        <option value="double">Double</option>
+                    </select>
+                </div>
+            </div>
+
+            <div>
+                <span class="section-label"> Shadow</span>
+                <div class="slider-row"><label>Blur <span class="badge" id="shadowBlurVal">8px</span></label><input type="range" id="shadowBlur" min="0" max="20" value="8" step="1"></div>
+                <div class="slider-row"><label>Offset X <span class="badge" id="shadowXVal">2px</span></label><input type="range" id="shadowX" min="-10" max="10" value="2" step="1"></div>
+                <div class="slider-row"><label>Offset Y <span class="badge" id="shadowYVal">2px</span></label><input type="range" id="shadowY" min="-10" max="10" value="2" step="1"></div>
+                <div class="color-inline" style="justify-content:space-between;"><span>Color</span><input type="color" id="shadowColor" value="#000000"></div>
+            </div>
+
+            <details style="font-size:0.8rem;">
+                <summary style="cursor:pointer; font-weight:500;"> Add Text</summary>
+                <div style="display:flex; flex-direction:column; gap:6px; margin-top:6px;">
+                    <input type="text" id="textInput" placeholder="Your text" style="padding:6px;border:1px solid var(--border);border-radius:6px;font-family:var(--font);">
+                    <div class="slider-row"><label>Font Size <span class="badge" id="fontSizeVal">32</span></label><input type="range" id="fontSize" min="12" max="80" value="32" step="1"></div>
+                    <div class="color-inline"><span>Color</span><input type="color" id="textColor" value="#ffffff"></div>
+                    <label><input type="checkbox" id="textStrokeCheck"> Outline text</label>
+                </div>
+            </details>
+
+            <details style="font-size:0.8rem;">
+                <summary style="cursor:pointer; font-weight:500;"> Background Removal</summary>
+                <div style="display:flex; flex-direction:column; gap:6px; margin-top:6px;">
+                    <label><input type="checkbox" id="removeBgCheck"> Remove background</label>
+                    <div class="color-inline"><span>Color to remove</span><input type="color" id="bgColorPicker" value="#ffffff"></div>
+                    <div class="slider-row"><label>Tolerance <span class="badge" id="toleranceVal">30</span></label><input type="range" id="toleranceSlider" min="5" max="100" value="30" step="1"></div>
+                </div>
+            </details>
+
+            <div class="actions-row">
+                <button class="btn btn-primary" id="downloadPngBtn">⬇ PNG</button>
+                <button class="btn btn-outline btn-sm" id="downloadSheetBtn"> A4 Sheet</button>
+                <button class="btn btn-outline btn-sm" id="downloadStripBtn"> Strip</button>
+                <button class="btn btn-outline btn-sm" id="copyBtn"> Copy</button>
+                <button class="btn btn-outline btn-sm" id="resetBtn">↺ Reset</button>
+            </div>
+
+            <div>
+                <span class="section-label"> History</span>
+                <div class="history-strip" id="historyStrip"><span style="font-size:0.7rem;color:var(--text2);">Generate to see history</span></div>
+            </div>
+            <p style="font-size:0.65rem;color:var(--text2);text-align:center;"> Everything processed in your browser.</p>
+        </div>
+    </div>
+
+    <section style="margin-top:28px;">
+        <h2 style="text-align:center; margin-bottom:12px;"> Sample Gallery – Click to Try</h2>
+        <div class="gallery-strip" id="galleryStrip"></div>
+    </section>
+    <!-- ========================= -->
+<!-- SEO CONTENT SECTION -->
+<!-- À placer avant la FAQ -->
+<!-- ========================= -->
+
+<section class="seo-content">
+
+    <div class="seo-inner">
+
+        <h2>How to Create Custom Stickers Online from Photos</h2>
+
+        <p>
+            Custom sticker generators have become increasingly popular because they allow creators to transform ordinary photos into printable stickers, social media assets and aesthetic digital designs within seconds. Whether you want to create pet stickers, transparent PNG stickers, kawaii illustrations or printable sticker sheets, browser-based tools make the process simple without requiring advanced editing software.
+        </p>
+
+        <p>
+            Sticker Maker Pro was designed to help creators quickly generate high-quality stickers with custom shapes, outlines, shadows and text overlays directly inside the browser. Unlike many online editors, all processing happens locally on your device, which keeps your images private while providing a faster editing experience.
+        </p>
+
+        <h3>Turn photos into transparent PNG stickers</h3>
+
+        <p>
+            Transparent PNG stickers are widely used across Discord, WhatsApp, Telegram, TikTok and Etsy because they can easily be shared, printed or added to digital content. By removing the background and adding a clean outline, photos instantly become more expressive and visually engaging.
+        </p>
+
+        <p>
+            Pet portraits, profile pictures and cartoon-style edits are among the most popular sticker categories online because they work perfectly for social posts, phone wallpapers and custom merchandise.
+        </p>
+
+        <h3>Create printable sticker sheets</h3>
+
+        <p>
+            Printable sticker sheets are especially useful for creators who sell handmade products or digital downloads. Instead of exporting a single image, sticker sheet layouts organize multiple stickers automatically for easier printing and cutting.
+        </p>
+
+        <p>
+            Many Etsy sellers use printable PNG sticker sheets for:
+        </p>
+
+        <ul class="seo-list">
+            <li>Planner stickers</li>
+            <li>Pet sticker packs</li>
+            <li>Kawaii illustrations</li>
+            <li>Scrapbooking kits</li>
+            <li>Custom logo stickers</li>
+            <li>Printable journaling assets</li>
+            <li>Phone and laptop decals</li>
+        </ul>
+
+        <h3>Best sticker styles for social media</h3>
+
+        <p>
+            Stickers with bold outlines, soft shadows and playful shapes tend to perform particularly well on TikTok, Pinterest and Instagram because they stand out visually inside crowded feeds. Rounded shapes like circles, hearts and clouds are especially popular for cute or aesthetic designs.
+        </p>
+
+        <p>
+            Adding text overlays also allows creators to personalize stickers for birthdays, branding, memes, Twitch emotes and Discord communities.
+        </p>
+
+        <h3>100% browser-based private processing</h3>
+
+        <p>
+            Sticker Maker Pro runs entirely in the browser using HTML5 Canvas and JavaScript. Your photos are never uploaded to external servers, which makes the experience more private, secure and responsive.
+        </p>
+
+        <p>
+            This local processing approach is ideal for creators who want fast editing tools without sacrificing image privacy or waiting for cloud rendering.
+        </p>
+
+    </div>
+
+</section>
+
+<style>
+.seo-content{
+    margin-top:60px;
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+    padding:55px 42px;
+    position:relative;
+    overflow:hidden;
+}
+
+.seo-content::before{
+    content:'';
+    position:absolute;
+    inset:0;
+    background:
+        radial-gradient(circle at top right, rgba(212,117,60,0.07), transparent 35%),
+        radial-gradient(circle at bottom left, rgba(180,160,140,0.05), transparent 40%);
+    pointer-events:none;
+}
+
+.seo-inner{
+    position:relative;
+    z-index:2;
+    max-width:920px;
+    margin:0 auto;
+}
+
+.seo-content h2{
+    font-family:var(--font-heading);
+    font-size:2.2rem;
+    line-height:1.2;
+    margin-bottom:24px;
+    color:var(--accent-dark);
+    letter-spacing:-0.4px;
+}
+
+.seo-content h3{
+    font-family:var(--font-heading);
+    font-size:1.4rem;
+    margin-top:40px;
+    margin-bottom:16px;
+    color:var(--accent);
+}
+
+.seo-content p{
+    color:var(--text2);
+    line-height:1.9;
+    font-size:1rem;
+    margin-bottom:22px;
+}
+
+.seo-list{
+    padding-left:24px;
+    margin-bottom:24px;
+}
+
+.seo-list li{
+    color:var(--text2);
+    margin-bottom:10px;
+    line-height:1.8;
+}
+
+@media(max-width:768px){
+
+    .seo-content{
+        padding:38px 24px;
+    }
+
+    .seo-content h2{
+        font-size:1.75rem;
+    }
+
+    .seo-content h3{
+        font-size:1.2rem;
+    }
+
+    .seo-content p,
+    .seo-list li{
+        font-size:0.95rem;
+    }
+
+}
+</style>
+<p>
+Learn how to use this tool in our 
+<a href="/en-blog/best-etsy-meckup-tools/">complete sticker guide</a>.
+</p>
+    <section class="faq-section">
+        <h2>FAQ</h2>
+        <div class="faq-item"><div class="faq-question">How do I make a sticker?</div><div class="faq-answer">Upload a photo, pick a shape, adjust the outline and shadow. You can also scale/rotate the image inside the shape, add text, and remove the background. Download as a PNG with transparency.</div></div>
+        <div class="faq-item"><div class="faq-question">Can I add my pet's name?</div><div class="faq-answer">Yes! Use the "Add Text" section to type any text, choose size, color, and optional outline. It will appear inside the sticker shape.</div></div>
+        <div class="faq-item"><div class="faq-question">What export options are there?</div><div class="faq-answer">You can download a single sticker PNG, a printable A4 sheet (3x4 grid), or a horizontal strip of stickers. You can also copy the sticker to the clipboard.</div></div>
+        <div class="faq-item"><div class="faq-question">Is my image uploaded anywhere?</div><div class="faq-answer">No. All processing happens locally in your browser. No data is ever sent to a server.</div></div>
+    </section>
+    <footer>© 2025 Sticker Maker Pro · Crafted for creators | <a href="/seamless-generator/">seamless generator</a> | <a href="/portrait-animal/">stained-glass-generator</a>  </footer>
+</div>
+
+<script>
+(function() {
+    const outputCanvas = document.getElementById('outputCanvas');
+    const ctx = outputCanvas.getContext('2d');
+    const originalCanvas = document.getElementById('originalCanvas');
+    const origCtx = originalCanvas.getContext('2d');
+    const canvasContainer = document.getElementById('canvasContainer');
+    const placeholderBox = document.getElementById('placeholderBox');
+    const dimDisplay = document.getElementById('dimDisplay');
+    const uploadArea = document.getElementById('uploadArea');
+    const fileInput = document.getElementById('fileInput');
+    const fileNameDisplay = document.getElementById('fileNameDisplay');
+    const shapeGrid = document.getElementById('shapeGrid');
+    const scaleSlider = document.getElementById('scaleSlider');
+    const scaleVal = document.getElementById('scaleVal');
+    const rotateSlider = document.getElementById('rotateSlider');
+    const rotateVal = document.getElementById('rotateVal');
+    const borderThick = document.getElementById('borderThick');
+    const borderThickVal = document.getElementById('borderThickVal');
+    const borderColor = document.getElementById('borderColor');
+    const borderStyleSelect = document.getElementById('borderStyleSelect');
+    const shadowBlur = document.getElementById('shadowBlur');
+    const shadowBlurVal = document.getElementById('shadowBlurVal');
+    const shadowX = document.getElementById('shadowX');
+    const shadowXVal = document.getElementById('shadowXVal');
+    const shadowY = document.getElementById('shadowY');
+    const shadowYVal = document.getElementById('shadowYVal');
+    const shadowColor = document.getElementById('shadowColor');
+    const textInput = document.getElementById('textInput');
+    const fontSize = document.getElementById('fontSize');
+    const fontSizeVal = document.getElementById('fontSizeVal');
+    const textColor = document.getElementById('textColor');
+    const textStrokeCheck = document.getElementById('textStrokeCheck');
+    const removeBgCheck = document.getElementById('removeBgCheck');
+    const bgColorPicker = document.getElementById('bgColorPicker');
+    const toleranceSlider = document.getElementById('toleranceSlider');
+    const toleranceVal = document.getElementById('toleranceVal');
+    const historyStrip = document.getElementById('historyStrip');
+    const galleryStrip = document.getElementById('galleryStrip');
+    const btnResult = document.getElementById('btnResult');
+    const btnOriginal = document.getElementById('btnOriginal');
+
+    let originalImage = null, processedImage = null;
+    let currentShape = 'heart';
+    let viewMode = 'result';
+    const history = [];
+    const MAX_HISTORY = 6;
+
+    const shapes = ['heart','star','bone','paw','circle','diamond','cloud','hexagon','shield','crescent','flower','arrow'];
+
+    const galleryImages = [
+        { url:'https://picsum.photos/seed/pet1/400/400', label:'Cute Dog' },
+        { url:'https://picsum.photos/seed/pet2/400/400', label:'Cat Face' },
+        { url:'https://picsum.photos/seed/floral/400/400', label:'Flower' },
+        { url:'https://picsum.photos/seed/car1/400/400', label:'Vintage Car' },
+        { url:'https://picsum.photos/seed/portrait1/400/400', label:'Portrait' },
+        { url:'https://picsum.photos/seed/abstract1/400/400', label:'Abstract' },
+    ];
+
+    function getShapePath(shape, w, h, margin = 0) {
+        const path = new Path2D();
+        const m = margin, W = w-2*m, H = h-2*m;
+        const x=m, y=m;
+        switch(shape) {
+            case 'heart':
+                const cx = x+W/2, cy = y+H*0.35;
+                path.moveTo(cx, y+H*0.85);
+                path.bezierCurveTo(cx-W*0.55, y+H*0.5, cx-W*0.5, y-H*0.1, cx, y+H*0.25);
+                path.bezierCurveTo(cx+W*0.5, y-H*0.1, cx+W*0.55, y+H*0.5, cx, y+H*0.85);
+                break;
+            case 'star':
+                const sr = Math.min(W,H)/2, ir = sr*0.45;
+                const scx = x+W/2, scy = y+H/2;
+                for(let i=0;i<5;i++) {
+                    const a = Math.PI/2 + i*Math.PI*2/5;
+                    const ox = scx+sr*Math.cos(a), oy = scy-sr*Math.sin(a);
+                    if(i===0) path.moveTo(ox,oy); else path.lineTo(ox,oy);
+                    const ia = a+Math.PI/5;
+                    path.lineTo(scx+ir*Math.cos(ia), scy-ir*Math.sin(ia));
+                }
+                path.closePath();
+                break;
+            case 'bone':
+                const bw=W*0.8, bh=H*0.5, bx=x+(W-bw)/2, by=y+(H-bh)/2, r=bh*0.45;
+                path.moveTo(bx+r,by); path.lineTo(bx+bw-r,by); path.arcTo(bx+bw,by,bx+bw,by+r,r);
+                path.lineTo(bx+bw,by+bh-r); path.arcTo(bx+bw,by+bh,bx+bw-r,by+bh,r);
+                path.lineTo(bx+r,by+bh); path.arcTo(bx,by+bh,bx,by+bh-r,r);
+                path.lineTo(bx,by+r); path.arcTo(bx,by,bx+r,by,r); path.closePath();
+                break;
+            case 'paw':
+                const pcx = x+W/2, pcy = y+H*0.55, pr = Math.min(W,H)*0.28;
+                path.arc(pcx,pcy,pr,0,Math.PI*2);
+                [[-0.9,-1.2],[0.9,-1.2],[-0.5,-1.6],[0.5,-1.6]].forEach(([dx,dy])=>path.arc(pcx+dx*pr, pcy+dy*pr, pr*0.5,0,Math.PI*2));
+                break;
+            case 'circle': path.arc(x+W/2,y+H/2,Math.min(W,H)/2,0,Math.PI*2); break;
+            case 'diamond': path.moveTo(x+W/2,y); path.lineTo(x+W,y+H/2); path.lineTo(x+W/2,y+H); path.lineTo(x,y+H/2); path.closePath(); break;
+            case 'cloud':
+                const ccx=x+W/2, ccy=y+H*0.55;
+                path.arc(ccx-W*0.2, ccy-H*0.1, W*0.22,0,Math.PI*2);
+                path.arc(ccx+W*0.2, ccy-H*0.1, W*0.25,0,Math.PI*2);
+                path.arc(ccx-W*0.15, ccy+H*0.2, W*0.23,0,Math.PI*2);
+                path.arc(ccx+W*0.15, ccy+H*0.2, W*0.24,0,Math.PI*2);
+                path.arc(ccx, ccy, W*0.3,0,Math.PI*2);
+                break;
+            case 'hexagon':
+                const hcx=x+W/2, hcy=y+H/2, hR=Math.min(W,H)/2;
+                for(let i=0;i<6;i++) { const a=Math.PI/6+i*Math.PI/3; const hx=hcx+hR*Math.cos(a), hy=hcy+hR*Math.sin(a); if(i===0) path.moveTo(hx,hy); else path.lineTo(hx,hy); }
+                path.closePath();
+                break;
+            case 'shield':
+                path.moveTo(x+W*0.2, y); path.lineTo(x+W*0.8, y); path.lineTo(x+W, y+H*0.3); path.lineTo(x+W/2, y+H); path.lineTo(x, y+H*0.3); path.closePath();
+                break;
+            case 'crescent':
+                path.arc(x+W*0.5, y+H*0.5, Math.min(W,H)*0.4, 0.2, Math.PI*2-0.2);
+                path.arc(x+W*0.3, y+H*0.45, Math.min(W,H)*0.35, 0.6, Math.PI-0.6, true);
+                break;
+            case 'flower':
+                const fx=x+W/2, fy=y+H/2, fr=Math.min(W,H)*0.35, petals=5;
+                for(let i=0;i<petals;i++) {
+                    const a = i*Math.PI*2/petals;
+                    const px = fx+fr*Math.cos(a), py = fy+fr*Math.sin(a);
+                    if(i===0) path.moveTo(px,py); else path.lineTo(px,py);
+                    path.arc(fx,fy,fr*0.4, a-Math.PI/petals, a+Math.PI/petals);
+                }
+                path.closePath();
+                break;
+            case 'arrow':
+                path.moveTo(x+W*0.2, y+H*0.2); path.lineTo(x+W*0.7, y+H*0.2); path.lineTo(x+W*0.7, y); path.lineTo(x+W, y+H*0.5); path.lineTo(x+W*0.7, y+H); path.lineTo(x+W*0.7, y+H*0.8); path.lineTo(x+W*0.2, y+H*0.8); path.closePath();
+                break;
+            default: path.rect(x,y,W,H);
+        }
+        return path;
+    }
+
+    function buildShapeGrid() {
+        shapeGrid.innerHTML = '';
+        shapes.forEach(shape => {
+            const div = document.createElement('div');
+            div.className = 'shape-chip' + (shape===currentShape?' active':'');
+            div.dataset.shape = shape;
+            const ic = document.createElement('canvas'); ic.width=36; ic.height=36;
+            const ictx = ic.getContext('2d');
+            const p = getShapePath(shape,36,36,4); ictx.fillStyle='#b8a99a'; ictx.fill(p);
+            div.appendChild(ic);
+            div.addEventListener('click',()=>{
+                document.querySelectorAll('.shape-chip').forEach(d=>d.classList.remove('active'));
+                div.classList.add('active');
+                currentShape = shape;
+                if(processedImage) generateSticker();
+            });
+            shapeGrid.appendChild(div);
+        });
+    }
+    buildShapeGrid();
+
+    // Gallery
+    function buildGallery() {
+        galleryStrip.innerHTML = '';
+        galleryImages.forEach(imgData => {
+            const div = document.createElement('div'); div.className='gallery-item';
+            div.innerHTML = `<img src="${imgData.url}" alt="${imgData.label}" loading="lazy" crossorigin="anonymous">`;
+            div.addEventListener('click', ()=> loadGalleryImage(imgData));
+            galleryStrip.appendChild(div);
+        });
+    }
+    function loadGalleryImage(imgData) {
+        const img = new Image(); img.crossOrigin='anonymous';
+        img.onload = ()=>{
+            originalImage = img; fileNameDisplay.textContent = imgData.label+' (sample)';
+            fileNameDisplay.style.display='block'; placeholderBox.classList.add('hidden');
+            processImageAndGenerate(); drawOriginalToCanvas();
+        };
+        img.src = imgData.url;
+    }
+    buildGallery();
+
+    // Upload
+    uploadArea.addEventListener('click',()=>fileInput.click());
+    fileInput.addEventListener('change',e=>{ if(e.target.files[0]) handleUpload(e.target.files[0]); });
+    uploadArea.addEventListener('dragover',e=>{e.preventDefault(); uploadArea.classList.add('drag-over');});
+    uploadArea.addEventListener('dragleave',()=>uploadArea.classList.remove('drag-over'));
+    uploadArea.addEventListener('drop',e=>{ e.preventDefault(); uploadArea.classList.remove('drag-over'); if(e.dataTransfer.files[0]) handleUpload(e.dataTransfer.files[0]); });
+
+    function handleUpload(file) {
+        if(!file.type.startsWith('image/')) return;
+        const reader = new FileReader();
+        reader.onload = ev => {
+            const img = new Image();
+            img.onload = ()=>{ originalImage=img; fileNameDisplay.textContent=file.name; fileNameDisplay.style.display='block'; placeholderBox.classList.add('hidden'); processImageAndGenerate(); drawOriginalToCanvas(); };
+            img.src = ev.target.result;
+        };
+        reader.readAsDataURL(file);
+    }
+
+    function drawOriginalToCanvas() {
+        if(!originalImage) return;
+        const w = originalImage.naturalWidth, h = originalImage.naturalHeight;
+        originalCanvas.width = w; originalCanvas.height = h;
+        origCtx.clearRect(0,0,w,h); origCtx.drawImage(originalImage,0,0);
+    }
+
+    function removeBackground(sourceCanvas, targetColor, tolerance) {
+        const w=sourceCanvas.width, h=sourceCanvas.height;
+        const imgData = sourceCanvas.getContext('2d').getImageData(0,0,w,h);
+        const data = imgData.data;
+        const tc = hexToRgb(targetColor);
+        for(let i=0;i<data.length;i+=4) {
+            const r=data[i],g=data[i+1],b=data[i+2];
+            const dist = Math.sqrt((r-tc.r)**2+(g-tc.g)**2+(b-tc.b)**2);
+            if(dist <= tolerance) data[i+3]=0;
+        }
+        const newCanvas = document.createElement('canvas'); newCanvas.width=w; newCanvas.height=h;
+        newCanvas.getContext('2d').putImageData(imgData,0,0);
+        return newCanvas;
+    }
+    function hexToRgb(hex){ const c=hex.substring(1); const big=parseInt(c,16); return {r:(big>>16)&255,g:(big>>8)&255,b:big&255}; }
+
+    function processImageAndGenerate() {
+        if(!originalImage) return;
+        let source = originalImage;
+        if(removeBgCheck.checked) {
+            const temp = document.createElement('canvas'); temp.width=originalImage.naturalWidth; temp.height=originalImage.naturalHeight;
+            temp.getContext('2d').drawImage(originalImage,0,0);
+            source = removeBackground(temp, bgColorPicker.value, parseInt(toleranceSlider.value));
+        }
+        processedImage = source;
+        generateSticker();
+    }
+
+    function generateSticker() {
+        if(!processedImage) return;
+        const img = processedImage;
+        const imgW = img.naturalWidth || img.width, imgH = img.naturalHeight || img.height;
+        const border = parseFloat(borderThick.value);
+        const blur = parseInt(shadowBlur.value);
+        const sx = parseInt(shadowX.value), sy = parseInt(shadowY.value);
+        const margin = Math.max(border, blur+Math.abs(sx), blur+Math.abs(sy)) + 14;
+        const stickerW = imgW + margin*2, stickerH = imgH + margin*2;
+
+        outputCanvas.width = stickerW; outputCanvas.height = stickerH;
+        ctx.clearRect(0,0,stickerW,stickerH);
+        const shapePath = getShapePath(currentShape, stickerW, stickerH, margin - border/2);
+
+        // Shadow
+        if(blur>0) {
+            ctx.save(); ctx.shadowColor = shadowColor.value; ctx.shadowBlur = blur;
+            ctx.shadowOffsetX = sx; ctx.shadowOffsetY = sy;
+            ctx.fillStyle = '#000'; ctx.fill(shapePath);
+            ctx.restore();
+            ctx.save(); ctx.globalCompositeOperation = 'destination-out'; ctx.fillStyle = '#000'; ctx.fill(shapePath); ctx.restore();
+        }
+
+        // Clip and draw image
+        ctx.save(); ctx.clip(shapePath);
+        const scale = parseInt(scaleSlider.value)/100;
+        const angle = parseInt(rotateSlider.value) * Math.PI/180;
+        const srcW = imgW * scale, srcH = imgH * scale;
+        const dx = margin + (imgW - srcW)/2, dy = margin + (imgH - srcH)/2;
+        ctx.translate(stickerW/2, stickerH/2); ctx.rotate(angle); ctx.translate(-stickerW/2, -stickerH/2);
+        ctx.drawImage(img, dx, dy, srcW, srcH);
+        ctx.restore();
+
+        // Border
+        ctx.save();
+        ctx.strokeStyle = borderColor.value;
+        ctx.lineWidth = border;
+        ctx.lineJoin = 'round';
+        const style = borderStyleSelect.value;
+        if(style === 'dashed') ctx.setLineDash([border*2, border*1.5]);
+        else if(style === 'double') { ctx.stroke(shapePath); ctx.lineWidth = border*0.4; ctx.setLineDash([]); }
+        else ctx.setLineDash([]);
+        ctx.stroke(shapePath);
+        ctx.restore();
+
+        // Text
+        const text = textInput.value.trim();
+        if(text) {
+            const size = parseInt(fontSize.value);
+            ctx.save(); ctx.clip(shapePath);
+            ctx.font = `bold ${size}px "Inter", sans-serif`;
+            ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+            const tx = stickerW/2, ty = stickerH - margin*0.6;
+            if(textStrokeCheck.checked) { ctx.strokeStyle = '#000'; ctx.lineWidth = size*0.15; ctx.strokeText(text, tx, ty); }
+            ctx.fillStyle = textColor.value; ctx.fillText(text, tx, ty);
+            ctx.restore();
+        }
+
+        updatePreviewSize();
+        addToHistory();
+        dimDisplay.textContent = `${stickerW}×${stickerH}px`;
+    }
+
+    function updatePreviewSize() {
+        const maxW = canvasContainer.clientWidth-32, maxH = canvasContainer.clientHeight-32;
+        const scale = Math.min(1, maxW/outputCanvas.width, maxH/outputCanvas.height);
+        outputCanvas.style.width = outputCanvas.width*scale+'px';
+        outputCanvas.style.height = outputCanvas.height*scale+'px';
+    }
+
+    function addToHistory() {
+        const thumb = document.createElement('canvas'); thumb.width=outputCanvas.width; thumb.height=outputCanvas.height;
+        thumb.getContext('2d').drawImage(outputCanvas,0,0);
+        history.unshift({ canvas:thumb, shape:currentShape });
+        if(history.length>MAX_HISTORY) history.pop();
+        renderHistory();
+    }
+    function renderHistory() {
+        historyStrip.innerHTML = '';
+        if(history.length===0) { historyStrip.innerHTML='<span style="font-size:0.7rem;color:var(--text2);">Generate to see history</span>'; return; }
+        history.forEach((entry,i)=>{
+            const div = document.createElement('div'); div.className='history-thumb';
+            const mini = document.createElement('canvas'); mini.width=38; mini.height=38;
+            mini.getContext('2d').drawImage(entry.canvas,0,0,38,38);
+            div.appendChild(mini);
+            div.addEventListener('click',()=>{
+                currentShape = entry.shape;
+                document.querySelectorAll('.shape-chip').forEach(d=>d.classList.toggle('active', d.dataset.shape===currentShape));
+                if(processedImage) generateSticker();
+            });
+            historyStrip.appendChild(div);
+        });
+    }
+
+    // View modes
+    function setViewMode(mode) {
+        viewMode = mode;
+        btnResult.classList.toggle('active', mode==='result');
+        btnOriginal.classList.toggle('active', mode==='original');
+        if(mode==='result') { outputCanvas.style.display=''; originalCanvas.style.display='none'; }
+        else { outputCanvas.style.display='none'; originalCanvas.style.display=''; updateOriginalCanvasSize(); }
+    }
+    btnResult.addEventListener('click',()=>setViewMode('result'));
+    btnOriginal.addEventListener('click',()=>setViewMode('original'));
+
+    function updateOriginalCanvasSize() {
+        if(!originalImage) return;
+        const maxW = canvasContainer.clientWidth-32, maxH = canvasContainer.clientHeight-32;
+        const scale = Math.min(1, maxW/originalCanvas.width, maxH/originalCanvas.height);
+        originalCanvas.style.width = originalCanvas.width*scale+'px';
+        originalCanvas.style.height = originalCanvas.height*scale+'px';
+    }
+
+    // Sliders
+    scaleSlider.addEventListener('input',()=>{ scaleVal.textContent=scaleSlider.value+'%'; if(processedImage) generateSticker(); });
+    rotateSlider.addEventListener('input',()=>{ rotateVal.textContent=rotateSlider.value+'°'; if(processedImage) generateSticker(); });
+    borderThick.addEventListener('input',()=>{ borderThickVal.textContent=borderThick.value+'px'; if(processedImage) generateSticker(); });
+    borderColor.addEventListener('input',()=>{ if(processedImage) generateSticker(); });
+    borderStyleSelect.addEventListener('change',()=>{ if(processedImage) generateSticker(); });
+    shadowBlur.addEventListener('input',()=>{ shadowBlurVal.textContent=shadowBlur.value+'px'; if(processedImage) generateSticker(); });
+    shadowX.addEventListener('input',()=>{ shadowXVal.textContent=shadowX.value+'px'; if(processedImage) generateSticker(); });
+    shadowY.addEventListener('input',()=>{ shadowYVal.textContent=shadowY.value+'px'; if(processedImage) generateSticker(); });
+    shadowColor.addEventListener('input',()=>{ if(processedImage) generateSticker(); });
+    textInput.addEventListener('input',()=>{ if(processedImage) generateSticker(); });
+    fontSize.addEventListener('input',()=>{ fontSizeVal.textContent=fontSize.value; if(processedImage) generateSticker(); });
+    textColor.addEventListener('input',()=>{ if(processedImage) generateSticker(); });
+    textStrokeCheck.addEventListener('change',()=>{ if(processedImage) generateSticker(); });
+    removeBgCheck.addEventListener('change',()=>{ if(originalImage) processImageAndGenerate(); });
+    bgColorPicker.addEventListener('input',()=>{ if(removeBgCheck.checked && originalImage) processImageAndGenerate(); });
+    toleranceSlider.addEventListener('input',()=>{ toleranceVal.textContent=toleranceSlider.value; if(removeBgCheck.checked && originalImage) processImageAndGenerate(); });
+
+    // Downloads & Copy
+    document.getElementById('downloadPngBtn').addEventListener('click',()=>{
+        if(!processedImage) return alert('Load an image first.');
+        const url = outputCanvas.toDataURL('image/png');
+        const a = document.createElement('a'); a.href=url; a.download=`sticker-${currentShape}.png`; a.click();
+    });
+    document.getElementById('downloadSheetBtn').addEventListener('click',()=>{
+        if(!processedImage) return;
+        const sheet = document.createElement('canvas'); sheet.width=2480; sheet.height=3508;
+        const sctx = sheet.getContext('2d'); sctx.fillStyle='#fff'; sctx.fillRect(0,0,2480,3508);
+        const cols=3, rows=4, spacing=40;
+        const cellW = (2480-spacing*(cols+1))/cols, cellH = (3508-spacing*(rows+1))/rows;
+        const scale = Math.min(cellW/outputCanvas.width, cellH/outputCanvas.height);
+        const sw = outputCanvas.width*scale, sh = outputCanvas.height*scale;
+        for(let r=0;r<rows;r++) for(let c=0;c<cols;c++) {
+            const x = spacing + c*(cellW+spacing) + (cellW-sw)/2;
+            const y = spacing + r*(cellH+spacing) + (cellH-sh)/2;
+            sctx.drawImage(outputCanvas, x, y, sw, sh);
+        }
+        const url = sheet.toDataURL('image/png');
+        const a = document.createElement('a'); a.href=url; a.download=`sheet-${currentShape}.png`; a.click();
+    });
+    document.getElementById('downloadStripBtn').addEventListener('click',()=>{
+        if(!processedImage) return;
+        const num = 5, gap=10, stripW = outputCanvas.width*num + gap*(num+1), stripH = outputCanvas.height+gap*2;
+        const strip = document.createElement('canvas'); strip.width=stripW; strip.height=stripH;
+        const sctx = strip.getContext('2d'); sctx.fillStyle='#fff'; sctx.fillRect(0,0,stripW,stripH);
+        for(let i=0;i<num;i++) sctx.drawImage(outputCanvas, gap + i*(outputCanvas.width+gap), gap);
+        const url = strip.toDataURL('image/png');
+        const a = document.createElement('a'); a.href=url; a.download=`strip-${currentShape}.png`; a.click();
+    });
+    document.getElementById('copyBtn').addEventListener('click',async ()=>{
+        if(!processedImage) return;
+        try {
+            const blob = await new Promise(resolve => outputCanvas.toBlob(resolve,'image/png'));
+            await navigator.clipboard.write([new ClipboardItem({'image/png':blob})]);
+            alert('Sticker copied to clipboard!');
+        } catch(e) { alert('Copy failed. Try downloading instead.'); }
+    });
+
+    // Reset
+    document.getElementById('resetBtn').addEventListener('click',()=>{
+        originalImage=null; processedImage=null; outputCanvas.width=400; outputCanvas.height=300;
+        ctx.clearRect(0,0,400,300); originalCanvas.width=400; originalCanvas.height=300;
+        outputCanvas.style.width=''; outputCanvas.style.height=''; placeholderBox.classList.remove('hidden');
+        fileNameDisplay.style.display='none'; fileInput.value='';
+        currentShape='heart'; document.querySelectorAll('.shape-chip').forEach(d=>d.classList.toggle('active', d.dataset.shape==='heart'));
+        scaleSlider.value=100; scaleVal.textContent='100%';
+        rotateSlider.value=0; rotateVal.textContent='0°';
+        borderThick.value=12; borderThickVal.textContent='12px'; borderColor.value='#ffffff'; borderStyleSelect.value='solid';
+        shadowBlur.value=8; shadowBlurVal.textContent='8px'; shadowX.value=2; shadowXVal.textContent='2px'; shadowY.value=2; shadowYVal.textContent='2px'; shadowColor.value='#000000';
+        textInput.value=''; fontSize.value=32; fontSizeVal.textContent='32'; textColor.value='#ffffff'; textStrokeCheck.checked=false;
+        removeBgCheck.checked=false; toleranceSlider.value=30; toleranceVal.textContent='30';
+        history.length=0; renderHistory();
+        setViewMode('result');
+    });
+
+    // FAQ
+    document.querySelectorAll('.faq-item').forEach(i=>i.addEventListener('click',()=>i.classList.toggle('open')));
+
+    // Init
+    outputCanvas.width=400; outputCanvas.height=300;
+    setViewMode('result');
+    // Auto-load first gallery
+    setTimeout(()=>{ if(!originalImage) loadGalleryImage(galleryImages[0]); },300);
+})();
+</script>
+</body>
+</html>

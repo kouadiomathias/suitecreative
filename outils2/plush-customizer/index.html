@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plush Toy Customizer · Turn Your Photo into a Stuffed Animal</title>
+  <meta name="description" content="Create a unique plush toy from your photo. Woolly texture, visible stitches, shiny eyes. Download your custom stuffed animal as PNG. Free & private.">
+  <meta name="keywords" content="custom plush, stuffed animal generator, photo to plush, plush toy maker, wool texture, stitch effect, plush eyes, free online tool">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://suitecreative.fintoolsbox.com/plush-customizer/">
+
+  <link rel="alternate" hreflang="en" href="https://suitecreative.fintoolsbox.com/plush-customizer">
+  <link rel="alternate" hreflang="fr" href="https://suitecreative.fintoolsbox.com/fr/peluche">
+  <link rel="alternate" hreflang="x-default" href="https://suitecreative.fintoolsbox.com/plush-customizer">
+
+  <meta property="og:title" content="Plush Toy Customizer · Turn Your Photo into a Stuffed Animal">
+  <meta property="og:description" content="Get your own cuddly toy from a photo. Woolly texture, stitches, and shiny plush eyes. Download for free, fully private.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://suitecreative.fintoolsbox.com/plush-customizer.webp">
+  <meta property="og:url" content="https://suitecreative.fintoolsbox.com/plush-customizer">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Plush Toy Customizer">
+  <meta name="twitter:description" content="Turn any photo into a stuffed animal with stitches, wool texture, and cute eyes.">
+  <meta name="theme-color" content="#f9f4ea">
+  <meta name="twitter:image" content="https://suitecreative.fintoolsbox.com/plush-customizer.webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..700&family=Playfair+Display:ital,wght@0,500;0,700;1,500&display=swap" rel="stylesheet">
+ <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Plush Toy Customizer",
+  "applicationCategory": "DesignApplication",
+  "operatingSystem": "All",
+  "description": "Web app that transforms a photo into a plush toy sticker with wool texture, stitches, and plush eyes.",
+  "url": "https://suitecreative.fintoolsbox.com/plush-customizer",
+
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+
+  "featureList": [
+    "Photo to plush converter",
+    "Stuffed animal generator",
+    "Wool texture effect",
+    "Visible stitches",
+    "Plush eyes effect",
+    "Before and after comparison",
+    "PNG export",
+    "Private browser processing"
+  ],
+
+  "author": {
+    "@type": "Organization",
+    "name": "Suite Creative",
+    "url": "https://suitecreative.fintoolsbox.com/"
+  }
+
+}
+</script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "How do I turn my photo into a plush toy?", "acceptedAnswer": { "@type": "Answer", "text": "Upload your photo, adjust wool texture intensity, contour, and enable plush eyes. The generator processes everything in your browser and gives you a downloadable plushie image." } },
+      { "@type": "Question", "name": "Are the eyes placed automatically?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, when 'Plush eyes' is checked, the tool tries to detect dark areas in the upper third of the image to place shiny cartoon eyes. A well‑lit frontal photo works best." } },
+      { "@type": "Question", "name": "Can I remove the stitches?", "acceptedAnswer": { "@type": "Answer", "text": "Sure, just uncheck 'Visible stitches' for a smoother plush look." } },
+      { "@type": "Question", "name": "Is my image private?", "acceptedAnswer": { "@type": "Answer", "text": "Absolutely. All processing happens locally in your browser – no image is ever uploaded or stored." } }
+    ]
+  }
+  </script>
+  <style>
+    :root {
+      --cream: #f9f4ea;
+      --paper: #fffdf7;
+      --ink: #2c2416;
+      --ink-light: #5e5340;
+      --accent: #945d3b;
+      --accent-soft: #f2e3d5;
+      --border: #d9cdb0;
+      --radius: 24px;
+      --radius-sm: 16px;
+      --shadow: 0 8px 30px rgba(0,0,0,0.05), 0 2px 8px rgba(0,0,0,0.03);
+      --transition: 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+      --font-body: 'Inter', system-ui, sans-serif;
+      --font-heading: 'Playfair Display', Georgia, serif;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      font-family: var(--font-body);
+      background: var(--cream);
+      color: var(--ink);
+      min-height: 100vh;
+      display: flex; flex-direction: column; align-items: center;
+      line-height: 1.6;
+      background-image: radial-gradient(circle at 30% 40%, rgba(148,93,59,0.03) 0%, transparent 50%),
+                        radial-gradient(circle at 70% 80%, rgba(148,93,59,0.02) 0%, transparent 50%);
+    }
+    .container { width:100%; max-width:1200px; padding:28px 20px 40px; }
+    header {
+      display: flex; align-items: center; justify-content: space-between;
+      padding-bottom: 20px; border-bottom: 1px solid var(--border);
+      flex-wrap: wrap; gap: 12px;
+    }
+    .logo { font-family: var(--font-heading); font-size: 1.8rem; font-weight: 700; color: var(--accent); }
+    .logo span { color: #b8860b; }
+    .back-link { font-weight: 500; color: var(--accent); text-decoration: none; transition: var(--transition); }
+    .back-link:hover { text-decoration: underline; }
+    .hero { text-align: center; margin: 36px 0 24px; }
+    .hero h1 { font-family: var(--font-heading); font-size: clamp(2rem, 5vw, 2.8rem); color: var(--ink); margin-bottom: 8px; }
+    .hero p { color: var(--ink-light); font-size: 1.1rem; max-width: 600px; margin: 0 auto; }
+    .main-grid { display: flex; gap: 28px; flex-wrap: wrap; margin-top: 16px; }
+    .preview-box {
+      flex:2; min-width:340px; background: var(--paper); border-radius: var(--radius);
+      border: 1px solid var(--border); box-shadow: var(--shadow); display: flex; flex-direction: column;
+      overflow: hidden;
+    }
+    .canvas-wrapper {
+      flex:1; display: flex; align-items: center; justify-content: center;
+      padding: 20px; background: #faf7f2; border-bottom: 1px solid var(--border);
+      min-height: 380px; position: relative;
+    }
+    .canvas-wrapper canvas { max-width:100%; max-height:100%; border-radius:12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); background:#fff; }
+    .placeholder { position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; pointer-events:none; color:var(--ink-light); gap:12px; transition: opacity 0.3s; }
+    .placeholder.hidden { opacity:0; }
+    .compare-box {
+      position: relative; display: inline-block; overflow: hidden;
+      border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); background: #fff;
+    }
+    .compare-box img, .compare-box canvas { display: block; max-width: 100%; height: auto; }
+    .compare-slider {
+      position: absolute; top: 0; bottom: 0; width: 4px; background: white;
+      left: 50%; cursor: ew-resize; box-shadow: 0 0 10px rgba(0,0,0,0.5);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .compare-slider::after {
+      content: '◀ ▶'; color: white; font-size: 18px; background: rgba(0,0,0,0.6);
+      border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;
+      font-weight: bold; text-shadow: 0 0 4px black;
+    }
+    .controls-panel {
+      flex:1; min-width:280px; background: var(--paper); border-radius: var(--radius);
+      border: 1px solid var(--border); box-shadow: var(--shadow); padding:24px;
+      display:flex; flex-direction:column; gap:20px;
+    }
+    .upload-area {
+      border:2px dashed var(--border); border-radius: var(--radius-sm);
+      padding:22px; text-align:center; cursor:pointer; transition: var(--transition);
+      background: #fdfbf6;
+    }
+    .upload-area:hover, .upload-area.drag-over {
+      border-color: var(--accent); background: var(--accent-soft);
+      box-shadow:0 0 0 3px rgba(148,93,59,0.1);
+    }
+    .upload-area input { display:none; }
+    .file-name { margin-top:8px; font-weight:600; color:var(--accent); font-size:0.85rem; }
+    .gallery-title { font-weight: 600; margin-bottom: 8px; color: var(--ink); }
+    .gallery-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-bottom: 8px; }
+    .gallery-item {
+      aspect-ratio: 1; border-radius: 8px; overflow: hidden; cursor: pointer;
+      border: 2px solid transparent; transition: 0.2s; background: #ddd;
+    }
+    .gallery-item img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .gallery-item:hover { border-color: var(--accent); transform: scale(1.05); }
+    .slider-group { margin-bottom:12px; }
+    .slider-group label { display:flex; justify-content:space-between; font-weight:500; font-size:0.9rem; }
+    input[type="range"] { width:100%; accent-color: var(--accent); }
+    .badge { background: var(--accent-soft); color: var(--accent); padding:2px 10px; border-radius:20px; font-weight:600; font-size:0.8rem; }
+    .toggle-row { display:flex; align-items:center; justify-content:space-between; margin-bottom: 8px; }
+    .btn {
+      font-family:var(--font-body); font-weight:600; font-size:0.95rem; padding:12px 22px;
+      border-radius:40px; border:none; cursor:pointer; display:inline-flex;
+      align-items:center; justify-content:center; gap:8px;
+      background:var(--paper); color:var(--ink); border:1px solid var(--border);
+      box-shadow:0 2px 6px rgba(0,0,0,0.02); transition: var(--transition);
+    }
+    .btn-primary { background:var(--accent); color:white; border:none; box-shadow:0 6px 18px rgba(148,93,59,0.35); }
+    .btn-primary:hover { background:#7d4c30; transform:translateY(-1px); }
+    .btn-outline:hover { border-color:var(--accent); background: var(--accent-soft); }
+    .actions-row { display:flex; flex-wrap:wrap; gap:10px; }
+    .compare-toggle { margin: 10px 0; }
+    .faq-section { margin-top:48px; }
+    .faq-section h2 { font-family: var(--font-heading); font-size:2rem; margin-bottom:24px; text-align:center; }
+    .faq-item { border-bottom:1px solid var(--border); padding:16px 0; cursor:pointer; }
+    .faq-question { font-weight:600; display:flex; justify-content:space-between; align-items:center; }
+    .faq-answer { max-height:0; overflow:hidden; transition:max-height 0.3s; color:var(--ink-light); font-size:0.95rem; }
+    .faq-item.open .faq-answer { max-height:200px; margin-top:12px; }
+    .faq-question::after { content:'+'; font-size:1.5rem; color:var(--accent); transition:0.3s; }
+    .faq-item.open .faq-question::after { transform:rotate(45deg); }
+    footer { text-align:center; margin-top:40px; padding-top:20px; border-top:1px solid var(--border); color:var(--ink-light); font-size:0.85rem; }
+    a { color:var(--accent); text-decoration:none; }
+    @media (max-width:750px) { .main-grid { flex-direction:column; } .gallery-grid { grid-template-columns: repeat(2,1fr); } }
+  </style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <div class="logo">Plushify<span> AI</span></div>
+    <a href="/" class="back-link">← Back to home</a>
+  </header>
+
+  <section class="hero">
+    <h1>🧸 Plush Toy Customizer</h1>
+    <p>Upload a photo of your pet (or anything!) and turn it into an adorable stuffed animal with woolly texture, stitches, and shiny plush eyes.</p>
+  </section>
+
+  <div class="main-grid">
+    <div class="preview-box">
+      <div class="canvas-wrapper" id="canvasWrapper">
+        <div id="compareContainer" style="display:none; width:100%; height:100%; display:flex; align-items:center; justify-content:center;">
+          <div id="compareBox" class="compare-box" style="display:none;">
+            <img id="beforeImage" alt="Original" style="position:absolute; top:0; left:0; width:100%; height:100%; object-fit:contain;">
+            <canvas id="afterCanvas" style="width:100%; height:auto; display:block;"></canvas>
+            <div id="compareSlider" class="compare-slider"></div>
+          </div>
+        </div>
+        <canvas id="outputCanvas"></canvas>
+        <div class="placeholder" id="placeholderBox">
+          <span style="font-size:48px;">🐾✨</span>
+          <span>Upload an image to start</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="controls-panel">
+      <div class="upload-area" id="uploadArea">
+        <div>📤 <strong>Click or drop your photo</strong></div>
+        <div style="font-size:0.85rem;">JPG, PNG, WebP · Animal or object</div>
+        <div class="file-name" id="fileNameDisplay" style="display:none;"></div>
+        <input type="file" id="fileInput" accept="image/*">
+      </div>
+
+      <div>
+        <div class="gallery-title"> Quick gallery (click to try)</div>
+        <div class="gallery-grid" id="galleryGrid"></div>
+      </div>
+
+      <div class="slider-group">
+        <label>Wool texture intensity <span class="badge" id="textureVal">60%</span></label>
+        <input type="range" id="textureSlider" min="10" max="100" value="60" step="1">
+      </div>
+      <div class="slider-group">
+        <label>Edge detail <span class="badge" id="contourVal">Medium</span></label>
+        <input type="range" id="contourSlider" min="0" max="2" value="1" step="1">
+      </div>
+      <div class="toggle-row">
+        <span> Visible stitches</span>
+        <input type="checkbox" id="stitchCheck" checked>
+      </div>
+      <div class="toggle-row">
+        <span> Plush eyes</span>
+        <input type="checkbox" id="eyesCheck" checked>
+      </div>
+      <div class="toggle-row">
+        <span> Embroidered heart</span>
+        <input type="checkbox" id="heartCheck">
+      </div>
+      <div class="toggle-row compare-toggle">
+        <span>Before / After slider</span>
+        <input type="checkbox" id="compareToggle">
+      </div>
+
+      <div class="actions-row">
+        <button class="btn btn-primary" id="downloadBtn">⬇️ Download PNG</button>
+        <button class="btn btn-outline" id="resetBtn">↺ Reset</button>
+      </div>
+      <p style="font-size:0.8rem; color:var(--ink-light); text-align:center;">Processed locally. No data sent anywhere.</p>
+    </div>
+  </div>
+  <!-- ========================= -->
+<!-- SEO CONTENT SECTION -->
+<!-- À placer avant la FAQ -->
+<!-- ========================= -->
+
+<section class="seo-content">
+
+  <div class="seo-inner">
+
+    <h2>Turn Your Photo into a Cute Plush Toy Online</h2>
+
+    <p>
+      Plush-style image generators have become incredibly popular on Pinterest, TikTok and Etsy because they transform ordinary photos into soft, emotional and highly shareable creations. Whether it is a pet, a portrait, a favorite character or even an object, plush effects instantly make images feel warmer, cuter and more personal.
+    </p>
+
+    <p>
+      Plushify AI was designed to help creators generate stuffed-animal inspired images directly in the browser without using complex editing software. The tool automatically adds wool textures, soft edges, visible stitches and plush-style eyes to create a realistic handmade toy effect.
+    </p>
+
+    <h3>How to turn a pet photo into a plush toy</h3>
+
+    <p>
+      The best plush-style images usually start with clear and well-lit photos. Front-facing pet portraits tend to work especially well because the generator can better detect facial details and place plush eyes naturally.
+    </p>
+
+    <p>
+      Cats, dogs, rabbits and teddy bears are among the most popular subjects, but many users also create plush versions of cartoon characters, memes and aesthetic profile pictures for TikTok and Discord.
+    </p>
+
+    <h3>Why plush-style images are trending on TikTok</h3>
+
+    <p>
+      Cute transformations perform extremely well on short-form platforms because they trigger emotional reactions instantly. Before-and-after plush transformations are highly engaging and often shared as profile pictures, stickers or aesthetic wallpapers.
+    </p>
+
+    <p>
+      Plush aesthetics are also strongly connected to kawaii culture, cozy visuals and soft internet design trends that continue to grow across Pinterest and social media communities.
+    </p>
+
+    <h3>Create kawaii plush portraits online</h3>
+
+    <p>
+      Kawaii-inspired plush portraits combine oversized eyes, soft textures and rounded shapes to create charming and playful visuals. Many creators use plush effects for:
+    </p>
+
+    <ul class="seo-list">
+      <li>Discord avatars</li>
+      <li>TikTok profile pictures</li>
+      <li>Twitch emotes</li>
+      <li>Sticker packs</li>
+      <li>Phone wallpapers</li>
+      <li>Etsy digital downloads</li>
+      <li>Printable greeting cards</li>
+    </ul>
+
+    <h3>100% private browser-based processing</h3>
+
+    <p>
+      Unlike many AI image tools, Plushify AI processes everything locally in your browser. Your images are never uploaded to external servers, making the experience faster and more privacy-friendly.
+    </p>
+
+    <p>
+      This approach is especially useful for creators who want to experiment quickly with different plush styles while keeping their personal photos private.
+    </p>
+
+  </div>
+
+</section>
+
+<style>
+.seo-content{
+  margin-top:60px;
+  background:var(--paper);
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+  padding:50px 40px;
+}
+
+.seo-inner{
+  max-width:900px;
+  margin:0 auto;
+}
+
+.seo-content h2{
+  font-family:var(--font-heading);
+  font-size:2rem;
+  margin-bottom:22px;
+  color:var(--ink);
+}
+
+.seo-content h3{
+  font-family:var(--font-heading);
+  font-size:1.35rem;
+  margin-top:38px;
+  margin-bottom:16px;
+  color:var(--accent);
+}
+
+.seo-content p{
+  color:var(--ink-light);
+  line-height:1.9;
+  margin-bottom:20px;
+  font-size:1rem;
+}
+
+.seo-list{
+  padding-left:22px;
+  margin-bottom:20px;
+}
+
+.seo-list li{
+  color:var(--ink-light);
+  margin-bottom:10px;
+  line-height:1.8;
+}
+
+@media(max-width:768px){
+
+  .seo-content{
+    padding:35px 24px;
+  }
+
+  .seo-content h2{
+    font-size:1.6rem;
+  }
+
+  .seo-content h3{
+    font-size:1.2rem;
+  }
+
+  .seo-content p,
+  .seo-list li{
+    font-size:0.95rem;
+  }
+
+}
+</style>
+<!-- ========================= -->
+<!-- INTERNAL LINKS -->
+<!-- ========================= -->
+
+<section class="internal-links">
+
+  <h2>✨ More Creative Tools</h2>
+
+  <div class="internal-links-grid">
+
+    <a href="https://www.suitecreative.fintoolsbox.com/vitrail-mosaique/" class="tool-card">
+      <h3> Stained Glass Mosaic Studio</h3>
+      <p>
+        Turn portraits into beautiful stained glass and geometric mosaic artwork online.
+      </p>
+      <span>Try the tool →</span>
+    </a>
+
+    <a href="https://www.suitecreative.fintoolsbox.com/coloring-generator/" class="tool-card">
+      <h3> Seamless Pattern Generator</h3>
+      <p>
+        Create aesthetic repeat patterns for Etsy, fabric, wallpaper and print-on-demand products.
+      </p>
+      <span>Create patterns →</span>
+    </a>
+
+    <a href="https://www.suitecreative.fintoolsbox.com/sticker-maker/" class="tool-card">
+      <h3> Cartoon Sticker Generator</h3>
+      <p>
+        Transform photos into cute sticker-style illustrations for TikTok, Discord and social media.
+      </p>
+      <span>Generate stickers →</span>
+    </a>
+
+  </div>
+
+</section>
+
+<style>
+.internal-links{
+  margin-top:60px;
+}
+
+.internal-links h2{
+  text-align:center;
+  font-family:var(--font-heading);
+  font-size:2rem;
+  margin-bottom:30px;
+  color:var(--ink);
+}
+
+.internal-links-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
+
+.tool-card{
+  background:var(--paper);
+  border:1px solid var(--border);
+  border-radius:var(--radius-sm);
+  padding:24px;
+  text-decoration:none;
+  box-shadow:var(--shadow);
+  transition:0.25s ease;
+}
+
+.tool-card:hover{
+  transform:translateY(-4px);
+  border-color:var(--accent);
+}
+
+.tool-card h3{
+  margin-bottom:14px;
+  color:var(--ink);
+  font-size:1.05rem;
+}
+
+.tool-card p{
+  color:var(--ink-light);
+  line-height:1.7;
+  font-size:0.95rem;
+  margin-bottom:16px;
+}
+
+.tool-card span{
+  color:var(--accent);
+  font-weight:600;
+}
+</style>
+  <section class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <div class="faq-question">How do I turn my photo into a plush toy?</div>
+      <div class="faq-answer">Upload your photo, adjust the wool texture intensity, edge detail, and enable plush eyes. The generator processes everything in your browser and gives you a downloadable stuffed‑animal image.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">Are the eyes placed automatically?</div>
+      <div class="faq-answer">Yes, when “Plush eyes” is checked, the tool tries to detect dark areas in the upper third of the image to place shiny cartoon eyes. A well‑lit frontal photo works best.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">Can I remove the stitches?</div>
+      <div class="faq-answer">Sure, just uncheck “Visible stitches” for a smoother plush look.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">Is my image private?</div>
+      <div class="faq-answer">Absolutely. All processing happens locally in your browser – no image is ever uploaded or stored.</div>
+    </div>
+  </section>
+  <p>
+Learn how to use this tool in our 
+<a href="/en-blog/cat-coloring-page-generator/">complete sticker guide</a>.
+</p>
+  <footer>
+    <p>© 2025 Suite Creative · <a href="/">Home</a> · <a href="/privacy/">Privacy</a> · <a href="/privacy/">Legal</a></p>
+  </footer>
+</div>
+
+<script>
+(function() {
+  const outputCanvas = document.getElementById('outputCanvas');
+  const ctx = outputCanvas.getContext('2d');
+  const canvasWrapper = document.getElementById('canvasWrapper');
+  const placeholderBox = document.getElementById('placeholderBox');
+  const uploadArea = document.getElementById('uploadArea');
+  const fileInput = document.getElementById('fileInput');
+  const fileNameDisplay = document.getElementById('fileNameDisplay');
+  const textureSlider = document.getElementById('textureSlider');
+  const textureVal = document.getElementById('textureVal');
+  const contourSlider = document.getElementById('contourSlider');
+  const contourVal = document.getElementById('contourVal');
+  const stitchCheck = document.getElementById('stitchCheck');
+  const eyesCheck = document.getElementById('eyesCheck');
+  const heartCheck = document.getElementById('heartCheck');
+  const downloadBtn = document.getElementById('downloadBtn');
+  const resetBtn = document.getElementById('resetBtn');
+  const compareToggle = document.getElementById('compareToggle');
+  const compareBox = document.getElementById('compareBox');
+  const compareContainer = document.getElementById('compareContainer');
+  const beforeImage = document.getElementById('beforeImage');
+  const afterCanvas = document.getElementById('afterCanvas');
+  const compareSlider = document.getElementById('compareSlider');
+
+  let originalImage = null;
+  let currentResultDataUrl = null;
+  const MAX_SIZE = 800;
+
+  // ========== GALLERY (base64 sample images) ==========
+  const galleryImages = [
+    { name: 'Teddy Bear', data: 'data:image/svg+xml,' + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200"><rect width="200" height="200" fill="#f5e6d3"/><circle cx="100" cy="100" r="50" fill="#b0936a"/><circle cx="70" cy="70" r="20" fill="#b0936a"/><circle cx="130" cy="70" r="20" fill="#b0936a"/><circle cx="100" cy="95" r="12" fill="#fae5d3"/><circle cx="92" cy="60" r="5" fill="#333"/><circle cx="108" cy="60" r="5" fill="#333"/><circle cx="95" cy="95" r="3" fill="#222"/><ellipse cx="100" cy="112" rx="8" ry="4" fill="#d9a066"/></svg>') },
+    { name: 'Cat', data: 'data:image/svg+xml,' + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200"><rect width="200" height="200" fill="#e6d7c2"/><ellipse cx="100" cy="110" rx="45" ry="35" fill="#cc9966"/><circle cx="100" cy="70" r="35" fill="#cc9966"/><polygon points="75,45 60,20 85,38" fill="#cc9966"/><polygon points="125,45 140,20 115,38" fill="#cc9966"/><circle cx="85" cy="65" r="8" fill="#222"/><circle cx="115" cy="65" r="8" fill="#222"/><circle cx="87" cy="63" r="2" fill="white"/><circle cx="117" cy="63" r="2" fill="white"/><ellipse cx="100" cy="85" rx="8" ry="5" fill="#ffccaa"/><path d="M95 90 Q100 95 105 90" stroke="#222" fill="none" stroke-width="2"/></svg>') },
+    { name: 'Dog', data: 'data:image/svg+xml,' + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200"><rect width="200" height="200" fill="#fef0d7"/><ellipse cx="100" cy="100" rx="48" ry="38" fill="#d4a373"/><circle cx="100" cy="70" r="35" fill="#d4a373"/><ellipse cx="75" cy="55" rx="18" ry="22" fill="#b5835a"/><ellipse cx="125" cy="55" rx="18" ry="22" fill="#b5835a"/><circle cx="80" cy="68" r="6" fill="#222"/><circle cx="120" cy="68" r="6" fill="#222"/><circle cx="82" cy="66" r="2" fill="white"/><circle cx="122" cy="66" r="2" fill="white"/><ellipse cx="100" cy="85" rx="10" ry="6" fill="#ffe0cc"/><circle cx="96" cy="86" r="2.5" fill="#222"/></svg>') },
+    { name: 'Bunny', data: 'data:image/svg+xml,' + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200"><rect width="200" height="200" fill="#faf0e6"/><ellipse cx="100" cy="115" rx="40" ry="33" fill="#e0b899"/><circle cx="100" cy="75" r="30" fill="#e0b899"/><ellipse cx="85" cy="35" rx="9" ry="28" fill="#e0b899"/><ellipse cx="115" cy="35" rx="9" ry="28" fill="#e0b899"/><circle cx="90" cy="72" r="6" fill="#222"/><circle cx="110" cy="72" r="6" fill="#222"/><circle cx="92" cy="70" r="2" fill="white"/><circle cx="112" cy="70" r="2" fill="white"/><ellipse cx="100" cy="88" rx="6" ry="4" fill="#ffcccb"/><path d="M96 92 L100 96 L104 92" stroke="#222" fill="none" stroke-width="1.5"/></svg>') }
+  ];
+
+  function buildGallery() {
+    const grid = document.getElementById('galleryGrid');
+    grid.innerHTML = '';
+    galleryImages.forEach((item) => {
+      const div = document.createElement('div');
+      div.className = 'gallery-item';
+      const img = document.createElement('img');
+      img.src = item.data;
+      img.alt = item.name;
+      div.appendChild(img);
+      div.onclick = () => loadGalleryImage(item.data, item.name);
+      grid.appendChild(div);
+    });
+  }
+
+  function loadGalleryImage(dataUrl, name) {
+    const img = new Image();
+    img.onload = () => {
+      originalImage = img;
+      fileNameDisplay.textContent = name + ' (gallery)';
+      fileNameDisplay.style.display = 'block';
+      placeholderBox.classList.add('hidden');
+      outputCanvas.style.display = 'block';
+      updateOutput();
+    };
+    img.src = dataUrl;
+  }
+
+  // ========== CORE PLUSH EFFECT ==========
+  function generateTexturePattern(intensity) {
+    const patternCanvas = document.createElement('canvas');
+    patternCanvas.width = 200;
+    patternCanvas.height = 200;
+    const pCtx = patternCanvas.getContext('2d');
+    pCtx.fillStyle = '#fdfbf7';
+    pCtx.fillRect(0,0,200,200);
+    const steps = Math.floor(20 + intensity * 2);
+    for(let i=0; i<steps; i++) {
+      for(let j=0; j<steps; j++) {
+        const x = (i/steps)*200 + Math.random()*10-5;
+        const y = (j/steps)*200 + Math.random()*10-5;
+        const radius = Math.random() * 3 + 1;
+        pCtx.beginPath();
+        pCtx.arc(x, y, radius, 0, Math.PI*2);
+        pCtx.fillStyle = `rgba(200,180,160,${Math.random()*0.4*intensity/100})`;
+        pCtx.fill();
+      }
+    }
+    pCtx.strokeStyle = `rgba(180,160,140,${0.3*intensity/100})`;
+    pCtx.lineWidth = 0.5;
+    for(let i=0; i<300; i++) {
+      pCtx.beginPath();
+      const x1 = Math.random()*200, y1 = Math.random()*200;
+      const x2 = x1 + (Math.random()-0.5)*15;
+      const y2 = y1 + (Math.random()-0.5)*15;
+      pCtx.moveTo(x1,y1);
+      pCtx.lineTo(x2,y2);
+      pCtx.stroke();
+    }
+    return patternCanvas;
+  }
+
+  function detectEyes(imageData, width, height) {
+    const gray = new Uint8Array(width*height);
+    const data = imageData.data;
+    for(let i=0; i<data.length; i+=4) {
+      const idx = i/4;
+      gray[idx] = 0.299*data[i] + 0.587*data[i+1] + 0.114*data[i+2];
+    }
+    const topLimit = Math.floor(height*0.55);
+    const candidates = [];
+    for(let y=Math.floor(height*0.15); y<topLimit; y++) {
+      for(let x=0; x<width; x++) {
+        if(x > width*0.2 && x < width*0.8) {
+          const val = gray[y*width+x];
+          if(val < 80) candidates.push({x,y,val});
+        }
+      }
+    }
+    if(candidates.length < 2) return null;
+    candidates.sort((a,b)=>a.val - b.val);
+    const eye1 = candidates[0];
+    let eye2 = null;
+    for(const c of candidates) {
+      const dist = Math.hypot(c.x - eye1.x, c.y - eye1.y);
+      if(dist > width*0.1) { eye2 = c; break; }
+    }
+    if(!eye2) eye2 = candidates[Math.floor(candidates.length/2)];
+    return { eye1: {x: eye1.x, y: eye1.y}, eye2: {x: eye2.x, y: eye2.y} };
+  }
+
+  function drawStitchLine(ctx, x1, y1, x2, y2, color, width) {
+    ctx.save();
+    ctx.strokeStyle = color;
+    ctx.lineWidth = width;
+    ctx.setLineDash([4, 4]);
+    ctx.beginPath();
+    ctx.moveTo(x1, y1);
+    ctx.lineTo(x2, y2);
+    ctx.stroke();
+    ctx.setLineDash([]);
+    ctx.restore();
+  }
+
+  function applyPlushEffect(image, textureIntensity, contourLevel, showStitch, showEyes, showHeart) {
+    const w = image.naturalWidth || image.width;
+    const h = image.naturalHeight || image.height;
+    const scale = Math.min(1, MAX_SIZE/w, MAX_SIZE/h);
+    const canvasW = Math.floor(w*scale);
+    const canvasH = Math.floor(h*scale);
+    outputCanvas.width = canvasW;
+    outputCanvas.height = canvasH;
+
+    const srcCanvas = document.createElement('canvas');
+    srcCanvas.width = canvasW; srcCanvas.height = canvasH;
+    const srcCtx = srcCanvas.getContext('2d');
+    srcCtx.drawImage(image, 0, 0, canvasW, canvasH);
+    const srcData = srcCtx.getImageData(0,0,canvasW,canvasH);
+
+    const blurredCanvas = document.createElement('canvas');
+    blurredCanvas.width = canvasW; blurredCanvas.height = canvasH;
+    const bCtx = blurredCanvas.getContext('2d');
+    bCtx.filter = `blur(${8 + textureIntensity/10}px)`;
+    bCtx.drawImage(srcCanvas, 0, 0);
+    bCtx.filter = 'none';
+
+    const patternCanvas = generateTexturePattern(textureIntensity);
+    const finalCanvas = document.createElement('canvas');
+    finalCanvas.width = canvasW; finalCanvas.height = canvasH;
+    const fCtx = finalCanvas.getContext('2d');
+    fCtx.drawImage(blurredCanvas, 0,0);
+    fCtx.globalCompositeOperation = 'multiply';
+    fCtx.drawImage(patternCanvas, 0,0, canvasW, canvasH);
+    fCtx.globalCompositeOperation = 'source-over';
+    const combinedData = fCtx.getImageData(0,0,canvasW,canvasH);
+
+    if(contourLevel > 0) {
+      const edgeCanvas = document.createElement('canvas');
+      edgeCanvas.width = canvasW; edgeCanvas.height = canvasH;
+      const eCtx = edgeCanvas.getContext('2d');
+      eCtx.drawImage(blurredCanvas, 0,0);
+      const edgeData = eCtx.getImageData(0,0,canvasW,canvasH);
+      for(let y=1; y<canvasH-1; y++) {
+        for(let x=1; x<canvasW-1; x++) {
+          const i = (y*canvasW+x)*4;
+          const g = 0.299*edgeData.data[i] + 0.587*edgeData.data[i+1] + 0.114*edgeData.data[i+2];
+          const gRight = 0.299*edgeData.data[i+4] + 0.587*edgeData.data[i+5] + 0.114*edgeData.data[i+6];
+          const diff = Math.abs(g - gRight);
+          if(diff > 40) {
+            combinedData.data[i] = Math.min(255, combinedData.data[i]+30);
+            combinedData.data[i+1] = Math.min(255, combinedData.data[i+1]+20);
+            combinedData.data[i+2] = Math.min(255, combinedData.data[i+2]+10);
+          }
+        }
+      }
+    }
+
+    ctx.putImageData(combinedData, 0, 0);
+
+    if(showStitch) {
+      const stitchColor = '#8B5A2B';
+      const stitchWidth = 2;
+      const margin = 15;
+      ctx.beginPath();
+      ctx.strokeStyle = stitchColor;
+      ctx.lineWidth = stitchWidth;
+      ctx.setLineDash([6, 6]);
+      ctx.rect(margin, margin, canvasW - 2*margin, canvasH - 2*margin);
+      ctx.stroke();
+      drawStitchLine(ctx, margin, margin, margin+20, margin+20, stitchColor, stitchWidth);
+      drawStitchLine(ctx, canvasW-margin, margin, canvasW-margin-20, margin+20, stitchColor, stitchWidth);
+      drawStitchLine(ctx, margin, canvasH-margin, margin+20, canvasH-margin-20, stitchColor, stitchWidth);
+      drawStitchLine(ctx, canvasW-margin, canvasH-margin, canvasW-margin-20, canvasH-margin-20, stitchColor, stitchWidth);
+      ctx.setLineDash([]);
+    }
+
+    if(showEyes) {
+      const eyesPos = detectEyes(srcData, canvasW, canvasH);
+      if(eyesPos) {
+        const drawEye = (x, y) => {
+          ctx.save();
+          ctx.beginPath();
+          ctx.arc(x, y, 12, 0, Math.PI*2);
+          ctx.fillStyle = '#1a1a1a';
+          ctx.fill();
+          ctx.beginPath();
+          ctx.arc(x-3, y-3, 4, 0, Math.PI*2);
+          ctx.fillStyle = 'white';
+          ctx.fill();
+          ctx.beginPath();
+          ctx.arc(x-4, y-4, 1.5, 0, Math.PI*2);
+          ctx.fillStyle = 'white';
+          ctx.fill();
+          ctx.restore();
+        };
+        drawEye(eyesPos.eye1.x, eyesPos.eye1.y);
+        drawEye(eyesPos.eye2.x, eyesPos.eye2.y);
+      }
+    }
+
+    if(showHeart) {
+      const heartX = canvasW - 50;
+      const heartY = 50;
+      ctx.save();
+      ctx.fillStyle = '#d44';
+      ctx.beginPath();
+      ctx.moveTo(heartX, heartY+8);
+      ctx.bezierCurveTo(heartX, heartY, heartX-10, heartY-6, heartX-6, heartY-14);
+      ctx.bezierCurveTo(heartX+2, heartY-22, heartX+8, heartY-14, heartX+12, heartY-6);
+      ctx.bezierCurveTo(heartX+16, heartY+2, heartX+6, heartY+12, heartX, heartY+16);
+      ctx.bezierCurveTo(heartX-6, heartY+12, heartX-16, heartY+2, heartX-12, heartY-6);
+      ctx.fill();
+      ctx.restore();
+    }
+
+    const maxW = canvasWrapper.clientWidth - 40;
+    const maxH = canvasWrapper.clientHeight - 40;
+    const displayScale = Math.min(1, maxW/canvasW, maxH/canvasH);
+    outputCanvas.style.width = canvasW * displayScale + 'px';
+    outputCanvas.style.height = canvasH * displayScale + 'px';
+
+    return outputCanvas.toDataURL('image/png');
+  }
+
+  function updateOutput() {
+    if(!originalImage) return;
+    const texture = parseInt(textureSlider.value);
+    const contour = parseInt(contourSlider.value);
+    const stitch = stitchCheck.checked;
+    const eyes = eyesCheck.checked;
+    const heart = heartCheck.checked;
+    currentResultDataUrl = applyPlushEffect(originalImage, texture, contour, stitch, eyes, heart);
+    updateCompareView();
+  }
+
+  // ========== BEFORE / AFTER SLIDER ==========
+  function updateCompareView() {
+    const isCompare = compareToggle.checked;
+    if (!originalImage) {
+      compareBox.style.display = 'none';
+      outputCanvas.style.display = 'block';
+      return;
+    }
+    if (isCompare && currentResultDataUrl) {
+      outputCanvas.style.display = 'none';
+      compareBox.style.display = 'block';
+      beforeImage.src = originalImage.src;
+      const img = new Image();
+      img.onload = () => {
+        afterCanvas.width = img.width;
+        afterCanvas.height = img.height;
+        const actx = afterCanvas.getContext('2d');
+        actx.drawImage(img, 0, 0);
+        // Clip left half for original
+        actx.save();
+        actx.beginPath();
+        actx.rect(0, 0, afterCanvas.width * parseFloat(compareSlider.style.left || '50%') / 100, afterCanvas.height);
+        actx.clip();
+        actx.drawImage(img, 0, 0);
+        actx.restore();
+      };
+      img.src = currentResultDataUrl;
+    } else {
+      compareBox.style.display = 'none';
+      outputCanvas.style.display = 'block';
+    }
+  }
+
+  compareToggle.addEventListener('change', updateCompareView);
+
+  // Slider movement
+  function initSlider() {
+    let dragging = false;
+    const slider = compareSlider;
+    const box = compareBox;
+
+    function updatePosition(clientX) {
+      const rect = box.getBoundingClientRect();
+      let x = clientX - rect.left;
+      x = Math.max(10, Math.min(rect.width - 10, x));
+      const percent = (x / rect.width) * 100;
+      slider.style.left = percent + '%';
+      beforeImage.style.clip = `rect(0, ${x}px, ${rect.height}px, 0)`;
+    }
+
+    slider.addEventListener('mousedown', (e) => { dragging = true; e.preventDefault(); });
+    window.addEventListener('mousemove', (e) => { if (dragging) updatePosition(e.clientX); });
+    window.addEventListener('mouseup', () => { dragging = false; });
+    slider.addEventListener('touchstart', (e) => { dragging = true; });
+    window.addEventListener('touchmove', (e) => { if (dragging) updatePosition(e.touches[0].clientX); });
+    window.addEventListener('touchend', () => { dragging = false; });
+  }
+
+  // ========== EVENT LISTENERS ==========
+  uploadArea.addEventListener('click', () => fileInput.click());
+  fileInput.addEventListener('change', e => { if (e.target.files[0]) handleFile(e.target.files[0]); });
+  uploadArea.addEventListener('dragover', e => { e.preventDefault(); uploadArea.classList.add('drag-over'); });
+  uploadArea.addEventListener('dragleave', () => uploadArea.classList.remove('drag-over'));
+  uploadArea.addEventListener('drop', e => {
+    e.preventDefault(); uploadArea.classList.remove('drag-over');
+    if (e.dataTransfer.files[0]) handleFile(e.dataTransfer.files[0]);
+  });
+
+  function handleFile(file) {
+    if (!file.type.startsWith('image/')) return;
+    const reader = new FileReader();
+    reader.onload = ev => {
+      const img = new Image();
+      img.onload = () => {
+        originalImage = img;
+        fileNameDisplay.textContent = file.name;
+        fileNameDisplay.style.display = 'block';
+        placeholderBox.classList.add('hidden');
+        outputCanvas.style.display = 'block';
+        updateOutput();
+      };
+      img.src = ev.target.result;
+    };
+    reader.readAsDataURL(file);
+  }
+
+  textureSlider.addEventListener('input', () => {
+    textureVal.textContent = textureSlider.value + '%';
+    updateOutput();
+  });
+  contourSlider.addEventListener('input', () => {
+    const val = parseInt(contourSlider.value);
+    contourVal.textContent = val === 0 ? 'Soft' : (val === 1 ? 'Medium' : 'Strong');
+    updateOutput();
+  });
+  stitchCheck.addEventListener('change', updateOutput);
+  eyesCheck.addEventListener('change', updateOutput);
+  heartCheck.addEventListener('change', updateOutput);
+
+  downloadBtn.addEventListener('click', () => {
+    if (!currentResultDataUrl) { alert('Please upload an image first.'); return; }
+    const a = document.createElement('a');
+    a.href = currentResultDataUrl;
+    a.download = 'my-plush-toy.png';
+    a.click();
+  });
+
+  resetBtn.addEventListener('click', () => {
+    originalImage = null;
+    currentResultDataUrl = null;
+    outputCanvas.width = 600; outputCanvas.height = 400;
+    ctx.clearRect(0,0,600,400);
+    outputCanvas.style.width = ''; outputCanvas.style.height = '';
+    placeholderBox.classList.remove('hidden');
+    fileNameDisplay.style.display = 'none';
+    fileInput.value = '';
+    textureSlider.value = 60; textureVal.textContent = '60%';
+    contourSlider.value = 1; contourVal.textContent = 'Medium';
+    stitchCheck.checked = true;
+    eyesCheck.checked = true;
+    heartCheck.checked = false;
+    compareToggle.checked = false;
+    compareBox.style.display = 'none';
+    outputCanvas.style.display = 'block';
+  });
+
+  // FAQ
+  document.querySelectorAll('.faq-item').forEach(item => item.addEventListener('click', () => item.classList.toggle('open')));
+
+  // Init
+  buildGallery();
+  initSlider();
+  outputCanvas.width = 600;
+  outputCanvas.height = 400;
+})();
+</script>
+</body>
+</html>

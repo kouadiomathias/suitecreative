@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Générateur de Portrait Style Vitrail · Mosaïque Polygone</title>
+    <meta name="description" content="Transformez une photo en œuvre façon vitrail ou mosaïque géométrique. Segmentez votre image en polygones colorés avec contours noirs. Téléchargez le résultat en PNG.">
+    <meta name="keywords" content="effet vitrail, mosaïque photo, générateur vitrail, style Tiffany, portrait polygone, low poly art, vitrail numérique gratuit">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://suitecreative.fintoolsbox.com/fr/vitrail-mosaique/">
+    <!-- Hreflang -->
+    <link rel="alternate" hreflang="fr" href="https://suitecreative.fintoolsbox.com/fr/portrait-animal/">
+    <link rel="alternate" hreflang="en" href="https://suitecreative.fintoolsbox.com/vitrail-mosaique/">
+    <link rel="alternate" hreflang="x-default" href="https://suitecreative.fintoolsbox.com/vitrail-mosaique/">
+
+    <meta property="og:title" content="Générateur de Portrait Style Vitrail · Mosaïque Polygone">
+    <meta property="og:description" content="Créez un magnifique effet vitrail à partir de vos photos. Segmentation polygonale et contours noirs, entièrement gratuit.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="fr_FR">
+    <meta name="author" content="SuiteCreative">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta property="og:image" content="https://suitecreative.fintoolsbox.com/vitrail-mosaique.webp">
+    <meta property="og:url" content="https://suitecreative.fintoolsbox.com/fr/vitrail-mosaique/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Générateur Vitrail & Mosaïque">
+    <meta name="twitter:description" content="Effet vitrail personnalisable : polygones, contours noirs, couleurs moyennes. Téléchargez votre création.">
+    <meta name="twitter:image" content="https://suitecreative.fintoolsbox.com/vitrail-mosaique.webp">
+    <meta name="theme-color" content="#f9f4ea">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..700&family=Playfair+Display:ital,wght@0,500;0,700;1,500&display=swap" rel="stylesheet">
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            "name": "Générateur de Portrait Style Vitrail",
+            "applicationCategory": "DesignApplication",
+            "operatingSystem": "All",
+            "description": "Application web qui segmente une photo en polygones colorés (style vitrail) avec contours noirs, pour créer un portrait artistique téléchargeable.",
+            "url": "https://suitecreative.fintoolsbox.com/fr/vitrail-mosaique",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" }
+        }
+    </script>
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+                { "@type": "Question", "name": "Comment fonctionne le générateur de vitrail ?", "acceptedAnswer": { "@type": "Answer", "text": "Importez une photo. L'outil la divise en centaines de cellules polygonales, puis remplit chaque cellule avec la couleur dominante de l'image à cet endroit. Des contours noirs sont ajoutés pour simuler les joints en plomb d'un vrai vitrail." } },
+                { "@type": "Question", "name": "Puis-je régler la finesse du vitrail ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui, le curseur 'Nombre de cellules' contrôle la densité du maillage. Plus il y a de cellules, plus le résultat est détaillé. L'épaisseur des contours est également ajustable." } },
+                { "@type": "Question", "name": "L'image reste-t-elle privée ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui, tout est calculé dans votre navigateur. Aucune image n'est envoyée sur un serveur." } },
+                { "@type": "Question", "name": "Quel format puis-je télécharger ?", "acceptedAnswer": { "@type": "Answer", "text": "Vous pouvez télécharger le résultat en PNG haute résolution." } }
+            ]
+        }
+    </script>
+    <style>
+        :root {
+            --cream: #f9f4ea;
+            --paper: #fffdf7;
+            --ink: #2c2416;
+            --ink-light: #5e5340;
+            --accent: #945d3b;
+            --accent-soft: #f2e3d5;
+            --border: #d9cdb0;
+            --radius: 24px;
+            --radius-sm: 16px;
+            --shadow: 0 8px 30px rgba(0,0,0,0.05), 0 2px 8px rgba(0,0,0,0.03);
+            --transition: 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+            --font-body: 'Inter', system-ui, sans-serif;
+            --font-heading: 'Playfair Display', Georgia, serif;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: var(--font-body);
+            background: var(--cream);
+            color: var(--ink);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            line-height: 1.6;
+            background-image: radial-gradient(circle at 30% 40%, rgba(148,93,59,0.03) 0%, transparent 50%),
+                              radial-gradient(circle at 70% 80%, rgba(148,93,59,0.02) 0%, transparent 50%);
+        }
+        .container { width: 100%; max-width: 1200px; padding: 28px 20px 40px; }
+        header {
+            display: flex; align-items: center; justify-content: space-between;
+            padding-bottom: 20px; border-bottom: 1px solid var(--border);
+            flex-wrap: wrap; gap: 12px;
+        }
+        .logo {
+            font-family: var(--font-heading);
+            font-size: 1.8rem; font-weight: 700; color: var(--accent);
+        }
+        .logo span { color: #b8860b; }
+        .back-link {
+            font-weight: 500; color: var(--accent); text-decoration: none;
+            transition: var(--transition);
+        }
+        .back-link:hover { text-decoration: underline; }
+        .hero { text-align: center; margin: 36px 0 24px; }
+        .hero h1 {
+            font-family: var(--font-heading);
+            font-size: clamp(2rem, 5vw, 2.8rem);
+            color: var(--ink);
+            margin-bottom: 8px;
+        }
+        .hero p { color: var(--ink-light); font-size: 1.1rem; max-width: 600px; margin: 0 auto; }
+        .main-grid { display: flex; gap: 28px; flex-wrap: wrap; margin-top: 16px; }
+        .preview-box {
+            flex: 2; min-width: 340px; background: var(--paper); border-radius: var(--radius);
+            border: 1px solid var(--border); box-shadow: var(--shadow); display: flex; flex-direction: column;
+            overflow: hidden;
+        }
+        .canvas-wrapper {
+            flex: 1; display: flex; align-items: center; justify-content: center;
+            padding: 20px; background: #faf7f2; border-bottom: 1px solid var(--border);
+            min-height: 380px; position: relative;
+        }
+        .canvas-wrapper canvas {
+            max-width: 100%; max-height: 100%; border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08); background: #fff;
+        }
+        .placeholder {
+            position: absolute; inset: 0; display: flex; flex-direction: column;
+            align-items: center; justify-content: center; pointer-events: none;
+            color: var(--ink-light); gap: 12px; transition: opacity 0.3s;
+        }
+        .placeholder.hidden { opacity: 0; }
+        .controls-panel {
+            flex: 1; min-width: 280px; background: var(--paper); border-radius: var(--radius);
+            border: 1px solid var(--border); box-shadow: var(--shadow); padding: 24px;
+            display: flex; flex-direction: column; gap: 20px;
+        }
+        .upload-area {
+            border: 2px dashed var(--border); border-radius: var(--radius-sm);
+            padding: 22px; text-align: center; cursor: pointer; transition: var(--transition);
+            background: #fdfbf6;
+        }
+        .upload-area:hover, .upload-area.drag-over {
+            border-color: var(--accent); background: var(--accent-soft);
+            box-shadow: 0 0 0 3px rgba(148,93,59,0.1);
+        }
+        .upload-area input { display: none; }
+        .file-name { margin-top: 8px; font-weight: 600; color: var(--accent); font-size: 0.85rem; }
+        .slider-group { margin-bottom: 12px; }
+        .slider-group label { display: flex; justify-content: space-between; font-weight: 500; font-size: 0.9rem; }
+        input[type="range"] { width: 100%; accent-color: var(--accent); }
+        .badge { background: var(--accent-soft); color: var(--accent); padding: 2px 10px; border-radius: 20px; font-weight: 600; font-size: 0.8rem; }
+        .toggle-row { display: flex; align-items: center; justify-content: space-between; }
+        .btn {
+            font-family: var(--font-body); font-weight: 600; font-size: 0.95rem; padding: 12px 22px;
+            border-radius: 40px; border: none; cursor: pointer; display: inline-flex;
+            align-items: center; justify-content: center; gap: 8px;
+            background: var(--paper); color: var(--ink); border: 1px solid var(--border);
+            box-shadow: 0 2px 6px rgba(0,0,0,0.02); transition: var(--transition);
+        }
+        .btn-primary { background: var(--accent); color: white; border: none; box-shadow: 0 6px 18px rgba(148,93,59,0.35); }
+        .btn-primary:hover { background: #7d4c30; transform: translateY(-1px); }
+        .btn-outline:hover { border-color: var(--accent); background: var(--accent-soft); }
+        .actions-row { display: flex; flex-wrap: wrap; gap: 10px; }
+        .faq-section { margin-top: 48px; }
+        .faq-section h2 { font-family: var(--font-heading); font-size: 2rem; margin-bottom: 24px; text-align: center; }
+        .faq-item { border-bottom: 1px solid var(--border); padding: 16px 0; cursor: pointer; }
+        .faq-question { font-weight: 600; display: flex; justify-content: space-between; align-items: center; }
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s; color: var(--ink-light); font-size: 0.95rem; }
+        .faq-item.open .faq-answer { max-height: 200px; margin-top: 12px; }
+        .faq-question::after { content: '+'; font-size: 1.5rem; color: var(--accent); transition: 0.3s; }
+        .faq-item.open .faq-question::after { transform: rotate(45deg); }
+        footer { text-align: center; margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); color: var(--ink-light); font-size: 0.85rem; }
+        a { color: var(--accent); text-decoration: none; }
+        @media (max-width: 750px) { .main-grid { flex-direction: column; } }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">Suite<span>Créative</span></div>
+            <a href="/" class="back-link">← Retour à l'accueil</a>
+        </header>
+
+        <section class="hero">
+            <h1> Portrait Style Vitrail</h1>
+            <p>Importez une photo et transformez-la en mosaïque de polygones colorés, avec contours noirs façon vitrail Tiffany. Entièrement gratuit et local.</p>
+        </section>
+
+        <div class="main-grid">
+            <div class="preview-box">
+                <div class="canvas-wrapper" id="canvasWrapper">
+                    <canvas id="outputCanvas"></canvas>
+                    <div class="placeholder" id="placeholderBox">
+                        <span style="font-size:48px;">🐕</span>
+                        <span>Importez une image pour commencer</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="controls-panel">
+                <div class="upload-area" id="uploadArea">
+                    <div>📤 <strong>Cliquez ou déposez votre photo</strong></div>
+                    <div style="font-size:0.85rem;">JPG, PNG, WebP</div>
+                    <div class="file-name" id="fileNameDisplay" style="display:none;"></div>
+                    <input type="file" id="fileInput" accept="image/*">
+                </div>
+
+                <div class="slider-group">
+                    <label>Nombre de cellules <span class="badge" id="cellCountVal">300</span></label>
+                    <input type="range" id="cellCountSlider" min="50" max="800" value="300" step="10">
+                </div>
+                <div class="slider-group">
+                    <label>Épaisseur du trait <span class="badge" id="lineWidthVal">2 px</span></label>
+                    <input type="range" id="lineWidthSlider" min="1" max="6" value="2" step="0.5">
+                </div>
+                <div class="toggle-row">
+                    <span>Afficher les joints noirs</span>
+                    <input type="checkbox" id="showLinesCheck" checked>
+                </div>
+                <div class="toggle-row">
+                    <span>Fond blanc</span>
+                    <input type="checkbox" id="whiteBgCheck" checked>
+                </div>
+
+                <div class="actions-row">
+                    <button class="btn btn-primary" id="downloadBtn">⬇️ Télécharger PNG</button>
+                    <button class="btn btn-outline" id="resetBtn">↺ Reset</button>
+                </div>
+                <p style="font-size:0.8rem; color:var(--ink-light); text-align:center;">Traitement local. Aucune donnée envoyée.</p>
+            </div>
+        </div>
+
+        <section class="faq-section">
+            <h2>Questions fréquentes</h2>
+            <div class="faq-item">
+                <div class="faq-question">Comment fonctionne le générateur de vitrail ?</div>
+                <div class="faq-answer">Importez une photo. L'outil la divise en centaines de cellules polygonales, puis remplit chaque cellule avec la couleur dominante de l'image à cet endroit. Des contours noirs sont ajoutés pour simuler les joints en plomb d'un vrai vitrail.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Puis-je régler la finesse du vitrail ?</div>
+                <div class="faq-answer">Oui, le curseur « Nombre de cellules » contrôle la densité du maillage. Plus il y a de cellules, plus le résultat est détaillé. L'épaisseur des contours est également ajustable.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">L'image reste-t-elle privée ?</div>
+                <div class="faq-answer">Oui, tout est calculé dans votre navigateur. Aucune image n'est envoyée sur un serveur.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Quel format puis-je télécharger ?</div>
+                <div class="faq-answer">Vous pouvez télécharger le résultat en PNG haute résolution.</div>
+            </div>
+        </section>
+
+        <footer>
+            <p>© 2025 Suite Créative · <a href="/">Accueil</a> · <a href="https://suitecreative.com/confidentialite/">Confidentialité</a> · <a href="https://suitecreative.com/mentions-legales/">Mentions légales</a></p>
+        </footer>
+    </div>
+
+    <script>
+        (function() {
+            const outputCanvas = document.getElementById('outputCanvas');
+            const ctx = outputCanvas.getContext('2d');
+            const canvasWrapper = document.getElementById('canvasWrapper');
+            const placeholderBox = document.getElementById('placeholderBox');
+            const uploadArea = document.getElementById('uploadArea');
+            const fileInput = document.getElementById('fileInput');
+            const fileNameDisplay = document.getElementById('fileNameDisplay');
+            const cellCountSlider = document.getElementById('cellCountSlider');
+            const cellCountVal = document.getElementById('cellCountVal');
+            const lineWidthSlider = document.getElementById('lineWidthSlider');
+            const lineWidthVal = document.getElementById('lineWidthVal');
+            const showLinesCheck = document.getElementById('showLinesCheck');
+            const whiteBgCheck = document.getElementById('whiteBgCheck');
+            const downloadBtn = document.getElementById('downloadBtn');
+            const resetBtn = document.getElementById('resetBtn');
+
+            let originalImage = null;
+            const MAX_SIZE = 800;
+
+            // Utility: generate Voronoi diagram using random sites and compute cell colors
+            function generateVitrail(image, numCells, lineWidth, showLines, whiteBg) {
+                const w = image.naturalWidth || image.width;
+                const h = image.naturalHeight || image.height;
+                // Scale down for performance
+                const scale = Math.min(1, MAX_SIZE / w, MAX_SIZE / h);
+                const canvasW = Math.floor(w * scale);
+                const canvasH = Math.floor(h * scale);
+                outputCanvas.width = canvasW;
+                outputCanvas.height = canvasH;
+
+                const offCanvas = document.createElement('canvas');
+                offCanvas.width = canvasW;
+                offCanvas.height = canvasH;
+                const offCtx = offCanvas.getContext('2d');
+                offCtx.drawImage(image, 0, 0, canvasW, canvasH);
+                const imageData = offCtx.getImageData(0, 0, canvasW, canvasH);
+
+                // Generate random sites for Voronoi
+                const sites = [];
+                for (let i = 0; i < numCells; i++) {
+                    sites.push({
+                        x: Math.random() * canvasW,
+                        y: Math.random() * canvasH,
+                    });
+                }
+
+                // For each pixel, find nearest site (brute force per pixel – slow for many cells; we'll use a flood-fill approach instead)
+                // Better: Use a grid-based approach or approximate. For simplicity, we'll compute pixel-by-pixel for a smaller image and then scale? Too slow for > 100 cells at 800x800.
+                // We'll implement a more efficient method: create a cell map by scanning pixels and assigning to nearest site, but that's O(W*H*N) -> too slow.
+                // Alternative: We can create a low-res grid (e.g., downscale to 200x200) and then upscale the region assignments. Let's do that.
+                const lowResW = Math.min(canvasW, 200);
+                const lowResH = Math.min(canvasH, 200);
+                const lowResCanvas = document.createElement('canvas');
+                lowResCanvas.width = lowResW;
+                lowResCanvas.height = lowResH;
+                const lowCtx = lowResCanvas.getContext('2d');
+                lowCtx.drawImage(offCanvas, 0, 0, lowResW, lowResH);
+                const lowImageData = lowCtx.getImageData(0, 0, lowResW, lowResH);
+
+                // Build region map on low-res
+                const regionMap = new Int32Array(lowResW * lowResH);
+                for (let py = 0; py < lowResH; py++) {
+                    for (let px = 0; px < lowResW; px++) {
+                        let minDist = Infinity;
+                        let bestSite = 0;
+                        for (let i = 0; i < sites.length; i++) {
+                            const sx = sites[i].x * (lowResW / canvasW);
+                            const sy = sites[i].y * (lowResH / canvasH);
+                            const dx = px - sx, dy = py - sy;
+                            const d = dx * dx + dy * dy;
+                            if (d < minDist) {
+                                minDist = d;
+                                bestSite = i;
+                            }
+                        }
+                        regionMap[py * lowResW + px] = bestSite;
+                    }
+                }
+
+                // Compute average color per site using full-resolution image? We'll approximate by sampling the low-res image for that site.
+                const siteColors = [];
+                const siteCounts = new Array(sites.length).fill(0);
+                for (let i = 0; i < sites.length; i++) {
+                    siteColors.push({ r: 0, g: 0, b: 0 });
+                }
+                const lowData = lowImageData.data;
+                for (let py = 0; py < lowResH; py++) {
+                    for (let px = 0; px < lowResW; px++) {
+                        const idx = py * lowResW + px;
+                        const siteIdx = regionMap[idx];
+                        const pixelIdx = (py * lowResW + px) * 4;
+                        siteColors[siteIdx].r += lowData[pixelIdx];
+                        siteColors[siteIdx].g += lowData[pixelIdx + 1];
+                        siteColors[siteIdx].b += lowData[pixelIdx + 2];
+                        siteCounts[siteIdx]++;
+                    }
+                }
+                for (let i = 0; i < sites.length; i++) {
+                    if (siteCounts[i] > 0) {
+                        siteColors[i].r = Math.round(siteColors[i].r / siteCounts[i]);
+                        siteColors[i].g = Math.round(siteColors[i].g / siteCounts[i]);
+                        siteColors[i].b = Math.round(siteColors[i].b / siteCounts[i]);
+                    } else {
+                        siteColors[i] = { r: 255, g: 255, b: 255 };
+                    }
+                }
+
+                // Draw on output canvas
+                ctx.clearRect(0, 0, canvasW, canvasH);
+                if (whiteBg) {
+                    ctx.fillStyle = '#ffffff';
+                    ctx.fillRect(0, 0, canvasW, canvasH);
+                }
+
+                // Scale region map back to original size using nearest neighbor
+                const scaleX = canvasW / lowResW;
+                const scaleY = canvasH / lowResH;
+                const imageDataOut = ctx.createImageData(canvasW, canvasH);
+                const outData = imageDataOut.data;
+
+                for (let y = 0; y < canvasH; y++) {
+                    const lowY = Math.floor(y / scaleY);
+                    for (let x = 0; x < canvasW; x++) {
+                        const lowX = Math.floor(x / scaleX);
+                        const regionIdx = regionMap[lowY * lowResW + lowX];
+                        const color = siteColors[regionIdx];
+                        const outIdx = (y * canvasW + x) * 4;
+                        outData[outIdx] = color.r;
+                        outData[outIdx + 1] = color.g;
+                        outData[outIdx + 2] = color.b;
+                        outData[outIdx + 3] = 255;
+                    }
+                }
+                ctx.putImageData(imageDataOut, 0, 0);
+
+                // Draw cell borders if enabled
+                if (showLines && lineWidth > 0) {
+                    ctx.save();
+                    ctx.strokeStyle = '#1a1a1a';
+                    ctx.lineWidth = lineWidth;
+                    ctx.lineJoin = 'round';
+
+                    // Walk through low-res region map and draw edges between different regions
+                    // To avoid double lines and complexity, we'll draw a grid of lines based on low-res boundaries.
+                    const drawnEdges = new Set(); // track edges to avoid duplicates
+
+                    for (let y = 0; y < lowResH; y++) {
+                        for (let x = 0; x < lowResW; x++) {
+                            const current = regionMap[y * lowResW + x];
+                            // check right neighbor
+                            if (x < lowResW - 1) {
+                                const right = regionMap[y * lowResW + (x + 1)];
+                                if (current !== right) {
+                                    const edgeKey = `${x},${y}-right`;
+                                    if (!drawnEdges.has(edgeKey)) {
+                                        drawnEdges.add(edgeKey);
+                                        ctx.beginPath();
+                                        ctx.moveTo((x + 1) * scaleX, y * scaleY);
+                                        ctx.lineTo((x + 1) * scaleX, (y + 1) * scaleY);
+                                        ctx.stroke();
+                                    }
+                                }
+                            }
+                            // check bottom neighbor
+                            if (y < lowResH - 1) {
+                                const bottom = regionMap[(y + 1) * lowResW + x];
+                                if (current !== bottom) {
+                                    const edgeKey = `${x},${y}-bottom`;
+                                    if (!drawnEdges.has(edgeKey)) {
+                                        drawnEdges.add(edgeKey);
+                                        ctx.beginPath();
+                                        ctx.moveTo(x * scaleX, (y + 1) * scaleY);
+                                        ctx.lineTo((x + 1) * scaleX, (y + 1) * scaleY);
+                                        ctx.stroke();
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    ctx.restore();
+                }
+
+                // Update preview size
+                const maxW = canvasWrapper.clientWidth - 40;
+                const maxH = canvasWrapper.clientHeight - 40;
+                const displayScale = Math.min(1, maxW / canvasW, maxH / canvasH);
+                outputCanvas.style.width = canvasW * displayScale + 'px';
+                outputCanvas.style.height = canvasH * displayScale + 'px';
+            }
+
+            function updateOutput() {
+                if (!originalImage) return;
+                const cells = parseInt(cellCountSlider.value);
+                const lineW = parseFloat(lineWidthSlider.value);
+                const showLines = showLinesCheck.checked;
+                const whiteBg = whiteBgCheck.checked;
+                generateVitrail(originalImage, cells, lineW, showLines, whiteBg);
+            }
+
+            // Event Listeners
+            uploadArea.addEventListener('click', () => fileInput.click());
+            fileInput.addEventListener('change', e => { if (e.target.files[0]) handleFile(e.target.files[0]); });
+            uploadArea.addEventListener('dragover', e => { e.preventDefault(); uploadArea.classList.add('drag-over'); });
+            uploadArea.addEventListener('dragleave', () => uploadArea.classList.remove('drag-over'));
+            uploadArea.addEventListener('drop', e => {
+                e.preventDefault(); uploadArea.classList.remove('drag-over');
+                if (e.dataTransfer.files[0]) handleFile(e.dataTransfer.files[0]);
+            });
+
+            function handleFile(file) {
+                if (!file.type.startsWith('image/')) return;
+                const reader = new FileReader();
+                reader.onload = ev => {
+                    const img = new Image();
+                    img.onload = () => {
+                        originalImage = img;
+                        fileNameDisplay.textContent = file.name;
+                        fileNameDisplay.style.display = 'block';
+                        placeholderBox.classList.add('hidden');
+                        updateOutput();
+                    };
+                    img.src = ev.target.result;
+                };
+                reader.readAsDataURL(file);
+            }
+
+            cellCountSlider.addEventListener('input', () => {
+                cellCountVal.textContent = cellCountSlider.value;
+                updateOutput();
+            });
+            lineWidthSlider.addEventListener('input', () => {
+                lineWidthVal.textContent = lineWidthSlider.value + ' px';
+                updateOutput();
+            });
+            showLinesCheck.addEventListener('change', updateOutput);
+            whiteBgCheck.addEventListener('change', updateOutput);
+
+            downloadBtn.addEventListener('click', () => {
+                if (!originalImage) { alert('Veuillez importer une image.'); return; }
+                const dataUrl = outputCanvas.toDataURL('image/png');
+                const a = document.createElement('a');
+                a.href = dataUrl;
+                a.download = 'vitrail-mosaique.png';
+                a.click();
+            });
+
+            resetBtn.addEventListener('click', () => {
+                originalImage = null;
+                outputCanvas.width = 600; outputCanvas.height = 400;
+                ctx.clearRect(0, 0, 600, 400);
+                outputCanvas.style.width = ''; outputCanvas.style.height = '';
+                placeholderBox.classList.remove('hidden');
+                fileNameDisplay.style.display = 'none';
+                fileInput.value = '';
+                cellCountSlider.value = 300;
+                cellCountVal.textContent = '300';
+                lineWidthSlider.value = 2;
+                lineWidthVal.textContent = '2 px';
+                showLinesCheck.checked = true;
+                whiteBgCheck.checked = true;
+            });
+
+            // FAQ
+            document.querySelectorAll('.faq-item').forEach(item => {
+                item.addEventListener('click', () => item.classList.toggle('open'));
+            });
+
+            // Init canvas size
+            outputCanvas.width = 600;
+            outputCanvas.height = 400;
+        })();
+    </script>
+</body>
+</html>

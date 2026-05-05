@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Générateur de Coloriage Personnalisé | Photo en Dessin au Trait</title>
+    <meta name="description" content="Transformez une photo en coloriage personnalisé gratuitement. Convertissez vos images en dessin au trait noir et blanc à imprimer. Idéal pour animaux, portraits, paysages.">
+    <meta name="keywords" content="coloriage personnalisé, photo en dessin, générateur coloriage, convertir image en coloriage, dessin au trait, imprimer coloriage, ligne art, photo to coloring page">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://suitecreative.fintoolsbox.com/fr/generateur-coloriage/">
+    <link rel="alternate" hreflang="fr" href="https://suitecreative.fintoolsbox.com/fr/generateur-coloriage/">
+    <link rel="alternate" hreflang="en" href="https://suitecreative.fintoolsbox.com/coloring-generator/">
+    <link rel="alternate" hreflang="x-default" href="https://suitecreative.fintoolsbox.com/coloring-generator/">
+    <meta property="og:title" content="Générateur de Coloriage Personnalisé | Photo en Dessin au Trait">
+    <meta property="og:description" content="Transformez vos photos en superbes pages de coloriage en quelques secondes. Téléchargez en PNG ou PDF prêt à imprimer.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://suitecreative.fintoolsbox.com/coloring-generator.webp">
+    <meta property="og:url" content="https://suitecreative.fintoolsbox.com/fr/generateur-coloriage/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Générateur de Coloriage Personnalisé">
+    <meta name="twitter:description" content="Créez un coloriage unique à partir de votre photo. Noir et blanc, contours nets, téléchargement PDF.">
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            "name": "Générateur de Coloriage Personnalisé",
+            "applicationCategory": "Multimedia",
+            "operatingSystem": "All",
+            "description": "Application web permettant de transformer une photo en dessin au trait noir et blanc pour créer des pages de coloriage personnalisées.",
+            "url": "https://suitecreative.fintoolsbox.com/fr/generateur-coloriage/",
+            "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "EUR"
+            },
+            "author": {
+                "@type": "Organization",
+                "name": "ColoriageMaker"
+            }
+        }
+    </script>
+    <style>
+        :root {
+            --bg: #fafaf8;
+            --surface: #ffffff;
+            --surface-hover: #f5f5f0;
+            --border: #e0e0d8;
+            --text: #1a1a1a;
+            --text-secondary: #6b6b60;
+            --accent: #3b82f6;
+            --accent-light: #eff6ff;
+            --accent-dark: #1e40af;
+            --danger: #ef4444;
+            --success: #22c55e;
+            --radius: 20px;
+            --radius-sm: 14px;
+            --radius-xs: 10px;
+            --shadow: 0 4px 16px rgba(0, 0, 0, 0.04), 0 1px 4px rgba(0, 0, 0, 0.02);
+            --shadow-hover: 0 12px 32px rgba(0, 0, 0, 0.08), 0 2px 8px rgba(0, 0, 0, 0.04);
+            --transition: 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+            --font: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font);
+            background: var(--bg);
+            color: var(--text);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1100px;
+            padding: 28px 20px 40px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+        .header h1 {
+            font-size: clamp(2rem, 5vw, 2.8rem);
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 8px;
+        }
+        .header p {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .main-panel {
+            display: flex;
+            gap: 28px;
+            flex-wrap: wrap;
+        }
+        .preview-card {
+            flex: 2;
+            min-width: 340px;
+            background: var(--surface);
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            transition: var(--transition);
+        }
+        .preview-card:hover {
+            box-shadow: var(--shadow-hover);
+        }
+        .canvas-area {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+            background: #fafaf9;
+            border-bottom: 1px solid var(--border);
+            position: relative;
+            min-height: 380px;
+        }
+        .canvas-area canvas {
+            max-width: 100%;
+            max-height: 100%;
+            border-radius: var(--radius-xs);
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            background: white;
+        }
+        .placeholder {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            pointer-events: none;
+            color: var(--text-secondary);
+            gap: 12px;
+            transition: opacity 0.3s;
+        }
+        .placeholder.hidden {
+            opacity: 0;
+        }
+        .placeholder-icon {
+            font-size: 56px;
+            opacity: 0.7;
+        }
+
+        .controls-card {
+            flex: 1;
+            min-width: 280px;
+            background: var(--surface);
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow);
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .upload-area {
+            border: 2px dashed var(--border);
+            border-radius: var(--radius-sm);
+            padding: 28px 16px;
+            text-align: center;
+            cursor: pointer;
+            transition: var(--transition);
+            background: var(--surface-hover);
+            position: relative;
+        }
+        .upload-area:hover,
+        .upload-area.drag-over {
+            border-color: var(--accent);
+            background: var(--accent-light);
+            box-shadow: 0 0 0 3px rgba(59,130,246,0.15);
+        }
+        .upload-area input {
+            display: none;
+        }
+        .upload-area .upload-icon {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+        .file-name {
+            margin-top: 10px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--accent-dark);
+            word-break: break-all;
+        }
+        .btn {
+            font-family: var(--font);
+            font-weight: 600;
+            font-size: 0.95rem;
+            padding: 12px 22px;
+            border-radius: 40px;
+            border: none;
+            cursor: pointer;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background: white;
+            color: var(--text);
+            border: 1px solid var(--border);
+            box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+        }
+        .btn-primary {
+            background: var(--accent);
+            color: white;
+            border: none;
+            box-shadow: 0 4px 14px rgba(59,130,246,0.35);
+        }
+        .btn-primary:hover {
+            background: #2563eb;
+            transform: translateY(-1px);
+            box-shadow: 0 8px 22px rgba(59,130,246,0.45);
+        }
+        .btn-outline {
+            background: transparent;
+            border: 1.5px solid var(--border);
+        }
+        .btn-outline:hover {
+            border-color: var(--accent);
+            background: var(--accent-light);
+        }
+        .btn-sm {
+            padding: 8px 16px;
+            font-size: 0.85rem;
+        }
+        .slider-group {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+        .slider-group label {
+            display: flex;
+            justify-content: space-between;
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+        input[type="range"] {
+            width: 100%;
+            accent-color: var(--accent);
+            height: 6px;
+            cursor: pointer;
+        }
+        .value-badge {
+            background: var(--accent-light);
+            color: var(--accent-dark);
+            padding: 2px 10px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.8rem;
+        }
+        .actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .faq-section {
+            margin-top: 48px;
+        }
+        .faq-section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 24px;
+            text-align: center;
+        }
+        .faq-item {
+            border-bottom: 1px solid var(--border);
+            padding: 16px 0;
+            cursor: pointer;
+        }
+        .faq-question {
+            font-weight: 600;
+            font-size: 1.05rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            padding-right: 32px;
+        }
+        .faq-item.open .faq-answer {
+            max-height: 200px;
+            margin-top: 12px;
+        }
+        .faq-item.open .faq-question::after {
+            transform: rotate(45deg);
+        }
+        .faq-question::after {
+            content: '+';
+            font-size: 1.4rem;
+            transition: transform 0.3s;
+            color: var(--accent);
+        }
+        footer {
+            text-align: center;
+            margin-top: 48px;
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+        }
+        @media (max-width: 700px) {
+            .main-panel {
+                flex-direction: column;
+            }
+            .preview-card,
+            .controls-card {
+                min-width: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>🖍️ Générateur de Coloriage Personnalisé</h1>
+            <p>Transformez n'importe quelle photo en un magnifique dessin au trait, prêt à être colorié. Rapide, gratuit et sans inscription.</p>
+        </header>
+
+        <div class="main-panel">
+            <!-- Preview -->
+            <div class="preview-card">
+                <div class="canvas-area" id="canvasArea">
+                    <canvas id="previewCanvas"></canvas>
+                    <div class="placeholder" id="placeholder">
+                        <span class="placeholder-icon">🐶🦁🐱</span>
+                        <span>Importez une photo d'animal, de portrait ou de paysage</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Controls -->
+            <div class="controls-card">
+                <div class="upload-area" id="uploadArea">
+                    <div class="upload-icon">📤</div>
+                    <strong>Cliquez ou déposez votre photo</strong>
+                    <div style="font-size:0.85rem;color:var(--text-secondary);">JPEG, PNG, WebP • Max 10 Mo</div>
+                    <div class="file-name" id="fileNameDisplay" style="display:none;"></div>
+                    <input type="file" id="fileInput" accept="image/*">
+                </div>
+
+                <div class="slider-group">
+                    <label>Détail des contours <span class="value-badge" id="thresholdVal">40</span></label>
+                    <input type="range" id="thresholdSlider" min="10" max="90" value="40" step="1">
+                </div>
+                <div class="slider-group">
+                    <label>Lissage <span class="value-badge" id="blurVal">2</span></label>
+                    <input type="range" id="blurSlider" min="0" max="6" value="2" step="0.5">
+                </div>
+                <div class="slider-group">
+                    <label>Épaisseur du trait <span class="value-badge" id="lineVal">1</span></label>
+                    <input type="range" id="lineSlider" min="1" max="4" value="1" step="1">
+                </div>
+
+                <div class="actions">
+                    <button class="btn btn-outline btn-sm" id="resetBtn">↺ Réinitialiser</button>
+                    <button class="btn btn-primary" id="downloadPng">🖼️ Télécharger PNG</button>
+                    <button class="btn btn-primary" id="downloadPdf">📄 Télécharger PDF</button>
+                </div>
+                <p style="font-size:0.8rem;color:var(--text-secondary);text-align:center;">
+                    Ajustez les paramètres pour un rendu parfait avant de télécharger.
+                </p>
+            </div>
+        </div>
+
+        <!-- FAQ -->
+        <section class="faq-section">
+            <h2>Questions fréquentes</h2>
+            <div class="faq-item">
+                <div class="faq-question">Comment transformer une photo en coloriage ?</div>
+                <div class="faq-answer">Importez votre image, puis l'outil applique automatiquement une détection de contours intelligente. Vous pouvez régler le seuil, le lissage et l'épaisseur pour obtenir un trait net, idéal pour un coloriage.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Puis-je utiliser ce générateur pour des coloriages d'animaux ?</div>
+                <div class="faq-answer">Absolument ! Les photos d'animaux (chiens, chats, lions, oiseaux) donnent d'excellents résultats grâce aux contours bien marqués. Essayez avec une photo de votre animal de compagnie.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Le service est-il vraiment gratuit ?</div>
+                <div class="faq-answer">Oui, entièrement gratuit et sans inscription. Le traitement se fait directement dans votre navigateur, vos images ne sont jamais envoyées sur un serveur.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Quels formats puis-je télécharger ?</div>
+                <div class="faq-answer">Vous pouvez télécharger le coloriage au format PNG (image) ou PDF prêt à imprimer. Le PDF conserve la qualité optimale pour l'impression sur papier A4.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Comment obtenir un trait plus épais ou plus fin ?</div>
+                <div class="faq-answer">Utilisez le curseur « Épaisseur du trait ». Une valeur plus élevée rend les lignes plus épaisses, parfaites pour les jeunes enfants. Réduisez-la pour des détails plus fins.</div>
+            </div>
+        </section>
+        <p>
+Découvrez comment utiliser cet outil dans notre 
+<a href="/fr/blog/generateur-meckup/">guide complet des stickers</a>.
+</p>
+        <footer>
+            © 2025 ColoriageMaker – Outil de conversion photo en dessin au trait gratuit et professionnel.
+        </footer>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script>
+        (function() {
+            // DOM elements
+            const canvas = document.getElementById('previewCanvas');
+            const ctx = canvas.getContext('2d');
+            const canvasArea = document.getElementById('canvasArea');
+            const placeholder = document.getElementById('placeholder');
+            const uploadArea = document.getElementById('uploadArea');
+            const fileInput = document.getElementById('fileInput');
+            const fileNameDisplay = document.getElementById('fileNameDisplay');
+            const thresholdSlider = document.getElementById('thresholdSlider');
+            const blurSlider = document.getElementById('blurSlider');
+            const lineSlider = document.getElementById('lineSlider');
+            const thresholdVal = document.getElementById('thresholdVal');
+            const blurVal = document.getElementById('blurVal');
+            const lineVal = document.getElementById('lineVal');
+            const resetBtn = document.getElementById('resetBtn');
+            const downloadPng = document.getElementById('downloadPng');
+            const downloadPdf = document.getElementById('downloadPdf');
+
+            // State
+            let originalImage = null;
+            let processedImageData = null; // result as ImageData
+            let displayScale = 1;
+            const MAX_CANVAS_DIM = 1200;
+
+            // Slider values
+            let threshold = 40;
+            let blurAmount = 2;
+            let lineThickness = 1;
+
+            // Initialize canvas size
+            function resetCanvas() {
+                canvas.width = 800;
+                canvas.height = 600;
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+            }
+            resetCanvas();
+
+            // Update slider displays
+            function updateSliderLabels() {
+                thresholdVal.textContent = threshold;
+                blurVal.textContent = blurAmount;
+                lineVal.textContent = lineThickness;
+            }
+
+            // Event listeners for sliders
+            thresholdSlider.addEventListener('input', (e) => {
+                threshold = parseInt(e.target.value);
+                updateSliderLabels();
+                if (originalImage) processImage();
+            });
+            blurSlider.addEventListener('input', (e) => {
+                blurAmount = parseFloat(e.target.value);
+                updateSliderLabels();
+                if (originalImage) processImage();
+            });
+            lineSlider.addEventListener('input', (e) => {
+                lineThickness = parseInt(e.target.value);
+                updateSliderLabels();
+                if (originalImage) applyMorphologyAndUpdate();
+            });
+
+            // File handling
+            uploadArea.addEventListener('click', () => fileInput.click());
+            fileInput.addEventListener('change', (e) => {
+                if (e.target.files && e.target.files[0]) {
+                    handleFile(e.target.files[0]);
+                }
+            });
+
+            // Drag and drop
+            uploadArea.addEventListener('dragover', (e) => {
+                e.preventDefault();
+                uploadArea.classList.add('drag-over');
+            });
+            uploadArea.addEventListener('dragleave', () => {
+                uploadArea.classList.remove('drag-over');
+            });
+            uploadArea.addEventListener('drop', (e) => {
+                e.preventDefault();
+                uploadArea.classList.remove('drag-over');
+                if (e.dataTransfer.files && e.dataTransfer.files[0]) {
+                    handleFile(e.dataTransfer.files[0]);
+                }
+            });
+
+            function handleFile(file) {
+                if (!file.type.startsWith('image/')) {
+                    alert('Veuillez sélectionner une image valide.');
+                    return;
+                }
+                const reader = new FileReader();
+                reader.onload = (ev) => {
+                    const img = new Image();
+                    img.onload = () => {
+                        originalImage = img;
+                        fileNameDisplay.textContent = file.name;
+                        fileNameDisplay.style.display = 'block';
+                        placeholder.classList.add('hidden');
+                        processImage();
+                    };
+                    img.src = ev.target.result;
+                };
+                reader.readAsDataURL(file);
+            }
+
+            // Reset
+            resetBtn.addEventListener('click', () => {
+                originalImage = null;
+                processedImageData = null;
+                resetCanvas();
+                placeholder.classList.remove('hidden');
+                fileNameDisplay.style.display = 'none';
+                fileInput.value = '';
+                threshold = 40;
+                blurAmount = 2;
+                lineThickness = 1;
+                thresholdSlider.value = 40;
+                blurSlider.value = 2;
+                lineSlider.value = 1;
+                updateSliderLabels();
+            });
+
+            // Core processing: convert image to line art
+            function processImage() {
+                if (!originalImage) return;
+                // Scale image to reasonable processing size
+                const maxDim = MAX_CANVAS_DIM;
+                let w = originalImage.naturalWidth;
+                let h = originalImage.naturalHeight;
+                if (w > maxDim || h > maxDim) {
+                    const scale = Math.min(maxDim / w, maxDim / h);
+                    w = Math.floor(w * scale);
+                    h = Math.floor(h * scale);
+                }
+                // Offscreen canvas for processing
+                const offCanvas = document.createElement('canvas');
+                offCanvas.width = w;
+                offCanvas.height = h;
+                const offCtx = offCanvas.getContext('2d');
+                offCtx.drawImage(originalImage, 0, 0, w, h);
+                let imageData = offCtx.getImageData(0, 0, w, h);
+                // Grayscale
+                grayscale(imageData);
+                // Gaussian blur
+                if (blurAmount > 0) {
+                    imageData = gaussianBlur(imageData, w, h, blurAmount);
+                }
+                // Sobel edge detection
+                const edgeData = sobelEdgeDetection(imageData, w, h);
+                // Threshold
+                const binary = applyThreshold(edgeData, threshold);
+                // Invert (white lines on black -> black on white)
+                invertBinary(binary);
+                processedImageData = binary; // store raw binary
+                // Apply morphology based on line thickness
+                applyMorphologyAndUpdate();
+            }
+
+            function applyMorphologyAndUpdate() {
+                if (!processedImageData) return;
+                let data = new Uint8ClampedArray(processedImageData.data);
+                const w = processedImageData.width;
+                const h = processedImageData.height;
+                // Apply dilation if thickness > 1
+                if (lineThickness > 1) {
+                    for (let i = 1; i < lineThickness; i++) {
+                        data = dilate(data, w, h);
+                    }
+                }
+                // Update preview canvas
+                displayResult(data, w, h);
+            }
+
+            function grayscale(imageData) {
+                const d = imageData.data;
+                for (let i = 0; i < d.length; i += 4) {
+                    const gray = 0.299 * d[i] + 0.587 * d[i + 1] + 0.114 * d[i + 2];
+                    d[i] = d[i + 1] = d[i + 2] = gray;
+                }
+            }
+
+            function gaussianBlur(imageData, w, h, radius) {
+                const kernel = createGaussianKernel(radius);
+                return applyConvolution(imageData, w, h, kernel);
+            }
+
+            function createGaussianKernel(radius) {
+                const size = Math.max(3, Math.floor(radius * 2) + 1);
+                const kernel = [];
+                const sigma = radius / 2;
+                let sum = 0;
+                const half = Math.floor(size / 2);
+                for (let y = -half; y <= half; y++) {
+                    for (let x = -half; x <= half; x++) {
+                        const val = Math.exp(-(x * x + y * y) / (2 * sigma * sigma));
+                        kernel.push(val);
+                        sum += val;
+                    }
+                }
+                return kernel.map(v => v / sum);
+            }
+
+            function applyConvolution(imageData, w, h, kernel) {
+                const side = Math.round(Math.sqrt(kernel.length));
+                const half = Math.floor(side / 2);
+                const output = new ImageData(w, h);
+                const src = imageData.data;
+                const dst = output.data;
+                for (let y = 0; y < h; y++) {
+                    for (let x = 0; x < w; x++) {
+                        let r = 0, g = 0, b = 0;
+                        for (let ky = 0; ky < side; ky++) {
+                            for (let kx = 0; kx < side; kx++) {
+                                const px = Math.min(w - 1, Math.max(0, x + kx - half));
+                                const py = Math.min(h - 1, Math.max(0, y + ky - half));
+                                const idx = (py * w + px) * 4;
+                                const weight = kernel[ky * side + kx];
+                                r += src[idx] * weight;
+                                g += src[idx + 1] * weight;
+                                b += src[idx + 2] * weight;
+                            }
+                        }
+                        const di = (y * w + x) * 4;
+                        dst[di] = r;
+                        dst[di + 1] = g;
+                        dst[di + 2] = b;
+                        dst[di + 3] = 255;
+                    }
+                }
+                return output;
+            }
+
+            function sobelEdgeDetection(imageData, w, h) {
+                const sobelX = [-1, 0, 1, -2, 0, 2, -1, 0, 1];
+                const sobelY = [-1, -2, -1, 0, 0, 0, 1, 2, 1];
+                const grad = new ImageData(w, h);
+                const src = imageData.data;
+                const dst = grad.data;
+                for (let y = 1; y < h - 1; y++) {
+                    for (let x = 1; x < w - 1; x++) {
+                        let gx = 0, gy = 0;
+                        for (let ky = -1; ky <= 1; ky++) {
+                            for (let kx = -1; kx <= 1; kx++) {
+                                const idx = ((y + ky) * w + (x + kx)) * 4;
+                                const gray = src[idx]; // already grayscale
+                                const kernelIdx = (ky + 1) * 3 + (kx + 1);
+                                gx += gray * sobelX[kernelIdx];
+                                gy += gray * sobelY[kernelIdx];
+                            }
+                        }
+                        const magnitude = Math.min(255, Math.sqrt(gx * gx + gy * gy));
+                        const di = (y * w + x) * 4;
+                        dst[di] = dst[di + 1] = dst[di + 2] = magnitude;
+                        dst[di + 3] = 255;
+                    }
+                }
+                return grad;
+            }
+
+            function applyThreshold(imageData, thresh) {
+                const data = imageData.data;
+                const out = new ImageData(imageData.width, imageData.height);
+                const od = out.data;
+                for (let i = 0; i < data.length; i += 4) {
+                    const val = data[i] > thresh ? 255 : 0;
+                    od[i] = od[i + 1] = od[i + 2] = val;
+                    od[i + 3] = 255;
+                }
+                return out;
+            }
+
+            function invertBinary(imageData) {
+                const data = imageData.data;
+                for (let i = 0; i < data.length; i += 4) {
+                    const v = data[i] === 0 ? 255 : 0;
+                    data[i] = data[i + 1] = data[i + 2] = v;
+                }
+            }
+
+            function dilate(binaryData, w, h) {
+                const src = new Uint8ClampedArray(binaryData);
+                const dst = new Uint8ClampedArray(binaryData.length);
+                for (let y = 0; y < h; y++) {
+                    for (let x = 0; x < w; x++) {
+                        const idx = (y * w + x) * 4;
+                        if (src[idx] === 0) { // black pixel (line)
+                            // set neighbors black
+                            for (let dy = -1; dy <= 1; dy++) {
+                                for (let dx = -1; dx <= 1; dx++) {
+                                    if (dx === 0 && dy === 0) continue;
+                                    const nx = x + dx, ny = y + dy;
+                                    if (nx >= 0 && nx < w && ny >= 0 && ny < h) {
+                                        const nidx = (ny * w + nx) * 4;
+                                        dst[nidx] = dst[nidx + 1] = dst[nidx + 2] = 0;
+                                        dst[nidx + 3] = 255;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                // Copy original black pixels as well
+                for (let i = 0; i < src.length; i += 4) {
+                    if (src[i] === 0) {
+                        dst[i] = dst[i + 1] = dst[i + 2] = 0;
+                        dst[i + 3] = 255;
+                    } else if (dst[i] === 0) {
+                        // already set
+                    } else {
+                        dst[i] = dst[i + 1] = dst[i + 2] = 255;
+                        dst[i + 3] = 255;
+                    }
+                }
+                return dst;
+            }
+
+            function displayResult(binaryDataArray, w, h) {
+                // Create canvas sized to fit preview area
+                canvas.width = w;
+                canvas.height = h;
+                const imgData = new ImageData(w, h);
+                imgData.data.set(binaryDataArray);
+                ctx.putImageData(imgData, 0, 0);
+                // Scale display
+                const maxDisplayWidth = canvasArea.clientWidth - 48;
+                const maxDisplayHeight = canvasArea.clientHeight - 48;
+                displayScale = Math.min(1, maxDisplayWidth / w, maxDisplayHeight / h);
+                canvas.style.width = (w * displayScale) + 'px';
+                canvas.style.height = (h * displayScale) + 'px';
+            }
+
+            // Download functions
+            function getResultCanvas() {
+                if (!processedImageData) return null;
+                const w = processedImageData.width;
+                const h = processedImageData.height;
+                const tempCanvas = document.createElement('canvas');
+                tempCanvas.width = w;
+                tempCanvas.height = h;
+                const tCtx = tempCanvas.getContext('2d');
+                tCtx.putImageData(processedImageData, 0, 0);
+                // Apply dilation if needed directly on temp
+                if (lineThickness > 1) {
+                    let data = new Uint8ClampedArray(processedImageData.data);
+                    for (let i = 1; i < lineThickness; i++) {
+                        data = dilate(data, w, h);
+                    }
+                    const dilatedImageData = new ImageData(w, h);
+                    dilatedImageData.data.set(data);
+                    tCtx.putImageData(dilatedImageData, 0, 0);
+                }
+                return tempCanvas;
+            }
+
+            downloadPng.addEventListener('click', () => {
+                const resultCanvas = getResultCanvas();
+                if (!resultCanvas) {
+                    alert('Veuillez d\'abord importer une photo.');
+                    return;
+                }
+                resultCanvas.toBlob((blob) => {
+                    const url = URL.createObjectURL(blob);
+                    const a = document.createElement('a');
+                    a.href = url;
+                    a.download = 'coloriage-personnalise.png';
+                    a.click();
+                    URL.revokeObjectURL(url);
+                }, 'image/png');
+            });
+
+            downloadPdf.addEventListener('click', async () => {
+                const resultCanvas = getResultCanvas();
+                if (!resultCanvas) {
+                    alert('Veuillez d\'abord importer une photo.');
+                    return;
+                }
+                const { jsPDF } = window.jspdf;
+                const pdf = new jsPDF({
+                    orientation: resultCanvas.width > resultCanvas.height ? 'landscape' : 'portrait',
+                    unit: 'px',
+                    format: [resultCanvas.width + 20, resultCanvas.height + 20]
+                });
+                const imgData = resultCanvas.toDataURL('image/png');
+                pdf.addImage(imgData, 'PNG', 10, 10, resultCanvas.width, resultCanvas.height);
+                pdf.save('coloriage-personnalise.pdf');
+            });
+
+            // FAQ accordion
+            document.querySelectorAll('.faq-item').forEach(item => {
+                item.addEventListener('click', () => {
+                    item.classList.toggle('open');
+                });
+            });
+
+            updateSliderLabels();
+        })();
+    </script>
+</body>
+</html>

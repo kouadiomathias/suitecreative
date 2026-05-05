@@ -1,0 +1,2088 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stained Glass Portrait Generator · Polygon Mosaic Art</title>
+    <meta name="description" content="Transform any photo into a stunning stained glass or geometric mosaic artwork. Multiple styles: Voronoï, Low Poly, Hexagonal, Cubist & Diamond. Free, private, local processing.">
+    <meta name="keywords" content="stained glass effect, photo mosaic, low poly art, voronoi generator, geometric portrait, polygon art, tiffany style, free mosaic maker">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://suitecreative.fintoolsbox.com/vitrail-mosaique/">
+
+    <link rel="alternate" hreflang="en" href="https://suitecreative.fintoolsbox.com/vitrail-mosaique/">
+    <link rel="alternate" hreflang="fr" href="https://suitecreative.fintoolsbox.com/fr/vitrail-mosaique/">
+    <link rel="alternate" hreflang="x-default" href="https://suitecreative.fintoolsbox.com/vitrail-mosaique/">
+
+    <meta property="og:title" content="Stained Glass Portrait Generator · Polygon Mosaic Art">
+    <meta property="og:description" content="Create stunning stained glass or geometric mosaic art from your photos. 5 unique styles, fully customizable, 100% private.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="fr_FR">
+    <meta property="og:image" content="https://suitecreative.fintoolsbox.com/vitrail-mosaique.webp">
+    <meta property="og:url" content="https://suitecreative.fintoolsbox.com/vitrail-mosaique/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Stained Glass & Mosaic Generator">
+    <meta name="twitter:description" content="5 styles · Voronoï, Low Poly, Hex, Cubist, Diamond. Free & private.">
+    <meta name="theme-color" content="#1a1a2e">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..600..700&family=Cormorant+Garamond:ital,wght@0,500;0,700;1,500&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            "name": "Stained Glass Portrait Generator",
+            "applicationCategory": "DesignApplication",
+            "operatingSystem": "All",
+            "description": "Web app that transforms photos into stained glass, low poly, hexagonal, cubist or diamond mosaic art with customizable cell count and outline thickness. All processing is local.",
+            "url": "https://suitecreative.fintoolsbox.com/vitrail-mosaique/",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+            "featureList": [
+  "Stained glass effect generator",
+  "Polygon mosaic creator",
+  "Voronoi portrait art",
+  "Low poly art effect",
+  "Hexagonal mosaic style",
+  "Cubist image generator",
+  "Diamond tile effect",
+  "Before and after comparison",
+  "PNG export",
+  "Private browser processing"
+],
+        }
+    </script>
+    <style>
+        :root {
+            --bg: #1a1a2e;
+            --surface: #232340;
+            --surface2: #2a2a4a;
+            --text: #e8e6f0;
+            --text2: #b0adc5;
+            --accent: #e8a850;
+            --accent2: #d4896a;
+            --accent-glow: rgba(232, 168, 80, 0.2);
+            --border: #383860;
+            --radius: 20px;
+            --radius-sm: 12px;
+            --radius-xs: 8px;
+            --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.4), 0 4px 16px rgba(0, 0, 0, 0.25);
+            --shadow-md: 0 8px 28px rgba(0, 0, 0, 0.3), 0 2px 8px rgba(0, 0, 0, 0.2);
+            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.25);
+            --transition: 0.28s cubic-bezier(0.25, 0.1, 0.25, 1);
+            --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+            --font-heading: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+            --font-mono: 'JetBrains Mono', 'SF Mono', monospace;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: var(--font-body);
+            background: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            line-height: 1.6;
+            background-image: radial-gradient(ellipse at 25% 15%, rgba(232, 168, 80, 0.06) 0%, transparent 55%),
+                radial-gradient(ellipse at 75% 70%, rgba(180, 130, 200, 0.04) 0%, transparent 55%),
+                radial-gradient(ellipse at 50% 50%, rgba(40, 40, 80, 0.5) 0%, transparent 100%);
+        }
+        .container {
+            width: 100%;
+            max-width: 1340px;
+            padding: 20px 24px 40px;
+        }
+
+        /* HEADER */
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-bottom: 16px;
+            border-bottom: 1px solid var(--border);
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        .logo {
+            font-family: var(--font-heading);
+            font-size: 1.7rem;
+            font-weight: 700;
+            color: var(--accent);
+            letter-spacing: -0.3px;
+        }
+        .logo span {
+            color: #d4a574;
+            font-style: italic;
+        }
+        .header-actions {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .badge-pill {
+            background: var(--surface2);
+            color: var(--text2);
+            padding: 6px 14px;
+            border-radius: 30px;
+            font-size: 0.78rem;
+            font-weight: 500;
+            border: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            white-space: nowrap;
+        }
+        .badge-pill .dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: #5ecca0;
+            animation: pulse-dot 2s infinite;
+        }
+        @keyframes pulse-dot {
+            0%,
+            100% {
+                box-shadow: 0 0 0 0 rgba(94, 204, 160, 0.6);
+            }
+            50% {
+                box-shadow: 0 0 0 8px rgba(94, 204, 160, 0);
+            }
+        }
+
+        /* HERO */
+        .hero {
+            text-align: center;
+            margin: 28px 0 20px;
+        }
+        .hero h1 {
+            font-family: var(--font-heading);
+            font-size: clamp(1.9rem, 4.5vw, 2.6rem);
+            color: #fff;
+            margin-bottom: 6px;
+            letter-spacing: -0.4px;
+        }
+        .hero .subtitle {
+            color: var(--text2);
+            font-size: 1.05rem;
+            max-width: 620px;
+            margin: 0 auto;
+        }
+
+        /* MAIN LAYOUT */
+        .main-grid {
+            display: flex;
+            gap: 24px;
+            flex-wrap: wrap;
+            margin-top: 12px;
+        }
+
+        /* PREVIEW */
+        .preview-box {
+            flex: 2.2;
+            min-width: 360px;
+            background: var(--surface);
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow-lg);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            position: relative;
+        }
+        .canvas-toolbar {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 10px 16px;
+            background: var(--surface2);
+            border-bottom: 1px solid var(--border);
+            flex-wrap: wrap;
+        }
+        .canvas-toolbar .tool-btn {
+            background: transparent;
+            border: 1px solid transparent;
+            color: var(--text2);
+            padding: 8px 14px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.82rem;
+            font-weight: 500;
+            transition: var(--transition);
+            white-space: nowrap;
+            font-family: var(--font-body);
+        }
+        .canvas-toolbar .tool-btn:hover {
+            background: var(--surface);
+            border-color: var(--border);
+            color: #fff;
+        }
+        .canvas-toolbar .tool-btn.active {
+            background: var(--accent-glow);
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+        .canvas-wrapper {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 16px;
+            background: #1e1e35;
+            min-height: 400px;
+            position: relative;
+            cursor: default;
+        }
+        .canvas-wrapper.compare-mode {
+            cursor: col-resize;
+        }
+        .canvas-wrapper canvas {
+            max-width: 100%;
+            max-height: 100%;
+            border-radius: 8px;
+            box-shadow: var(--shadow-md);
+            background: #fff;
+            transition: opacity 0.2s;
+        }
+        .canvas-wrapper canvas.hidden-canvas {
+            position: absolute;
+            opacity: 0;
+            pointer-events: none;
+        }
+        .compare-slider {
+            position: absolute;
+            top: 16px;
+            bottom: 16px;
+            width: 3px;
+            background: var(--accent);
+            cursor: col-resize;
+            z-index: 5;
+            display: none;
+            border-radius: 3px;
+            box-shadow: 0 0 18px rgba(232, 168, 80, 0.6);
+        }
+        .compare-slider::after {
+            content: '⟷';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: var(--accent);
+            color: #1a1a2e;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            font-weight: 700;
+        }
+        .compare-slider.visible {
+            display: block;
+        }
+        .placeholder-overlay {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            pointer-events: none;
+            color: var(--text2);
+            gap: 10px;
+            transition: opacity 0.35s;
+            z-index: 2;
+        }
+        .placeholder-overlay.hidden {
+            opacity: 0;
+        }
+        .placeholder-icon {
+            font-size: 56px;
+            opacity: 0.7;
+        }
+        .processing-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(26, 26, 46, 0.75);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 8;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.2s;
+        }
+        .processing-overlay.visible {
+            opacity: 1;
+        }
+        .spinner {
+            width: 40px;
+            height: 40px;
+            border: 3px solid var(--border);
+            border-top-color: var(--accent);
+            border-radius: 50%;
+            animation: spin 0.7s linear infinite;
+        }
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* CONTROLS PANEL */
+        .controls-panel {
+            flex: 1;
+            min-width: 300px;
+            max-width: 380px;
+            background: var(--surface);
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow-lg);
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            max-height: fit-content;
+            position: sticky;
+            top: 20px;
+        }
+        .section-title {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            color: var(--text2);
+            font-weight: 600;
+            margin-bottom: -8px;
+        }
+        .upload-area {
+            border: 2px dashed var(--border);
+            border-radius: var(--radius-sm);
+            padding: 18px;
+            text-align: center;
+            cursor: pointer;
+            transition: var(--transition);
+            background: var(--surface2);
+            position: relative;
+        }
+        .upload-area:hover,
+        .upload-area.drag-over {
+            border-color: var(--accent);
+            background: #2d2d50;
+            box-shadow: 0 0 0 4px var(--accent-glow);
+        }
+        .upload-area input {
+            display: none;
+        }
+        .upload-icon {
+            font-size: 32px;
+            display: block;
+            margin-bottom: 4px;
+        }
+        .file-name {
+            margin-top: 6px;
+            font-weight: 600;
+            color: var(--accent);
+            font-size: 0.8rem;
+            word-break: break-all;
+        }
+
+        /* STYLE SELECTOR */
+        .style-selector {
+            display: flex;
+            gap: 6px;
+            flex-wrap: wrap;
+        }
+        .style-chip {
+            flex: 1;
+            min-width: 55px;
+            padding: 10px 8px;
+            border-radius: var(--radius-xs);
+            border: 1.5px solid var(--border);
+            background: var(--surface2);
+            cursor: pointer;
+            text-align: center;
+            transition: var(--transition);
+            font-size: 0.72rem;
+            font-weight: 500;
+            color: var(--text2);
+            font-family: var(--font-body);
+        }
+        .style-chip:hover {
+            border-color: #888;
+            color: #fff;
+        }
+        .style-chip.active {
+            border-color: var(--accent);
+            background: var(--accent-glow);
+            color: var(--accent);
+            box-shadow: 0 0 12px rgba(232, 168, 80, 0.15);
+        }
+        .style-chip .style-icon {
+            font-size: 1.3rem;
+            display: block;
+            margin-bottom: 2px;
+        }
+
+        /* SLIDERS */
+        .slider-group {
+            margin-bottom: 2px;
+        }
+        .slider-group label {
+            display: flex;
+            justify-content: space-between;
+            font-weight: 500;
+            font-size: 0.84rem;
+            color: var(--text);
+            margin-bottom: 2px;
+        }
+        .slider-group .val-badge {
+            background: var(--surface2);
+            color: var(--accent);
+            padding: 2px 10px;
+            border-radius: 16px;
+            font-weight: 600;
+            font-size: 0.75rem;
+            font-family: var(--font-mono);
+            border: 1px solid var(--border);
+        }
+        input[type="range"] {
+            width: 100%;
+            accent-color: var(--accent);
+            height: 6px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        /* TOGGLES */
+        .toggle-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 0.84rem;
+        }
+        .toggle-switch {
+            position: relative;
+            width: 44px;
+            height: 26px;
+            flex-shrink: 0;
+        }
+        .toggle-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        .toggle-slider {
+            position: absolute;
+            cursor: pointer;
+            inset: 0;
+            background: var(--border);
+            border-radius: 26px;
+            transition: var(--transition);
+        }
+        .toggle-slider::before {
+            content: '';
+            position: absolute;
+            height: 20px;
+            width: 20px;
+            left: 3px;
+            bottom: 3px;
+            background: #fff;
+            border-radius: 50%;
+            transition: var(--transition);
+        }
+        input:checked+.toggle-slider {
+            background: var(--accent);
+        }
+        input:checked+.toggle-slider::before {
+            transform: translateX(18px);
+        }
+
+        /* COLOR MODE */
+        .color-mode-selector {
+            display: flex;
+            gap: 4px;
+            flex-wrap: wrap;
+        }
+        .color-chip {
+            flex: 1;
+            min-width: 52px;
+            padding: 7px 6px;
+            border-radius: 20px;
+            border: 1.5px solid var(--border);
+            background: var(--surface2);
+            cursor: pointer;
+            text-align: center;
+            font-size: 0.7rem;
+            font-weight: 500;
+            transition: var(--transition);
+            color: var(--text2);
+            font-family: var(--font-body);
+        }
+        .color-chip:hover {
+            border-color: #888;
+            color: #fff;
+        }
+        .color-chip.active {
+            border-color: var(--accent2);
+            background: rgba(212, 137, 106, 0.15);
+            color: var(--accent2);
+        }
+
+        /* BUTTONS */
+        .btn {
+            font-family: var(--font-body);
+            font-weight: 600;
+            font-size: 0.9rem;
+            padding: 11px 20px;
+            border-radius: 30px;
+            border: none;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 7px;
+            transition: var(--transition);
+            white-space: nowrap;
+        }
+        .btn-primary {
+            background: var(--accent);
+            color: #1a1a2e;
+            border: none;
+            box-shadow: 0 6px 22px rgba(232, 168, 80, 0.35);
+            font-weight: 700;
+        }
+        .btn-primary:hover {
+            background: #f0b860;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 28px rgba(232, 168, 80, 0.45);
+        }
+        .btn-outline {
+            background: transparent;
+            color: var(--text);
+            border: 1.5px solid var(--border);
+        }
+        .btn-outline:hover {
+            border-color: var(--accent);
+            background: var(--accent-glow);
+        }
+        .btn-sm {
+            padding: 7px 14px;
+            font-size: 0.78rem;
+            border-radius: 20px;
+        }
+        .actions-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .privacy-note {
+            font-size: 0.72rem;
+            color: var(--text2);
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 4px;
+        }
+
+        /* GALLERY STRIP */
+        .gallery-section {
+            margin-top: 28px;
+        }
+        .gallery-section h2 {
+            font-family: var(--font-heading);
+            font-size: 1.6rem;
+            margin-bottom: 14px;
+            text-align: center;
+            color: #fff;
+        }
+        .gallery-strip {
+            display: flex;
+            gap: 12px;
+            overflow-x: auto;
+            padding: 8px 4px 14px;
+            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: thin;
+            scrollbar-color: var(--border) transparent;
+        }
+        .gallery-strip::-webkit-scrollbar {
+            height: 5px;
+        }
+        .gallery-strip::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .gallery-strip::-webkit-scrollbar-thumb {
+            background: var(--border);
+            border-radius: 10px;
+        }
+        .gallery-item {
+            flex-shrink: 0;
+            width: 130px;
+            height: 130px;
+            border-radius: var(--radius-sm);
+            overflow: hidden;
+            cursor: pointer;
+            border: 2px solid transparent;
+            transition: var(--transition);
+            position: relative;
+            background: var(--surface2);
+        }
+        .gallery-item:hover {
+            border-color: var(--accent);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-md);
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .gallery-item .gallery-label {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 6px;
+            background: rgba(0, 0, 0, 0.7);
+            font-size: 0.68rem;
+            text-align: center;
+            color: #fff;
+            font-weight: 500;
+        }
+        .gallery-loading {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text2);
+            font-size: 0.8rem;
+            height: 100%;
+        }
+
+        /* PRESET CHIPS */
+        .preset-row {
+            display: flex;
+            gap: 5px;
+            flex-wrap: wrap;
+        }
+        .preset-chip {
+            padding: 6px 12px;
+            border-radius: 18px;
+            border: 1.5px solid var(--border);
+            background: var(--surface2);
+            cursor: pointer;
+            font-size: 0.72rem;
+            font-weight: 500;
+            transition: var(--transition);
+            color: var(--text2);
+            font-family: var(--font-body);
+        }
+        .preset-chip:hover {
+            border-color: var(--accent2);
+            color: #fff;
+        }
+        .preset-chip.active-preset {
+            border-color: var(--accent2);
+            background: rgba(212, 137, 106, 0.2);
+            color: var(--accent2);
+        }
+
+        /* FAQ */
+        .faq-section {
+            margin-top: 44px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .faq-section h2 {
+            font-family: var(--font-heading);
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #fff;
+        }
+        .faq-item {
+            border-bottom: 1px solid var(--border);
+            padding: 14px 0;
+            cursor: pointer;
+        }
+        .faq-question {
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.95rem;
+        }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.35s ease;
+            color: var(--text2);
+            font-size: 0.88rem;
+        }
+        .faq-item.open .faq-answer {
+            max-height: 180px;
+            margin-top: 10px;
+        }
+        .faq-question::after {
+            content: '+';
+            font-size: 1.4rem;
+            color: var(--accent);
+            transition: 0.3s;
+            flex-shrink: 0;
+            margin-left: 12px;
+        }
+        .faq-item.open .faq-question::after {
+            transform: rotate(45deg);
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            margin-top: 36px;
+            padding-top: 18px;
+            border-top: 1px solid var(--border);
+            color: var(--text2);
+            font-size: 0.8rem;
+        }
+        footer a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* TOAST */
+        .toast {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--surface2);
+            color: #fff;
+            padding: 12px 24px;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            z-index: 100;
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow-lg);
+            opacity: 0;
+            transition: opacity 0.3s;
+            pointer-events: none;
+        }
+        .toast.show {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        @media (max-width: 850px) {
+            .main-grid {
+                flex-direction: column;
+            }
+            .controls-panel {
+                max-width: 100%;
+                position: static;
+            }
+            .preview-box {
+                min-width: auto;
+            }
+            .canvas-wrapper {
+                min-height: 300px;
+            }
+            .gallery-item {
+                width: 100px;
+                height: 100px;
+            }
+        }
+        @media (max-width: 480px) {
+            .container {
+                padding: 10px 8px 24px;
+            }
+            .controls-panel {
+                padding: 14px;
+                gap: 12px;
+            }
+            .style-chip {
+                padding: 8px 4px;
+                font-size: 0.65rem;
+            }
+            .style-chip .style-icon {
+                font-size: 1rem;
+            }
+            .canvas-wrapper {
+                min-height: 250px;
+                padding: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- HEADER -->
+        <header>
+            <div class="logo">Suite<span>Créative</span></div>
+            <div class="header-actions">
+                <span class="badge-pill"><span class="dot"></span> Local Processing</span>
+                <span class="badge-pill">🔒 100% Private</span>
+            </div>
+        </header>
+
+        <!-- HERO -->
+        <section class="hero">
+            <h1>🎨 Stained Glass Portrait Generator</h1>
+            <p class="subtitle">Upload any photo and transform it into a stunning geometric mosaic. Choose from 5 unique styles, customize every detail, and download your artwork — all processed privately in your browser.</p>
+        </section>
+
+        <!-- MAIN -->
+        <div class="main-grid">
+            <!-- Preview Box -->
+            <div class="preview-box" id="previewBox">
+                <div class="canvas-toolbar">
+                    <button class="tool-btn active" data-mode="result" id="btnResult">🎨 Result</button>
+                    <button class="tool-btn" data-mode="original" id="btnOriginal">🖼️ Original</button>
+                    <button class="tool-btn" data-mode="compare" id="btnCompare">↔ Compare</button>
+                    <span style="flex:1;"></span>
+                    <span style="font-size:0.7rem;color:var(--text2);" id="dimensionsDisplay"></span>
+                </div>
+                <div class="canvas-wrapper" id="canvasWrapper">
+                    <canvas id="outputCanvas"></canvas>
+                    <canvas id="originalCanvas" class="hidden-canvas"></canvas>
+                    <div class="compare-slider" id="compareSlider"></div>
+                    <div class="placeholder-overlay" id="placeholderBox">
+                        <span class="placeholder-icon">🖼️</span>
+                        <span>Upload an image or pick from the gallery below</span>
+                    </div>
+                    <div class="processing-overlay" id="processingOverlay">
+                        <div class="spinner"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Controls Panel -->
+            <div class="controls-panel" id="controlsPanel">
+                <!-- Upload -->
+                <div class="upload-area" id="uploadArea">
+                    <span class="upload-icon">📤</span>
+                    <strong>Click or Drop Your Photo</strong>
+                    <div style="font-size:0.78rem;color:var(--text2);">JPG · PNG · WebP · HEIC</div>
+                    <div class="file-name" id="fileNameDisplay" style="display:none;"></div>
+                    <input type="file" id="fileInput" accept="image/*">
+                </div>
+
+                <!-- Style Selector -->
+                <div>
+                    <span class="section-title">🎭 Style</span>
+                    <div class="style-selector" id="styleSelector">
+                        <button class="style-chip active" data-style="voronoi"><span class="style-icon">🔮</span>Stained Glass</button>
+                        <button class="style-chip" data-style="lowpoly"><span class="style-icon">🔺</span>Low Poly</button>
+                        <button class="style-chip" data-style="hex"><span class="style-icon">⬡</span>Hexagonal</button>
+                        <button class="style-chip" data-style="grid"><span class="style-icon">▦</span>Cubist</button>
+                        <button class="style-chip" data-style="diamond"><span class="style-icon">◇</span>Diamond</button>
+                    </div>
+                </div>
+
+                <!-- Presets -->
+                <div>
+                    <span class="section-title">📋 Quick Presets</span>
+                    <div class="preset-row" id="presetRow">
+                        <button class="preset-chip" data-preset="classic">Classic</button>
+                        <button class="preset-chip" data-preset="fine">Fine Art</button>
+                        <button class="preset-chip" data-preset="bold">Bold Modern</button>
+                        <button class="preset-chip" data-preset="sketch">Sketch</button>
+                        <button class="preset-chip" data-preset="mural">Mural</button>
+                    </div>
+                </div>
+
+                <!-- Sliders -->
+                <div class="slider-group">
+                    <label>Cell Count <span class="val-badge" id="cellCountVal">300</span></label>
+                    <input type="range" id="cellCountSlider" min="30" max="900" value="300" step="10">
+                </div>
+                <div class="slider-group">
+                    <label>Outline Thickness <span class="val-badge" id="lineWidthVal">2.0 px</span></label>
+                    <input type="range" id="lineWidthSlider" min="0.5" max="8" value="2" step="0.5">
+                </div>
+
+                <!-- Color Mode -->
+                <div>
+                    <span class="section-title">🎨 Color Mode</span>
+                    <div class="color-mode-selector" id="colorModeSelector">
+                        <button class="color-chip active" data-cmode="original">Original</button>
+                        <button class="color-chip" data-cmode="vibrant">Vibrant</button>
+                        <button class="color-chip" data-cmode="pastel">Pastel</button>
+                        <button class="color-chip" data-cmode="mono">Mono</button>
+                    </div>
+                </div>
+
+                <!-- Toggles -->
+                <div class="toggle-row">
+                    <span>Show Outlines</span>
+                    <label class="toggle-switch"><input type="checkbox" id="showLinesCheck" checked><span class="toggle-slider"></span></label>
+                </div>
+                <div class="toggle-row">
+                    <span>White Background</span>
+                    <label class="toggle-switch"><input type="checkbox" id="whiteBgCheck" checked><span class="toggle-slider"></span></label>
+                </div>
+
+                <!-- Actions -->
+                <div class="actions-row">
+                    <button class="btn btn-primary" id="downloadBtn">⬇ Download PNG</button>
+                    <button class="btn btn-outline btn-sm" id="randomizeBtn">🎲 Randomize</button>
+                    <button class="btn btn-outline btn-sm" id="resetBtn">↺ Reset</button>
+                </div>
+                <p class="privacy-note">🔒 All processing is local. No data is ever uploaded.</p>
+            </div>
+        </div>
+
+        <!-- GALLERY -->
+        <section class="gallery-section">
+            <h2>📸 Try With a Sample Image</h2>
+            <div class="gallery-strip" id="galleryStrip">
+                <!-- Populated by JS -->
+            </div>
+        </section>
+        <!-- ========================= -->
+<!-- SEO CONTENT SECTION -->
+<!-- À placer avant la FAQ -->
+<!-- ========================= -->
+
+<section class="seo-content">
+
+    <div class="seo-inner">
+
+        <h2>How to Create Stained Glass Art from a Photo</h2>
+
+        <p>
+            Stained glass style artwork has become increasingly popular online because it transforms ordinary photos into colorful geometric compositions inspired by traditional glass mosaics and cathedral window art. With modern browser-based generators, it is now possible to create stained glass portraits, low poly illustrations and polygon mosaic effects in just a few seconds without using complex design software.
+        </p>
+
+        <p>
+            The process works by dividing an image into hundreds of geometric cells. Each polygon captures the average color of a specific region of the photo, while dark outlines recreate the look of real stained glass lead joints. The result is a unique artistic transformation that combines digital art with the timeless aesthetic of handcrafted mosaics.
+        </p>
+
+        <h3>Choose the right photo for mosaic effects</h3>
+
+        <p>
+            Portraits with strong lighting and visible facial contrast usually produce the best stained glass results. Close-up photos tend to preserve more detail, especially when using higher polygon counts or Voronoï styles.
+        </p>
+
+        <p>
+            Landscapes, architecture, flowers and animals also work particularly well because geometric segmentation naturally enhances textures, shapes and color transitions.
+        </p>
+
+        <h3>What is Voronoï mosaic art?</h3>
+
+        <p>
+            Voronoï art is a geometric style based on randomly distributed polygon cells. Each cell expands around a central point, creating organic stained-glass-like structures. This effect is widely used in generative art, low poly portraits and abstract digital illustrations.
+        </p>
+
+        <p>
+            Compared to traditional square mosaics, Voronoï decomposition creates a much more natural and artistic appearance with irregular polygon shapes that resemble real glass fragments.
+        </p>
+
+        <h3>Create low poly portraits online</h3>
+
+        <p>
+            Low poly artwork uses triangular or polygonal shapes to simplify an image while preserving its most important visual features. This aesthetic became extremely popular in digital art, gaming, posters and album covers because it creates a modern geometric look while remaining visually recognizable.
+        </p>
+
+        <p>
+            Many creators use low poly portrait generators to produce:
+        </p>
+
+        <ul class="seo-list">
+            <li>Social media profile pictures</li>
+            <li>Poster artwork</li>
+            <li>Digital wallpapers</li>
+            <li>Album covers</li>
+            <li>Creative portfolio visuals</li>
+            <li>Print-on-demand artwork</li>
+            <li>Abstract illustrations</li>
+        </ul>
+
+        <h3>100% private browser-based processing</h3>
+
+        <p>
+            Unlike many online image editors, this stained glass generator processes everything directly in your browser using HTML5 Canvas and JavaScript. Your images are never uploaded to external servers, which makes the experience faster, more private and more secure.
+        </p>
+
+        <p>
+            This local processing approach is especially useful for artists, designers and creators who want to experiment with geometric effects while keeping full control over their files.
+        </p>
+
+    </div>
+
+</section>
+
+<style>
+.seo-content{
+    margin-top:60px;
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:var(--radius);
+    box-shadow:var(--shadow-lg);
+    padding:55px 45px;
+    position:relative;
+    overflow:hidden;
+}
+
+.seo-content::before{
+    content:'';
+    position:absolute;
+    inset:0;
+    background:
+        radial-gradient(circle at top right, rgba(232,168,80,0.08), transparent 35%),
+        radial-gradient(circle at bottom left, rgba(180,130,200,0.06), transparent 40%);
+    pointer-events:none;
+}
+
+.seo-inner{
+    position:relative;
+    z-index:2;
+    max-width:920px;
+    margin:0 auto;
+}
+
+.seo-content h2{
+    font-family:var(--font-heading);
+    font-size:2.3rem;
+    line-height:1.2;
+    margin-bottom:24px;
+    color:#fff;
+    letter-spacing:-0.5px;
+}
+
+.seo-content h3{
+    font-family:var(--font-heading);
+    font-size:1.45rem;
+    margin-top:42px;
+    margin-bottom:18px;
+    color:var(--accent);
+}
+
+.seo-content p{
+    color:var(--text2);
+    line-height:1.95;
+    font-size:1rem;
+    margin-bottom:22px;
+}
+
+.seo-list{
+    padding-left:24px;
+    margin-bottom:24px;
+}
+
+.seo-list li{
+    color:var(--text2);
+    margin-bottom:10px;
+    line-height:1.8;
+}
+
+@media(max-width:768px){
+
+    .seo-content{
+        padding:38px 24px;
+    }
+
+    .seo-content h2{
+        font-size:1.8rem;
+    }
+
+    .seo-content h3{
+        font-size:1.25rem;
+    }
+
+    .seo-content p,
+    .seo-list li{
+        font-size:0.95rem;
+    }
+
+}
+</style>
+        <!-- FAQ -->
+        <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <div class="faq-question">How does the stained glass generator work?</div>
+                <div class="faq-answer">Upload a photo and the tool segments it into hundreds of polygonal cells using Voronoï decomposition (or other geometric patterns). Each cell is filled with the average color from that region of your photo, and dark outlines are added to simulate lead joints — just like a real stained glass window.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">What's the difference between the 5 styles?</div>
+                <div class="faq-answer"><strong>Stained Glass</strong> uses random Voronoï cells for an organic look. <strong>Low Poly</strong> creates a triangular mesh for that classic geometric portrait style. <strong>Hexagonal</strong> uses a honeycomb pattern. <strong>Cubist</strong> uses a regular grid for a blocky, modern art feel. <strong>Diamond</strong> creates a diagonal tile mosaic.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Is my image uploaded to a server?</div>
+                <div class="faq-answer">No. Everything runs locally in your browser using JavaScript and the HTML5 Canvas API. Your image never leaves your device. You can disconnect from the internet after loading the page and it will still work.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Can I adjust the level of detail?</div>
+                <div class="faq-answer">Absolutely. The Cell Count slider lets you set anywhere from 30 to 900 cells. Fewer cells create a more abstract, bold look; more cells preserve finer details. The outline thickness is also adjustable from 0.5 to 8 pixels.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">What formats can I download?</div>
+                <div class="faq-answer">You can download your creation as a high-resolution PNG file with a single click. The output matches the preview resolution for maximum quality.</div>
+            </div>
+        </section>
+        <p>
+Learn how to use this tool in our 
+<a href="/en-blog/tiktok-product-video-guide/">complete sticker guide</a>.
+</p>
+        <!-- FOOTER -->
+        <footer>
+            <p>© 2025 Suite Créative · <a href="/">Home</a> · <a href="/privacy/">Privacy</a> | <a href="/meckup-generator/">mockup video generator</a> | <a href="/seamless-generator/">seamless generator</a> · <a href="/legal/">Legal</a> ·</p>
+        </footer>
+    </div>
+
+    <!-- Toast -->
+    <div class="toast" id="toast"></div>
+
+    <script>
+        (function() {
+            // ───────────────────── DOM REFS ─────────────────────
+            const outputCanvas = document.getElementById('outputCanvas');
+            const ctx = outputCanvas.getContext('2d');
+            const originalCanvas = document.getElementById('originalCanvas');
+            const origCtx = originalCanvas.getContext('2d');
+            const canvasWrapper = document.getElementById('canvasWrapper');
+            const placeholderBox = document.getElementById('placeholderBox');
+            const processingOverlay = document.getElementById('processingOverlay');
+            const compareSlider = document.getElementById('compareSlider');
+            const dimensionsDisplay = document.getElementById('dimensionsDisplay');
+            const uploadArea = document.getElementById('uploadArea');
+            const fileInput = document.getElementById('fileInput');
+            const fileNameDisplay = document.getElementById('fileNameDisplay');
+            const cellCountSlider = document.getElementById('cellCountSlider');
+            const cellCountVal = document.getElementById('cellCountVal');
+            const lineWidthSlider = document.getElementById('lineWidthSlider');
+            const lineWidthVal = document.getElementById('lineWidthVal');
+            const showLinesCheck = document.getElementById('showLinesCheck');
+            const whiteBgCheck = document.getElementById('whiteBgCheck');
+            const downloadBtn = document.getElementById('downloadBtn');
+            const resetBtn = document.getElementById('resetBtn');
+            const randomizeBtn = document.getElementById('randomizeBtn');
+            const galleryStrip = document.getElementById('galleryStrip');
+            const toast = document.getElementById('toast');
+            const styleSelector = document.getElementById('styleSelector');
+            const colorModeSelector = document.getElementById('colorModeSelector');
+            const presetRow = document.getElementById('presetRow');
+            const btnResult = document.getElementById('btnResult');
+            const btnOriginal = document.getElementById('btnOriginal');
+            const btnCompare = document.getElementById('btnCompare');
+
+            // ───────────────────── STATE ─────────────────────
+            let originalImage = null;
+            let currentStyle = 'voronoi';
+            let currentColorMode = 'original';
+            let viewMode = 'result'; // 'result' | 'original' | 'compare'
+            let comparePosition = 0.5; // 0–1, fraction from left
+            let isDraggingCompare = false;
+            const MAX_SIZE = 900;
+            const LOW_RES_FACTOR = 3; // Process at 1/3 resolution for speed
+
+            // ───────────────────── GALLERY IMAGES ─────────────────────
+            const galleryImages = [
+                { url: 'https://picsum.photos/seed/gallery-dog/400/400', label: 'Dog Portrait',
+                    seed: 'gallery-dog' },
+                { url: 'https://picsum.photos/seed/gallery-cat/400/400', label: 'Cat Closeup',
+                seed: 'gallery-cat' },
+                { url: 'https://picsum.photos/seed/gallery-portrait/400/400', label: 'Woman Portrait',
+                    seed: 'gallery-portrait' },
+                { url: 'https://picsum.photos/seed/gallery-flower/400/400', label: 'Flower Macro',
+                    seed: 'gallery-flower' },
+                { url: 'https://picsum.photos/seed/gallery-building/400/400', label: 'Architecture',
+                    seed: 'gallery-building' },
+                { url: 'https://picsum.photos/seed/gallery-bird/400/400', label: 'Bird', seed: 'gallery-bird' },
+                { url: 'https://picsum.photos/seed/gallery-abstract/400/400', label: 'Abstract',
+                seed: 'gallery-abstract' },
+            ];
+
+            // ───────────────────── TOAST ─────────────────────
+            let toastTimer;
+
+            function showToast(msg) {
+                clearTimeout(toastTimer);
+                toast.textContent = msg;
+                toast.classList.add('show');
+                toastTimer = setTimeout(() => toast.classList.remove('show'), 2200);
+            }
+
+            // ───────────────────── PROCESSING OVERLAY ─────────────────────
+            let processingTimeout;
+
+            function showProcessing() {
+                processingOverlay.classList.add('visible');
+            }
+
+            function hideProcessing() {
+                clearTimeout(processingTimeout);
+                processingTimeout = setTimeout(() => processingOverlay.classList.remove('visible'), 150);
+            }
+
+            // ───────────────────── BUILD GALLERY ─────────────────────
+            function buildGallery() {
+                galleryStrip.innerHTML = '';
+                galleryImages.forEach((imgData) => {
+                    const item = document.createElement('div');
+                    item.className = 'gallery-item';
+                    item.innerHTML = `
+                        <img src="${imgData.url}" alt="${imgData.label}" loading="lazy" crossorigin="anonymous" 
+                             onerror="this.parentElement.querySelector('.gallery-loading').style.display='flex'; this.style.display='none';">
+                        <div class="gallery-label">${imgData.label}</div>
+                        <div class="gallery-loading" style="display:none;">Loading...</div>
+                    `;
+                    item.addEventListener('click', () => loadGalleryImage(imgData));
+                    galleryStrip.appendChild(item);
+                });
+            }
+
+            function loadGalleryImage(imgData) {
+                showProcessing();
+                const img = new Image();
+                img.crossOrigin = 'anonymous';
+                img.onload = () => {
+                    originalImage = img;
+                    fileNameDisplay.textContent = imgData.label + ' (demo)';
+                    fileNameDisplay.style.display = 'block';
+                    placeholderBox.classList.add('hidden');
+                    drawOriginalToCanvas();
+                    updateOutput();
+                    showToast('✅ Loaded: ' + imgData.label);
+                    hideProcessing();
+                };
+                img.onerror = () => {
+                    hideProcessing();
+                    showToast('⚠️ Could not load demo image. Try uploading your own.');
+                };
+                img.src = imgData.url;
+            }
+
+            // ───────────────────── UPLOAD HANDLERS ─────────────────────
+            uploadArea.addEventListener('click', () => fileInput.click());
+            fileInput.addEventListener('change', e => {
+                if (e.target.files[0]) handleFileUpload(e.target.files[0]);
+            });
+            uploadArea.addEventListener('dragover', e => {
+                e.preventDefault();
+                uploadArea.classList.add('drag-over');
+            });
+            uploadArea.addEventListener('dragleave', () => uploadArea.classList.remove('drag-over'));
+            uploadArea.addEventListener('drop', e => {
+                e.preventDefault();
+                uploadArea.classList.remove('drag-over');
+                if (e.dataTransfer.files[0]) handleFileUpload(e.dataTransfer.files[0]);
+            });
+
+            function handleFileUpload(file) {
+                if (!file.type.startsWith('image/')) {
+                    showToast('⚠️ Please upload an image file.');
+                    return;
+                }
+                showProcessing();
+                const reader = new FileReader();
+                reader.onload = ev => {
+                    const img = new Image();
+                    img.onload = () => {
+                        originalImage = img;
+                        fileNameDisplay.textContent = file.name;
+                        fileNameDisplay.style.display = 'block';
+                        placeholderBox.classList.add('hidden');
+                        drawOriginalToCanvas();
+                        updateOutput();
+                        showToast('✅ Image loaded! Adjust settings to customize.');
+                        hideProcessing();
+                    };
+                    img.onerror = () => {
+                        hideProcessing();
+                        showToast('⚠️ Error loading image.');
+                    };
+                    img.src = ev.target.result;
+                };
+                reader.readAsDataURL(file);
+            }
+
+            function drawOriginalToCanvas() {
+                if (!originalImage) return;
+                const w = originalImage.naturalWidth || originalImage.width;
+                const h = originalImage.naturalHeight || originalImage.height;
+                const scale = Math.min(1, MAX_SIZE / w, MAX_SIZE / h);
+                const cw = Math.floor(w * scale);
+                const ch = Math.floor(h * scale);
+                originalCanvas.width = cw;
+                originalCanvas.height = ch;
+                origCtx.clearRect(0, 0, cw, ch);
+                origCtx.drawImage(originalImage, 0, 0, cw, ch);
+            }
+
+            // ───────────────────── SITE GENERATION BY STYLE ─────────────────────
+            function generateSites(numCells, canvasW, canvasH, style) {
+                const sites = [];
+                const margin = 4;
+                const w = canvasW - margin * 2;
+                const h = canvasH - margin * 2;
+
+                switch (style) {
+                    case 'voronoi':
+                        // Random distribution
+                        for (let i = 0; i < numCells; i++) {
+                            sites.push({
+                                x: margin + Math.random() * w,
+                                y: margin + Math.random() * h,
+                            });
+                        }
+                        break;
+
+                    case 'lowpoly':
+                        // Jittered grid for triangulation
+                        const triCols = Math.ceil(Math.sqrt(numCells * 1.6));
+                        const triRows = Math.ceil(numCells / triCols);
+                        const triCellW = w / triCols;
+                        const triCellH = h / triRows;
+                        const triJitter = 0.35;
+                        for (let row = 0; row <= triRows; row++) {
+                            for (let col = 0; col <= triCols; col++) {
+                                const jx = (Math.random() - 0.5) * triCellW * triJitter * 2;
+                                const jy = (Math.random() - 0.5) * triCellH * triJitter * 2;
+                                sites.push({
+                                    x: margin + col * triCellW + jx,
+                                    y: margin + row * triCellH + jy,
+                                });
+                            }
+                        }
+                        // Trim to approximate numCells
+                        while (sites.length > numCells + 50 && sites.length > 100) {
+                            sites.splice(Math.floor(Math.random() * sites.length), 1);
+                        }
+                        break;
+
+                    case 'hex':
+                        // Hexagonal grid
+                        const hexSpacing = Math.sqrt(w * h / numCells) * 1.1;
+                        const hexDx = hexSpacing;
+                        const hexDy = hexSpacing * Math.sqrt(3) / 2;
+                        const hexCols = Math.ceil(w / hexDx) + 2;
+                        const hexRows = Math.ceil(h / hexDy) + 2;
+                        for (let row = 0; row < hexRows; row++) {
+                            for (let col = 0; col < hexCols; col++) {
+                                const offsetX = (row % 2 === 0) ? 0 : hexDx / 2;
+                                const sx = margin + col * hexDx + offsetX;
+                                const sy = margin + row * hexDy;
+                                if (sx >= margin && sx <= margin + w && sy >= margin && sy <= margin + h) {
+                                    sites.push({ x: sx, y: sy });
+                                }
+                            }
+                        }
+                        break;
+
+                    case 'grid':
+                        // Regular rectangular grid
+                        const gridCols = Math.ceil(Math.sqrt(numCells * (w / h)));
+                        const gridRows = Math.ceil(numCells / gridCols);
+                        const gridCellW = w / gridCols;
+                        const gridCellH = h / gridRows;
+                        const gridJitter = 0.08;
+                        for (let row = 0; row <= gridRows; row++) {
+                            for (let col = 0; col <= gridCols; col++) {
+                                const jx = (Math.random() - 0.5) * gridCellW * gridJitter * 2;
+                                const jy = (Math.random() - 0.5) * gridCellH * gridJitter * 2;
+                                sites.push({
+                                    x: margin + col * gridCellW + jx,
+                                    y: margin + row * gridCellH + jy,
+                                });
+                            }
+                        }
+                        break;
+
+                    case 'diamond':
+                        // Staggered grid for diamond effect
+                        const dSpacing = Math.sqrt(w * h / numCells) * 1.05;
+                        const dCols = Math.ceil(w / dSpacing) + 2;
+                        const dRows = Math.ceil(h / dSpacing) + 2;
+                        for (let row = 0; row < dRows; row++) {
+                            for (let col = 0; col < dCols; col++) {
+                                const offsetX = (row % 2 === 0) ? 0 : dSpacing / 2;
+                                const sx = margin + col * dSpacing + offsetX;
+                                const sy = margin + row * dSpacing * 0.7;
+                                if (sx >= margin && sx <= margin + w && sy >= margin && sy <= margin + h) {
+                                    sites.push({ x: sx, y: sy });
+                                }
+                            }
+                        }
+                        break;
+
+                    default:
+                        for (let i = 0; i < numCells; i++) {
+                            sites.push({
+                                x: margin + Math.random() * w,
+                                y: margin + Math.random() * h,
+                            });
+                        }
+                }
+                return sites;
+            }
+
+            // ───────────────────── COLOR TRANSFORM ─────────────────────
+            function applyColorMode(r, g, b, mode) {
+                switch (mode) {
+                    case 'vibrant':
+                        // Boost saturation
+                        const avg = (r + g + b) / 3;
+                        const factor = 1.5;
+                        return {
+                            r: Math.min(255, Math.round(avg + (r - avg) * factor)),
+                            g: Math.min(255, Math.round(avg + (g - avg) * factor)),
+                            b: Math.min(255, Math.round(avg + (b - avg) * factor)),
+                        };
+                    case 'pastel':
+                        return {
+                            r: Math.round(r + (255 - r) * 0.45),
+                            g: Math.round(g + (255 - g) * 0.45),
+                            b: Math.round(b + (255 - b) * 0.45),
+                        };
+                    case 'mono':
+                        const gray = Math.round(r * 0.299 + g * 0.587 + b * 0.114);
+                        return { r: gray, g: gray, b: gray };
+                    default: // 'original'
+                        return { r, g, b };
+                }
+            }
+
+            // ───────────────────── MAIN RENDER ─────────────────────
+            function generateArt(image, numCells, lineWidth, showLines, whiteBg, style, colorMode) {
+                const w = image.naturalWidth || image.width;
+                const h = image.naturalHeight || image.height;
+                const scale = Math.min(1, MAX_SIZE / w, MAX_SIZE / h);
+                const canvasW = Math.floor(w * scale);
+                const canvasH = Math.floor(h * scale);
+                outputCanvas.width = canvasW;
+                outputCanvas.height = canvasH;
+
+                // Draw original image to offscreen canvas
+                const offCanvas = document.createElement('canvas');
+                offCanvas.width = canvasW;
+                offCanvas.height = canvasH;
+                const offCtx = offCanvas.getContext('2d');
+                offCtx.drawImage(image, 0, 0, canvasW, canvasH);
+
+                // Low-res processing grid
+                const lowResW = Math.max(30, Math.floor(canvasW / LOW_RES_FACTOR));
+                const lowResH = Math.max(30, Math.floor(canvasH / LOW_RES_FACTOR));
+                const lowCanvas = document.createElement('canvas');
+                lowCanvas.width = lowResW;
+                lowCanvas.height = lowResH;
+                const lowCtx = lowCanvas.getContext('2d');
+                lowCtx.drawImage(offCanvas, 0, 0, lowResW, lowResH);
+                const lowImageData = lowCtx.getImageData(0, 0, lowResW, lowResH);
+
+                // Generate sites
+                const sites = generateSites(numCells, canvasW, canvasH, style);
+
+                // Build region map on low-res grid
+                const regionMap = new Int32Array(lowResW * lowResH);
+                const scaleX = lowResW / canvasW;
+                const scaleY = lowResH / canvasH;
+
+                for (let py = 0; py < lowResH; py++) {
+                    for (let px = 0; px < lowResW; px++) {
+                        let minDist = Infinity;
+                        let bestSite = 0;
+                        for (let i = 0; i < sites.length; i++) {
+                            const sx = sites[i].x * scaleX;
+                            const sy = sites[i].y * scaleY;
+                            const dx = px - sx;
+                            const dy = py - sy;
+                            const d = dx * dx + dy * dy;
+                            if (d < minDist) {
+                                minDist = d;
+                                bestSite = i;
+                            }
+                        }
+                        regionMap[py * lowResW + px] = bestSite;
+                    }
+                }
+
+                // Compute average color per site
+                const siteColors = [];
+                const siteCounts = new Array(sites.length).fill(0);
+                for (let i = 0; i < sites.length; i++) {
+                    siteColors.push({ r: 0, g: 0, b: 0 });
+                }
+                const lowData = lowImageData.data;
+                for (let py = 0; py < lowResH; py++) {
+                    for (let px = 0; px < lowResW; px++) {
+                        const idx = py * lowResW + px;
+                        const siteIdx = regionMap[idx];
+                        const pixelIdx = idx * 4;
+                        siteColors[siteIdx].r += lowData[pixelIdx];
+                        siteColors[siteIdx].g += lowData[pixelIdx + 1];
+                        siteColors[siteIdx].b += lowData[pixelIdx + 2];
+                        siteCounts[siteIdx]++;
+                    }
+                }
+                for (let i = 0; i < sites.length; i++) {
+                    if (siteCounts[i] > 0) {
+                        const rawR = Math.round(siteColors[i].r / siteCounts[i]);
+                        const rawG = Math.round(siteColors[i].g / siteCounts[i]);
+                        const rawB = Math.round(siteColors[i].b / siteCounts[i]);
+                        const transformed = applyColorMode(rawR, rawG, rawB, colorMode);
+                        siteColors[i] = transformed;
+                    } else {
+                        siteColors[i] = applyColorMode(255, 255, 255, colorMode);
+                    }
+                }
+
+                // Fill output canvas
+                ctx.clearRect(0, 0, canvasW, canvasH);
+                if (whiteBg) {
+                    ctx.fillStyle = '#ffffff';
+                    ctx.fillRect(0, 0, canvasW, canvasH);
+                }
+
+                const scaleBackX = canvasW / lowResW;
+                const scaleBackY = canvasH / lowResH;
+                const imageDataOut = ctx.createImageData(canvasW, canvasH);
+                const outData = imageDataOut.data;
+
+                for (let y = 0; y < canvasH; y++) {
+                    const lowY = Math.min(lowResH - 1, Math.floor(y / scaleBackY));
+                    const rowOffset = lowY * lowResW;
+                    for (let x = 0; x < canvasW; x++) {
+                        const lowX = Math.min(lowResW - 1, Math.floor(x / scaleBackX));
+                        const regionIdx = regionMap[rowOffset + lowX];
+                        const color = siteColors[regionIdx];
+                        const outIdx = (y * canvasW + x) * 4;
+                        outData[outIdx] = color.r;
+                        outData[outIdx + 1] = color.g;
+                        outData[outIdx + 2] = color.b;
+                        outData[outIdx + 3] = 255;
+                    }
+                }
+                ctx.putImageData(imageDataOut, 0, 0);
+
+                // Draw outlines
+                if (showLines && lineWidth > 0) {
+                    ctx.save();
+                    ctx.strokeStyle = '#1a1a1a';
+                    ctx.lineWidth = lineWidth;
+                    ctx.lineJoin = 'round';
+                    ctx.lineCap = 'round';
+
+                    if (style === 'lowpoly') {
+                        // Draw Delaunay-like edges between neighboring sites
+                        const neighborSet = new Set();
+                        for (let y = 0; y < lowResH; y++) {
+                            for (let x = 0; x < lowResW; x++) {
+                                const current = regionMap[y * lowResW + x];
+                                if (x < lowResW - 1) {
+                                    const right = regionMap[y * lowResW + (x + 1)];
+                                    if (current !== right) {
+                                        const key = Math.min(current, right) + '_' + Math.max(current, right);
+                                        neighborSet.add(key);
+                                    }
+                                }
+                                if (y < lowResH - 1) {
+                                    const bottom = regionMap[(y + 1) * lowResW + x];
+                                    if (current !== bottom) {
+                                        const key = Math.min(current, bottom) + '_' + Math.max(current, bottom);
+                                        neighborSet.add(key);
+                                    }
+                                }
+                            }
+                        }
+                        neighborSet.forEach(key => {
+                            const [a, b] = key.split('_').map(Number);
+                            ctx.beginPath();
+                            ctx.moveTo(sites[a].x, sites[a].y);
+                            ctx.lineTo(sites[b].x, sites[b].y);
+                            ctx.stroke();
+                        });
+                    } else {
+                        // Draw Voronoi cell boundaries
+                        const drawnEdges = new Set();
+                        for (let y = 0; y < lowResH; y++) {
+                            for (let x = 0; x < lowResW; x++) {
+                                const current = regionMap[y * lowResW + x];
+                                if (x < lowResW - 1) {
+                                    const right = regionMap[y * lowResW + (x + 1)];
+                                    if (current !== right) {
+                                        const edgeKey = `${x},${y}-right`;
+                                        if (!drawnEdges.has(edgeKey)) {
+                                            drawnEdges.add(edgeKey);
+                                            ctx.beginPath();
+                                            ctx.moveTo((x + 1) * scaleBackX, y * scaleBackY);
+                                            ctx.lineTo((x + 1) * scaleBackX, (y + 1) * scaleBackY);
+                                            ctx.stroke();
+                                        }
+                                    }
+                                }
+                                if (y < lowResH - 1) {
+                                    const bottom = regionMap[(y + 1) * lowResW + x];
+                                    if (current !== bottom) {
+                                        const edgeKey = `${x},${y}-bottom`;
+                                        if (!drawnEdges.has(edgeKey)) {
+                                            drawnEdges.add(edgeKey);
+                                            ctx.beginPath();
+                                            ctx.moveTo(x * scaleBackX, (y + 1) * scaleBackY);
+                                            ctx.lineTo((x + 1) * scaleBackX, (y + 1) * scaleBackY);
+                                            ctx.stroke();
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    ctx.restore();
+                }
+
+                // Update dimensions display
+                dimensionsDisplay.textContent = `${canvasW}×${canvasH}px`;
+
+                // Resize display
+                updateCanvasDisplaySize();
+            }
+
+            function updateCanvasDisplaySize() {
+                const maxW = Math.max(200, canvasWrapper.clientWidth - 32);
+                const maxH = Math.max(150, canvasWrapper.clientHeight - 32);
+                const displayScale = Math.min(1, maxW / outputCanvas.width, maxH / outputCanvas.height);
+                outputCanvas.style.width = outputCanvas.width * displayScale + 'px';
+                outputCanvas.style.height = outputCanvas.height * displayScale + 'px';
+                originalCanvas.style.width = originalCanvas.width * displayScale + 'px';
+                originalCanvas.style.height = originalCanvas.height * displayScale + 'px';
+                // Position original canvas same as output
+                originalCanvas.style.position = 'absolute';
+                originalCanvas.style.top = '50%';
+                originalCanvas.style.left = '50%';
+                originalCanvas.style.transform = 'translate(-50%, -50%)';
+                outputCanvas.style.position = 'relative';
+                outputCanvas.style.zIndex = '1';
+                originalCanvas.style.zIndex = '0';
+            }
+
+            function updateOutput() {
+                if (!originalImage) return;
+                showProcessing();
+                const cells = parseInt(cellCountSlider.value);
+                const lineW = parseFloat(lineWidthSlider.value);
+                const showLines = showLinesCheck.checked;
+                const whiteBg = whiteBgCheck.checked;
+                // Use requestAnimationFrame to let the spinner render
+                requestAnimationFrame(() => {
+                    generateArt(originalImage, cells, lineW, showLines, whiteBg, currentStyle, currentColorMode);
+                    applyViewMode();
+                    hideProcessing();
+                });
+            }
+
+            // ───────────────────── VIEW MODES ─────────────────────
+            function applyViewMode() {
+                compareSlider.classList.remove('visible');
+                originalCanvas.classList.add('hidden-canvas');
+                outputCanvas.style.clipPath = 'none';
+                outputCanvas.style.opacity = '1';
+                originalCanvas.style.opacity = '0';
+
+                switch (viewMode) {
+                    case 'result':
+                        outputCanvas.style.display = '';
+                        originalCanvas.style.display = 'none';
+                        canvasWrapper.classList.remove('compare-mode');
+                        break;
+                    case 'original':
+                        outputCanvas.style.display = 'none';
+                        originalCanvas.style.display = '';
+                        originalCanvas.classList.remove('hidden-canvas');
+                        originalCanvas.style.opacity = '1';
+                        originalCanvas.style.position = 'relative';
+                        originalCanvas.style.top = 'auto';
+                        originalCanvas.style.left = 'auto';
+                        originalCanvas.style.transform = 'none';
+                        canvasWrapper.classList.remove('compare-mode');
+                        break;
+                    case 'compare':
+                        outputCanvas.style.display = '';
+                        originalCanvas.style.display = '';
+                        originalCanvas.classList.remove('hidden-canvas');
+                        originalCanvas.style.opacity = '1';
+                        originalCanvas.style.position = 'absolute';
+                        originalCanvas.style.top = '50%';
+                        originalCanvas.style.left = '50%';
+                        originalCanvas.style.transform = 'translate(-50%, -50%)';
+                        outputCanvas.style.position = 'absolute';
+                        outputCanvas.style.top = '50%';
+                        outputCanvas.style.left = '50%';
+                        outputCanvas.style.transform = 'translate(-50%, -50%)';
+                        outputCanvas.style.zIndex = '2';
+                        originalCanvas.style.zIndex = '1';
+                        outputCanvas.style.clipPath =
+                            `inset(0 ${100 - comparePosition * 100}% 0 0)`;
+                        compareSlider.classList.add('visible');
+                        updateCompareSliderPosition();
+                        canvasWrapper.classList.add('compare-mode');
+                        break;
+                }
+                updateCanvasDisplaySize();
+            }
+
+            function updateCompareSliderPosition() {
+                const wrapperRect = canvasWrapper.getBoundingClientRect();
+                const canvasRect = outputCanvas.getBoundingClientRect();
+                const leftEdge = canvasRect.left - wrapperRect.left;
+                const sliderX = leftEdge + canvasRect.width * comparePosition;
+                compareSlider.style.left = sliderX + 'px';
+                compareSlider.style.top = (canvasRect.top - wrapperRect.top) + 'px';
+                compareSlider.style.height = canvasRect.height + 'px';
+            }
+
+            function setViewMode(mode) {
+                viewMode = mode;
+                btnResult.classList.toggle('active', mode === 'result');
+                btnOriginal.classList.toggle('active', mode === 'original');
+                btnCompare.classList.toggle('active', mode === 'compare');
+                applyViewMode();
+                if (mode === 'compare') {
+                    updateCompareSliderPosition();
+                }
+            }
+
+            btnResult.addEventListener('click', () => setViewMode('result'));
+            btnOriginal.addEventListener('click', () => setViewMode('original'));
+            btnCompare.addEventListener('click', () => setViewMode('compare'));
+
+            // Compare slider dragging
+            compareSlider.addEventListener('mousedown', (e) => {
+                if (viewMode === 'compare') {
+                    isDraggingCompare = true;
+                    e.preventDefault();
+                }
+            });
+            document.addEventListener('mousemove', (e) => {
+                if (!isDraggingCompare || viewMode !== 'compare') return;
+                const wrapperRect = canvasWrapper.getBoundingClientRect();
+                const canvasRect = outputCanvas.getBoundingClientRect();
+                const relativeX = e.clientX - canvasRect.left;
+                comparePosition = Math.max(0.02, Math.min(0.98, relativeX / canvasRect.width));
+                outputCanvas.style.clipPath =
+                    `inset(0 ${100 - comparePosition * 100}% 0 0)`;
+                updateCompareSliderPosition();
+            });
+            document.addEventListener('mouseup', () => {
+                isDraggingCompare = false;
+            });
+            compareSlider.addEventListener('touchstart', (e) => {
+                if (viewMode === 'compare') {
+                    isDraggingCompare = true;
+                    e.preventDefault();
+                }
+            }, { passive: false });
+            document.addEventListener('touchmove', (e) => {
+                if (!isDraggingCompare || viewMode !== 'compare') return;
+                const wrapperRect = canvasWrapper.getBoundingClientRect();
+                const canvasRect = outputCanvas.getBoundingClientRect();
+                const relativeX = e.touches[0].clientX - canvasRect.left;
+                comparePosition = Math.max(0.02, Math.min(0.98, relativeX / canvasRect.width));
+                outputCanvas.style.clipPath =
+                    `inset(0 ${100 - comparePosition * 100}% 0 0)`;
+                updateCompareSliderPosition();
+            });
+            document.addEventListener('touchend', () => {
+                isDraggingCompare = false;
+            });
+
+            // ───────────────────── EVENT LISTENERS ─────────────────────
+            cellCountSlider.addEventListener('input', () => {
+                cellCountVal.textContent = cellCountSlider.value;
+                debouncedUpdate();
+            });
+            lineWidthSlider.addEventListener('input', () => {
+                lineWidthVal.textContent = parseFloat(lineWidthSlider.value).toFixed(1) + ' px';
+                debouncedUpdate();
+            });
+            showLinesCheck.addEventListener('change', () => debouncedUpdate());
+            whiteBgCheck.addEventListener('change', () => debouncedUpdate());
+
+            let debounceTimer;
+
+            function debouncedUpdate() {
+                clearTimeout(debounceTimer);
+                debounceTimer = setTimeout(() => {
+                    if (originalImage) updateOutput();
+                }, 180);
+            }
+
+            // Style selector
+            styleSelector.addEventListener('click', (e) => {
+                const chip = e.target.closest('.style-chip');
+                if (!chip) return;
+                styleSelector.querySelectorAll('.style-chip').forEach(c => c.classList.remove(
+                    'active'));
+                chip.classList.add('active');
+                currentStyle = chip.dataset.style;
+                if (originalImage) updateOutput();
+                showToast('🎭 Style: ' + chip.textContent.trim());
+            });
+
+            // Color mode selector
+            colorModeSelector.addEventListener('click', (e) => {
+                const chip = e.target.closest('.color-chip');
+                if (!chip) return;
+                colorModeSelector.querySelectorAll('.color-chip').forEach(c => c.classList.remove(
+                    'active'));
+                chip.classList.add('active');
+                currentColorMode = chip.dataset.cmode;
+                if (originalImage) updateOutput();
+                showToast('🎨 Color: ' + chip.textContent.trim());
+            });
+
+            // Presets
+            presetRow.addEventListener('click', (e) => {
+                const chip = e.target.closest('.preset-chip');
+                if (!chip) return;
+                presetRow.querySelectorAll('.preset-chip').forEach(c => c.classList.remove(
+                'active-preset'));
+                chip.classList.add('active-preset');
+                applyPreset(chip.dataset.preset);
+            });
+
+            function applyPreset(preset) {
+                switch (preset) {
+                    case 'classic':
+                        cellCountSlider.value = 300;
+                        lineWidthSlider.value = 2;
+                        showLinesCheck.checked = true;
+                        whiteBgCheck.checked = true;
+                        setStyle('voronoi');
+                        setColorMode('original');
+                        break;
+                    case 'fine':
+                        cellCountSlider.value = 600;
+                        lineWidthSlider.value = 1;
+                        showLinesCheck.checked = true;
+                        whiteBgCheck.checked = true;
+                        setStyle('lowpoly');
+                        setColorMode('vibrant');
+                        break;
+                    case 'bold':
+                        cellCountSlider.value = 100;
+                        lineWidthSlider.value = 4;
+                        showLinesCheck.checked = true;
+                        whiteBgCheck.checked = true;
+                        setStyle('grid');
+                        setColorMode('vibrant');
+                        break;
+                    case 'sketch':
+                        cellCountSlider.value = 200;
+                        lineWidthSlider.value = 1.5;
+                        showLinesCheck.checked = true;
+                        whiteBgCheck.checked = false;
+                        setStyle('voronoi');
+                        setColorMode('mono');
+                        break;
+                    case 'mural':
+                        cellCountSlider.value = 450;
+                        lineWidthSlider.value = 3;
+                        showLinesCheck.checked = true;
+                        whiteBgCheck.checked = true;
+                        setStyle('diamond');
+                        setColorMode('pastel');
+                        break;
+                }
+                cellCountVal.textContent = cellCountSlider.value;
+                lineWidthVal.textContent = parseFloat(lineWidthSlider.value).toFixed(1) + ' px';
+                if (originalImage) updateOutput();
+                showToast('📋 Preset: ' + preset.charAt(0).toUpperCase() + preset.slice(1));
+            }
+
+            function setStyle(style) {
+                currentStyle = style;
+                styleSelector.querySelectorAll('.style-chip').forEach(c => {
+                    c.classList.toggle('active', c.dataset.style === style);
+                });
+            }
+
+            function setColorMode(cmode) {
+                currentColorMode = cmode;
+                colorModeSelector.querySelectorAll('.color-chip').forEach(c => {
+                    c.classList.toggle('active', c.dataset.cmode === cmode);
+                });
+            }
+
+            // Download
+            downloadBtn.addEventListener('click', () => {
+                if (!originalImage) {
+                    showToast('⚠️ Please upload an image first.');
+                    return;
+                }
+                // Temporarily set view to result for clean download
+                const prevMode = viewMode;
+                if (viewMode !== 'result') {
+                    setViewMode('result');
+                }
+                requestAnimationFrame(() => {
+                    const dataUrl = outputCanvas.toDataURL('image/png');
+                    const a = document.createElement('a');
+                    a.href = dataUrl;
+                    const styleNames = {
+                        voronoi: 'stained-glass',
+                        lowpoly: 'low-poly',
+                        hex: 'hexagonal',
+                        grid: 'cubist',
+                        diamond: 'diamond'
+                    };
+                    a.download = `mosaic-${styleNames[currentStyle] || currentStyle}-${Date.now()}.png`;
+                    a.click();
+                    showToast('✅ Downloaded! Enjoy your artwork.');
+                    if (prevMode !== 'result') {
+                        setViewMode(prevMode);
+                    }
+                });
+            });
+
+            // Reset
+            resetBtn.addEventListener('click', () => {
+                originalImage = null;
+                outputCanvas.width = 600;
+                outputCanvas.height = 400;
+                ctx.clearRect(0, 0, 600, 400);
+                originalCanvas.width = 600;
+                originalCanvas.height = 400;
+                origCtx.clearRect(0, 0, 600, 400);
+                outputCanvas.style.width = '';
+                outputCanvas.style.height = '';
+                outputCanvas.style.clipPath = 'none';
+                outputCanvas.style.position = 'relative';
+                outputCanvas.style.top = 'auto';
+                outputCanvas.style.left = 'auto';
+                outputCanvas.style.transform = 'none';
+                outputCanvas.style.zIndex = '1';
+                outputCanvas.style.display = '';
+                originalCanvas.style.display = 'none';
+                originalCanvas.classList.add('hidden-canvas');
+                originalCanvas.style.clipPath = 'none';
+                placeholderBox.classList.remove('hidden');
+                fileNameDisplay.style.display = 'none';
+                fileInput.value = '';
+                cellCountSlider.value = 300;
+                cellCountVal.textContent = '300';
+                lineWidthSlider.value = 2;
+                lineWidthVal.textContent = '2.0 px';
+                showLinesCheck.checked = true;
+                whiteBgCheck.checked = true;
+                currentStyle = 'voronoi';
+                currentColorMode = 'original';
+                viewMode = 'result';
+                comparePosition = 0.5;
+                compareSlider.classList.remove('visible');
+                canvasWrapper.classList.remove('compare-mode');
+                dimensionsDisplay.textContent = '';
+                setViewMode('result');
+                styleSelector.querySelectorAll('.style-chip').forEach(c => c.classList.toggle('active', c
+                    .dataset.style === 'voronoi'));
+                colorModeSelector.querySelectorAll('.color-chip').forEach(c => c.classList.toggle('active', c
+                    .dataset.cmode === 'original'));
+                presetRow.querySelectorAll('.preset-chip').forEach(c => c.classList.remove('active-preset'));
+                showToast('🔄 Reset complete.');
+            });
+
+            // Randomize
+            randomizeBtn.addEventListener('click', () => {
+                if (!originalImage) {
+                    showToast('⚠️ Upload an image first to randomize.');
+                    return;
+                }
+                const styles = ['voronoi', 'lowpoly', 'hex', 'grid', 'diamond'];
+                const colorModes = ['original', 'vibrant', 'pastel', 'mono'];
+                const randomStyle = styles[Math.floor(Math.random() * styles.length)];
+                const randomColor = colorModes[Math.floor(Math.random() * colorModes.length)];
+                const randomCells = Math.floor(Math.random() * 600) + 60;
+                const randomLineWidth = (Math.random() * 5 + 0.5).toFixed(1);
+                const randomShowLines = Math.random() > 0.1;
+                const randomWhiteBg = Math.random() > 0.2;
+
+                setStyle(randomStyle);
+                setColorMode(randomColor);
+                cellCountSlider.value = randomCells;
+                cellCountVal.textContent = randomCells;
+                lineWidthSlider.value = randomLineWidth;
+                lineWidthVal.textContent = parseFloat(randomLineWidth).toFixed(1) + ' px';
+                showLinesCheck.checked = randomShowLines;
+                whiteBgCheck.checked = randomWhiteBg;
+                presetRow.querySelectorAll('.preset-chip').forEach(c => c.classList.remove('active-preset'));
+                updateOutput();
+                showToast('🎲 Randomized! Style: ' + randomStyle + ' | Cells: ' + randomCells);
+            });
+
+            // ───────────────────── FAQ ─────────────────────
+            document.querySelectorAll('.faq-item').forEach(item => {
+                item.addEventListener('click', () => item.classList.toggle('open'));
+            });
+
+            // ───────────────────── RESIZE HANDLER ─────────────────────
+            window.addEventListener('resize', () => {
+                updateCanvasDisplaySize();
+                if (viewMode === 'compare') updateCompareSliderPosition();
+            });
+
+            // ───────────────────── KEYBOARD SHORTCUTS ─────────────────────
+            document.addEventListener('keydown', (e) => {
+                if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+                switch (e.key.toLowerCase()) {
+                    case 'r':
+                        setViewMode('result');
+                        showToast('View: Result');
+                        break;
+                    case 'o':
+                        setViewMode('original');
+                        showToast('View: Original');
+                        break;
+                    case 'c':
+                        setViewMode('compare');
+                        showToast('View: Compare (drag the slider)');
+                        break;
+                    case 'd':
+                        downloadBtn.click();
+                        break;
+                    case 'x':
+                        randomizeBtn.click();
+                        break;
+                    case 'escape':
+                        resetBtn.click();
+                        break;
+                }
+            });
+
+            // ───────────────────── INIT ─────────────────────
+            function init() {
+                outputCanvas.width = 600;
+                outputCanvas.height = 400;
+                originalCanvas.width = 600;
+                originalCanvas.height = 400;
+                buildGallery();
+                updateCanvasDisplaySize();
+                // Auto-load first gallery image as demo
+                setTimeout(() => {
+                    if (!originalImage && galleryImages.length > 0) {
+                        loadGalleryImage(galleryImages[0]);
+                    }
+                }, 400);
+            }
+
+            init();
+            console.log('🖼️ Stained Glass Portrait Generator ready.');
+            console.log('   Shortcuts: R=Result O=Original C=Compare D=Download X=Randomize Esc=Reset');
+            console.log('   Styles: Voronoï | Low Poly | Hexagonal | Cubist | Diamond');
+            console.log('   🔒 100% local processing — no data ever uploaded.');
+        })();
+    </script>
+</body>
+</html>

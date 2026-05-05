@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://suitecreative.fintoolsbox.com/sitemap.xml
+Host: suitecreative.fintoolsbox.com

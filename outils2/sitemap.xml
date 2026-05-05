@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <!-- Page d'accueil de la suite -->
+    <url>
+        <loc>https://www.suitecreative.com/</loc>
+        <lastmod>2025-04-08</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <!-- Outil 1 : Mockup Vidéo T-shirt avec vent -->
+    <url>
+        <loc>https://www.suitecreative.com/generateur-meckup/</loc>
+        <lastmod>2025-04-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <!-- Outil 2 : Générateur de coloriage personnalisé -->
+    <url>
+        <loc>https://www.suitecreative.com/generateur-coloriage/</loc>
+        <lastmod>2025-04-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <!-- Outil 3 : Générateur de stickers avec forme de découpe -->
+    <url>
+        <loc>https://www.suitecreative.com/generateur-stickers</loc>
+        <lastmod>2025-04-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <!-- Outil 4 : Portrait animal style asiatique -->
+    <url>
+        <loc>https://www.suitecreative.com/portrait-animal</loc>
+        <lastmod>2025-04-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <!-- Outil Peluche Personnalisée -->
+    <url>
+        <loc>https://www.suitecreative.com/generateur-peluche/</loc>
+        <lastmod>2025-04-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <!-- Outil Vitrail Mosaïque -->
+    <url>
+        <loc>https://www.suitecreative.com/vitrail-mosaique/</loc>
+        <lastmod>2025-04-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <!-- Outil Flipbook -->
+    <url>
+        <loc>https://www.suitecreative.com/flipbook/</loc>
+        <lastmod>2025-04-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+
+    <!-- Article : Mockup Vidéo T‑shirt avec Effet de Vent -->
+    <url>
+        <loc>https://www.suitecreative.com/blog/generateur-meckup</loc>
+        <lastmod>2025-04-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Article : Coloriage Personnalisé -->
+    <url>
+        <loc>https://www.suitecreative.com/blog/generateur-coloriage/</loc>
+        <lastmod>2025-04-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Article : Stickers Personnalisés -->
+    <url>
+        <loc>https://www.suitecreative.com/blog/generateur-stickers/</loc>
+        <lastmod>2025-04-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Article : Peluche Personnalisée -->
+    <url>
+        <loc>https://www.suitecreative.com/blog/peluche/</loc>
+        <lastmod>2025-04-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Article : Mosaïque Polygone / Vitrail -->
+    <url>
+        <loc>https://www.suitecreative.com/blog/mosaique-polygone/</loc>
+        <lastmod>2025-04-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+
+     <url>
+        <loc>https://example.com/best-etsy-mockup-tools</loc>
+        <lastmod>2025-04-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://example.com/how-to-create-product-videos</loc>
+        <lastmod>2025-04-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://example.com/tiktok-product-video-guide</loc>
+        <lastmod>2025-04-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://example.com/shopify-video-mockups</loc>
+        <lastmod>2025-04-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://example.com/cat-coloring-page-generator</loc>
+        <lastmod>2025-04-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://example.com/kids-coloring-page-generator</loc>
+        <lastmod>2025-04-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://example.com/photo-to-coloring-page</loc>
+        <lastmod>2025-04-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://example.com/stained-glass-generator</loc>
+        <lastmod>2025-04-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://example.com/tiffany-glass-effect</loc>
+        <lastmod>2025-04-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+
+
+    <url>
+    <loc>https://www.yourdomain.com/patternzoo</loc>
+    <lastmod>2025-07-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Stained Glass Portrait Generator -->
+  <url>
+    <loc>https://www.yourdomain.com/stained-glass-generator</loc>
+    <lastmod>2025-07-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Plush Toy Customizer -->
+  <url>
+    <loc>https://www.yourdomain.com/plush-toy-customizer</loc>
+    <lastmod>2025-07-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Custom Coloring Page Generator -->
+  <url>
+    <loc>https://www.yourdomain.com/custom-coloring-page</loc>
+    <lastmod>2025-07-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- T-Shirt Video Mockup Pro -->
+  <url>
+    <loc>https://www.yourdomain.com/mockup-studio-pro</loc>
+    <lastmod>2025-07-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+</urlset>
+
+
+
+
+
+
+
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <!-- ═══════════════════════════════════════════════
+       English version — PatternZoo
+  ════════════════════════════════════════════════ -->
+  <url>
+    <loc>https://suitecreative.fintoolsbox.com/seamless-generator/</loc>
+    <lastmod>2026-05-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+
+    <!-- hreflang alternates -->
+    <xhtml:link
+      rel="alternate"
+      hreflang="en"
+      href="https://suitecreative.fintoolsbox.com/seamless-generator/"/>
+    <xhtml:link
+      rel="alternate"
+      hreflang="fr"
+      href="https://suitecreative.fintoolsbox.com/fr/animal-semless-generator/"/>
+    <xhtml:link
+      rel="alternate"
+      hreflang="x-default"
+      href="https://suitecreative.fintoolsbox.com/seamless-generator/"/>
+
+    <!-- Representative screenshot -->
+    <image:image>
+      <image:loc>https://www.suitecreative.fintoolsbox.com/seamless-generator.webp</image:loc>
+      <image:title>PatternZoo — Free Seamless Animal Pattern Generator</image:title>
+      <image:caption>Create seamless repeat patterns with 10 vector animals, 6 tiling modes, PNG &amp; SVG export.</image:caption>
+    </image:image>
+  </url>
+
+  <!-- ═══════════════════════════════════════════════
+       French version — PatternZoo
+  ════════════════════════════════════════════════ -->
+  <url>
+    <loc>https://suitecreative.fintoolsbox.com/fr/animal-semless-generator/</loc>
+    <lastmod>2026-05-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+
+    <!-- hreflang alternates -->
+    <xhtml:link
+      rel="alternate"
+      hreflang="fr"
+      href="https://suitecreative.fintoolsbox.com/fr/animal-semless-generator/"/>
+    <xhtml:link
+      rel="alternate"
+      hreflang="en"
+      href="https://suitecreative.fintoolsbox.com/seamless-generator/"/>
+    <xhtml:link
+      rel="alternate"
+      hreflang="x-default"
+      href="https://suitecreative.fintoolsbox.com/seamless-generator/"/>
+
+    <!-- Representative screenshot -->
+    <image:image>
+      <image:loc>https://suitecreative.fintoolsbox.com/fr/seamless-generator.webp</image:loc>
+      <image:title>PatternZoo — Générateur de Motifs Seamless Gratuit avec Animaux</image:title>
+      <image:caption>Créez gratuitement des motifs seamless répétitifs à base d'animaux. 10 animaux, 6 modes de tiling, export PNG HD et SVG.</image:caption>
+    </image:image>
+  </url>
+
+
+  <!-- ═══════════════════════════════════════════════
+       English version — Sticker Maker Pro
+  ════════════════════════════════════════════════ -->
+  <url>
+    <loc>https://suitecreative.fintoolsbox.com/sticker-maker/</loc>
+    <lastmod>2026-05-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+
+    <xhtml:link
+      rel="alternate"
+      hreflang="en"
+      href="https://suitecreative.fintoolsbox.com/sticker-maker/"/>
+    <xhtml:link
+      rel="alternate"
+      hreflang="fr"
+      href="https://suitecreative.fintoolsbox.com/fr/generateur-stickers/"/>
+    <xhtml:link
+      rel="alternate"
+      hreflang="x-default"
+      href="https://suitecreative.fintoolsbox.com/sticker-maker/"/>
+
+    <image:image>
+      <image:loc>https://suitecreative.fintoolsbox.com/sticker-maker.webp</image:loc>
+      <image:title>Sticker Maker Pro — Custom Sticker Generator</image:title>
+      <image:caption>Create transparent PNG stickers, printable sticker sheets and custom sticker packs online.</image:caption>
+    </image:image>
+  </url>
+
+  <!-- ═══════════════════════════════════════════════
+       French version — Générateur de Stickers
+  ════════════════════════════════════════════════ -->
+  <url>
+    <loc>https://suitecreative.fintoolsbox.com/fr/generateur-stickers/</loc>
+    <lastmod>2026-05-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+
+    <xhtml:link
+      rel="alternate"
+      hreflang="fr"
+      href="https://suitecreative.fintoolsbox.com/fr/generateur-stickers/"/>
+    <xhtml:link
+      rel="alternate"
+      hreflang="en"
+      href="https://suitecreative.fintoolsbox.com/sticker-maker/"/>
+    <xhtml:link
+      rel="alternate"
+      hreflang="x-default"
+      href="https://suitecreative.fintoolsbox.com/sticker-maker/"/>
+
+    <image:image>
+      <image:loc>https://suitecreative.fintoolsbox.com/sticker-maker.webp</image:loc>
+      <image:title>Générateur de Stickers Personnalisés</image:title>
+      <image:caption>Créez des stickers PNG transparents, planches imprimables et autocollants personnalisés gratuitement.</image:caption>
+    </image:image>
+  </url>
+
+  <!-- ═══════════════════════════════════════════════
+       English version — Plush Customizer
+  ════════════════════════════════════════════════ -->
+  <url>
+    <loc>https://suitecreative.fintoolsbox.com/plush-customizer/</loc>
+    <lastmod>2026-05-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+
+    <xhtml:link
+      rel="alternate"
+      hreflang="en"
+      href="https://suitecreative.fintoolsbox.com/plush-customizer/"/>
+    <xhtml:link
+      rel="alternate"
+      hreflang="fr"
+      href="https://suitecreative.fintoolsbox.com/fr/peluche/"/>
+    <xhtml:link
+      rel="alternate"
+      hreflang="x-default"
+      href="https://suitecreative.fintoolsbox.com/plush-customizer/"/>
+
+    <image:image>
+      <image:loc>https://suitecreative.fontoolsbox.com/plush-customizer.webp</image:loc>
+      <image:title>Plushify AI — Plush Toy Generator</image:title>
+      <image:caption>Turn photos into cute plush toys with wool textures, stitches and kawaii effects.</image:caption>
+    </image:image>
+  </url>
+
+  <!-- ═══════════════════════════════════════════════
+       French version — Générateur Effet Peluche
+  ════════════════════════════════════════════════ -->
+  <url>
+    <loc>https://suitecreative.fintoolsbox.com/fr/peluche/</loc>
+    <lastmod>2026-05-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+
+    <xhtml:link
+      rel="alternate"
+      hreflang="fr"
+      href="https://suitecreative.fintoolsbox.com/fr/peluche/"/>
+    <xhtml:link
+      rel="alternate"
+      hreflang="en"
+      href="https://suitecreative.fintoolsbox.com/plush-customizer/"/>
+    <xhtml:link
+      rel="alternate"
+      hreflang="x-default"
+      href="https://suitecreative.fintoolsbox.com/plush-customizer/"/>
+
+    <image:image>
+      <image:loc>https://suitecreative.fintoolsbox.com/plush-customizer.webp</image:loc>
+      <image:title>Générateur Effet Peluche Kawaii</image:title>
+      <image:caption>Transformez vos photos en adorables peluches kawaii avec textures laineuses et coutures réalistes.</image:caption>
+    </image:image>
+  </url>
+
+  <!-- ═══════════════════════════════════════════════
+       English version — Stained Glass Mosaic Studio
+  ════════════════════════════════════════════════ -->
+  <url>
+    <loc>https://suitecreative.fintoolsbox.com/vitrail-mosaique/</loc>
+    <lastmod>2026-05-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+
+    <xhtml:link
+      rel="alternate"
+      hreflang="en"
+      href="https://suitecreative.fintoolsbox.com/vitrail-mosaique/"/>
+    <xhtml:link
+      rel="alternate"
+      hreflang="fr"
+      href="https://suitecreative.fintoolsbox.com/fr/vitrail-mosaique/"/>
+    <xhtml:link
+      rel="alternate"
+      hreflang="x-default"
+      href="https://suitecreative.fintoolsbox.com/vitrail-mosaique/"/>
+
+    <image:image>
+      <image:loc>https://suitecreative.fintoolsbox.com/vitrail-mosaique.webp</image:loc>
+      <image:title>Stained Glass Mosaic Studio</image:title>
+      <image:caption>Create stained glass portraits, polygon mosaics and geometric low poly artwork online.</image:caption>
+    </image:image>
+  </url>
+
+  <!-- ═══════════════════════════════════════════════
+       French version — Générateur Vitrail Mosaïque
+  ════════════════════════════════════════════════ -->
+  <url>
+    <loc>https://suitecreative.fintoolsbox.com/fr/vitrail-mosaique/</loc>
+    <lastmod>2026-05-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+
+    <xhtml:link
+      rel="alternate"
+      hreflang="fr"
+      href="https://suitecreative.fintoolsbox.com/fr/vitrail-mosaique/"/>
+    <xhtml:link
+      rel="alternate"
+      hreflang="en"
+      href="https://suitecreative.fintoolsbox.com/vitrail-mosaique/"/>
+    <xhtml:link
+      rel="alternate"
+      hreflang="x-default"
+      href="https://suitecreative.fintoolsbox.com/vitrail-mosaique/"/>
+
+    <image:image>
+      <image:loc>https://suitecreative.fintoolsbox.com/vitrail-mosaique.webp</image:loc>
+      <image:title>Générateur Vitrail Mosaïque</image:title>
+      <image:caption>Transformez vos photos en œuvres géométriques style vitrail, low poly et mosaïque artistique.</image:caption>
+    </image:image>
+  </url>
+
+  <!-- ═══════════════════════════════════════════════
+       English version — Pet Art Generator
+  ════════════════════════════════════════════════ -->
+  <url>
+    <loc>https://suitecreative.fintoolsbox.com/portrait-animal/</loc>
+    <lastmod>2026-05-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+
+    <xhtml:link
+      rel="alternate"
+      hreflang="en"
+      href="https://suitecreative.com/portrait-animal/"/>
+    <xhtml:link
+      rel="alternate"
+      hreflang="fr"
+      href="https://suitecreative.fintoolsbox.com/fr/portrait-animal/"/>
+    <xhtml:link
+      rel="alternate"
+      hreflang="x-default"
+      href="https://suitecreative.fintoolsbox.com/portrait-animal/"/>
+
+    <image:image>
+      <image:loc>https://suitecreative.fintoolsbox.com/portrait-animal.webp</image:loc>
+      <image:title>Pet Art Generator — Sumi-e & Pop Art Portraits</image:title>
+      <image:caption>Create artistic pet portraits with sumi-e ink, oil painting, sketch and pop art styles.</image:caption>
+    </image:image>
+  </url>
+
+  <!-- ═══════════════════════════════════════════════
+       French version — Portrait Animal Artistique
+  ════════════════════════════════════════════════ -->
+  <url>
+    <loc>https://suitecreative.fintoolsbox.com/fr/portrait-animal/</loc>
+    <lastmod>2026-05-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+
+    <xhtml:link
+      rel="alternate"
+      hreflang="fr"
+      href="https://suitecreative.fintoolsbox.com/fr/portrait-animal/"/>
+    <xhtml:link
+      rel="alternate"
+      hreflang="en"
+      href="https://suitecreative.fintoolsbox.com/portrait-animal/"/>
+    <xhtml:link
+      rel="alternate"
+      hreflang="x-default"
+      href="https://suitecreative.fintoolsbox.com/portrait-animal/"/>
+
+    <image:image>
+      <image:loc>https://suitecreative.fintoolsbox.com/portrait-animal.webp</image:loc>
+      <image:title>Portrait Animal Artistique Style Asiatique</image:title>
+      <image:caption>Transformez vos animaux en portraits sumi-e, peinture à l’huile, croquis ou pop art.</image:caption>
+    </image:image>
+  </url>
+
+</urlset>

@@ -1,0 +1,264 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog & Guides · Tous nos articles sur les outils créatifs | Suite Créative</title>
+    <meta name="description" content="Retrouvez tous nos articles et guides détaillés : mockup vidéo, coloriage personnalisé, stickers, peluche, mosaïque vitrail. Apprenez à maîtriser chaque outil gratuit.">
+    <meta name="keywords" content="blog créatif, guides outils, articles mockup vidéo, tutoriel coloriage, stickers personnalisés, peluche photo, mosaique vitrail">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.suitecreative.com/blog/">
+    <meta property="og:title" content="Blog de la Suite Créative · Articles et guides">
+    <meta property="og:description" content="Découvrez tous nos articles pour tirer le meilleur parti des générateurs de stickers, coloriages, mockups et bien plus.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://www.suitecreative.com/logo.jpg">
+    <meta property="og:url" content="https://www.suitecreative.com/blog/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Blog de la Suite Créative">
+    <meta name="twitter:description" content="Guides, astuces et articles sur les outils créatifs gratuits.">
+    <meta name="theme-color" content="#f9f4ea">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..700&family=Playfair+Display:ital,wght@0,500;0,700;1,500&display=swap" rel="stylesheet">
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "url": "https://www.suitecreative.com/blog/generateur-meckup/",
+                    "name": "Mockup Vidéo T‑shirt avec Effet de Vent"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "url": "https://www.suitecreative.com/blog/generateur-coloriage/",
+                    "name": "Coloriage Personnalisé : Transformez une Photo en Dessin à Imprimer"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "url": "https://www.suitecreative.com/blog/generateur-stickers/",
+                    "name": "Générateur de Stickers Personnalisés : Formes de Découpe, Contour Blanc & PNG Transparent"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 4,
+                    "url": "https://www.suitecreative.com/blog/generateur-peluche/",
+                    "name": "Peluche Personnalisée : Transformez une Photo en Doudou"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 5,
+                    "url": "https://www.suitecreative.com/blog/mosaique-polygone/",
+                    "name": "La Mosaïque Polygone : quand la photo rencontre la géométrie"
+                }
+            ],
+            "numberOfItems": 5
+        }
+    </script>
+    <style>
+        :root {
+            --cream: #f9f4ea;
+            --paper: #fffdf7;
+            --ink: #2c2416;
+            --ink-light: #5e5340;
+            --accent: #945d3b;
+            --accent-soft: #f2e3d5;
+            --border: #d9cdb0;
+            --radius: 24px;
+            --radius-sm: 16px;
+            --shadow: 0 8px 30px rgba(0,0,0,0.05), 0 2px 8px rgba(0,0,0,0.03);
+            --shadow-hover: 0 16px 40px rgba(0,0,0,0.08);
+            --transition: 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+            --font-body: 'Inter', system-ui, sans-serif;
+            --font-heading: 'Playfair Display', Georgia, serif;
+        }
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body {
+            font-family: var(--font-body);
+            background: var(--cream);
+            color: var(--ink);
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            background-image: radial-gradient(circle at 30% 20%, rgba(148,93,59,0.03) 0%, transparent 50%),
+                              radial-gradient(circle at 70% 80%, rgba(148,93,59,0.02) 0%, transparent 50%);
+        }
+        .container { width: 100%; max-width: 1100px; padding: 28px 0 40px; }
+        header {
+            display: flex; align-items: center; justify-content: space-between;
+            padding-bottom: 20px; border-bottom: 1px solid var(--border);
+            flex-wrap: wrap; gap: 12px; margin-bottom: 36px;
+        }
+        .logo {
+            font-family: var(--font-heading);
+            font-size: 1.8rem; font-weight: 700; color: var(--accent);
+            text-decoration: none;
+        }
+        .logo span { color: #b8860b; }
+        .back-link {
+            font-weight: 500; color: var(--accent); text-decoration: none;
+            transition: var(--transition);
+        }
+        .back-link:hover { text-decoration: underline; }
+        h1 {
+            font-family: var(--font-heading);
+            font-size: 2.4rem;
+            color: var(--ink);
+            text-align: center;
+            margin-bottom: 12px;
+        }
+        .subtitle {
+            text-align: center;
+            color: var(--ink-light);
+            margin-bottom: 40px;
+            font-size: 1.1rem;
+        }
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 28px;
+        }
+        .article-card {
+            background: var(--paper);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 28px 24px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            text-decoration: none;
+            color: inherit;
+        }
+        .article-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-hover);
+            border-color: var(--accent);
+        }
+        .article-icon {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+        }
+        .article-card h2 {
+            font-family: var(--font-heading);
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+            color: var(--ink);
+            line-height: 1.3;
+        }
+        .article-card p {
+            color: var(--ink-light);
+            font-size: 0.95rem;
+            flex: 1;
+            margin-bottom: 16px;
+        }
+        .article-card .meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.85rem;
+            color: var(--ink-light);
+        }
+        .read-more {
+            font-weight: 600;
+            color: var(--accent);
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            padding-top: 24px;
+            border-top: 1px solid var(--border);
+            color: var(--ink-light);
+            font-size: 0.85rem;
+        }
+        a { color: var(--accent); }
+        @media (max-width: 650px) {
+            h1 { font-size: 1.9rem; }
+            .articles-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="/" class="logo">Suite<span>Créative</span></a>
+            <a href="/" class="back-link">← Retour à l'accueil</a>
+        </header>
+
+        <h1> Notre blog créatif</h1>
+        <p class="subtitle">Découvrez tous nos articles pour maîtriser chaque outil et libérer votre créativité.</p>
+
+        <div class="articles-grid">
+            <!-- Article 1 : Mockup vidéo -->
+            <a href="/blog/generateur-meckup/" class="article-card">
+                <div class="article-icon">👕</div>
+                <h2>Mockup Vidéo T‑shirt avec Effet de Vent</h2>
+                <p>Donnez vie à vos visuels avec un mockup vidéo de T‑shirt animé par un vent réaliste. Créez gratuitement une présentation produit dynamique sans logiciel.</p>
+                <div class="meta">
+                    <span> 8 avril 2025</span>
+                    <span class="read-more">Lire l'article →</span>
+                </div>
+            </a>
+
+            <!-- Article 2 : Coloriage -->
+            <a href="/blog/generateur-coloriage/" class="article-card">
+                <div class="article-icon">🐶</div>
+                <h2>Coloriage Personnalisé : Transformez une Photo en Dessin</h2>
+                <p>Convertissez n'importe quelle image en un coloriage noir et blanc à imprimer. Idéal pour occuper les enfants avec leurs propres photos.</p>
+                <div class="meta">
+                    <span> 8 avril 2025</span>
+                    <span class="read-more">Lire l'article →</span>
+                </div>
+            </a>
+
+            <!-- Article 3 : Stickers -->
+            <a href="/blog/generateur-stickers/" class="article-card">
+                <div class="article-icon">🐾</div>
+                <h2>Générateur de Stickers Personnalisés</h2>
+                <p>Créez des autocollants uniques avec forme de découpe, contour blanc et ombre portée. Parfait pour vos animaux, logos et créations.</p>
+                <div class="meta">
+                    <span> 8 avril 2025</span>
+                    <span class="read-more">Lire l'article →</span>
+                </div>
+            </a>
+
+            <!-- Article 4 : Peluche -->
+            <a href="/blog/generateur-peluche/" class="article-card">
+                <div class="article-icon">🧸</div>
+                <h2>Peluche Personnalisée : Transformez une Photo en Doudou</h2>
+                <p>Offrez-vous un doudou unique à partir de votre photo. Apprenez comment la texture laineuse, les coutures et les yeux sont générés.</p>
+                <div class="meta">
+                    <span> 8 avril 2025</span>
+                    <span class="read-more">Lire l'article →</span>
+                </div>
+            </a>
+
+            <!-- Article 5 : Mosaïque -->
+            <a href="/blog/mosaique-polygone/" class="article-card">
+                <div class="article-icon">🎨</div>
+                <h2>La Mosaïque Polygone : quand la photo rencontre la géométrie</h2>
+                <p>Découvrez comment une image devient un vitrail moderne. Histoire, technique et utilisation du générateur de mosaïque polygonale.</p>
+                <div class="meta">
+                    <span> 8 avril 2025</span>
+                    <span class="read-more">Lire l'article →</span>
+                </div>
+            </a>
+        </div>
+
+        <footer>
+            <p>© 2025 Suite Créative · <a href="/">Accueil</a> · <a href="https://www.suitecreative.com/confidentialite/">Confidentialité</a> · <a href="https://www.suitecreative.com/mentions-legales/">Mentions légales</a></p>
+        </footer>
+    </div>
+</body>
+</html>

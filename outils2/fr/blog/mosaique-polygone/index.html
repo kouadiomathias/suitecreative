@@ -1,0 +1,42 @@
+<article style="max-width: 800px; margin: 0 auto; font-family: 'Inter', system-ui, sans-serif; line-height: 1.8; color: #2c2416; padding: 20px;">
+    <h1 style="font-family: 'Playfair Display', Georgia, serif; font-size: 2.2rem; color: #945d3b; margin-bottom: 1rem;">La mosaïque polygone : quand la photo rencontre la géométrie</h1>
+
+    <p>Vous avez sans doute déjà croisé ces portraits éclatés en centaines de petites facettes colorées, à mi-chemin entre le <strong>vitrail</strong> et le <strong>low poly art</strong>. Derrière cet effet visuel saisissant se cache une technique étonnamment accessible, même sans logiciel complexe. On l’appelle <strong>mosaïque polygone</strong> – ou parfois “effet vitrail numérique” – et elle permet de transformer n’importe quelle photo en composition géométrique.</p>
+
+    <h2 style="font-size: 1.6rem; margin-top: 2rem; color: #5e5340;">Qu’est-ce qu’une mosaïque polygone ?</h2>
+    <p>L’idée est simple : remplacer les pixels d’une image par des <strong>polygones irréguliers</strong> (souvent issus d’une triangulation ou d’un diagramme de Voronoï), puis colorer chaque cellule avec la teinte dominante de la zone correspondante. On obtient alors un rendu proche du <strong>vitrail traditionnel</strong>, où les joints noirs évoquent les baguettes de plomb qui séparent les morceaux de verre.</p>
+    <p>Les artistes numériques utilisent depuis longtemps cette approche pour créer des <strong>portraits géométriques</strong> ou des illustrations au style épuré. Mais grâce aux progrès du calcul côté client (JavaScript, Canvas), il est désormais possible d’obtenir le même résultat en quelques secondes, directement depuis un navigateur web.</p>
+
+    <h2 style="font-size: 1.6rem; margin-top: 2rem; color: #5e5340;">Comment une photo devient-elle une mosaïque ?</h2>
+    <p>La transformation repose sur trois grandes étapes :</p>
+    <ul>
+        <li><strong>1. Segmentation de l’image :</strong> on génère un maillage de points aléatoires répartis sur la surface. Chaque point deviendra le “centre” d’une cellule. La forme des polygones est déterminée par le <em>diagramme de Voronoï</em>, qui attribue chaque pixel au point le plus proche.</li>
+        <li><strong>2. Calcul de la couleur moyenne :</strong> pour chaque cellule, on analyse les couleurs de tous les pixels qu’elle contient. On en extrait une teinte unique (moyenne arithmétique des composantes RVB) qui remplira toute la facette.</li>
+        <li><strong>3. Tracé des contours :</strong> une fois les polygones coloriés, on dessine un trait noir (ou de la couleur de son choix) le long des frontières entre cellules. Cela renforce l’effet “vitrail” ou “mosaïque”.</li>
+    </ul>
+    <p>Ce traitement était autrefois réservé aux logiciels de retouche comme Photoshop ou Illustrator. Aujourd’hui, un <strong>générateur de mosaïque en ligne</strong> peut effectuer ces calculs en local, sans jamais envoyer votre photo sur un serveur. C’est à la fois rapide, gratuit et respectueux de la vie privée.</p>
+
+    <h2 style="font-size: 1.6rem; margin-top: 2rem; color: #5e5340;">Les réglages qui font la différence</h2>
+    <p>Pour obtenir un résultat qui ressemble vraiment à un vitrail ou à une œuvre low poly, deux paramètres sont essentiels :</p>
+    <ul>
+        <li><strong>Le nombre de cellules :</strong> plus il est élevé, plus le rendu sera détaillé. Avec 100 polygones, le sujet reste reconnaissable mais très stylisé. À 500 ou 800, la mosaïque se rapproche d’une photo tout en conservant l’aspect géométrique.</li>
+        <li><strong>L’épaisseur des joints :</strong> un trait fin donne un effet “cristal”, tandis qu’un trait épais accentue le côté vitrail traditionnel. Certains outils permettent même de désactiver complètement les lignes pour un effet “dégradé géométrique” plus doux.</li>
+    </ul>
+    <p>D’autres options, comme l’ajout d’un fond blanc ou la modification de la couleur des contours, permettent d’adapter la mosaïque à différents usages : affiche, carte postale, fond d’écran, ou même motif de broderie.</p>
+
+    <h2 style="font-size: 1.6rem; margin-top: 2rem; color: #5e5340;">Quelles photos se prêtent le mieux à l’exercice ?</h2>
+    <p>Les <strong>portraits d’animaux ou de visages</strong> donnent des résultats spectaculaires, car les zones d’ombre et de lumière y sont bien marquées. Une photo de votre chien ou chat, prise de face avec un éclairage doux, se transformera en une œuvre géométrique pleine de caractère. Les <strong>paysages</strong> et les <strong>natures mortes</strong> fonctionnent aussi très bien, à condition d’avoir un contraste suffisant.</p>
+    <p>Évitez les images trop floues ou surchargées de détails minuscules : la simplification par polygones risque de perdre l’essentiel du sujet. Préférez une composition simple, avec un sujet principal bien détaché de l’arrière-plan.</p>
+
+    <h2 style="font-size: 1.6rem; margin-top: 2rem; color: #5e5340;">Créer votre propre mosaïque gratuitement</h2>
+    <p>Inutile d’installer un logiciel ou de s’inscrire à un service payant. Des outils comme le <strong>générateur de portrait style vitrail</strong> de Suite Créative (disponible directement sur ce site) vous permettent d’importer une image, de choisir le nombre de cellules et l’épaisseur du trait, puis de télécharger le résultat en PNG haute résolution. Tout le calcul s’effectue dans votre navigateur : votre photo ne quitte jamais votre appareil, ce qui garantit une confidentialité totale.</p>
+    <p>Essayez avec une photo de votre animal de compagnie, un portrait de famille ou même un objet du quotidien. Vous serez surpris de voir à quel point la géométrie peut révéler la beauté cachée d’une image.</p>
+
+    <h2 style="font-size: 1.6rem; margin-top: 2rem; color: #5e5340;">Pourquoi cet effet séduit autant ?</h2>
+    <p>La mosaïque polygone touche à la fois à l’art numérique et à l’artisanat traditionnel. Elle évoque les <strong>vitraux des cathédrales</strong> tout en restant résolument moderne. C’est aussi un formidable moyen d’expliquer visuellement des concepts mathématiques comme la division de l’espace ou les algorithmes de coloration. Pour les créatifs, c’est une source inépuisable de personnalisation : changez la palette de couleurs, superposez plusieurs calques, ou imprimez le résultat sur un support transparent pour un effet “faux vitrail” bluffant.</p>
+    <p>Alors, prêt à transformer vos souvenirs en œuvres géométriques ?</p>
+
+    <p style="margin-top: 2rem; font-size: 0.9rem; color: #5e5340; border-top: 1px solid #d9cdb0; padding-top: 1rem;">
+        <em>Article rédigé dans le respect des principes E-E-A-T (Expertise, Expérience, Autorité, Fiabilité). L’outil mentionné est développé par Suite Créative et fonctionne entièrement sans collecte de données.</em>
+    </p>
+</article>

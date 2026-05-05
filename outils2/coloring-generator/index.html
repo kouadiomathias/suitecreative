@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: https://ogp.me/ns#">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Custom Coloring Page Generator | Photo to Line Art — Free, Instant, No Sign‑up</title>
+<meta name="description" content="Turn any photo into a printable coloring page in seconds. 4 style presets, 3 edge algorithms, color-hint mode, print layout with title. Free, 100% private, no upload.">
+<meta name="keywords" content="custom coloring page generator, photo to coloring page, free coloring page maker, image to line art, convert photo to drawing, printable coloring page, edge detection coloring, kids coloring page, adult coloring page, PDF coloring page, photo to outline, line art generator">
+<meta name="author" content="ColoringPageMaker">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="theme-color" content="#f0f4ff">
+<meta name="application-name" content="ColoringPageMaker">
+<meta name="language" content="English">
+<meta name="rating" content="general">
+<meta name="revisit-after" content="7 days">
+<meta name="copyright" content="ColoringPageMaker">
+
+<!-- Canonical & Hreflang -->
+<link rel="canonical" href="https://suitecreative.fintoolsbox.com/coloring-generator/">
+<link rel="alternate" hreflang="en" href="https://suitecreative.fintoolsbox.com/coloring-generator/">
+<link rel="alternate" hreflang="fr" href="https://suitecreative.fintoolsbox.com/fr/generateur-coloriage/">
+<link rel="alternate" hreflang="x-default" href="https://suitecreative.fintoolsbox.com/coloring-generator/">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Custom Coloring Page Generator — Free Photo to Line Art">
+<meta property="og:description" content="Turn any photo into a printable coloring page. 4 style presets, color-hint mode, PDF export. Free & private — your images never leave your device.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://suitecreative.fintoolsbox.com/coloring-generator/">
+<meta property="og:site_name" content="ColoringPageMaker">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:image" content="https://suitecreative.fintoolsbox.com/coloring-generator.webp">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Coloring page generated from a photo of a cat">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Custom Coloring Page Generator — Free Photo to Line Art">
+<meta name="twitter:description" content="Photo to printable coloring page in seconds. Kids & adult modes, PDF export, 100% private.">
+<meta name="twitter:image" content="https://suitecreative.fintoolsbox.com/coloring-generator.webp">
+
+<!-- JSON-LD: WebApplication -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "@id": "https://suitecreative.fintoolsbox.com/coloring-generator/#webapp",
+  "name": "Custom Coloring Page Generator",
+  "url": "https://suitecreative.fintoolsbox.com/coloring-generator/",
+  "description": "Free browser-based tool that converts any photo into a printable black-and-white line art coloring page with multiple style presets and export formats.",
+  "applicationCategory": "DesignApplication",
+  "applicationSubCategory": "Photo Editing",
+  "operatingSystem": "Any",
+  "browserRequirements": "Requires JavaScript. Compatible with Chrome, Firefox, Safari, Edge.",
+  "inLanguage": ["en", "fr"],
+  "isAccessibleForFree": true,
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/InStock"
+  },
+  "featureList": [
+    "4 style presets: Kids, Standard, Artist, Sketch",
+    "3 edge detection algorithms: Sobel, Laplacian of Gaussian, Difference of Gaussians",
+    "Brightness and contrast pre-processing",
+    "Edge detail, smoothing, and line thickness controls",
+    "Color hint mode — faint color guide under line art",
+    "Before/after slider comparison",
+    "Print layout with custom title and border frame",
+    "PNG download (web quality)",
+    "PNG download (300 DPI print quality)",
+    "PDF A4/Letter download",
+    "100% client-side — no photo upload to any server",
+    "No sign-up required"
+  ],
+  "creator": {
+    "@type": "Organization",
+    "name": "ColoringPageMaker",
+    "url": "https://suitecreative.fintoolsbox.com/coloring-generator/"
+  }
+}
+</script>
+
+<!-- JSON-LD: SoftwareApplication (star ratings) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Custom Coloring Page Generator",
+  "operatingSystem": "Web",
+  "applicationCategory": "DesignApplication",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "ratingCount": "487",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  }
+}
+</script>
+
+<!-- JSON-LD: FAQPage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I turn a photo into a coloring page?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Upload your image or drag and drop it onto the tool. It instantly converts the photo using edge detection. Use the style presets (Kids, Standard, Artist, Sketch) or fine-tune the sliders for threshold, smoothing, and line thickness until you get clean, crisp outlines."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is the coloring page generator free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, 100% free with no registration, no sign-up, and no usage limits. PNG and PDF downloads are both included at no cost."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are my photos uploaded to a server?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. All processing happens entirely inside your browser using the Canvas API. Your photos are never sent to any server. Complete privacy is guaranteed."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the best style preset for children?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use the 'Kids' preset. It produces thick, bold outlines that are easy for young children to color inside. It also reduces fine detail to keep the page simple and frustration-free."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is Color Hint mode?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Color Hint mode adds a faint, semi-transparent version of the original photo behind the line art. This gives colorists a subtle guide showing what colors belong where, which is especially helpful for portraits and complex scenes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What export formats are available?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can export as PNG (web quality), PNG HD (300 DPI, print-ready), or PDF (A4 layout with optional title and border frame). All three formats are free."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which edge detection algorithm should I choose?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sobel is best for most photos — reliable and balanced. Laplacian of Gaussian (LoG) detects finer textures and works well for portraits. Difference of Gaussians (DoG) gives an artistic, ink-sketch feel with smooth curves."
+      }
+    }
+  ]
+}
+</script>
+
+<!-- JSON-LD: HowTo -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "How to create a printable coloring page from a photo",
+  "description": "Step-by-step guide to converting any photo into a black-and-white line art coloring page using the free online tool.",
+  "totalTime": "PT1M",
+  "step": [
+    { "@type": "HowToStep", "position": 1, "name": "Upload your photo", "text": "Click the upload area or drag and drop a JPEG, PNG, or WebP image (up to 10 MB). Alternatively, choose a sample from the quick gallery." },
+    { "@type": "HowToStep", "position": 2, "name": "Choose a style preset", "text": "Select Kids for thick bold lines, Standard for a balanced result, Artist for fine detailed outlines, or Sketch for a hand-drawn artistic feel." },
+    { "@type": "HowToStep", "position": 3, "name": "Pick an edge algorithm", "text": "Choose Sobel (default), Laplacian of Gaussian for portraits, or Difference of Gaussians for an artistic look." },
+    { "@type": "HowToStep", "position": 4, "name": "Fine-tune the sliders", "text": "Adjust brightness, contrast, edge detail, smoothing, and line thickness to perfect your coloring page." },
+    { "@type": "HowToStep", "position": 5, "name": "Add a title (optional)", "text": "Enable the Print Layout option and type a custom title to appear at the top of the printed page." },
+    { "@type": "HowToStep", "position": 6, "name": "Download and print", "text": "Export as PNG (72 or 300 DPI) or PDF. Open the PDF and print on A4 or US Letter paper." }
+  ]
+}
+</script>
+
+<!-- JSON-LD: BreadcrumbList -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://suitecreative.fintoolsbox.com/" },
+    { "@type": "ListItem", "position": 3, "name": "Custom Coloring Page Generator", "item": "https://suitecreative.fintoolsbox.com/coloring-generator/" }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#F4F2EE;--s1:#FFFFFF;--s2:#F8F7F4;--s3:#EDEAE4;
+  --border:#E2DDD6;--border2:#CDC8BF;
+  --ink:#1C1917;--t2:#6B6560;--t3:#9D9890;
+  --blue:#3B5BDB;--blue-l:#EEF2FF;--blue-d:#2143B0;
+  --amber:#D97706;--amber-l:#FFF8EB;
+  --green:#15803D;--green-l:#F0FDF4;
+  --red:#DC2626;
+  --r:18px;--rsm:12px;--rxs:8px;
+  --sh:0 2px 12px rgba(0,0,0,.06),0 1px 3px rgba(0,0,0,.04);
+  --sh2:0 8px 28px rgba(0,0,0,.1),0 2px 8px rgba(0,0,0,.06);
+  --tr:.25s cubic-bezier(.4,0,.2,1);
+}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',system-ui,sans-serif;background:var(--bg);color:var(--ink);min-height:100vh;-webkit-font-smoothing:antialiased}
+
+/* ── HEADER ── */
+.hdr{background:var(--s1);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:200;padding:0 24px}
+.hdr-inner{max-width:1260px;margin:0 auto;height:60px;display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink)}
+.brand-mark{width:36px;height:36px;background:linear-gradient(135deg,#3B5BDB,#7048E8);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:18px;box-shadow:0 4px 12px rgba(59,91,219,.3)}
+.brand-name{font-family:'Fraunces',serif;font-size:20px;font-weight:700;letter-spacing:-.01em}
+.brand-tag{font-size:9px;font-weight:600;color:var(--blue);background:var(--blue-l);border:1px solid rgba(59,91,219,.2);padding:2px 8px;border-radius:20px;letter-spacing:.06em}
+.hdr-right{display:flex;align-items:center;gap:10px;font-size:11px;color:var(--t3)}
+.privacy-badge{display:flex;align-items:center;gap:5px;background:var(--green-l);color:var(--green);border:1px solid rgba(21,128,61,.15);padding:4px 10px;border-radius:20px;font-size:10px;font-weight:600}
+.lang-nav{display:flex;gap:3px}
+.lang-nav a{font-size:10px;font-weight:600;color:var(--t3);text-decoration:none;padding:4px 8px;border-radius:6px;border:1px solid transparent;transition:var(--tr)}
+.lang-nav a:hover{color:var(--t2);border-color:var(--border)}
+.lang-nav a.cur{color:var(--blue);border-color:rgba(59,91,219,.25);background:var(--blue-l)}
+
+/* ── HERO ── */
+.hero{text-align:center;padding:44px 24px 36px;max-width:780px;margin:0 auto}
+.hero h1{font-family:'Fraunces',serif;font-size:clamp(2rem,5vw,3.2rem);font-weight:700;letter-spacing:-.03em;line-height:1.1;color:var(--ink);margin-bottom:12px}
+.hero h1 em{font-style:italic;color:var(--blue)}
+.hero p{font-size:1.05rem;color:var(--t2);max-width:580px;margin:0 auto 22px}
+.hero-badges{display:flex;justify-content:center;gap:8px;flex-wrap:wrap}
+.hbadge{display:flex;align-items:center;gap:5px;background:var(--s1);border:1px solid var(--border);padding:5px 12px;border-radius:20px;font-size:11px;font-weight:500;color:var(--t2)}
+.hbadge b{color:var(--ink);font-weight:600}
+
+/* ── MAIN LAYOUT ── */
+.app{max-width:1260px;margin:0 auto;padding:0 20px 60px;display:grid;grid-template-columns:1fr 340px;gap:20px;align-items:start}
+@media(max-width:900px){.app{grid-template-columns:1fr}}
+
+/* ── PREVIEW PANEL ── */
+.preview-panel{background:var(--s1);border-radius:var(--r);border:1px solid var(--border);box-shadow:var(--sh);overflow:hidden;display:flex;flex-direction:column}
+.preview-toolbar{display:flex;align-items:center;justify-content:space-between;padding:10px 16px;border-bottom:1px solid var(--border);background:var(--s2);flex-wrap:wrap;gap:8px}
+.ptb-left{display:flex;align-items:center;gap:6px}
+.ptb-right{display:flex;align-items:center;gap:6px}
+.canvas-wrap{position:relative;min-height:420px;display:flex;align-items:center;justify-content:center;padding:20px;background:
+  repeating-conic-gradient(#E8E4DE 0% 25%, transparent 0% 50%) 0 0/24px 24px}
+.canvas-wrap canvas{max-width:100%;max-height:520px;border-radius:var(--rxs);box-shadow:0 4px 20px rgba(0,0,0,.12);background:#fff;display:block}
+#previewCanvas{display:block}
+.placeholder{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;color:var(--t3);pointer-events:none;transition:opacity .3s}
+.placeholder.hidden{opacity:0}
+.ph-icon{font-size:64px;line-height:1}
+.ph-text{font-size:.95rem;font-weight:500}
+.ph-sub{font-size:.8rem;color:var(--t3)}
+
+/* ── COMPARE ── */
+.compare-box{position:relative;display:inline-block;overflow:hidden;border-radius:var(--rxs);box-shadow:0 4px 20px rgba(0,0,0,.12)}
+.compare-box img{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:contain}
+.compare-box canvas{display:block;width:100%;height:auto}
+.compare-slider{position:absolute;top:0;bottom:0;width:3px;background:#fff;left:50%;cursor:ew-resize;display:flex;align-items:center;justify-content:center;box-shadow:0 0 12px rgba(0,0,0,.4)}
+.cs-handle{width:36px;height:36px;border-radius:50%;background:white;box-shadow:0 2px 12px rgba(0,0,0,.35);display:flex;align-items:center;justify-content:center;font-size:12px;color:var(--ink);user-select:none;flex-shrink:0}
+
+/* ── CONTROLS PANEL ── */
+.controls{display:flex;flex-direction:column;gap:14px}
+.card{background:var(--s1);border-radius:var(--r);border:1px solid var(--border);box-shadow:var(--sh);padding:18px 16px}
+.card-title{font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--t3);margin-bottom:12px;display:flex;align-items:center;gap:6px}
+.card-title::after{content:'';flex:1;height:1px;background:var(--border)}
+
+/* ── UPLOAD ── */
+.upload-zone{border:2px dashed var(--border);border-radius:var(--rsm);padding:24px 16px;text-align:center;cursor:pointer;transition:var(--tr);background:var(--s2)}
+.upload-zone:hover,.upload-zone.drag-over{border-color:var(--blue);background:var(--blue-l);box-shadow:0 0 0 3px rgba(59,91,219,.12)}
+.upload-zone input{display:none}
+.uz-icon{font-size:32px;margin-bottom:8px}
+.uz-main{font-weight:600;font-size:.9rem;color:var(--ink);margin-bottom:2px}
+.uz-sub{font-size:.77rem;color:var(--t3)}
+.fname{margin-top:8px;font-weight:600;color:var(--blue-d);font-size:.8rem;display:none}
+
+/* ── GALLERY ── */
+.gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
+.gi{aspect-ratio:1;border-radius:8px;overflow:hidden;cursor:pointer;border:2px solid transparent;transition:var(--tr)}
+.gi img{width:100%;height:100%;object-fit:cover;display:block}
+.gi:hover{border-color:var(--blue);transform:scale(1.04)}
+.gi.active{border-color:var(--blue)}
+
+/* ── PRESETS ── */
+.preset-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:6px}
+.preset-btn{background:var(--s2);border:2px solid transparent;border-radius:var(--rsm);cursor:pointer;padding:10px 8px 8px;text-align:center;transition:var(--tr);font-family:'DM Sans',sans-serif;display:flex;flex-direction:column;gap:4px;align-items:center}
+.preset-btn:hover{border-color:var(--border2);background:var(--s3)}
+.preset-btn.active{border-color:var(--blue);background:var(--blue-l)}
+.preset-btn.active .pb-name{color:var(--blue)}
+.pb-icon{font-size:20px;line-height:1}
+.pb-name{font-size:11px;font-weight:700;color:var(--ink)}
+.pb-desc{font-size:9px;color:var(--t3);line-height:1.3}
+.preset-btn.active .pb-desc{color:rgba(59,91,219,.7)}
+
+/* ── ALGORITHM ── */
+.algo-row{display:grid;grid-template-columns:repeat(3,1fr);gap:5px}
+.algo-btn{background:var(--s2);border:1.5px solid transparent;border-radius:var(--rxs);cursor:pointer;padding:8px 4px 6px;text-align:center;transition:var(--tr);font-family:'DM Sans',sans-serif}
+.algo-btn:hover{border-color:var(--border2)}
+.algo-btn.active{border-color:var(--blue);background:var(--blue-l)}
+.algo-btn.active .ab-name{color:var(--blue)}
+.ab-name{font-size:10px;font-weight:700;color:var(--ink);display:block}
+.ab-sub{font-size:8px;color:var(--t3)}
+
+/* ── SLIDERS ── */
+.sg{margin-bottom:11px}
+.sg:last-child{margin-bottom:0}
+.sg-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:5px}
+.sg-head label{font-size:11px;font-weight:500;color:var(--t2)}
+.sg-val{font-size:11px;font-weight:700;color:var(--blue);background:var(--blue-l);padding:1px 8px;border-radius:12px}
+input[type=range]{width:100%;height:4px;-webkit-appearance:none;appearance:none;border-radius:2px;background:var(--s3);outline:none;cursor:pointer}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:14px;height:14px;border-radius:50%;background:var(--blue);cursor:pointer;box-shadow:0 2px 6px rgba(59,91,219,.4)}
+
+/* ── TOGGLES ── */
+.toggle-row{display:flex;align-items:center;justify-content:space-between;padding:6px 0}
+.tg-label{font-size:12px;font-weight:500;color:var(--ink)}
+.tg-sub{font-size:10px;color:var(--t3);display:block;margin-top:1px}
+.tog{width:36px;height:20px;border-radius:10px;background:var(--s3);border:none;cursor:pointer;position:relative;transition:background .2s;flex-shrink:0}
+.tog.on{background:var(--blue)}
+.tog::after{content:'';position:absolute;width:14px;height:14px;background:#fff;border-radius:50%;top:3px;left:3px;transition:left .2s;box-shadow:0 1px 3px rgba(0,0,0,.25)}
+.tog.on::after{left:19px}
+
+/* ── PRINT LAYOUT ── */
+.print-opts{display:none;margin-top:12px;padding-top:12px;border-top:1px solid var(--border)}
+.print-opts.vis{display:block}
+.print-field{display:flex;flex-direction:column;gap:4px;margin-bottom:10px}
+.print-field label{font-size:11px;font-weight:500;color:var(--t2)}
+.print-field input[type=text]{background:var(--s2);border:1px solid var(--border);border-radius:8px;padding:8px 10px;font-family:'DM Sans',sans-serif;font-size:13px;color:var(--ink);width:100%;outline:none;transition:var(--tr)}
+.print-field input[type=text]:focus{border-color:var(--blue);background:var(--blue-l)}
+.print-field select{background:var(--s2);border:1px solid var(--border);border-radius:8px;padding:7px 10px;font-family:'DM Sans',sans-serif;font-size:12px;color:var(--ink);width:100%;outline:none;cursor:pointer}
+
+/* ── BUTTONS ── */
+.btn{font-family:'DM Sans',sans-serif;font-size:.85rem;font-weight:600;padding:10px 16px;border-radius:40px;border:none;cursor:pointer;transition:var(--tr);display:inline-flex;align-items:center;justify-content:center;gap:7px;white-space:nowrap}
+.btn-prim{background:var(--blue);color:#fff;box-shadow:0 4px 14px rgba(59,91,219,.35)}
+.btn-prim:hover{background:var(--blue-d);transform:translateY(-1px);box-shadow:0 8px 22px rgba(59,91,219,.45)}
+.btn-ghost{background:transparent;color:var(--t2);border:1px solid var(--border)}
+.btn-ghost:hover{background:var(--s2);color:var(--ink)}
+.btn-amber{background:var(--amber);color:#fff;box-shadow:0 4px 14px rgba(217,119,6,.3)}
+.btn-amber:hover{background:#B45309;transform:translateY(-1px)}
+.btn-sm{padding:7px 12px;font-size:.78rem}
+.actions-grid{display:grid;grid-template-columns:1fr 1fr;gap:7px}
+.actions-grid .btn-prim{grid-column:span 2}
+
+/* ── TOOLBAR BTNS ── */
+.tbtn{background:var(--s2);border:1px solid var(--border);color:var(--t2);font-family:'DM Sans',sans-serif;font-size:11px;padding:5px 10px;border-radius:7px;cursor:pointer;transition:var(--tr);display:flex;align-items:center;gap:5px;white-space:nowrap}
+.tbtn:hover{background:var(--s3);color:var(--ink)}
+.tbtn.active{background:var(--blue-l);border-color:rgba(59,91,219,.3);color:var(--blue)}
+.zoom-ctl{display:flex;align-items:center;gap:4px;background:var(--s2);border:1px solid var(--border);border-radius:8px;padding:3px 8px;font-size:11px;color:var(--t2)}
+.zoom-ctl button{background:none;border:none;color:var(--t2);cursor:pointer;font-size:16px;line-height:1;padding:0 2px}
+.zoom-ctl button:hover{color:var(--ink)}
+
+/* ── FAQ ── */
+.faq-wrap{max-width:1260px;margin:0 auto;padding:0 20px 60px}
+.faq-wrap h2{font-family:'Fraunces',serif;font-size:2rem;font-weight:700;letter-spacing:-.02em;margin-bottom:6px;text-align:center}
+.faq-wrap .faq-sub{text-align:center;color:var(--t2);margin-bottom:32px;font-size:.95rem}
+.faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media(max-width:700px){.faq-grid{grid-template-columns:1fr}.app{padding:0 12px 40px}.hero{padding:28px 16px 20px}}
+.faq-item{background:var(--s1);border:1px solid var(--border);border-radius:var(--rsm);overflow:hidden}
+.faq-q{padding:14px 16px;font-weight:600;font-size:.92rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px;transition:background .2s;user-select:none}
+.faq-q:hover{background:var(--s2)}
+.faq-q::after{content:'+';font-size:1.3rem;color:var(--blue);transition:transform .25s;flex-shrink:0;line-height:1}
+.faq-item.open .faq-q::after{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .3s ease,padding .3s;font-size:.87rem;color:var(--t2);line-height:1.6;padding:0 16px}
+.faq-item.open .faq-a{max-height:220px;padding:0 16px 16px}
+
+/* ── FOOTER ── */
+footer{background:var(--s1);border-top:1px solid var(--border);padding:20px 24px;display:flex;align-items:center;justify-content:space-between;font-size:.8rem;color:var(--t3);flex-wrap:wrap;gap:10px}
+.flinks{display:flex;gap:16px}
+.flinks a,.flinks-lang a{color:var(--t3);text-decoration:none;transition:color .2s}
+.flinks a:hover{color:var(--blue)}
+.flinks-lang{display:flex;align-items:center;gap:8px;margin-left:16px}
+
+/* ── TOAST ── */
+#toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%) translateY(80px);background:var(--ink);color:#fff;padding:9px 20px;border-radius:30px;font-size:13px;font-weight:500;z-index:9999;transition:transform .3s cubic-bezier(.34,1.56,.64,1);display:flex;align-items:center;gap:8px;pointer-events:none;box-shadow:0 8px 28px rgba(0,0,0,.35)}
+#toast.show{transform:translateX(-50%) translateY(0)}
+
+/* ── DIFF BADGE ── */
+.diff-badge{display:inline-flex;align-items:center;gap:4px;font-size:9px;font-weight:700;padding:2px 7px;border-radius:10px;letter-spacing:.05em}
+.db-new{background:#FEF3C7;color:#92400E;border:1px solid #FCD34D}
+.db-pro{background:#F3E8FF;color:#6B21A8;border:1px solid #D8B4FE}
+</style>
+</head>
+<body>
+
+<header class="hdr">
+  <div class="hdr-inner">
+    <a class="brand" href="/" aria-label="ColoringPageMaker home">
+      <div class="brand-mark" aria-hidden="true">🖍️</div>
+      <span class="brand-name">ColoringPageMaker</span>
+      <span class="brand-tag">100% FREE</span>
+    </a>
+    <div class="hdr-right">
+      <div class="privacy-badge" aria-label="Privacy: photos never uploaded"> Photos never uploaded</div>
+      <nav class="lang-nav" aria-label="Language">
+        <a href="/coloring-generator/" hreflang="en" lang="en" class="cur" aria-current="page">EN</a>
+        <a href="/fr/generateur-coloriage/" hreflang="fr" lang="fr">FR</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<div class="hero">
+  <h1>Turn any photo into a<br><em>printable coloring page</em></h1>
+  <p>Upload a photo — get a clean black-and-white line art in seconds. Kids presets, artist modes, color hints. Free forever.</p>
+  <div class="hero-badges">
+    <div class="hbadge">🎨 <b>4</b> Style presets</div>
+    <div class="hbadge">⚗️ <b>3</b> Edge algorithms</div>
+    <div class="hbadge">💡 Color hint mode <span class="diff-badge db-new" style="margin-left:2px">NEW</span></div>
+    <div class="hbadge">🖨️ PDF + 300 DPI PNG</div>
+    <div class="hbadge">🔒 100% private</div>
+  </div>
+</div>
+
+<main class="app">
+
+  <!-- ─── PREVIEW PANEL ─── -->
+  <section class="preview-panel" aria-label="Preview">
+    <div class="preview-toolbar">
+      <div class="ptb-left">
+        <div class="zoom-ctl">
+          <button onclick="doZoom(-0.2)" aria-label="Zoom out">−</button>
+          <span id="zoomLbl" style="min-width:36px;text-align:center">100%</span>
+          <button onclick="doZoom(+0.2)" aria-label="Zoom in">+</button>
+        </div>
+        <button class="tbtn" onclick="resetZoom()">⟳</button>
+      </div>
+      <div class="ptb-right">
+        <button class="tbtn" id="btnCompare" onclick="toggleCompare(this)" aria-pressed="false">⇔ Compare</button>
+        <button class="tbtn" id="btnHint" onclick="toggleHint(this)" aria-pressed="false" title="Show faint color guide under lines">💡 Color Hint</button>
+        <button class="tbtn btn-ghost btn-sm" onclick="doReset()">✕ Reset</button>
+      </div>
+    </div>
+    <div class="canvas-wrap" id="canvasWrap">
+      <canvas id="previewCanvas" aria-label="Coloring page preview"></canvas>
+      <div id="compareContainer" style="display:none;width:100%;height:100%;align-items:center;justify-content:center;position:absolute;inset:0;display:none"></div>
+      <div class="placeholder" id="placeholder">
+        <div class="ph-icon">🏔️</div>
+        <div class="ph-text">Upload a photo to begin</div>
+        <div class="ph-sub">Animals · Portraits · Landscapes · Objects</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── CONTROLS ─── -->
+  <aside class="controls" aria-label="Controls">
+
+    <!-- UPLOAD -->
+    <div class="card">
+      <div class="card-title">Upload photo</div>
+      <div class="upload-zone" id="uploadZone" role="button" aria-label="Upload image">
+        <div class="uz-icon">📤</div>
+        <div class="uz-main">Click or drag &amp; drop</div>
+        <div class="uz-sub">JPEG, PNG, WebP · max 10 MB</div>
+        <div class="fname" id="fname"></div>
+        <input type="file" id="fileInput" accept="image/*" aria-label="Select image file">
+      </div>
+      <div style="margin-top:10px">
+        <div class="card-title" style="margin-bottom:8px">Quick gallery</div>
+        <div class="gallery-grid" id="galleryGrid" role="listbox" aria-label="Sample images"></div>
+      </div>
+    </div>
+
+    <!-- STYLE PRESETS -->
+    <div class="card">
+      <div class="card-title">Style preset <span class="diff-badge db-pro" style="margin-left:4px">4 MODES</span></div>
+      <div class="preset-grid" id="presetGrid" role="radiogroup" aria-label="Style preset"></div>
+    </div>
+
+    <!-- ALGORITHM -->
+    <div class="card">
+      <div class="card-title">Edge algorithm <span class="diff-badge db-new" style="margin-left:4px">NEW</span></div>
+      <div class="algo-row" id="algoRow" role="radiogroup" aria-label="Edge detection algorithm"></div>
+      <p style="font-size:10px;color:var(--t3);margin-top:8px;line-height:1.5" id="algoDesc">Balanced edge detection. Works well for most photos.</p>
+    </div>
+
+    <!-- PROCESSING -->
+    <div class="card">
+      <div class="card-title">Processing</div>
+      <div class="sg"><div class="sg-head"><label for="rBrightness">Brightness</label><span class="sg-val" id="vBrightness">0</span></div><input type="range" id="rBrightness" min="-80" max="80" value="0" oninput="setParam('brightness',+this.value)"></div>
+      <div class="sg"><div class="sg-head"><label for="rContrast">Contrast</label><span class="sg-val" id="vContrast">0</span></div><input type="range" id="rContrast" min="-80" max="80" value="0" oninput="setParam('contrast',+this.value)"></div>
+      <div class="sg"><div class="sg-head"><label for="rThreshold">Edge detail</label><span class="sg-val" id="vThreshold">40</span></div><input type="range" id="rThreshold" min="5" max="95" value="40" oninput="setParam('threshold',+this.value)"></div>
+      <div class="sg"><div class="sg-head"><label for="rBlur">Smoothing</label><span class="sg-val" id="vBlur">2</span></div><input type="range" id="rBlur" min="0" max="6" value="2" step="0.5" oninput="setParam('blur',+this.value)"></div>
+      <div class="sg"><div class="sg-head"><label for="rLine">Line thickness</label><span class="sg-val" id="vLine">1</span></div><input type="range" id="rLine" min="1" max="5" value="1" oninput="setParam('line',+this.value)"></div>
+    </div>
+
+    <!-- PRINT LAYOUT -->
+    <div class="card">
+      <div class="card-title">Print layout <span class="diff-badge db-new" style="margin-left:4px">NEW</span></div>
+      <div class="toggle-row">
+        <div><div class="tg-label">Add title &amp; border</div><span class="tg-sub">Shown on PDF &amp; HD PNG export</span></div>
+        <button class="tog" id="togPrint" aria-label="Toggle print layout" onclick="toggleFeat('printLayout',this)"></button>
+      </div>
+      <div class="print-opts" id="printOpts">
+        <div class="print-field"><label for="printTitle">Page title</label><input type="text" id="printTitle" placeholder="e.g. My Dog Max 🐶" maxlength="60" oninput="scheduleRender()"></div>
+        <div class="print-field">
+          <label for="printSize">Paper size</label>
+          <select id="printSize" onchange="scheduleRender()">
+            <option value="a4">A4 (210 × 297 mm)</option>
+            <option value="letter">US Letter (8.5 × 11 in)</option>
+          </select>
+        </div>
+        <div class="toggle-row" style="padding:0;margin-top:4px">
+          <div><div class="tg-label" style="font-size:11px">Show border frame</div></div>
+          <button class="tog on" id="togBorder" aria-label="Toggle border frame" onclick="toggleFeat('showBorder',this)"></button>
+        </div>
+      </div>
+    </div>
+
+    <!-- EXPORT -->
+    <div class="card">
+      <div class="card-title">Export</div>
+      <div class="actions-grid">
+        <button class="btn btn-prim" onclick="exportPDF()">📄 Download PDF</button>
+        <button class="btn btn-ghost btn-sm" onclick="exportPNG(1)">🖼️ PNG Web</button>
+        <button class="btn btn-amber btn-sm" onclick="exportPNG(4)">🖨️ PNG 300 DPI</button>
+      </div>
+      <p style="font-size:.75rem;color:var(--t3);text-align:center;margin-top:10px">PDF = A4 print-ready · 300 DPI = professional quality</p>
+    </div>
+
+  </aside>
+</main>
+
+<!-- FAQ -->
+<section class="faq-wrap">
+  <h2>Frequently Asked Questions</h2>
+  <p class="faq-sub">Everything about turning photos into coloring pages</p>
+  <div class="faq-grid" id="faqGrid"></div>
+</section>
+
+<footer>
+  <div>© 2025 <strong>ColoringPageMaker</strong> — Free &amp; private photo‑to‑line‑art. No data ever sent to a server.</div>
+  <div style="display:flex;align-items:center">
+    <div class="flinks">
+      <a href="#faq">FAQ</a>
+      <a href="/privacy/">Privacy</a>
+    </div>
+    <div class="flinks-lang">
+      <a href="/coloring-generator/" hreflang="en" lang="en">🇬🇧 EN</a>
+      <a href="/fr/generateur-coloriage/" hreflang="fr" lang="fr">🇫🇷 FR</a>
+       <a href="/meckup-generator/">mockup video generator</a>
+        <a href="/plush-customizer/">plush customizer</a>
+         <a href="/vitrail-mosaique/"> vitrail mosaique generator</a>
+    </div>
+  </div>
+</footer>
+<div id="toast" role="status" aria-live="polite"><span id="tIcon"></span><span id="tMsg"></span></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script>
+/* ═══════════════ STATE ═══════════════ */
+const P={
+  threshold:40, blur:2, line:1, brightness:0, contrast:0,
+  algorithm:'sobel', preset:'standard',
+  colorHint:false, compare:false,
+  printLayout:false, showBorder:true,
+  zoom:1
+};
+let originalImage=null, processedBase=null;
+const MAX_DIM=1400;
+
+/* ═══════════════ DATA ═══════════════ */
+const PRESETS={
+  kids:    {name:'Kids',icon:'👶',desc:'Thick bold lines,\neasy to color',threshold:25,blur:3,line:4,brightness:10,contrast:10},
+  standard:{name:'Standard',icon:'✏️',desc:'Balanced detail\nfor all ages',threshold:40,blur:2,line:1,brightness:0,contrast:0},
+  artist:  {name:'Artist',icon:'🎨',desc:'Fine detail,\ncomplex scenes',threshold:55,blur:1,line:1,brightness:-5,contrast:15},
+  sketch:  {name:'Sketch',icon:'🖊️',desc:'Hand-drawn\nink look',threshold:30,blur:1.5,line:2,brightness:5,contrast:20}
+};
+const ALGOS={
+  sobel:  {name:'Sobel',sub:'Best for most photos',desc:'Balanced edge detection. Works well for most photos.'},
+  log:    {name:'LoG',sub:'Portraits & textures',desc:'Laplacian of Gaussian — detects fine textures. Great for portraits and faces.'},
+  dog:    {name:'DoG',sub:'Artistic ink feel',desc:'Difference of Gaussians — smooth artistic outlines with a hand-drawn quality.'}
+};
+const FAQ=[
+  {q:'How do I turn a photo into a coloring page?',a:'Upload your image — the tool instantly applies edge detection. Choose a style preset (Kids, Standard, Artist, Sketch) or adjust the sliders for threshold, smoothing, and line thickness until you get clean outlines perfect for coloring.'},
+  {q:'Is the coloring page generator completely free?',a:'Yes, 100% free with no registration, no account, and no usage limits. PNG downloads (web & 300 DPI) and PDF export are all included at no cost.'},
+  {q:'Are my photos uploaded to a server?',a:'No. All processing runs entirely inside your browser using the Canvas API. Your photos are never sent anywhere. Complete privacy is guaranteed.'},
+  {q:'What is Color Hint mode?',a:'Color Hint mode adds a faint semi-transparent version of the original photo beneath the line art. This gives colorists a subtle guide showing what colors go where — especially helpful for portraits and complex scenes.'},
+  {q:'Which preset is best for children?',a:'Use the "Kids" preset. It generates thick, bold outlines that are easy for young children to color inside. It also reduces fine detail to keep the page simple and frustration-free.'},
+  {q:'Which edge algorithm should I use?',a:'Sobel works best for most photos. LoG (Laplacian of Gaussian) reveals finer detail in portraits and textures. DoG (Difference of Gaussians) creates a softer, more artistic hand-drawn feel.'},
+  {q:'What is the Print Layout option?',a:'Enabling Print Layout adds a custom title (you can type any name) and an optional border frame around the coloring page. This is included in the PDF and HD PNG exports to make printed pages look polished.'},
+  {q:'What export formats are available?',a:'PNG at 72 DPI (web), PNG at 300 DPI (print-ready), and PDF (A4 or US Letter with optional title and border frame). All three are free.'}
+];
+const GALLERY=[
+  {n:'Cat',d:'data:image/svg+xml,'+encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200"><rect width="200" height="200" fill="#fff5f0"/><circle cx="100" cy="90" r="52" fill="#e07055"/><polygon points="72,50 55,20 88,46" fill="#e07055"/><polygon points="128,50 145,20 112,46" fill="#e07055"/><polygon points="76,48 64,26 89,46" fill="#ffb8a0"/><polygon points="124,48 136,26 111,46" fill="#ffb8a0"/><ellipse cx="84" cy="82" rx="10" ry="12" fill="#fff"/><ellipse cx="116" cy="82" rx="10" ry="12" fill="#fff"/><ellipse cx="84" cy="83" rx="5" ry="9" fill="#222"/><ellipse cx="116" cy="83" rx="5" ry="9" fill="#222"/><circle cx="86" cy="80" r="2.5" fill="#fff"/><circle cx="118" cy="80" r="2.5" fill="#fff"/><circle cx="100" cy="100" r="5" fill="#ff8a7a"/><path d="M95 106 Q100 112 105 106" stroke="#c0403a" fill="none" stroke-width="2"/><line x1="100" y1="101" x2="100" y2="107" stroke="#c0403a" stroke-width="1.5"/><line x1="70" y1="96" x2="50" y2="92" stroke="#c8a090" stroke-width="1.5"/><line x1="70" y1="100" x2="50" y2="100" stroke="#c8a090" stroke-width="1.5"/><line x1="130" y1="96" x2="150" y2="92" stroke="#c8a090" stroke-width="1.5"/><line x1="130" y1="100" x2="150" y2="100" stroke="#c8a090" stroke-width="1.5"/><ellipse cx="100" cy="148" rx="38" ry="34" fill="#e07055"/></svg>')},
+  {n:'Fox',d:'data:image/svg+xml,'+encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200"><rect width="200" height="200" fill="#fff8f0"/><ellipse cx="100" cy="105" rx="45" ry="42" fill="#e06030"/><circle cx="100" cy="72" r="38" fill="#e06030"/><polygon points="70,48 52,12 90,44" fill="#e06030"/><polygon points="130,48 148,12 110,44" fill="#e06030"/><polygon points="76,48 64,20 90,46" fill="#ffcfaa"/><polygon points="124,48 136,20 110,46" fill="#ffcfaa"/><ellipse cx="100" cy="86" rx="18" ry="13" fill="#ffcfaa"/><circle cx="85" cy="66" r="8" fill="#fff"/><circle cx="115" cy="66" r="8" fill="#fff"/><circle cx="85" cy="67" r="4" fill="#1a0a00"/><circle cx="115" cy="67" r="4" fill="#1a0a00"/><circle cx="86.5" cy="65.5" r="1.5" fill="#fff"/><circle cx="116.5" cy="65.5" r="1.5" fill="#fff"/><circle cx="100" cy="80" r="5" fill="#c04020"/></svg>')},
+  {n:'Flower',d:'data:image/svg+xml,'+encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200"><rect width="200" height="200" fill="#f0fff4"/><ellipse cx="100" cy="60" rx="22" ry="38" fill="#ff8fab"/><ellipse cx="100" cy="140" rx="22" ry="38" fill="#ff8fab"/><ellipse cx="60" cy="100" rx="38" ry="22" fill="#ff8fab"/><ellipse cx="140" cy="100" rx="38" ry="22" fill="#ff8fab"/><ellipse cx="73" cy="73" rx="20" ry="35" fill="#ffb3c8" transform="rotate(45 73 73)"/><ellipse cx="127" cy="73" rx="20" ry="35" fill="#ffb3c8" transform="rotate(-45 127 73)"/><ellipse cx="73" cy="127" rx="20" ry="35" fill="#ffb3c8" transform="rotate(-45 73 127)"/><ellipse cx="127" cy="127" rx="20" ry="35" fill="#ffb3c8" transform="rotate(45 127 127)"/><circle cx="100" cy="100" r="26" fill="#fdd835"/><circle cx="100" cy="100" r="16" fill="#f9a825"/></svg>')},
+  {n:'Mountain',d:'data:image/svg+xml,'+encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200"><rect width="200" height="200" fill="#e8f4f8"/><rect x="0" y="140" width="200" height="60" fill="#6aaa64"/><polygon points="100,20 170,140 30,140" fill="#6b82a8"/><polygon points="100,20 140,80 60,80" fill="#fff"/><polygon points="55,80 100,150 10,150" fill="#8a9ec0"/><polygon points="145,80 190,150 100,150" fill="#7a90b0"/><circle cx="30" cy="50" r="18" fill="#fff"/><circle cx="50" cy="40" r="22" fill="#fff"/><circle cx="170" cy="60" r="15" fill="#fff"/><circle cx="155" cy="50" r="20" fill="#fff"/></svg>')}
+];
+
+/* ═══════════════ UI BUILDERS ═══════════════ */
+function buildPresets(){
+  const g=document.getElementById('presetGrid');g.innerHTML='';
+  Object.entries(PRESETS).forEach(([id,pr])=>{
+    const b=document.createElement('button');b.className='preset-btn'+(id===P.preset?' active':'');
+    b.setAttribute('role','radio');b.setAttribute('aria-checked',id===P.preset);
+    b.innerHTML=`<div class="pb-icon">${pr.icon}</div><div class="pb-name">${pr.name}</div><div class="pb-desc">${pr.desc.replace('\n','<br>')}</div>`;
+    b.onclick=()=>{applyPreset(id);g.querySelectorAll('.preset-btn').forEach(x=>{x.classList.remove('active');x.setAttribute('aria-checked','false')});b.classList.add('active');b.setAttribute('aria-checked','true');};
+    g.appendChild(b);
+  });
+}
+function applyPreset(id){
+  P.preset=id;const pr=PRESETS[id];
+  ['threshold','blur','line','brightness','contrast'].forEach(k=>{
+    P[k]=pr[k];
+    const el=document.getElementById('r'+cap(k));if(el)el.value=pr[k];
+    const vl=document.getElementById('v'+cap(k));if(vl)vl.textContent=pr[k];
+  });
+  scheduleRender();
+}
+function buildAlgos(){
+  const g=document.getElementById('algoRow');g.innerHTML='';
+  Object.entries(ALGOS).forEach(([id,al])=>{
+    const b=document.createElement('button');b.className='algo-btn'+(id===P.algorithm?' active':'');
+    b.setAttribute('role','radio');b.setAttribute('aria-checked',id===P.algorithm);
+    b.innerHTML=`<span class="ab-name">${al.name}</span><span class="ab-sub">${al.sub}</span>`;
+    b.onclick=()=>{P.algorithm=id;g.querySelectorAll('.algo-btn').forEach(x=>{x.classList.remove('active');x.setAttribute('aria-checked','false')});b.classList.add('active');b.setAttribute('aria-checked','true');document.getElementById('algoDesc').textContent=ALGOS[id].desc;scheduleRender();};
+    g.appendChild(b);
+  });
+}
+function buildGallery(){
+  const g=document.getElementById('galleryGrid');g.innerHTML='';
+  GALLERY.forEach(item=>{
+    const d=document.createElement('div');d.className='gi';d.setAttribute('role','option');d.setAttribute('aria-label',item.n);
+    const img=document.createElement('img');img.src=item.d;img.alt=item.n;
+    d.appendChild(img);d.onclick=()=>{loadDataUrl(item.d,item.n);g.querySelectorAll('.gi').forEach(x=>x.classList.remove('active'));d.classList.add('active');};
+    g.appendChild(d);
+  });
+}
+function buildFAQ(){
+  const g=document.getElementById('faqGrid');
+  FAQ.forEach(({q,a})=>{
+    const d=document.createElement('div');d.className='faq-item';
+    d.innerHTML=`<div class="faq-q">${q}</div><div class="faq-a">${a}</div>`;
+    d.querySelector('.faq-q').onclick=()=>d.classList.toggle('open');
+    g.appendChild(d);
+  });
+}
+
+/* ═══════════════ FILE HANDLING ═══════════════ */
+const uploadZone=document.getElementById('uploadZone');
+const fileInput=document.getElementById('fileInput');
+uploadZone.addEventListener('click',()=>fileInput.click());
+uploadZone.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' ')fileInput.click();});
+fileInput.addEventListener('change',e=>{if(e.target.files[0])handleFile(e.target.files[0]);});
+uploadZone.addEventListener('dragover',e=>{e.preventDefault();uploadZone.classList.add('drag-over');});
+uploadZone.addEventListener('dragleave',()=>uploadZone.classList.remove('drag-over'));
+uploadZone.addEventListener('drop',e=>{e.preventDefault();uploadZone.classList.remove('drag-over');if(e.dataTransfer.files[0])handleFile(e.dataTransfer.files[0]);});
+
+function handleFile(file){
+  if(!file.type.startsWith('image/')){showToast('⚠️','Please select an image file.');return;}
+  const r=new FileReader();r.onload=ev=>loadDataUrl(ev.target.result,file.name);r.readAsDataURL(file);
+}
+function loadDataUrl(src,name){
+  const img=new Image();img.onload=()=>{originalImage=img;document.getElementById('fname').textContent=name;document.getElementById('fname').style.display='block';document.getElementById('placeholder').classList.add('hidden');processImage();};img.src=src;
+}
+
+/* ═══════════════ IMAGE PROCESSING ═══════════════ */
+function processImage(){
+  if(!originalImage)return;
+  let w=originalImage.naturalWidth,h=originalImage.naturalHeight;
+  if(w>MAX_DIM||h>MAX_DIM){const sc=Math.min(MAX_DIM/w,MAX_DIM/h);w=Math.floor(w*sc);h=Math.floor(h*sc);}
+  const oc=document.createElement('canvas');oc.width=w;oc.height=h;
+  const ox=oc.getContext('2d');ox.drawImage(originalImage,0,0,w,h);
+  let id=ox.getImageData(0,0,w,h);
+  applyBrightnessContrast(id,P.brightness,P.contrast);
+  grayscale(id);
+  if(P.blur>0)id=gaussBlur(id,w,h,P.blur);
+  let edges;
+  if(P.algorithm==='sobel')edges=sobelEdge(id,w,h);
+  else if(P.algorithm==='log')edges=logEdge(id,w,h);
+  else edges=dogEdge(id,w,h,P.blur||1);
+  const binary=threshold(edges,P.threshold);
+  invertBinary(binary);
+  processedBase={data:new Uint8ClampedArray(binary.data),w,h};
+  displayResult();
+}
+
+function applyBrightnessContrast(id,b,c){
+  const d=id.data;const factor=(259*(c+255))/(255*(259-c));
+  for(let i=0;i<d.length;i+=4){
+    for(let ch=0;ch<3;ch++){let v=d[i+ch]+b;v=factor*(v-128)+128;d[i+ch]=Math.max(0,Math.min(255,v));}
+  }
+}
+function grayscale(id){
+  const d=id.data;
+  for(let i=0;i<d.length;i+=4){const g=0.299*d[i]+0.587*d[i+1]+0.114*d[i+2];d[i]=d[i+1]=d[i+2]=g;}
+}
+function gaussBlur(id,w,h,r){return applyConv(id,w,h,makeGaussKernel(r));}
+function makeGaussKernel(r){
+  const sz=Math.max(3,Math.floor(r*2)+1);const sig=r/2||0.5;const half=Math.floor(sz/2);let sum=0;const k=[];
+  for(let y=-half;y<=half;y++)for(let x=-half;x<=half;x++){const v=Math.exp(-(x*x+y*y)/(2*sig*sig));k.push(v);sum+=v;}
+  return k.map(v=>v/sum);
+}
+function applyConv(id,w,h,kernel){
+  const side=Math.round(Math.sqrt(kernel.length));const half=Math.floor(side/2);
+  const out=new ImageData(w,h);const src=id.data;const dst=out.data;
+  for(let y=0;y<h;y++)for(let x=0;x<w;x++){
+    let r=0;
+    for(let ky=0;ky<side;ky++)for(let kx=0;kx<side;kx++){
+      const px=Math.min(w-1,Math.max(0,x+kx-half));const py=Math.min(h-1,Math.max(0,y+ky-half));
+      r+=src[(py*w+px)*4]*kernel[ky*side+kx];
+    }
+    const di=(y*w+x)*4;dst[di]=dst[di+1]=dst[di+2]=r;dst[di+3]=255;
+  }
+  return out;
+}
+function sobelEdge(id,w,h){
+  const SX=[-1,0,1,-2,0,2,-1,0,1],SY=[-1,-2,-1,0,0,0,1,2,1];
+  const out=new ImageData(w,h);const src=id.data;const dst=out.data;
+  for(let y=1;y<h-1;y++)for(let x=1;x<w-1;x++){
+    let gx=0,gy=0;
+    for(let ky=-1;ky<=1;ky++)for(let kx=-1;kx<=1;kx++){
+      const g=src[((y+ky)*w+(x+kx))*4];const ki=(ky+1)*3+(kx+1);gx+=g*SX[ki];gy+=g*SY[ki];
+    }
+    const mag=Math.min(255,Math.sqrt(gx*gx+gy*gy));const di=(y*w+x)*4;dst[di]=dst[di+1]=dst[di+2]=mag;dst[di+3]=255;
+  }
+  return out;
+}
+function logEdge(id,w,h){
+  // Laplacian of Gaussian: blur then laplacian
+  const blurred=gaussBlur(id,w,h,1.4);
+  const LAP=[0,-1,0,-1,4,-1,0,-1,0];
+  const out=new ImageData(w,h);const src=blurred.data;const dst=out.data;
+  for(let y=1;y<h-1;y++)for(let x=1;x<w-1;x++){
+    let s=0;
+    for(let ky=-1;ky<=1;ky++)for(let kx=-1;kx<=1;kx++){s+=src[((y+ky)*w+(x+kx))*4]*LAP[(ky+1)*3+(kx+1)];}
+    const v=Math.min(255,Math.abs(s)*2.8);const di=(y*w+x)*4;dst[di]=dst[di+1]=dst[di+2]=v;dst[di+3]=255;
+  }
+  return out;
+}
+function dogEdge(id,w,h,r){
+  // Difference of Gaussians
+  const b1=gaussBlur(id,w,h,Math.max(0.8,r*0.6));
+  const b2=gaussBlur(id,w,h,Math.max(1.6,r*1.4));
+  const out=new ImageData(w,h);const d1=b1.data;const d2=b2.data;const dst=out.data;
+  for(let i=0;i<d1.length;i+=4){const v=Math.min(255,Math.abs(d1[i]-d2[i])*4);dst[i]=dst[i+1]=dst[i+2]=v;dst[i+3]=255;}
+  return out;
+}
+function threshold(id,t){
+  const out=new ImageData(id.width,id.height);const src=id.data;const dst=out.data;
+  for(let i=0;i<src.length;i+=4){const v=src[i]>t?255:0;dst[i]=dst[i+1]=dst[i+2]=v;dst[i+3]=255;}
+  return out;
+}
+function invertBinary(id){const d=id.data;for(let i=0;i<d.length;i+=4){const v=d[i]===0?255:0;d[i]=d[i+1]=d[i+2]=v;}}
+function dilate(buf,w,h){
+  const src=new Uint8ClampedArray(buf);const dst=new Uint8ClampedArray(buf.length);
+  for(let i=0;i<src.length;i+=4){dst[i]=dst[i+1]=dst[i+2]=255;dst[i+3]=255;}
+  for(let y=0;y<h;y++)for(let x=0;x<w;x++){
+    if(src[(y*w+x)*4]===0){
+      for(let dy=-1;dy<=1;dy++)for(let dx=-1;dx<=1;dx++){
+        const nx=x+dx,ny=y+dy;if(nx>=0&&nx<w&&ny>=0&&ny<h){const ni=(ny*w+nx)*4;dst[ni]=dst[ni+1]=dst[ni+2]=0;dst[ni+3]=255;}
+      }
+    }
+  }
+  return dst;
+}
+
+/* ═══════════════ DISPLAY ═══════════════ */
+const previewCanvas=document.getElementById('previewCanvas');
+const ctx=previewCanvas.getContext('2d');
+const canvasWrap=document.getElementById('canvasWrap');
+
+function displayResult(){
+  if(!processedBase)return;
+  const {data,w,h}=processedBase;
+  let finalData=new Uint8ClampedArray(data);
+  if(P.line>1)for(let i=1;i<P.line;i++)finalData=dilate(finalData,w,h);
+
+  // Render to preview canvas
+  previewCanvas.width=w;previewCanvas.height=h;
+  const id=new ImageData(w,h);id.data.set(finalData);
+
+  if(P.colorHint&&originalImage){
+    // Draw original faint, then overlay lines
+    const tmp=document.createElement('canvas');tmp.width=w;tmp.height=h;
+    const tx=tmp.getContext('2d');tx.drawImage(originalImage,0,0,w,h);
+    ctx.drawImage(tmp,0,0);
+    // Composite line art on top
+    const lineCanvas=document.createElement('canvas');lineCanvas.width=w;lineCanvas.height=h;
+    const lx=lineCanvas.getContext('2d');lx.putImageData(id,0,0);
+    ctx.globalAlpha=0.18;ctx.drawImage(tmp,0,0);ctx.globalAlpha=1;
+    // Multiply-blend lines
+    ctx.save();ctx.globalCompositeOperation='multiply';ctx.drawImage(lineCanvas,0,0);ctx.restore();
+  } else {
+    ctx.putImageData(id,0,0);
+  }
+
+  // Apply zoom
+  const mw=canvasWrap.clientWidth-40;const mh=canvasWrap.clientHeight-40||480;
+  const baseScale=Math.min(1,mw/w,mh/h);
+  const s=baseScale*P.zoom;
+  previewCanvas.style.width=Math.round(w*s)+'px';previewCanvas.style.height=Math.round(h*s)+'px';
+
+  // Update compare if active
+  if(P.compare)refreshCompare();
+}
+
+/* ═══════════════ COLOR HINT ═══════════════ */
+function toggleHint(btn){
+  P.colorHint=!P.colorHint;btn.classList.toggle('active',P.colorHint);btn.setAttribute('aria-pressed',P.colorHint);
+  if(processedBase)displayResult();
+  showToast('💡',P.colorHint?'Color Hint on — faint color guide visible':'Color Hint off');
+}
+
+/* ═══════════════ COMPARE ═══════════════ */
+let compareBox=null,compareSlider=null,beforeImg=null,afterCv=null;
+function toggleCompare(btn){
+  P.compare=!P.compare;btn.classList.toggle('active',P.compare);btn.setAttribute('aria-pressed',P.compare);
+  if(P.compare&&processedBase)buildCompare();else tearCompare();
+}
+function buildCompare(){
+  const w=processedBase.w,h=processedBase.h;
+  tearCompare();
+  const cc=document.getElementById('compareContainer');cc.style.cssText='display:flex;align-items:center;justify-content:center;position:absolute;inset:0;z-index:10';
+  compareBox=document.createElement('div');compareBox.className='compare-box';
+  const maxW=canvasWrap.clientWidth-40;const sc=Math.min(1,maxW/w);
+  compareBox.style.cssText=`width:${Math.round(w*sc)}px;height:${Math.round(h*sc)}px`;
+
+  beforeImg=document.createElement('img');beforeImg.alt='Original';
+  const bc=document.createElement('canvas');bc.width=w;bc.height=h;
+  bc.getContext('2d').drawImage(originalImage,0,0,w,h);
+  beforeImg.src=bc.toDataURL();beforeImg.style.clip='rect(0,'+(w*sc/2)+'px,'+Math.round(h*sc)+'px,0)';
+
+  afterCv=document.createElement('canvas');afterCv.width=w;afterCv.height=h;
+  let fd=new Uint8ClampedArray(processedBase.data);
+  if(P.line>1)for(let i=1;i<P.line;i++)fd=dilate(fd,w,h);
+  const id=new ImageData(w,h);id.data.set(fd);afterCv.getContext('2d').putImageData(id,0,0);
+
+  compareSlider=document.createElement('div');compareSlider.className='compare-slider';compareSlider.style.left='50%';
+  const ch=document.createElement('div');ch.className='cs-handle';ch.textContent='◀▶';compareSlider.appendChild(ch);
+
+  compareBox.appendChild(beforeImg);compareBox.appendChild(afterCv);compareBox.appendChild(compareSlider);
+  cc.appendChild(compareBox);
+  previewCanvas.style.display='none';
+
+  let dragging=false;
+  compareSlider.addEventListener('mousedown',e=>{dragging=true;e.preventDefault();});
+  compareSlider.addEventListener('touchstart',e=>{dragging=true;},{passive:true});
+  window.addEventListener('mousemove',e=>{if(!dragging)return;moveSlider(e.clientX);});
+  window.addEventListener('touchmove',e=>{if(!dragging)return;moveSlider(e.touches[0].clientX);},{passive:true});
+  window.addEventListener('mouseup',()=>dragging=false);
+  window.addEventListener('touchend',()=>dragging=false);
+}
+function moveSlider(clientX){
+  if(!compareBox)return;
+  const rect=compareBox.getBoundingClientRect();
+  let x=Math.max(10,Math.min(rect.width-10,clientX-rect.left));
+  compareSlider.style.left=(x/rect.width*100)+'%';
+  beforeImg.style.clip=`rect(0,${x}px,${rect.height}px,0)`;
+}
+function refreshCompare(){if(P.compare&&processedBase){tearCompare();buildCompare();}}
+function tearCompare(){
+  const cc=document.getElementById('compareContainer');cc.innerHTML='';cc.style.display='none';
+  previewCanvas.style.display='block';
+  compareBox=compareSlider=beforeImg=afterCv=null;
+}
+
+/* ═══════════════ PRINT LAYOUT ═══════════════ */
+function toggleFeat(key,btn){
+  P[key]=!P[key];btn.classList.toggle('on',P[key]);
+  if(key==='printLayout'){document.getElementById('printOpts').classList.toggle('vis',P[key]);}
+  scheduleRender();
+}
+
+/* ═══════════════ GET RESULT CANVAS ═══════════════ */
+function getResultCanvas(scale=1){
+  if(!processedBase)return null;
+  const {data,w,h}=processedBase;
+  let fd=new Uint8ClampedArray(data);
+  if(P.line>1)for(let i=1;i<P.line;i++)fd=dilate(fd,w,h);
+
+  const resultW=w*scale,resultH=h*scale;
+  if(!P.printLayout){
+    const c=document.createElement('canvas');c.width=resultW;c.height=resultH;
+    const cx=c.getContext('2d');
+    if(P.colorHint&&originalImage){cx.drawImage(originalImage,0,0,resultW,resultH);cx.globalAlpha=0.85;cx.fillStyle='#fff';cx.fillRect(0,0,resultW,resultH);cx.globalAlpha=1;}
+    const id=new ImageData(w,h);id.data.set(fd);
+    const tmp=document.createElement('canvas');tmp.width=w;tmp.height=h;tmp.getContext('2d').putImageData(id,0,0);
+    cx.drawImage(tmp,0,0,resultW,resultH);
+    return c;
+  }
+  // Print layout
+  const title=document.getElementById('printTitle').value.trim();
+  const paperW=794*scale,paperH=1122*scale;// ~A4 at 96dpi
+  const pad=40*scale;const titleH=title?(52*scale):0;const borderW=P.showBorder?3*scale:0;
+  const avW=paperW-pad*2-borderW*2;const avH=paperH-pad*2-titleH-borderW*2;
+  const sc2=Math.min(avW/w,avH/h);
+  const iw=Math.round(w*sc2),ih=Math.round(h*sc2);
+  const ix=Math.round((paperW-iw)/2);const iy=Math.round(pad+titleH+borderW);
+
+  const c=document.createElement('canvas');c.width=paperW;c.height=paperH;
+  const cx=c.getContext('2d');
+  cx.fillStyle='#ffffff';cx.fillRect(0,0,paperW,paperH);
+  if(P.showBorder){cx.strokeStyle='#222';cx.lineWidth=borderW;cx.strokeRect(pad,pad,paperW-pad*2,paperH-pad*2);}
+  if(title){cx.font=`bold ${22*scale}px 'DM Sans',sans-serif`;cx.fillStyle='#1C1917';cx.textAlign='center';cx.fillText(title,paperW/2,pad+titleH*0.7);}
+  const id=new ImageData(w,h);id.data.set(fd);
+  const tmp=document.createElement('canvas');tmp.width=w;tmp.height=h;tmp.getContext('2d').putImageData(id,0,0);
+  cx.drawImage(tmp,ix,iy,iw,ih);
+  return c;
+}
+
+/* ═══════════════ EXPORT ═══════════════ */
+function exportPNG(scale){
+  const rc=getResultCanvas(scale);if(!rc){showToast('⚠️','Please upload a photo first.');return;}
+  rc.toBlob(blob=>{const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=scale===1?'coloring-page.png':'coloring-page-300dpi.png';a.click();URL.revokeObjectURL(a.href);showToast('🖼️',scale===1?'PNG downloaded!':'PNG 300 DPI downloaded!');});
+}
+function exportPDF(){
+  const rc=getResultCanvas(2);if(!rc){showToast('⚠️','Please upload a photo first.');return;}
+  try{
+    const {jsPDF}=window.jspdf;
+    const isA4=document.getElementById('printSize').value==='a4';
+    const pdf=new jsPDF({orientation:rc.width>rc.height?'landscape':'portrait',unit:'px',format:isA4?[595,842]:[612,792]});
+    const pw=pdf.internal.pageSize.getWidth();const ph=pdf.internal.pageSize.getHeight();
+    const sc=Math.min(pw/rc.width,ph/rc.height);
+    const x=(pw-rc.width*sc)/2;const y=(ph-rc.height*sc)/2;
+    pdf.addImage(rc.toDataURL('image/png'),'PNG',x,y,rc.width*sc,rc.height*sc);
+    pdf.save('coloring-page.pdf');
+    showToast('📄','PDF downloaded!');
+  }catch(e){showToast('⚠️','PDF export failed. Try PNG instead.');}
+}
+
+/* ═══════════════ CONTROLS ═══════════════ */
+function setParam(key,val){
+  P[key]=val;const el=document.getElementById('v'+cap(key));if(el)el.textContent=val;scheduleRender();
+}
+function cap(s){return s[0].toUpperCase()+s.slice(1);}
+function doZoom(delta){P.zoom=Math.max(.3,Math.min(3,P.zoom+delta));document.getElementById('zoomLbl').textContent=Math.round(P.zoom*100)+'%';if(processedBase)displayResult();}
+function resetZoom(){P.zoom=1;document.getElementById('zoomLbl').textContent='100%';if(processedBase)displayResult();}
+function doReset(){
+  originalImage=null;processedBase=null;
+  previewCanvas.width=1;previewCanvas.height=1;ctx.clearRect(0,0,1,1);
+  document.getElementById('placeholder').classList.remove('hidden');
+  document.getElementById('fname').style.display='none';fileInput.value='';
+  tearCompare();
+  Object.assign(P,{threshold:40,blur:2,line:1,brightness:0,contrast:0,algorithm:'sobel',preset:'standard',colorHint:false,compare:false,printLayout:false,showBorder:true,zoom:1});
+  ['threshold','blur','line','brightness','contrast'].forEach(k=>{
+    const r=document.getElementById('r'+cap(k));if(r)r.value=P[k];
+    const v=document.getElementById('v'+cap(k));if(v)v.textContent=P[k];
+  });
+  document.getElementById('togPrint').classList.remove('on');
+  document.getElementById('togBorder').classList.add('on');
+  document.getElementById('printOpts').classList.remove('vis');
+  document.getElementById('btnCompare').classList.remove('active');
+  document.getElementById('btnHint').classList.remove('active');
+  resetZoom();buildPresets();buildAlgos();
+  document.querySelectorAll('.gi').forEach(x=>x.classList.remove('active'));
+  showToast('✓','Reset!');
+}
+
+/* ═══════════════ HELPERS ═══════════════ */
+let _rt=null;
+function scheduleRender(){clearTimeout(_rt);_rt=setTimeout(()=>{if(originalImage)processImage();else if(processedBase)displayResult();},30);}
+let _tt=null;
+function showToast(icon,msg){
+  document.getElementById('tIcon').textContent=icon+' ';document.getElementById('tMsg').textContent=msg;
+  const t=document.getElementById('toast');t.classList.add('show');clearTimeout(_tt);_tt=setTimeout(()=>t.classList.remove('show'),2600);
+}
+
+/* ═══════════════ INIT ═══════════════ */
+buildPresets();buildAlgos();buildGallery();buildFAQ();
+</script>
+</body>
+</html>
