@@ -13,23 +13,12 @@
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
 
-    <!-- hreflang alternates -->
-    <xhtml:link
-      rel="alternate"
-      hreflang="en"
-      href="https://suitecreative.fintoolsbox.com/seamless-generator/"/>
-    <xhtml:link
-      rel="alternate"
-      hreflang="fr"
-      href="https://suitecreative.fintoolsbox.com/fr/animal-semless-generator/"/>
-    <xhtml:link
-      rel="alternate"
-      hreflang="x-default"
-      href="https://suitecreative.fintoolsbox.com/seamless-generator/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://suitecreative.fintoolsbox.com/seamless-generator/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://suitecreative.fintoolsbox.com/fr/animal-semless-generator/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://suitecreative.fintoolsbox.com/seamless-generator/"/>
 
-    <!-- Representative screenshot -->
     <image:image>
-      <image:loc>https://www.suitecreative.fintoolsbox.com/seamless-generator.webp</image:loc>
+      <image:loc>https://suitecreative.fintoolsbox.com/seamless-generator.webp</image:loc>
       <image:title>PatternZoo — Free Seamless Animal Pattern Generator</image:title>
       <image:caption>Create seamless repeat patterns with 10 vector animals, 6 tiling modes, PNG &amp; SVG export.</image:caption>
     </image:image>
@@ -44,28 +33,16 @@
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
 
-    <!-- hreflang alternates -->
-    <xhtml:link
-      rel="alternate"
-      hreflang="fr"
-      href="https://suitecreative.fintoolsbox.com/fr/animal-semless-generator/"/>
-    <xhtml:link
-      rel="alternate"
-      hreflang="en"
-      href="https://suitecreative.fintoolsbox.com/seamless-generator/"/>
-    <xhtml:link
-      rel="alternate"
-      hreflang="x-default"
-      href="https://suitecreative.fintoolsbox.com/seamless-generator/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://suitecreative.fintoolsbox.com/fr/animal-semless-generator/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://suitecreative.fintoolsbox.com/seamless-generator/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://suitecreative.fintoolsbox.com/seamless-generator/"/>
 
-    <!-- Representative screenshot -->
     <image:image>
       <image:loc>https://suitecreative.fintoolsbox.com/fr/seamless-generator.webp</image:loc>
       <image:title>PatternZoo — Générateur de Motifs Seamless Gratuit avec Animaux</image:title>
       <image:caption>Créez gratuitement des motifs seamless répétitifs à base d'animaux. 10 animaux, 6 modes de tiling, export PNG HD et SVG.</image:caption>
     </image:image>
   </url>
-
 
   <!-- ═══════════════════════════════════════════════
        English version — Sticker Maker Pro
@@ -76,18 +53,9 @@
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
 
-    <xhtml:link
-      rel="alternate"
-      hreflang="en"
-      href="https://suitecreative.fintoolsbox.com/sticker-maker/"/>
-    <xhtml:link
-      rel="alternate"
-      hreflang="fr"
-      href="https://suitecreative.fintoolsbox.com/fr/generateur-stickers/"/>
-    <xhtml:link
-      rel="alternate"
-      hreflang="x-default"
-      href="https://suitecreative.fintoolsbox.com/sticker-maker/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://suitecreative.fintoolsbox.com/sticker-maker/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://suitecreative.fintoolsbox.com/fr/generateur-stickers/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://suitecreative.fintoolsbox.com/sticker-maker/"/>
 
     <image:image>
       <image:loc>https://suitecreative.fintoolsbox.com/sticker-maker.webp</image:loc>
@@ -105,18 +73,9 @@
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
 
-    <xhtml:link
-      rel="alternate"
-      hreflang="fr"
-      href="https://suitecreative.fintoolsbox.com/fr/generateur-stickers/"/>
-    <xhtml:link
-      rel="alternate"
-      hreflang="en"
-      href="https://suitecreative.fintoolsbox.com/sticker-maker/"/>
-    <xhtml:link
-      rel="alternate"
-      hreflang="x-default"
-      href="https://suitecreative.fintoolsbox.com/sticker-maker/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://suitecreative.fintoolsbox.com/fr/generateur-stickers/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://suitecreative.fintoolsbox.com/sticker-maker/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://suitecreative.fintoolsbox.com/sticker-maker/"/>
 
     <image:image>
       <image:loc>https://suitecreative.fintoolsbox.com/sticker-maker.webp</image:loc>
@@ -134,21 +93,12 @@
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
 
-    <xhtml:link
-      rel="alternate"
-      hreflang="en"
-      href="https://suitecreative.fintoolsbox.com/plush-customizer/"/>
-    <xhtml:link
-      rel="alternate"
-      hreflang="fr"
-      href="https://suitecreative.fintoolsbox.com/fr/peluche/"/>
-    <xhtml:link
-      rel="alternate"
-      hreflang="x-default"
-      href="https://suitecreative.fintoolsbox.com/plush-customizer/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://suitecreative.fintoolsbox.com/plush-customizer/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://suitecreative.fintoolsbox.com/fr/peluche/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://suitecreative.fintoolsbox.com/plush-customizer/"/>
 
     <image:image>
-      <image:loc>https://suitecreative.fontoolsbox.com/plush-customizer.webp</image:loc>
+      <image:loc>https://suitecreative.fintoolsbox.com/plush-customizer.webp</image:loc>
       <image:title>Plushify AI — Plush Toy Generator</image:title>
       <image:caption>Turn photos into cute plush toys with wool textures, stitches and kawaii effects.</image:caption>
     </image:image>
@@ -163,18 +113,9 @@
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
 
-    <xhtml:link
-      rel="alternate"
-      hreflang="fr"
-      href="https://suitecreative.fintoolsbox.com/fr/peluche/"/>
-    <xhtml:link
-      rel="alternate"
-      hreflang="en"
-      href="https://suitecreative.fintoolsbox.com/plush-customizer/"/>
-    <xhtml:link
-      rel="alternate"
-      hreflang="x-default"
-      href="https://suitecreative.fintoolsbox.com/plush-customizer/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://suitecreative.fintoolsbox.com/fr/peluche/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://suitecreative.fintoolsbox.com/plush-customizer/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://suitecreative.fintoolsbox.com/plush-customizer/"/>
 
     <image:image>
       <image:loc>https://suitecreative.fintoolsbox.com/plush-customizer.webp</image:loc>
@@ -192,18 +133,9 @@
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
 
-    <xhtml:link
-      rel="alternate"
-      hreflang="en"
-      href="https://suitecreative.fintoolsbox.com/vitrail-mosaique/"/>
-    <xhtml:link
-      rel="alternate"
-      hreflang="fr"
-      href="https://suitecreative.fintoolsbox.com/fr/vitrail-mosaique/"/>
-    <xhtml:link
-      rel="alternate"
-      hreflang="x-default"
-      href="https://suitecreative.fintoolsbox.com/vitrail-mosaique/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://suitecreative.fintoolsbox.com/vitrail-mosaique/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://suitecreative.fintoolsbox.com/fr/vitrail-mosaique/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://suitecreative.fintoolsbox.com/vitrail-mosaique/"/>
 
     <image:image>
       <image:loc>https://suitecreative.fintoolsbox.com/vitrail-mosaique.webp</image:loc>
@@ -221,18 +153,9 @@
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
 
-    <xhtml:link
-      rel="alternate"
-      hreflang="fr"
-      href="https://suitecreative.fintoolsbox.com/fr/vitrail-mosaique/"/>
-    <xhtml:link
-      rel="alternate"
-      hreflang="en"
-      href="https://suitecreative.fintoolsbox.com/vitrail-mosaique/"/>
-    <xhtml:link
-      rel="alternate"
-      hreflang="x-default"
-      href="https://suitecreative.fintoolsbox.com/vitrail-mosaique/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://suitecreative.fintoolsbox.com/fr/vitrail-mosaique/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://suitecreative.fintoolsbox.com/vitrail-mosaique/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://suitecreative.fintoolsbox.com/vitrail-mosaique/"/>
 
     <image:image>
       <image:loc>https://suitecreative.fintoolsbox.com/vitrail-mosaique.webp</image:loc>
@@ -250,22 +173,13 @@
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
 
-    <xhtml:link
-      rel="alternate"
-      hreflang="en"
-      href="https://suitecreative.fintoolsbox.com/portrait-animal/"/>
-    <xhtml:link
-      rel="alternate"
-      hreflang="fr"
-      href="https://suitecreative.fintoolsbox.com/fr/portrait-animal/"/>
-    <xhtml:link
-      rel="alternate"
-      hreflang="x-default"
-      href="https://suitecreative.fintoolsbox.com/portrait-animal/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://suitecreative.fintoolsbox.com/portrait-animal/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://suitecreative.fintoolsbox.com/fr/portrait-animal/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://suitecreative.fintoolsbox.com/portrait-animal/"/>
 
     <image:image>
       <image:loc>https://suitecreative.fintoolsbox.com/portrait-animal.webp</image:loc>
-      <image:title>Pet Art Generator — Sumi-e & Pop Art Portraits</image:title>
+      <image:title>Pet Art Generator — Sumi-e &amp; Pop Art Portraits</image:title>
       <image:caption>Create artistic pet portraits with sumi-e ink, oil painting, sketch and pop art styles.</image:caption>
     </image:image>
   </url>
@@ -279,54 +193,39 @@
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
 
-    <xhtml:link
-      rel="alternate"
-      hreflang="fr"
-      href="https://suitecreative.fintoolsbox.com/fr/portrait-animal/"/>
-    <xhtml:link
-      rel="alternate"
-      hreflang="en"
-      href="https://suitecreative.fintoolsbox.com/portrait-animal/"/>
-    <xhtml:link
-      rel="alternate"
-      hreflang="x-default"
-      href="https://suitecreative.fintoolsbox.com/portrait-animal/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://suitecreative.fintoolsbox.com/fr/portrait-animal/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://suitecreative.fintoolsbox.com/portrait-animal/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://suitecreative.fintoolsbox.com/portrait-animal/"/>
 
     <image:image>
       <image:loc>https://suitecreative.fintoolsbox.com/portrait-animal.webp</image:loc>
       <image:title>Portrait Animal Artistique Style Asiatique</image:title>
-      <image:caption>Transformez vos animaux en portraits sumi-e, peinture à l’huile, croquis ou pop art.</image:caption>
+      <image:caption>Transformez vos animaux en portraits sumi-e, peinture à l'huile, croquis ou pop art.</image:caption>
     </image:image>
   </url>
 
+  <!-- ═══════════════════════════════════════════════
+       English version — Video Mockup Generator
+  ════════════════════════════════════════════════ -->
   <url>
     <loc>https://suitecreative.fintoolsbox.com/meckup-generator/</loc>
     <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
 
-    <xhtml:link
-      rel="alternate"
-      hreflang="en"
-      href="https://suitecreative.fintoolsbox.com/meckup-generator/"/>
-    <xhtml:link
-      rel="alternate"
-      hreflang="fr"
-      href="https://suitecreative.fintoolsbox.com/fr/mockup-video/"/>
-    <xhtml:link
-      rel="alternate"
-      hreflang="x-default"
-      href="https://suitecreative.fintoolsbox.com/meckup-generator/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://suitecreative.fintoolsbox.com/meckup-generator/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://suitecreative.fintoolsbox.com/fr/mockup-video/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://suitecreative.fintoolsbox.com/meckup-generator/"/>
 
     <image:image>
       <image:loc>https://suitecreative.fintoolsbox.com/meckup-generator.webp</image:loc>
-      <image:title>Pet Art Generator — Sumi-e & Pop Art Portraits</image:title>
-      <image:caption>Create artistic pet portraits with sumi-e ink, oil painting, sketch and pop art styles.</image:caption>
+      <image:title>T-Shirt Video Mockup Generator — Animated Wind Effect</image:title>
+      <image:caption>Create stunning product videos with realistic wind animation on a T-shirt mockup. Free, no software needed.</image:caption>
     </image:image>
   </url>
 
   <!-- ═══════════════════════════════════════════════
-       French version — Portrait Animal Artistique
+       French version — Mockup Vidéo T-Shirt
   ════════════════════════════════════════════════ -->
   <url>
     <loc>https://suitecreative.fintoolsbox.com/fr/mockup-video/</loc>
@@ -334,55 +233,39 @@
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
 
-    <xhtml:link
-      rel="alternate"
-      hreflang="fr"
-      href="https://suitecreative.fintoolsbox.com/fr/mockup-video/"/>
-    <xhtml:link
-      rel="alternate"
-      hreflang="en"
-      href="https://suitecreative.fintoolsbox.com/meckup-generator/"/>
-    <xhtml:link
-      rel="alternate"
-      hreflang="x-default"
-      href="https://suitecreative.fintoolsbox.com/meckup-generator/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://suitecreative.fintoolsbox.com/fr/mockup-video/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://suitecreative.fintoolsbox.com/meckup-generator/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://suitecreative.fintoolsbox.com/meckup-generator/"/>
 
     <image:image>
       <image:loc>https://suitecreative.fintoolsbox.com/meckup-generator.webp</image:loc>
-      <image:title>Portrait Animal Artistique Style Asiatique</image:title>
-      <image:caption>Transformez vos animaux en portraits sumi-e, peinture à l’huile, croquis ou pop art.</image:caption>
+      <image:title>Mockup Vidéo T‑shirt avec Effet de Vent</image:title>
+      <image:caption>Donnez vie à vos visuels avec un mockup vidéo de T‑shirt animé. Créez une présentation produit dynamique gratuitement.</image:caption>
     </image:image>
   </url>
 
-
+  <!-- ═══════════════════════════════════════════════
+       English version — Custom Coloring Generator
+  ════════════════════════════════════════════════ -->
   <url>
     <loc>https://suitecreative.fintoolsbox.com/coloring-generator/</loc>
     <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
 
-    <xhtml:link
-      rel="alternate"
-      hreflang="en"
-      href="https://suitecreative.fintoolsbox.com/coloring-generator/"/>
-    <xhtml:link
-      rel="alternate"
-      hreflang="fr"
-      href="https://suitecreative.fintoolsbox.com/fr/generateur-coloriage/"/>
-    <xhtml:link
-      rel="alternate"
-      hreflang="x-default"
-      href="https://suitecreative.fintoolsbox.com/coloring-generator/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://suitecreative.fintoolsbox.com/coloring-generator/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://suitecreative.fintoolsbox.com/fr/generateur-coloriage/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://suitecreative.fintoolsbox.com/coloring-generator/"/>
 
     <image:image>
       <image:loc>https://suitecreative.fintoolsbox.com/coloring-generator.webp</image:loc>
-      <image:title>Pet Art Generator — Sumi-e & Pop Art Portraits</image:title>
-      <image:caption>Create artistic pet portraits with sumi-e ink, oil painting, sketch and pop art styles.</image:caption>
+      <image:title>Custom Coloring Page Generator — Turn Photos into Drawings</image:title>
+      <image:caption>Convert any image into a black-and-white printable coloring page. Perfect for kids and crafters.</image:caption>
     </image:image>
   </url>
 
   <!-- ═══════════════════════════════════════════════
-       French version — Portrait Animal Artistique
+       French version — Générateur de Coloriage Personnalisé
   ════════════════════════════════════════════════ -->
   <url>
     <loc>https://suitecreative.fintoolsbox.com/fr/generateur-coloriage/</loc>
@@ -390,54 +273,39 @@
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
 
-    <xhtml:link
-      rel="alternate"
-      hreflang="fr"
-      href="https://suitecreative.fintoolsbox.com/fr/generateur-coloriage/"/>
-    <xhtml:link
-      rel="alternate"
-      hreflang="en"
-      href="https://suitecreative.fintoolsbox.com/coloring-generator/"/>
-    <xhtml:link
-      rel="alternate"
-      hreflang="x-default"
-      href="https://suitecreative.fintoolsbox.com/cocloring-generator/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://suitecreative.fintoolsbox.com/fr/generateur-coloriage/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://suitecreative.fintoolsbox.com/coloring-generator/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://suitecreative.fintoolsbox.com/coloring-generator/"/>
 
     <image:image>
       <image:loc>https://suitecreative.fintoolsbox.com/coloring-generator.webp</image:loc>
-      <image:title>Portrait Animal Artistique Style Asiatique</image:title>
-      <image:caption>Transformez vos animaux en portraits sumi-e, peinture à l’huile, croquis ou pop art.</image:caption>
+      <image:title>Générateur de Coloriage Personnalisé</image:title>
+      <image:caption>Transformez une photo en dessin à colorier noir et blanc. Imprimez et coloriez vos propres images.</image:caption>
     </image:image>
   </url>
 
+  <!-- ═══════════════════════════════════════════════
+       English Homepage
+  ════════════════════════════════════════════════ -->
   <url>
     <loc>https://suitecreative.fintoolsbox.com/</loc>
     <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
 
-    <xhtml:link
-      rel="alternate"
-      hreflang="en"
-      href="https://suitecreative.fintoolsbox.com/"/>
-    <xhtml:link
-      rel="alternate"
-      hreflang="fr"
-      href="https://suitecreative.fintoolsbox.com/fr/"/>
-    <xhtml:link
-      rel="alternate"
-      hreflang="x-default"
-      href="https://suitecreative.fintoolsbox.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://suitecreative.fintoolsbox.com/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://suitecreative.fintoolsbox.com/fr/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://suitecreative.fintoolsbox.com/"/>
 
     <image:image>
       <image:loc>https://suitecreative.fintoolsbox.com/logo.png</image:loc>
-      <image:title>Pet Art Generator — Sumi-e & Pop Art Portraits</image:title>
-      <image:caption>Create artistic pet portraits with sumi-e ink, oil painting, sketch and pop art styles.</image:caption>
+      <image:title>Suite Creative — Free Online Creative Tools</image:title>
+      <image:caption>Suite Creative offers free generators for stickers, coloring pages, mockups, plush toys, stained glass and more.</image:caption>
     </image:image>
   </url>
 
   <!-- ═══════════════════════════════════════════════
-       French version — Portrait Animal Artistique
+       French Homepage
   ════════════════════════════════════════════════ -->
   <url>
     <loc>https://suitecreative.fintoolsbox.com/fr/</loc>
@@ -445,186 +313,141 @@
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
 
-    <xhtml:link
-      rel="alternate"
-      hreflang="fr"
-      href="https://suitecreative.fintoolsbox.com/fr/"/>
-    <xhtml:link
-      rel="alternate"
-      hreflang="en"
-      href="https://suitecreative.fintoolsbox.com/"/>
-    <xhtml:link
-      rel="alternate"
-      hreflang="x-default"
-      href="https://suitecreative.fintoolsbox.com/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://suitecreative.fintoolsbox.com/fr/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://suitecreative.fintoolsbox.com/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://suitecreative.fintoolsbox.com/"/>
 
     <image:image>
       <image:loc>https://suitecreative.fintoolsbox.com/logo.png</image:loc>
-      <image:title>Portrait Animal Artistique Style Asiatique</image:title>
-      <image:caption>Transformez vos animaux en portraits sumi-e, peinture à l’huile, croquis ou pop art.</image:caption>
-    </image:image>
-  </url>
-
-<url>
-    <loc>https://suitecreative.fintoolsbox.com/privacy/</loc>
-    <lastmod>2026-05-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
-
-    <xhtml:link
-      rel="alternate"
-      hreflang="en"
-      href="https://suitecreative.fintoolsbox.com/privacy/"/>
-    <xhtml:link
-      rel="alternate"
-      hreflang="fr"
-      href="https://suitecreative.fintoolsbox.com/fr/confidentialite/"/>
-    <xhtml:link
-      rel="alternate"
-      hreflang="x-default"
-      href="https://suitecreative.fintoolsbox.com/privacy/"/>
-
-    <image:image>
-      <image:loc>https://suitecreative.fintoolsbox.com/logo.png</image:loc>
-      <image:title>Pet Art Generator — Sumi-e & Pop Art Portraits</image:title>
-      <image:caption>Create artistic pet portraits with sumi-e ink, oil painting, sketch and pop art styles.</image:caption>
+      <image:title>Suite Creative — Outils Créatifs Gratuits en Ligne</image:title>
+      <image:caption>Suite Creative propose des générateurs gratuits pour stickers, coloriages, mockups, peluches, vitraux et plus.</image:caption>
     </image:image>
   </url>
 
   <!-- ═══════════════════════════════════════════════
-       French version — Portrait Animal Artistique
+       English Privacy Policy
+  ════════════════════════════════════════════════ -->
+  <url>
+    <loc>https://suitecreative.fintoolsbox.com/privacy/</loc>
+    <lastmod>2026-05-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+
+    <xhtml:link rel="alternate" hreflang="en" href="https://suitecreative.fintoolsbox.com/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://suitecreative.fintoolsbox.com/fr/confidentialite/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://suitecreative.fintoolsbox.com/privacy/"/>
+  </url>
+
+  <!-- ═══════════════════════════════════════════════
+       French Privacy Policy
   ════════════════════════════════════════════════ -->
   <url>
     <loc>https://suitecreative.fintoolsbox.com/fr/confidentialite/</loc>
     <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.5</priority>
 
-    <xhtml:link
-      rel="alternate"
-      hreflang="fr"
-      href="https://suitecreative.fintoolsbox.com/fr/confidentialite/"/>
-    <xhtml:link
-      rel="alternate"
-      hreflang="en"
-      href="https://suitecreative.fintoolsbox.com/privacy/"/>
-    <xhtml:link
-      rel="alternate"
-      hreflang="x-default"
-      href="https://suitecreative.fintoolsbox.com/privacy/"/>
-
-    <image:image>
-      <image:loc>https://suitecreative.fintoolsbox.com/logo.png</image:loc>
-      <image:title>Portrait Animal Artistique Style Asiatique</image:title>
-      <image:caption>Transformez vos animaux en portraits sumi-e, peinture à l’huile, croquis ou pop art.</image:caption>
-    </image:image>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://suitecreative.fintoolsbox.com/fr/confidentialite/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://suitecreative.fintoolsbox.com/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://suitecreative.fintoolsbox.com/privacy/"/>
   </url>
 
-  
+  <!-- ═══════════════════════════════════════════════
+       French blog article — Flipbook
+  ════════════════════════════════════════════════ -->
+  <url>
+    <loc>https://suitecreative.fintoolsbox.com/fr/blog/flipbook/</loc>
+    <lastmod>2025-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 
-    <!-- Outil Flipbook -->
-    <url>
-        <loc>https://suitecreative.fintoolsbox.com/fr/blog/flipbook/</loc>
-        <lastmod>2025-04-08</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.9</priority>
-    </url>
+  <!-- ---------- French blog articles ---------- -->
+  <url>
+    <loc>https://suitecreative.fintoolsbox.com/fr/blog/generateur-meckup</loc>
+    <lastmod>2025-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://suitecreative.fintoolsbox.com/fr/blog/generateur-coloriage/</loc>
+    <lastmod>2025-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://suitecreative.fintoolsbox.com/fr/blog/generateur-stickers/</loc>
+    <lastmod>2025-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://suitecreative.fintoolsbox.com/fr/blog/generateur-peluche/</loc>
+    <lastmod>2025-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://suitecreative.fintoolsbox.com/fr/blog/mosaique-polygone/</loc>
+    <lastmod>2025-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 
-
-    <!-- Article : Mockup Vidéo T‑shirt avec Effet de Vent -->
-    <url>
-        <loc>https://suitecreative.fintoolsbox.com/fr/blog/generateur-meckup</loc>
-        <lastmod>2025-04-08</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <!-- Article : Coloriage Personnalisé -->
-    <url>
-        <loc>https://suitecreative.fintoolsbox.com/fr/blog/generateur-coloriage/</loc>
-        <lastmod>2025-04-08</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <!-- Article : Stickers Personnalisés -->
-    <url>
-        <loc>https://suitecreative.fintoolsbox.com/fr/blog/generateur-stickers/</loc>
-        <lastmod>2025-04-08</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <!-- Article : Peluche Personnalisée -->
-    <url>
-        <loc>https://suitecreative.fintoolsbox.com/fr/blog/generateur-peluche/</loc>
-        <lastmod>2025-04-08</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <!-- Article : Mosaïque Polygone / Vitrail -->
-    <url>
-        <loc>https://suitecreative.fintoolsbox.com/fr/blog/mosaique-polygone/</loc>
-        <lastmod>2025-04-08</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-
-     <url>
-        <loc>https://suitecreative.fintoolsbox.com/en-blog/best-etsy-mockup-tools</loc>
-        <lastmod>2025-04-08</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://suitecreative.fintoolsbox.com/en-blog/how-to-create-product-videos</loc>
-        <lastmod>2025-04-08</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://suitecreative.fintoolsbox.com/en-blog/tiktok-product-video-guide</loc>
-        <lastmod>2025-04-08</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://suitecreative.fintoolsbox.com/en-blog/shopify-video-mockups</loc>
-        <lastmod>2025-04-08</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://suitecreative.fintoolsbox.com/en-blog/cat-coloring-page-generator</loc>
-        <lastmod>2025-04-08</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://suitecreative.fintoolsbox.com/en-blog/kids-coloring-page-generator</loc>
-        <lastmod>2025-04-08</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://suitecreative.fintoolsbox.com/en-blog/photo-to-coloring-page</loc>
-        <lastmod>2025-04-08</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://suitecreative.fintoolsbox.com/en-blog/stained-glass-generator</loc>
-        <lastmod>2025-04-08</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://suitecreative.fintoolsbox.com/en-blog/tiffany-glass-effect</loc>
-        <lastmod>2025-04-08</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
+  <!-- ---------- English blog articles ---------- -->
+  <url>
+    <loc>https://suitecreative.fintoolsbox.com/en-blog/best-etsy-mockup-tools</loc>
+    <lastmod>2025-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://suitecreative.fintoolsbox.com/en-blog/how-to-create-product-videos</loc>
+    <lastmod>2025-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://suitecreative.fintoolsbox.com/en-blog/tiktok-product-video-guide</loc>
+    <lastmod>2025-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://suitecreative.fintoolsbox.com/en-blog/shopify-video-mockups</loc>
+    <lastmod>2025-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://suitecreative.fintoolsbox.com/en-blog/cat-coloring-page-generator</loc>
+    <lastmod>2025-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://suitecreative.fintoolsbox.com/en-blog/kids-coloring-page-generator</loc>
+    <lastmod>2025-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://suitecreative.fintoolsbox.com/en-blog/photo-to-coloring-page</loc>
+    <lastmod>2025-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://suitecreative.fintoolsbox.com/en-blog/stained-glass-generator</loc>
+    <lastmod>2025-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://suitecreative.fintoolsbox.com/en-blog/tiffany-glass-effect</loc>
+    <lastmod>2025-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 
 </urlset>
