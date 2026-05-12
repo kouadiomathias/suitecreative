@@ -351,5 +351,114 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://suitecreative.fintoolsbox.com/privacy/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://suitecreative.fintoolsbox.com/privacy/"/>
   </url>
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
+  <!-- ═══════════════════════════════════════════════
+       Article 1 : Photo to Plush Toy (EN)
+  ════════════════════════════════════════════════ -->
+  <url>
+    <loc>https://suitecreative.fintoolsbox.com/en-blog/photo-to-plush-toy/</loc>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://suitecreative.fintoolsbox.com/en-blog/photo-to-plush-toy/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://suitecreative.fintoolsbox.com/fr/blog/photo-a-peluche/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://suitecreative.fintoolsbox.com/en-blog/photo-to-plush-toy/"/>
+  </url>
+
+  <!-- ═══════════════════════════════════════════════
+       Article 1 : Photo vers Peluche (FR)
+  ════════════════════════════════════════════════ -->
+  <url>
+    <loc>https://suitecreative.fintoolsbox.com/fr/blog/photo-a-peluche/</loc>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://suitecreative.fintoolsbox.com/fr/blog/photo-a-peluche/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://suitecreative.fintoolsbox.com/en-blog/photo-to-plush-toy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://suitecreative.fintoolsbox.com/en-blog/photo-to-plush-toy/"/>
+  </url>
+
+  <!-- ═══════════════════════════════════════════════
+       Article 2 : Kawaii Plush Avatars (EN)
+  ════════════════════════════════════════════════ -->
+  <url>
+    <loc>https://suitecreative.fintoolsbox.com/en-blog/kawaii-plush-avatar/</loc>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://suitecreative.fintoolsbox.com/en-blog/kawaii-plush-avatar/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://suitecreative.fintoolsbox.com/fr/blog/avatar-kawaii-peluche/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://suitecreative.fintoolsbox.com/en-blog/kawaii-plush-avatar/"/>
+  </url>
+
+  <!-- ═══════════════════════════════════════════════
+       Article 2 : Avatar Peluche Kawaii (FR)
+  ════════════════════════════════════════════════ -->
+  <url>
+    <loc>https://suitecreative.fintoolsbox.com/fr/blog/avatar-kawaii-peluche/</loc>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://suitecreative.fintoolsbox.com/fr/blog/avatar-kawaii-peluche/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://suitecreative.fintoolsbox.com/en-blog/kawaii-plush-avatar/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://suitecreative.fintoolsbox.com/en-blog/kawaii-plush-avatar/"/>
+  </url>
+
+  <!-- ═══════════════════════════════════════════════
+       Article 3 : Seamless Patterns for Etsy (EN)
+  ════════════════════════════════════════════════ -->
+  <url>
+    <loc>https://suitecreative.fintoolsbox.com/en-blog/seamless-patterns-etsy/</loc>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://suitecreative.fintoolsbox.com/en-blog/seamless-patterns-etsy/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://suitecreative.fintoolsbox.com/fr/blog/motif-seamless-etsy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://suitecreative.fintoolsbox.com/en-blog/seamless-patterns-etsy/"/>
+  </url>
+
+  <!-- ═══════════════════════════════════════════════
+       Article 3 : Motifs Seamless pour Etsy (FR)
+  ════════════════════════════════════════════════ -->
+  <url>
+    <loc>https://suitecreative.fintoolsbox.com/fr/blog/motif-seamless-etsy/</loc>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://suitecreative.fintoolsbox.com/fr/blog/motif-seamless-etsy/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://suitecreative.fintoolsbox.com/en-blog/seamless-patterns-etsy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://suitecreative.fintoolsbox.com/en-blog/seamless-patterns-etsy/"/>
+  </url>
+
+  <!-- ═══════════════════════════════════════════════
+       Article 4 : AI Pattern Generator for Fabric (EN)
+  ════════════════════════════════════════════════ -->
+  <url>
+    <loc>https://suitecreative.fintoolsbox.com/en-blog/ai-pattern-generator-fabric-wallpaper/</loc>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://suitecreative.fintoolsbox.com/en-blog/ai-pattern-generator-fabric-wallpaper/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://suitecreative.fintoolsbox.com/fr/blog/generateur-ia-motif-tissu/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://suitecreative.fintoolsbox.com/en-blog/ai-pattern-generator-fabric-wallpaper/"/>
+  </url>
+
+  <!-- ═══════════════════════════════════════════════
+       Article 4 : Générateur IA de motifs (FR)
+  ════════════════════════════════════════════════ -->
+  <url>
+    <loc>https://suitecreative.fintoolsbox.com/fr/blog/generateur-ia-motif-tissu/</loc>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://suitecreative.fintoolsbox.com/fr/blog/generateur-ia-motif-tissu/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://suitecreative.fintoolsbox.com/en-blog/ai-pattern-generator-fabric-wallpaper/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://suitecreative.fintoolsbox.com/en-blog/ai-pattern-generator-fabric-wallpaper/"/>
+  </url>
+
+</urlset>
 </urlset>
