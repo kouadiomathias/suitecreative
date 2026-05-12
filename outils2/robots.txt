@@ -4,3 +4,4 @@ Allow: /
 # Sitemaps
 Sitemap: https://suitecreative.fintoolsbox.com/sitemap.xml
 Sitemap: https://suitecreative.fintoolsbox.com/sitemap-blog.xml
+Sitemap: https://suitecreative.fintoolsbox.com/sitemap-blog1.xml
