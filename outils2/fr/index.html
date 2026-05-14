@@ -1,375 +1,791 @@
+
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Suite Créative · 5 Outils Gratuits pour Créer Stickers, Coloriages, Portraits & Mockups Vidéo</title>
-    <meta name="description" content="Découvrez 5 outils créatifs gratuits et privés : générateur de stickers, coloriage personnalisé, portrait animal style asiatique, mockup vidéo T-shirt avec vent. Sans inscription, traitement local.">
-    <meta name="keywords" content="outils créatifs, générateur stickers, coloriage personnalisé, portrait animal, mockup vidéo, effet vent T-shirt, suite créative, design gratuit, outils SEO">
+    <title>SuiteCréative · des outils pensés pour les créatifs</title>
+    <meta name="description" content="Une petite collection d’outils de création dans le navigateur, qui restent discrets. Sans inscription, tout reste chez vous.">
+    <meta name="keywords" content="outils créatifs, générateur stickers, coloriage personnalisé, portrait animal, mockup vidéo, motif seamless, suite créative, design gratuit">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://suitecreative.fintoolsbox.com/fr/">
     <link rel="alternate" hreflang="fr" href="https://suitecreative.fintoolsbox.com/fr/">
     <link rel="alternate" hreflang="en" href="https://suitecreative.fintoolsbox.com/">
     <link rel="alternate" hreflang="x-default" href="https://suitecreative.fintoolsbox.com/">
-    <meta property="og:title" content="Suite Créative · 5 Outils de Design Gratuits">
-    <meta property="og:description" content="Stickers, coloriages, portraits artistiques et mockups vidéo. Tout se passe dans votre navigateur, sans serveur.">
+    <meta property="og:title" content="SuiteCréative · des outils pensés pour les créatifs">
+    <meta property="og:description" content="Stickers, coloriages, portraits, motifs et mockups. Tout tourne en local dans votre navigateur — sans serveur, sans inscription.">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://suitecreative.fintoolsbox.com/logo.png">
     <meta property="og:url" content="https://suitecreative.fintoolsbox.com/fr/">
+    <meta property="og:locale" content="fr_FR">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Suite Créative · 5 Outils de Design">
-    <meta name="twitter:description" content="Transformez vos photos et idées en designs uniques. Gratuit, privé, instantané.">
-    <meta name="theme-color" content="#f9f4ea">
-    <link rel="manifest" href="data:application/manifest+json,%7B%22name%22%3A%22Suite%20Cr%C3%A9ative%22%2C%22short_name%22%3A%22Cr%C3%A9ative%22%2C%22start_url%22%3A%22.%2F%22%2C%22display%22%3A%22standalone%22%2C%22background_color%22%3A%22%23f9f4ea%22%2C%22theme_color%22%3A%22%23945d3b%22%7D">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    <meta name="twitter:title" content="SuiteCréative · des outils pensés pour les créatifs">
+    <meta name="twitter:description" content="Transformez vos photos en stickers, coloriages, portraits et maquettes animées. Gratuit, privé, instantané.">
+    <meta name="theme-color" content="#f7f3eb" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#1a1a1a" media="(prefers-color-scheme: dark)">
     <script type="application/ld+json">
         {
-            "@context": "https://schema.org",
-            "@type": "ItemList",
-            "itemListElement": [
-                { "@type": "SoftwareApplication", "name": "WindMockup – Mockup Vidéo T-shirt avec Vent", "description": "Importez votre design de T-shirt et générez une vidéo avec effet de vent réaliste.", "url": "#windmockup", "applicationCategory": "Multimedia" },
-                { "@type": "SoftwareApplication", "name": "Coloriage Personnalisé", "description": "Transformez une photo en dessin au trait pour créer un coloriage à imprimer.", "url": "#coloriage", "applicationCategory": "Multimedia" },
-                { "@type": "SoftwareApplication", "name": "Sticker Maker Pro", "description": "Créez des stickers avec forme de découpe (cœur, étoile, os…) à partir de vos photos.", "url": "#sticker", "applicationCategory": "Multimedia" },
-                { "@type": "SoftwareApplication", "name": "Portrait Animal Style Asiatique", "description": "Redessinez vos animaux en style sumi-e, croquis, huile ou pop art avec sceau rouge.", "url": "#portrait", "applicationCategory": "Multimedia" }
-            ],
-            "numberOfItems": 5,
-            "itemListOrder": "Unordered"
+            "@context":"https://schema.org",
+            "@graph":[
+                {
+                    "@type":"WebSite",
+                    "@id":"https://suitecreative.fintoolsbox.com/fr/#website",
+                    "url":"https://suitecreative.fintoolsbox.com/fr/",
+                    "name":"SuiteCréative",
+                    "description":"Une petite collection d'outils créatifs pour artistes, créateurs et curieux.",
+                    "inLanguage":"fr"
+                },
+                {
+                    "@type":"Organization",
+                    "@id":"https://suitecreative.fintoolsbox.com/#organization",
+                    "name":"SuiteCréative",
+                    "url":"https://suitecreative.fintoolsbox.com/fr/",
+                    "logo":{"@type":"ImageObject","url":"https://suitecreative.fintoolsbox.com/logo.png"}
+                }
+            ]
         }
     </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-2CEE6GDLC2"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-2CEE6GDLC2');
-</script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2CEE6GDLC2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-2CEE6GDLC2');
+    </script>
     <style>
-        :root {
-            --cream: #f9f4ea;
-            --paper: #fffdf7;
-            --ink: #2c2416;
-            --ink-light: #5e5340;
-            --accent: #945d3b;
-            --accent-soft: #f2e3d5;
-            --gold: #b8860b;
-            --border: #d9cdb0;
-            --shadow: 0 8px 30px rgba(0,0,0,0.05), 0 2px 8px rgba(0,0,0,0.03);
-            --radius: 24px;
-            --radius-sm: 16px;
-            --transition: 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
-            --font-body: 'Inter', system-ui, sans-serif;
-            --font-heading: 'Playfair Display', Georgia, serif;
+        /* ═══════════════════════════════════════════
+           TOKENS — LIGHT
+        ═══════════════════════════════════════════ */
+        :root,[data-theme="light"]{
+            --bg:         #f7f3eb;
+            --surface:    #fdfaf5;
+            --surface-2:  #f0ebe1;
+            --border:     #e4dccf;
+            --border-2:   #d4c9b5;
+            --ink:        #1d1d1d;
+            --ink-2:      #5c5347;
+            --ink-3:      #9b8e7c;
+            --accent:     #9b5c2e;
+            --accent-2:   #7a4420;
+            --accent-bg:  rgba(155,92,46,.08);
+            --accent-bdr: rgba(155,92,46,.22);
+            --gold:       #b08a4c;
+            --gold-bg:    rgba(176,138,76,.08);
+            --ok:         #3a6b4b;
+            --ok-bg:      rgba(58,107,75,.08);
+            --shadow-sm:  0 1px 3px rgba(0,0,0,.04),0 4px 12px rgba(0,0,0,.02);
+            --shadow-md:  0 4px 20px rgba(0,0,0,.05),0 8px 32px rgba(0,0,0,.03);
+            --shadow-lg:  0 12px 40px rgba(0,0,0,.07),0 4px 16px rgba(0,0,0,.04);
+            --card-shine: none;
+            --noise: none;
         }
-        * { margin:0; padding:0; box-sizing:border-box; }
-        body {
-            font-family: var(--font-body);
-            background: var(--cream);
-            color: var(--ink);
-            line-height: 1.6;
-            background-image: radial-gradient(circle at 20% 30%, rgba(148,93,59,0.03) 0%, transparent 50%),
-                              radial-gradient(circle at 80% 70%, rgba(184,134,11,0.04) 0%, transparent 50%);
+        /* ═══════════════════════════════════════════
+           TOKENS — DARK
+        ═══════════════════════════════════════════ */
+        [data-theme="dark"]{
+            --bg:         #1a1815;
+            --surface:    #26231e;
+            --surface-2:  #3a352c;
+            --border:     #3e372b;
+            --border-2:   #564c3a;
+            --ink:        #f0ebe0;
+            --ink-2:      #b8ad94;
+            --ink-3:      #807564;
+            --accent:     #c88b5a;
+            --accent-2:   #e0a070;
+            --accent-bg:  rgba(200,139,90,.1);
+            --accent-bdr: rgba(200,139,90,.25);
+            --gold:       #c8a558;
+            --gold-bg:    rgba(200,165,88,.08);
+            --ok:         #5ca07a;
+            --ok-bg:      rgba(92,160,122,.08);
+            --shadow-sm:  0 1px 3px rgba(0,0,0,.2),0 4px 12px rgba(0,0,0,.15);
+            --shadow-md:  0 4px 20px rgba(0,0,0,.25),0 8px 32px rgba(0,0,0,.15);
+            --shadow-lg:  0 12px 40px rgba(0,0,0,.4),0 4px 16px rgba(0,0,0,.25);
         }
-        .container { max-width:1200px; margin:0 auto; padding:28px 20px 40px; }
-        header {
-            display: flex; align-items: center; justify-content: space-between;
-            padding-bottom: 24px; border-bottom: 1px solid var(--border);
-            flex-wrap: wrap; gap: 16px;
+
+        /* ═══════════════════════════════════════════
+           BASE
+        ═══════════════════════════════════════════ */
+        *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+        html{scroll-behavior:smooth}
+        body{
+            font-family:'DM Sans',system-ui,sans-serif;
+            background:var(--bg);color:var(--ink);
+            line-height:1.6;-webkit-font-smoothing:antialiased;
+            min-height:100vh;
+            transition:background .3s,color .3s;
         }
-        .logo {
-            font-family: var(--font-heading);
-            font-size: 2rem; font-weight: 700; color: var(--accent);
-            letter-spacing: -0.02em;
+        body::before{
+            content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
+            background-image:radial-gradient(ellipse 80% 60% at 15% 20%,rgba(155,92,46,.03) 0%,transparent 60%),
+            radial-gradient(ellipse 60% 80% at 85% 75%,rgba(176,138,76,.03) 0%,transparent 60%);
+            opacity:1;
+            transition:opacity .3s;
         }
-        .logo span { color: var(--gold); }
-        .nav-links {
-            display: flex; gap: 24px;
-            font-weight: 500; font-size: 0.95rem;
+        [data-theme="dark"] body::before{opacity:0.3;}
+
+        .container{max-width:1200px;margin:0 auto;padding:0 28px 80px;position:relative;z-index:1}
+
+        /* ═══════════════════════════════════════════
+           HEADER — editorial, quiet
+        ═══════════════════════════════════════════ */
+        .site-header{
+            display:flex;align-items:center;justify-content:space-between;
+            padding:28px 0 24px;border-bottom:1px solid var(--border);
+            flex-wrap:wrap;gap:14px;
         }
-        .nav-links a {
-            color: var(--ink-light); text-decoration: none;
-            position: relative; transition: var(--transition);
+        .logo{
+            font-family:'Fraunces',Georgia,serif;font-size:1.6rem;font-weight:600;
+            color:var(--accent);letter-spacing:-.02em;text-decoration:none;
+            display:flex;align-items:baseline;gap:2px;
         }
-        .nav-links a:hover { color: var(--accent); }
-        .hero {
-            text-align: center; margin: 48px 0 40px;
+        .logo-word{color:var(--gold);font-weight:500;}
+        .header-right{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+        nav{display:flex;gap:2px;align-items:center}
+        .nav-link{
+            font-size:14px;font-weight:400;color:var(--ink-2);text-decoration:none;
+            padding:6px 14px;border-radius:6px;transition:all .18s;
         }
-        .hero h1 {
-            font-family: var(--font-heading);
-            font-size: clamp(2.2rem, 6vw, 3.2rem);
-            color: var(--ink);
-            margin-bottom: 12px;
-            line-height: 1.3;
+        .nav-link:hover{background:var(--surface-2);color:var(--ink)}
+
+        /* Dark mode toggle — simple icon */
+        .theme-btn{
+            width:36px;height:36px;border-radius:8px;border:1px solid var(--border);
+            background:transparent;cursor:pointer;display:flex;align-items:center;
+            justify-content:center;font-size:18px;transition:all .2s;margin-left:6px;
+            color:var(--ink-2);
         }
-        .hero p {
-            font-size: 1.15rem; color: var(--ink-light);
-            max-width: 700px; margin: 0 auto 24px;
+        .theme-btn:hover{border-color:var(--accent);color:var(--accent);background:var(--accent-bg)}
+        .theme-btn svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:1.8}
+        .theme-btn .icon-light{display:block}
+        .theme-btn .icon-dark{display:none}
+        [data-theme="dark"] .theme-btn .icon-light{display:none}
+        [data-theme="dark"] .theme-btn .icon-dark{display:block}
+
+        /* ═══════════════════════════════════════════
+           HERO — calm, left aligned
+        ═══════════════════════════════════════════ */
+        .hero{
+            text-align:left;
+            padding:80px 0 64px;
+            max-width:680px;
+            margin:0 auto 0 0;
         }
-        .hero .badge-row {
-            display: flex; justify-content: center; gap: 12px; flex-wrap: wrap;
+        .hero h1{
+            font-family:'Fraunces',Georgia,serif;
+            font-size:clamp(2.2rem,5.5vw,3.2rem);font-weight:600;
+            color:var(--ink);line-height:1.2;letter-spacing:-.02em;
+            margin-bottom:20px;
         }
-        .badge {
-            background: var(--accent-soft); color: var(--accent);
-            padding: 6px 16px; border-radius: 20px; font-weight: 600;
-            font-size: 0.85rem; letter-spacing: 0.02em;
+        .hero h1 em{font-style:italic;color:var(--accent);font-weight:500;}
+        .hero-sub{
+            font-size:1.05rem;color:var(--ink-2);
+            max-width:540px;line-height:1.6;
+            margin-bottom:0;
+            font-weight:350;
         }
-        .tools-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 28px; margin-top: 16px;
+        .hero .quiet-note{
+            margin-top:24px;
+            font-size:0.85rem;
+            color:var(--ink-3);
+            border-left:2px solid var(--accent-bdr);
+            padding-left:14px;
+            font-style:italic;
         }
-        .tool-card {
-            background: var(--paper); border-radius: var(--radius);
-            border: 1px solid var(--border); box-shadow: var(--shadow);
-            padding: 28px 22px 22px; transition: var(--transition);
-            display: flex; flex-direction: column;
-            text-decoration: none; color: inherit;
-            position: relative; overflow: hidden;
+
+        /* ═══════════════════════════════════════════
+           SECTION LABELS
+        ═══════════════════════════════════════════ */
+        .section-label{
+            font-family:'DM Mono',monospace;font-size:10px;font-weight:500;
+            letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);
+            margin-bottom:24px;display:flex;align-items:center;gap:12px;
         }
-        .tool-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 16px 40px rgba(0,0,0,0.08), 0 4px 12px rgba(0,0,0,0.04);
-            border-color: var(--accent);
+        .section-label::after{content:'';flex:1;height:1px;background:var(--border);}
+
+        /* ═══════════════════════════════════════════
+           TOOL GRID — asymmetric, real previews
+        ═══════════════════════════════════════════ */
+        #tools{margin-bottom:80px}
+        .tools-grid{
+            display:grid;
+            grid-template-columns:repeat(3,1fr);
+            gap:24px;
         }
-        .tool-card .icon {
-            font-size: 2.5rem; margin-bottom: 16px;
+        .tool-card.featured{
+            grid-column:span 2;
+            grid-row:span 2;
         }
-        .tool-card h3 {
-            font-family: var(--font-heading);
-            font-size: 1.5rem; margin-bottom: 8px;
-            color: var(--ink);
+        .tool-card.medium{grid-column:span 1;grid-row:span 1;}
+        .tool-card.small{grid-column:span 1;}
+
+        .tool-card{
+            background:var(--surface);
+            border:1px solid var(--border);
+            border-radius:14px;
+            padding:22px;
+            display:flex;flex-direction:column;
+            text-decoration:none;color:inherit;
+            position:relative;overflow:hidden;
+            transition:transform .25s cubic-bezier(.25,.1,.25,1),
+            box-shadow .25s,
+            border-color .25s;
+            box-shadow:var(--shadow-sm);
         }
-        .tool-card p {
-            color: var(--ink-light); font-size: 0.95rem;
-            flex: 1; margin-bottom: 16px;
+        .tool-card:hover{
+            transform:translateY(-3px);
+            box-shadow:var(--shadow-lg);
+            border-color:var(--border-2);
         }
-        .tool-card .tag {
-            align-self: flex-start;
-            background: var(--accent-soft); color: var(--accent);
-            padding: 4px 14px; border-radius: 12px;
-            font-weight: 600; font-size: 0.8rem;
-            margin-bottom: 12px;
+        .tool-card:hover .card-arrow{
+            transform:translateX(4px);
+            color:var(--accent);
         }
-        .tool-card .arrow {
-            font-weight: 600; color: var(--accent);
-            display: flex; align-items: center; gap: 4px;
+        .card-preview{
+            width:100%;
+            height:140px;
+            background:var(--surface-2);
+            border-radius:8px;
+            margin-bottom:16px;
+            display:flex;align-items:center;justify-content:center;
+            overflow:hidden;
+            position:relative;
         }
-        .coming-soon {
-            opacity: 0.7; background: #fefcf8;
-            border: 2px dashed var(--border);
+        .card-preview svg{
+            width:80%;
+            height:80%;
+            opacity:0.7;
+            transition:opacity .2s;
         }
-        .coming-soon:hover { opacity: 1; transform: none; }
-        .features-section {
-            margin: 56px 0;
-            background: var(--paper); border-radius: var(--radius);
-            border: 1px solid var(--border); padding: 36px 32px;
-            display: flex; flex-wrap: wrap; gap: 32px;
-            justify-content: space-around;
+        .tool-card:hover .card-preview svg{opacity:0.9}
+        .card-top{display:none;}
+        .tool-card h3{
+            font-family:'Fraunces',Georgia,serif;
+            font-size:1.35rem;font-weight:600;color:var(--ink);
+            letter-spacing:-.01em;margin-bottom:6px;line-height:1.3;
         }
-        .feature-item {
-            text-align: center; flex: 1; min-width: 160px;
+        .tool-card p{
+            font-size:14px;color:var(--ink-2);line-height:1.6;
+            flex:1;margin-bottom:14px;
         }
-        .feature-item .feat-icon {
-            font-size: 2.2rem; margin-bottom: 8px;
+        .card-footer{
+            display:flex;align-items:center;justify-content:space-between;
+            margin-top:auto;
         }
-        .feature-item strong {
-            display: block; font-size: 1.1rem; margin-bottom: 4px;
+        .card-tags{display:flex;gap:8px;flex-wrap:wrap}
+        .card-tag{font-size:12px;color:var(--ink-3);font-weight:400;}
+        .card-arrow{font-size:18px;color:var(--ink-3);transition:all .2s;flex-shrink:0;}
+        .tool-card.featured .card-preview{height:220px;}
+
+        @media(max-width:900px){
+            .tools-grid{grid-template-columns:repeat(2,1fr);}
+            .tool-card.featured{grid-column:span 2;grid-row:span 1;}
         }
-        .faq-section {
-            margin-top: 56px;
+        @media(max-width:560px){
+            .tools-grid{grid-template-columns:1fr;}
+            .tool-card.featured{grid-column:span 1;}
         }
-        .faq-section h2 {
-            font-family: var(--font-heading);
-            font-size: 2rem; margin-bottom: 28px; text-align: center;
+
+        /* ═══════════════════════════════════════════
+           RECENTLY CREATED — human touch
+        ═══════════════════════════════════════════ */
+        .recent-section{margin-bottom:80px}
+        .recent-grid{
+            display:grid;
+            grid-template-columns:repeat(auto-fill,minmax(160px,1fr));
+            gap:18px;
         }
-        .faq-item {
-            border-bottom: 1px solid var(--border);
-            padding: 16px 0; cursor: pointer;
+        .recent-item{
+            background:var(--surface);
+            border:1px solid var(--border);
+            border-radius:12px;
+            overflow:hidden;
+            box-shadow:var(--shadow-sm);
+            transition:transform .2s,box-shadow .2s;
         }
-        .faq-question {
-            font-weight: 600; display: flex;
-            justify-content: space-between; align-items: center;
+        .recent-item:hover{transform:translateY(-2px);box-shadow:var(--shadow-md)}
+        .recent-thumb{
+            width:100%;height:120px;
+            background:var(--surface-2);
+            display:flex;align-items:center;justify-content:center;
         }
-        .faq-answer {
-            max-height: 0; overflow: hidden;
-            transition: max-height 0.3s ease; color: var(--ink-light);
-            font-size: 0.95rem; padding-right: 24px;
+        .recent-thumb svg{width:70%;height:70%;opacity:0.7}
+        .recent-caption{
+            padding:10px 12px;
+            font-size:12px;color:var(--ink-2);
+            text-align:center;
         }
-        .faq-item.open .faq-answer { max-height: 200px; margin-top: 12px; }
-        .faq-question::after {
-            content: '+'; font-size: 1.5rem; color: var(--accent);
-            transition: transform 0.3s;
+
+        /* ═══════════════════════════════════════════
+           HOW IT WORKS — simplified
+        ═══════════════════════════════════════════ */
+        .how-section{margin-bottom:72px}
+        .steps{
+            display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+            gap:20px;
         }
-        .faq-item.open .faq-question::after { transform: rotate(45deg); }
-        footer {
-            text-align: center; margin-top: 48px;
-            padding-top: 24px; border-top: 1px solid var(--border);
-            color: var(--ink-light); font-size: 0.9rem;
+        .step{
+            background:transparent;
+            border:none;
+            padding:16px 0;
+            box-shadow:none;
         }
-        @media (max-width: 650px) {
-            .nav-links { display: none; }
-            .hero h1 { font-size: 2rem; }
-            .features-section { flex-direction: column; }
+        .step-num{
+            font-family:'Fraunces',Georgia,serif;font-size:2.8rem;font-weight:600;
+            color:var(--border-2);line-height:1;margin-bottom:8px;
+        }
+        .step h4{font-size:15px;font-weight:600;color:var(--ink);margin-bottom:4px}
+        .step p{font-size:13px;color:var(--ink-2);line-height:1.55}
+
+        /* ═══════════════════════════════════════════
+           JOURNAL
+        ═══════════════════════════════════════════ */
+        .journal-section{margin-bottom:80px}
+        .journal-grid{
+            display:grid;
+            grid-template-columns:repeat(auto-fill,minmax(240px,1fr));
+            gap:24px;
+        }
+        .journal-card{
+            text-decoration:none;color:inherit;
+            border-bottom:1px solid var(--border);
+            padding-bottom:20px;
+            transition:border-color .2s;
+        }
+        .journal-card:hover{border-bottom-color:var(--accent)}
+        .journal-card h3{
+            font-family:'Fraunces',Georgia,serif;
+            font-size:1.25rem;font-weight:600;
+            margin-bottom:6px;color:var(--ink);
+        }
+        .journal-card p{font-size:14px;color:var(--ink-2);}
+
+        /* ═══════════════════════════════════════════
+           FAQ — discreet
+        ═══════════════════════════════════════════ */
+        .faq-section{margin-bottom:80px}
+        .faq-section h2{
+            font-family:'Fraunces',Georgia,serif;
+            font-size:1.8rem;font-weight:600;
+            color:var(--ink);margin-bottom:28px;letter-spacing:-.01em;
+        }
+        .faq-list{
+            border:none;
+            background:transparent;
+            box-shadow:none;
+        }
+        .faq-item{border-bottom:1px solid var(--border);}
+        .faq-item:last-child{border-bottom:none}
+        .faq-q{
+            display:flex;justify-content:space-between;align-items:center;
+            padding:16px 0;cursor:pointer;transition:background .15s;
+            gap:16px;
+        }
+        .faq-q:hover{color:var(--accent)}
+        .faq-q-text{font-size:15px;font-weight:500;color:var(--ink);}
+        .faq-icon{
+            width:24px;height:24px;border-radius:50%;background:transparent;
+            border:1px solid var(--border);display:flex;align-items:center;justify-content:center;
+            font-size:16px;color:var(--ink-2);flex-shrink:0;transition:transform .22s;
+        }
+        .faq-item.open .faq-icon{transform:rotate(45deg);border-color:var(--accent);color:var(--accent)}
+        .faq-a{
+            max-height:0;overflow:hidden;
+            transition:max-height .3s cubic-bezier(.25,.1,.25,1),padding .3s;
+            font-size:14px;color:var(--ink-2);line-height:1.65;
+            padding:0 0;
+        }
+        .faq-item.open .faq-a{max-height:200px;padding:0 0 18px 0;}
+
+        /* ═══════════════════════════════════════════
+           FOOTER
+        ═══════════════════════════════════════════ */
+        footer{
+            border-top:1px solid var(--border);
+            padding-top:28px;
+            display:flex;flex-direction:column;align-items:flex-start;
+            gap:12px;text-align:left;
+        }
+        .footer-logo{
+            font-family:'Fraunces',Georgia,serif;
+            font-size:1.2rem;font-weight:600;color:var(--accent);
+        }
+        .footer-links{display:flex;gap:24px;flex-wrap:wrap;}
+        .footer-links a{
+            font-size:13px;color:var(--ink-3);text-decoration:none;transition:color .15s;
+        }
+        .footer-links a:hover{color:var(--accent)}
+        .footer-copy{font-size:12px;color:var(--ink-3)}
+
+        ::-webkit-scrollbar{width:6px}
+        ::-webkit-scrollbar-track{background:var(--bg)}
+        ::-webkit-scrollbar-thumb{background:var(--border-2);border-radius:6px}
+
+        @media(max-width:680px){
+            nav{display:none}
+            .hero{padding:48px 0 40px;text-align:left;}
+        }
+        @media(prefers-reduced-motion:reduce){
+            *{transition:none!important;animation:none!important}
         }
     </style>
 </head>
 <body>
 <div class="container">
-    <header>
-        <div class="logo">Suite<span>Créative</span></div>
-        <nav class="nav-links">
-            <a href="#tools">Outils</a>
-            <a href="/fr/blog/">blog</a>
-            <a href="#features">Pourquoi nous</a>
-            <a href="#faq">FAQ</a>
-            <a href="/confidentialite/">politique de confidentialite</a>
-            <a href="/mentions-legales/">mentions legales</a>
-        </nav>
+
+    <!-- HEADER -->
+    <header class="site-header">
+        <a class="logo" href="/fr/" aria-label="SuiteCréative accueil">
+            suite<span class="logo-word">créative</span>
+        </a>
+        <div class="header-right">
+            <nav aria-label="Navigation principale">
+                <a class="nav-link" href="#tools">Outils</a>
+                <a class="nav-link" href="/fr/blog/">Journal</a>
+                <a class="nav-link" href="#faq">FAQ</a>
+                <a class="nav-link" href="/confidentialite/">Confidentialité</a>
+                <a class="nav-link" href="/mentions-legales/">Mentions légales</a>
+            </nav>
+            <button class="theme-btn" id="themeToggle" aria-label="Basculer le mode sombre" title="Mode clair / sombre">
+                <!-- icône soleil -->
+                <svg class="icon-light" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="2">
+                    <circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+                </svg>
+                <!-- icône lune -->
+                <svg class="icon-dark" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="2">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                </svg>
+            </button>
+        </div>
     </header>
 
-    <section class="hero">
-        <h1>5 outils de création uniques,<br>directement dans votre navigateur</h1>
-        <p>Transformez vos photos et vos idées en stickers, coloriages, portraits artistiques et mockups animés. Aucune inscription, 100% privé.</p>
-        <div class="badge-row">
-            <span class="badge"> Aucune API externe</span>
-            <span class="badge"> Traitement local</span>
-            <span class="badge"> Résultat instantané</span>
+    <!-- HERO — calme et éditorial -->
+    <section class="hero" aria-labelledby="hero-h1">
+        <h1 id="hero-h1">
+            Des outils créatifs pensés pour <br><em>ceux qui aiment fabriquer</em>
+        </h1>
+        <p class="hero-sub">
+            Une petite collection d’outils visuels pour artistes, créateurs et curieux. Transformez vos photos en stickers, coloriages, portraits et plus encore — en quelques secondes, sans que rien ne quitte votre appareil.
+        </p>
+        <p class="quiet-note">Construit lentement. Fonctionne en local. Pensé pour l’expérimentation.</p>
+    </section>
+
+    <!-- GRILLE D’OUTILS — asymétrique, vraies previews -->
+    <section id="tools" aria-label="Outils">
+        <div class="section-label">La collection</div>
+        <div class="tools-grid">
+
+            <!-- 1. Mockup Vidéo T-shirt (featured) -->
+            <a href="/fr/mockup-video/" class="tool-card featured">
+                <div class="card-preview">
+                    <svg viewBox="0 0 100 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M30 10 L35 25 L50 20 L65 25 L70 10 L80 5 L85 20 L80 50 L70 75 L30 75 L20 50 L15 20 L20 5 Z" fill="var(--accent-bg)" stroke="var(--accent)" stroke-width="2"/>
+                        <path d="M55 30 Q65 25 75 30" stroke="var(--ink-3)" stroke-width="1.5" fill="none"/>
+                    </svg>
+                </div>
+                <h3>Mockup Vidéo T‑shirt</h3>
+                <p>Vidéo réaliste avec effet de vent pour votre design. Export WebM.</p>
+                <div class="card-footer">
+                    <div class="card-tags"><span class="card-tag">WebM</span><span class="card-tag">Animation</span></div>
+                    <span class="card-arrow">→</span>
+                </div>
+            </a>
+
+            <!-- 2. Coloriage Personnalisé (medium) -->
+            <a href="/fr/generateur-coloriage/" class="tool-card medium">
+                <div class="card-preview">
+                    <svg viewBox="0 0 100 80">
+                        <rect x="20" y="15" width="60" height="50" rx="4" fill="none" stroke="var(--ink-3)" stroke-width="1.5"/>
+                        <circle cx="40" cy="35" r="8" fill="none" stroke="var(--ink-3)" stroke-width="1.2"/>
+                        <path d="M50 25 L55 35 L50 30 L45 35 Z" fill="none" stroke="var(--ink-3)" stroke-width="1.2"/>
+                    </svg>
+                </div>
+                <h3>Coloriage Personnalisé</h3>
+                <p>Photo en dessin au trait net, prêt à imprimer. 5 styles, export PDF.</p>
+                <div class="card-footer">
+                    <div class="card-tags"><span class="card-tag">Enfants</span><span class="card-tag">Manga</span></div>
+                    <span class="card-arrow">→</span>
+                </div>
+            </a>
+
+            <!-- 3. Sticker Maker (medium) -->
+            <a href="/fr/generateur-stickers/" class="tool-card medium">
+                <div class="card-preview">
+                    <svg viewBox="0 0 100 80">
+                        <path d="M50 15 L65 40 L90 45 L70 60 L75 85 L50 72 L25 85 L30 60 L10 45 L35 40 Z" fill="none" stroke="var(--accent)" stroke-width="2"/>
+                        <circle cx="50" cy="50" r="15" fill="var(--accent-bg)" stroke="var(--accent)" stroke-width="1.5"/>
+                    </svg>
+                </div>
+                <h3>Sticker avec Forme de Découpe</h3>
+                <p>Autocollants détourés en cœur, étoile, os… avec contour blanc et ombre.</p>
+                <div class="card-footer">
+                    <div class="card-tags"><span class="card-tag">Découpe</span><span class="card-tag">Contour</span></div>
+                    <span class="card-arrow">→</span>
+                </div>
+            </a>
+
+            <!-- 4. Portrait Animal (small) -->
+            <a href="/fr/portrait-animal/" class="tool-card small">
+                <div class="card-preview">
+                    <svg viewBox="0 0 100 80">
+                        <ellipse cx="40" cy="40" rx="15" ry="12" fill="none" stroke="var(--ink-3)" stroke-width="1.5"/>
+                        <circle cx="45" cy="38" r="3" fill="var(--ink-3)"/>
+                        <path d="M50 50 Q60 55 55 65" stroke="var(--ink-3)" stroke-width="1.5" fill="none"/>
+                    </svg>
+                </div>
+                <h3>Portrait Animal Artistique</h3>
+                <p>Sumi‑e, huile, pop art avec sceau rouge.</p>
+                <div class="card-footer">
+                    <div class="card-tags"><span class="card-tag">Sumi-e</span></div>
+                    <span class="card-arrow">→</span>
+                </div>
+            </a>
+
+            <!-- 5. Motif Seamless (small) -->
+            <a href="/fr/animal-semless-generator/" class="tool-card small">
+                <div class="card-preview">
+                    <svg viewBox="0 0 100 80">
+                        <rect width="20" height="20" fill="none" stroke="var(--accent)" stroke-width="1.5"/>
+                        <rect x="30" width="20" height="20" fill="none" stroke="var(--accent)" stroke-width="1.5"/>
+                        <rect y="30" width="20" height="20" fill="none" stroke="var(--accent)" stroke-width="1.5"/>
+                        <rect x="30" y="30" width="20" height="20" fill="none" stroke="var(--accent)" stroke-width="1.5"/>
+                    </svg>
+                </div>
+                <h3>Générateur de Motifs Seamless</h3>
+                <p>Motifs animaliers répétables, 6 modes, export SVG.</p>
+                <div class="card-footer">
+                    <div class="card-tags"><span class="card-tag">Textile</span></div>
+                    <span class="card-arrow">→</span>
+                </div>
+            </a>
+
+            <!-- 6. Peluche (small) -->
+            <a href="/fr/peluche/" class="tool-card small">
+                <div class="card-preview">
+                    <svg viewBox="0 0 100 80">
+                        <ellipse cx="50" cy="45" rx="20" ry="25" fill="var(--accent-bg)" stroke="var(--accent)" stroke-width="2"/>
+                        <circle cx="40" cy="35" r="3" fill="var(--ink-3)"/>
+                        <circle cx="60" cy="35" r="3" fill="var(--ink-3)"/>
+                        <path d="M45 55 Q50 62 55 55" stroke="var(--ink-3)" stroke-width="1.5" fill="none"/>
+                    </svg>
+                </div>
+                <h3>Générateur de Peluche</h3>
+                <p>Transformez une photo en peluche toute douce.</p>
+                <div class="card-footer">
+                    <div class="card-tags"><span class="card-tag">Mignon</span><span class="card-tag">Cadeau</span></div>
+                    <span class="card-arrow">→</span>
+                </div>
+            </a>
+
+            <!-- 7. Flipbook (small) -->
+            <a href="/fr/generateur-flipbook/" class="tool-card small">
+                <div class="card-preview">
+                    <svg viewBox="0 0 100 80">
+                        <rect x="15" y="10" width="30" height="60" rx="2" fill="none" stroke="var(--ink-3)" stroke-width="1.5"/>
+                        <rect x="55" y="10" width="30" height="60" rx="2" fill="none" stroke="var(--ink-3)" stroke-width="1.5"/>
+                        <path d="M35 40 L50 40" stroke="var(--ink-3)" stroke-width="1"/>
+                    </svg>
+                </div>
+                <h3>Générateur de Flipbook</h3>
+                <p>Créez un folioscope imprimable à partir d’une série d’images.</p>
+                <div class="card-footer">
+                    <div class="card-tags"><span class="card-tag">Imprimer</span></div>
+                    <span class="card-arrow">→</span>
+                </div>
+            </a>
+
+            <!-- 8. Mosaïque Polygone (small) -->
+            <a href="/fr/vitrail-mosaique/" class="tool-card small">
+                <div class="card-preview">
+                    <svg viewBox="0 0 100 80">
+                        <polygon points="50,10 70,30 65,55 35,55 30,30" fill="none" stroke="var(--accent)" stroke-width="1.5"/>
+                        <polygon points="50,10 30,30 20,20" fill="none" stroke="var(--accent)" stroke-width="1.5"/>
+                        <polygon points="70,30 80,20 75,40" fill="none" stroke="var(--accent)" stroke-width="1.5"/>
+                    </svg>
+                </div>
+                <h3>Mosaïque Polygone</h3>
+                <p>Art géométrique low‑poly à partir de n’importe quelle photo.</p>
+                <div class="card-footer">
+                    <div class="card-tags"><span class="card-tag">Low-poly</span></div>
+                    <span class="card-arrow">→</span>
+                </div>
+            </a>
         </div>
     </section>
 
-    <div class="tools-grid" id="tools">
-        <!-- Outil 1: WindMockup -->
-        <a href="/fr/mockup-video/" class="tool-card">
-            <div class="icon">👕</div>
-            <h3>Mockup Vidéo T‑shirt</h3>
-            <p>Importez votre visuel et générez une vidéo réaliste avec un effet de vent sur le tissu. Export WebM.</p>
-            <span class="tag">Vidéo · Effet vent</span>
-            <span class="arrow">Essayer →</span>
-        </a>
-
-        <!-- Outil 2: Coloriage personnalisé -->
-        <a href="/fr/generateur-coloriage/" class="tool-card">
-            <div class="icon">🐶</div>
-            <h3>Coloriage Personnalisé</h3>
-            <p>Convertissez une photo en dessin au trait net, prêt à être imprimé. Parfait pour les enfants.</p>
-            <span class="tag">Dessin · PDF</span>
-            <span class="arrow">Essayer →</span>
-        </a>
-
-        <!-- Outil 3: Sticker Maker Pro -->
-        <a href="/fr/generateur-stickers/" class="tool-card">
-            <div class="icon">⭐️</div>
-            <h3>Sticker avec Forme de Découpe</h3>
-            <p>Créez des autocollants détourés (cœur, étoile, os…) avec contour blanc et ombre.</p>
-            <span class="tag">Stickers · PNG</span>
-            <span class="arrow">Essayer →</span>
-        </a>
-
-        <!-- Outil 4: Portrait Animal Style Asiatique -->
-        <a href="/fr/portrait-animal/" class="tool-card">
-            <div class="icon">🐕</div>
-            <h3>Portrait Animal Artistique</h3>
-            <p>Redessinez votre chien ou chat en style sumi‑e, croquis, huile ou pop art avec sceau rouge.</p>
-            <span class="tag">Art · Sceau</span>
-            <span class="arrow">Essayer →</span>
-        </a>
-
-        <!-- Outil 5 : à venir -->
-         <a href="/fr/animal-semless-generator/" class="tool-card">
-            <div class="icon">⭐️</div>
-            <h3>Générateur de Motifs Seamless</h3>
-            <p>PatternZoo — Générateur de Motifs Seamless Gratuit avec Animaux</p>
-            <span class="tag">motifs animal </span>
-            <span class="arrow" style="opacity:0.5;">Essayer →</span>
-        </a>
-         <a href="/fr/peluche/" class="tool-card">
-            <div class="icon">🔮</div>
-            <h3>Générateur de peluche</h3>
-            <p>PatternZoo — Générateur de Motifs Seamless Gratuit avec Animaux</p>
-            <span class="tag">motifs animal </span>
-            <span class="arrow" style="opacity:0.5;">Essayer →</span>
-        </a>
-         <a href="/fr/generateur-flipbook/" class="tool-card">
-            <div class="icon">🐕</div>
-            <h3>Générateur de flipbook</h3>
-            <p>PatternZoo — Générateur de Motifs Seamless Gratuit avec Animaux</p>
-            <span class="tag">motifs animal </span>
-            <span class="arrow" style="opacity:0.5;">Essayer →</span>
-        </a>
-         <a href="/fr/vitrail-mosaique/" class="tool-card">
-            <div class="icon">🐶</div>
-            <h3>Générateur de Polygone mosaique</h3>
-            <p>PatternZoo — Générateur de Motifs Seamless Gratuit avec Animaux</p>
-            <span class="tag">motifs animal </span>
-            <span class="arrow" style="opacity:0.5;">Essayer →</span>
-        </a>
-    </div>
-
-    <section class="features-section" id="features">
-        <div class="feature-item">
-            <div class="feat-icon">🔐</div>
-            <strong>Respect de la vie privée</strong>
-            <small>Aucune image n’est envoyée sur un serveur. Tout est traité localement dans votre navigateur.</small>
-        </div>
-        <div class="feature-item">
-            <div class="feat-icon">🎛️</div>
-            <strong>Paramètres fins</strong>
-            <small>Chaque outil offre des réglages intuitifs pour un rendu professionnel et personnalisé.</small>
-        </div>
-        <div class="feature-item">
-            <div class="feat-icon">📱</div>
-            <strong>Compatible mobile</strong>
-            <small>Interface responsive, installez les outils comme une application (PWA) pour un accès rapide.</small>
-        </div>
-        <div class="feature-item">
-            <div class="feat-icon">💬</div>
-            <strong>Export & Partage</strong>
-            <small>Téléchargez en PNG, PDF, WebM et partagez directement vos créations.</small>
+    <!-- EXPLORATIONS RÉCENTES -->
+    <section class="recent-section" aria-labelledby="recent-label">
+        <div class="section-label" id="recent-label">Explorations récentes</div>
+        <div class="recent-grid">
+            <div class="recent-item">
+                <div class="recent-thumb">
+                    <svg viewBox="0 0 80 80"><circle cx="40" cy="40" r="25" fill="var(--accent-bg)" stroke="var(--accent)" stroke-width="2"/><circle cx="35" cy="35" r="3" fill="var(--ink-3)"/><circle cx="45" cy="35" r="3" fill="var(--ink-3)"/><path d="M35 48 Q40 55 45 48" stroke="var(--ink-3)" stroke-width="1.5" fill="none"/></svg>
+                </div>
+                <div class="recent-caption">Portrait en sticker</div>
+            </div>
+            <div class="recent-item">
+                <div class="recent-thumb">
+                    <svg viewBox="0 0 80 80"><rect x="15" y="15" width="50" height="50" fill="none" stroke="var(--ink-3)" stroke-width="2"/><path d="M25 40 L55 40 M40 25 L40 55" stroke="var(--ink-3)" stroke-width="1.2"/></svg>
+                </div>
+                <div class="recent-caption">Étude de motif</div>
+            </div>
+            <div class="recent-item">
+                <div class="recent-thumb">
+                    <svg viewBox="0 0 80 80"><ellipse cx="40" cy="45" rx="18" ry="22" fill="var(--accent-bg)" stroke="var(--accent)" stroke-width="2"/><circle cx="32" cy="38" r="2.5" fill="var(--ink-3)"/><circle cx="48" cy="38" r="2.5" fill="var(--ink-3)"/></svg>
+                </div>
+                <div class="recent-caption">Peluche chat</div>
+            </div>
+            <div class="recent-item">
+                <div class="recent-thumb">
+                    <svg viewBox="0 0 80 80"><polygon points="40,10 60,30 55,55 25,55 20,30" fill="none" stroke="var(--accent)" stroke-width="2"/><circle cx="40" cy="35" r="8" fill="none" stroke="var(--ink-3)" stroke-width="1.2"/></svg>
+                </div>
+                <div class="recent-caption">Renard mosaïque</div>
+            </div>
+            <div class="recent-item">
+                <div class="recent-thumb">
+                    <svg viewBox="0 0 80 80"><path d="M25 20 L35 40 L65 45 L50 60 L55 80 L25 65 L-5 80 L0 60 L-15 45 L15 40 Z" fill="none" stroke="var(--accent)" stroke-width="1.5"/></svg>
+                </div>
+                <div class="recent-caption">Sticker étoile</div>
+            </div>
         </div>
     </section>
 
-    <section class="faq-section" id="faq">
-        <h2>Questions fréquentes</h2>
-        <div class="faq-item">
-            <div class="faq-question">Est-ce que ces outils sont vraiment gratuits ?</div>
-            <div class="faq-answer">Oui, entièrement. Aucun abonnement, aucune publicité intrusive. La suite est financée par notre passion du design.</div>
-        </div>
-        <div class="faq-item">
-            <div class="faq-question">Mes photos sont-elles en sécurité ?</div>
-            <div class="faq-answer">Absolument. Aucune image ne quitte votre appareil. Le traitement s'effectue en JavaScript dans votre navigateur.</div>
-        </div>
-        <div class="faq-item">
-            <div class="faq-question">Puis-je utiliser ces outils pour un usage commercial ?</div>
-            <div class="faq-answer">Oui, les créations vous appartiennent. Vous pouvez les utiliser pour votre entreprise, vos produits ou vos réseaux sociaux.</div>
-        </div>
-        <div class="faq-item">
-            <div class="faq-question">Quels formats puis-je télécharger ?</div>
-            <div class="faq-answer">Selon l'outil : PNG transparent, PDF haute résolution, vidéo WebM. Tous prêts pour l'impression ou le web.</div>
-        </div>
-        <div class="faq-item">
-            <div class="faq-question">Comment fonctionne le générateur de stickers ?</div>
-            <div class="faq-answer">Importez une photo, choisissez une forme (cœur, os, étoile…), ajustez l'épaisseur du contour et téléchargez un PNG avec ombre portée.</div>
-        </div>
-        <div class="faq-item">
-            <div class="faq-question">Puis-je utiliser le mockup vidéo pour mon e‑commerce ?</div>
-            <div class="faq-answer">Oui, idéal pour présenter vos T‑shirts. La vidéo avec effet de vent donne un aperçu dynamique du produit.</div>
+    <!-- COMMENT ÇA MARCHE -->
+    <section class="how-section" aria-labelledby="how-h2">
+        <div class="section-label">Comment ça marche</div>
+        <div class="steps">
+            <div class="step">
+                <div class="step-num">01</div>
+                <h4>Importez votre photo</h4>
+                <p>Glissez‑déposez un JPG ou PNG. Rien ne quitte votre appareil.</p>
+            </div>
+            <div class="step">
+                <div class="step-num">02</div>
+                <h4>Choisissez un outil et un style</h4>
+                <p>8 outils, plusieurs styles, réglages fins en temps réel.</p>
+            </div>
+            <div class="step">
+                <div class="step-num">03</div>
+                <h4>Exportez, c’est à vous</h4>
+                <p>Téléchargez en PNG, PDF, WebM ou SVG — pour toujours.</p>
+            </div>
         </div>
     </section>
 
+    <!-- JOURNAL -->
+    <section class="journal-section" aria-labelledby="journal-label">
+        <div class="section-label" id="journal-label">Du journal</div>
+        <div class="journal-grid">
+            <a href="/fr/blog/" class="journal-card">
+                <h3>Pourquoi nous construisons des outils locaux</h3>
+                <p>Un petit manifeste sur la vie privée, la vitesse et la possession créative.</p>
+            </a>
+            <a href="/fr/blog/" class="journal-card">
+                <h3>Dans les coulisses du générateur de peluches</h3>
+                <p>Comment nous transformons les photos en compagnons tout doux grâce à Canvas.</p>
+            </a>
+        </div>
+    </section>
+
+    <!-- FAQ — discrète -->
+    <section class="faq-section" id="faq" aria-labelledby="faq-h2">
+        <h2 id="faq-h2">Questions</h2>
+        <div class="faq-list">
+
+            <div class="faq-item">
+                <div class="faq-q" role="button" tabindex="0" aria-expanded="false">
+                    <span class="faq-q-text">Est-ce que ces outils sont vraiment gratuits ?</span>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-a">Oui, entièrement gratuits. Aucun abonnement, aucune publicité, aucune limite d’utilisation.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-q" role="button" tabindex="0" aria-expanded="false">
+                    <span class="faq-q-text">Mes images sont-elles protégées ?</span>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-a">Absolument. Tout le traitement a lieu dans votre navigateur. Aucune image n’est envoyée sur un serveur.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-q" role="button" tabindex="0" aria-expanded="false">
+                    <span class="faq-q-text">Puis-je utiliser les résultats à des fins commerciales ?</span>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-a">Oui, toutes vos créations vous appartiennent. Utilisez-les pour votre entreprise, le print‑on‑demand ou les réseaux sociaux.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-q" role="button" tabindex="0" aria-expanded="false">
+                    <span class="faq-q-text">Dois-je installer quelque chose ?</span>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-a">Non. Tout fonctionne dans le navigateur. Vous pouvez éventuellement l’ajouter comme PWA pour un accès hors ligne.</div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
     <footer>
-        <p>© 2025 Suite Créative · Tous les outils sont libres et respectueux de vos données.</p>
+        <div class="footer-logo">SuiteCréative<span style="color:var(--gold)">.</span></div>
+        <nav class="footer-links" aria-label="Navigation pied de page">
+            <a href="/fr/blog/">Journal</a>
+            <a href="/confidentialite/">Confidentialité</a>
+            <a href="/mentions-legales/">Mentions légales</a>
+            <a href="mailto:hello@creativesuite.com">Contact</a>
+        </nav>
+        <p class="footer-copy">© 2025 SuiteCréative — construit lentement, avec soin.</p>
     </footer>
-</div>
+
+</div><!-- /container -->
 
 <script>
+    // Dark mode toggle
+    (function(){
+        const html = document.documentElement;
+        const btn  = document.getElementById('themeToggle');
+        const STORAGE_KEY = 'cs-theme';
+
+        function applyTheme(t){
+            html.setAttribute('data-theme', t);
+            localStorage.setItem(STORAGE_KEY, t);
+            btn.setAttribute('aria-label', t === 'dark' ? 'Passer au mode clair' : 'Passer au mode sombre');
+        }
+
+        const saved = localStorage.getItem(STORAGE_KEY);
+        if (saved) {
+            applyTheme(saved);
+        } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            applyTheme('dark');
+        }
+
+        btn.addEventListener('click', () => {
+            const current = html.getAttribute('data-theme') || 'light';
+            applyTheme(current === 'dark' ? 'light' : 'dark');
+        });
+
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+            if (!localStorage.getItem(STORAGE_KEY)) applyTheme(e.matches ? 'dark' : 'light');
+        });
+    })();
+
     // FAQ accordion
-    document.querySelectorAll('.faq-item').forEach(item => {
-        item.addEventListener('click', () => item.classList.toggle('open'));
+    document.querySelectorAll('.faq-q').forEach(q => {
+        function toggle(){
+            const item = q.closest('.faq-item');
+            const open = item.classList.toggle('open');
+            q.setAttribute('aria-expanded', open);
+        }
+        q.addEventListener('click', toggle);
+        q.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); } });
     });
-    // Micro-interaction : surligner les cartes au survol (déjà fait en CSS)
 </script>
 </body>
 </html>
