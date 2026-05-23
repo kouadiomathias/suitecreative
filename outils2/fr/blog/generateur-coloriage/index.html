@@ -1,164 +1,384 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Générateur de Coloriage Personnalisé : Transformez une Photo en Dessin à Imprimer</title>
-    <meta name="description" content="Créez un coloriage unique à partir de n'importe quelle photo. Convertissez une image en dessin au trait net, idéal pour les enfants. Outil gratuit, sans inscription et 100% privé.">
-    <meta name="keywords" content="coloriage personnalisé, générateur de coloriage, photo en dessin, dessin au trait, coloriage à imprimer, page de coloriage, créer un coloriage, outil coloriage gratuit, photo en coloriage">
+    <title>Coloriage personnalisé gratuit à partir d'une photo</title>
+    <meta name="description" content="Transformez n'importe quelle photo en coloriage personnalisé à imprimer gratuitement. Dessin au trait net, réglages simples, téléchargement PNG ou PDF. Sans inscription, 100 % privé.">
+    <meta name="keywords" content="coloriage personnalisé gratuit, transformer photo en coloriage, générateur coloriage, photo en dessin à colorier, coloriage à imprimer, dessin au trait, coloriage enfant personnalisé">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://www.suitecreative.fintoolsbox.com/fr/blog/generateur-coloriage/">
-    <meta property="og:title" content="Générateur de Coloriage Personnalisé : Transformez une Photo en Dessin à Imprimer">
-    <meta property="og:description" content="Découvrez comment convertir une photo en coloriage personnalisé grâce à un outil en ligne gratuit et confidentiel. Conseils d'utilisation et téléchargement en PNG ou PDF.">
+    <link rel="canonical" href="https://suitecreative.fintoolsbox.com/fr/blog/generateur-coloriage/">
+
+    <meta property="og:title" content="Coloriage personnalisé gratuit à partir d'une photo — Suite Créative">
+    <meta property="og:description" content="Transformez votre photo en coloriage à imprimer en quelques secondes. Outil gratuit, sans inscription, traitement 100 % local.">
     <meta property="og:type" content="article">
-    <meta property="og:image" content="https://www.suitecreative.fintoolsbox.com/og-coloriage.jpg">
-    <meta property="og:url" content="https://www.suitecreative.fintoolsbox.com/fr/blog/generateur-coloriage/">
+    <meta property="og:image" content="https://suitecreative.fintoolsbox.com/images/og-coloriage.png">
+    <meta property="og:url" content="https://suitecreative.fintoolsbox.com/fr/blog/generateur-coloriage/">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Générateur de Coloriage Personnalisé">
-    <meta name="twitter:description" content="Transformez une photo en coloriage unique. Téléchargement gratuit en PNG ou PDF, traitement local et sécurisé.">
+    <meta name="twitter:title" content="Coloriage personnalisé gratuit à partir d'une photo">
+    <meta name="twitter:description" content="Photo → dessin à colorier en 30 secondes. Gratuit, sans inscription, PNG ou PDF haute résolution.">
+    <meta name="twitter:image" content="https://suitecreative.fintoolsbox.com/images/og-coloriage.png">
     <meta name="theme-color" content="#f9f4ea">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..700&family=Playfair+Display:ital,wght@0,500;0,700;1,500&display=swap" rel="stylesheet">
-    <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "Article",
-            "headline": "Générateur de Coloriage Personnalisé : Transformez une Photo en Dessin à Imprimer",
-            "description": "Apprenez à créer un coloriage unique à partir de vos photos. Explication du fonctionnement, astuces pour de beaux traits et présentation de l'outil gratuit Suite Créative.",
-            "author": {
-                "@type": "Organization",
-                "name": "Suite Créative"
-            },
-            "datePublished": "2025-04-08",
-            "dateModified": "2025-04-08",
-            "publisher": {
-                "@type": "Organization",
-                "name": "Suite Créative",
-                "logo": {
-                    "@type": "ImageObject",
-                    "url": "https://www.suitecreative.suitecreative.com/logo.png"
-                }
-            },
-            "image": "https://www.suitecreative.fintoolsbox.com/og-coloriage.jpg",
-            "mainEntityOfPage": {
-                "@type": "WebPage",
-                "@id": "https://www.suitecreative.fintoolsbox.com/fr/blog/generateur-coloriage/"
-            }
-        }
-    </script>
-    <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": [
-                {
-                    "@type": "Question",
-                    "name": "Comment fonctionne le générateur de coloriage ?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "Importez une photo, l'outil la convertit en niveaux de gris, applique un filtre de détection de contours (Sobel) puis seuille l'image pour obtenir un dessin au trait noir et blanc. Vous pouvez ensuite télécharger le coloriage en PNG ou PDF."
-                    }
-                },
-                {
-                    "@type": "Question",
-                    "name": "Quels types d'images utilisent le mieux ?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "Les photos avec un sujet bien contrasté et un fond plutôt uni donnent les meilleurs résultats. Les portraits d'animaux, de personnes ou d'objets simples se transforment très bien en coloriage."
-                    }
-                },
-                {
-                    "@type": "Question",
-                    "name": "Puis-je imprimer le coloriage directement ?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "Oui, vous pouvez télécharger le résultat en PDF haute résolution, prêt à être imprimé sur une feuille A4. Le format PNG est également disponible."
-                    }
-                },
-                {
-                    "@type": "Question",
-                    "name": "Est-ce que l'outil respecte ma vie privée ?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "Absolument. Tout le traitement s'effectue dans votre navigateur. Aucune image n'est envoyée sur un serveur. Vos photos restent sur votre appareil."
-                    }
-                }
-            ]
-        }
-    </script>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-2CEE6GDLC2"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
 
-  gtag('config', 'G-2CEE6GDLC2');
-</script>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2CEE6GDLC2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-2CEE6GDLC2');
+    </script>
+
+    <!-- Schema : BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://suitecreative.fintoolsbox.com/fr/" },
+            { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://suitecreative.fintoolsbox.com/fr/blog/" },
+            { "@type": "ListItem", "position": 3, "name": "Coloriage personnalisé gratuit", "item": "https://suitecreative.fintoolsbox.com/fr/blog/generateur-coloriage/" }
+        ]
+    }
+    </script>
+
+    <!-- Schema : Article -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Coloriage personnalisé gratuit à partir d'une photo",
+        "description": "Transformez n'importe quelle photo en coloriage à imprimer gratuitement. Dessin au trait net, réglages simples, PNG ou PDF. Sans inscription, 100 % privé.",
+        "author": {
+            "@type": "Organization",
+            "name": "Suite Créative",
+            "url": "https://suitecreative.fintoolsbox.com/fr/"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Suite Créative",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://suitecreative.fintoolsbox.com/logo.png"
+            }
+        },
+        "image": "https://suitecreative.fintoolsbox.com/images/og-coloriage.png",
+        "datePublished": "2025-04-08",
+        "dateModified": "2026-05-23",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://suitecreative.fintoolsbox.com/fr/blog/generateur-coloriage/"
+        }
+    }
+    </script>
+
+    <!-- Schema : FAQPage -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Comment transformer une photo en coloriage gratuitement ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Importez votre photo dans le générateur de coloriage de Suite Créative. L'outil détecte automatiquement les contours, génère un dessin au trait noir et blanc et vous permet de télécharger le résultat en PNG ou PDF. C'est gratuit, sans inscription et sans que votre photo quitte votre appareil."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Quels types de photos donnent le meilleur coloriage ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Les photos avec un sujet net sur fond uni donnent les meilleurs résultats : portraits d'animaux, visages de face, objets simples. Évitez les images floues ou les arrière-plans très chargés qui génèrent des traits parasites."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Peut-on imprimer le coloriage directement ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Oui. Le générateur propose un téléchargement en PDF haute résolution, directement imprimable en A4. Le format PNG est également disponible pour une utilisation numérique ou une retouche."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Le générateur de coloriage fonctionne-t-il pour les enfants ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Absolument. Le curseur d'épaisseur de trait permet d'obtenir des contours larges et bien visibles, idéaux pour les enfants. Vous pouvez aussi réduire les détails pour simplifier le dessin selon l'âge."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Mes photos sont-elles envoyées sur un serveur ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Non. Tout le traitement s'effectue directement dans votre navigateur. Aucune image n'est transmise à un serveur distant — vos photos personnelles restent sur votre appareil."
+                }
+            }
+        ]
+    }
+    </script>
+
     <style>
         :root {
-            --cream: #f9f4ea;
-            --paper: #fffdf7;
-            --ink: #2c2416;
-            --ink-light: #5e5340;
-            --accent: #945d3b;
-            --accent-soft: #f2e3d5;
-            --border: #d9cdb0;
-            --radius: 24px;
-            --shadow: 0 8px 30px rgba(0,0,0,0.05);
-            --font-body: 'Inter', system-ui, sans-serif;
-            --font-heading: 'Playfair Display', Georgia, serif;
+            --cream: #f7f4ee;
+            --paper: #fffcf6;
+            --ink: #1c1a14;
+            --ink-soft: #46402e;
+            --ink-light: #7a7060;
+            --accent: #2e7d52;
+            --accent-light: #e8f5ee;
+            --accent-muted: #5aaa7c;
+            --accent2: #c17b2a;
+            --border: #e0d8c4;
+            --radius-lg: 28px;
+            --radius-sm: 12px;
+            --shadow: 0 12px 40px rgba(20,18,10,0.07);
+            --font-body: 'DM Sans', system-ui, sans-serif;
+            --font-heading: 'Lora', Georgia, serif;
         }
-        * { margin:0; padding:0; box-sizing:border-box; }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
         body {
             font-family: var(--font-body);
             background: var(--cream);
             color: var(--ink);
             line-height: 1.8;
-            padding: 20px;
-            background-image: radial-gradient(circle at 20% 30%, rgba(148,93,59,0.03) 0%, transparent 50%);
+            padding: 32px 20px 60px;
         }
-        .container {
-            max-width: 850px;
-            margin: 0 auto;
-            background: var(--paper);
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-            padding: 40px 36px;
-            box-shadow: var(--shadow);
+
+        .page { max-width: 860px; margin: 0 auto; }
+
+        /* ── Header ── */
+        .site-header {
+            text-align: center;
+            margin-bottom: 40px;
         }
         .logo {
             font-family: var(--font-heading);
-            font-size: 1.8rem;
+            font-size: 1.6rem;
             font-weight: 700;
             color: var(--accent);
-            text-align: center;
-            margin-bottom: 24px;
+            text-decoration: none;
+            letter-spacing: -0.02em;
         }
-        .logo span { color: #b8860b; }
+        .logo em { color: var(--accent2); font-style: normal; }
+
+        /* ── Breadcrumb ── */
+        .breadcrumb {
+            font-size: 0.82rem;
+            color: var(--ink-light);
+            margin-bottom: 28px;
+            display: flex;
+            gap: 6px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .breadcrumb a { color: var(--accent); text-decoration: none; }
+        .breadcrumb a:hover { text-decoration: underline; }
+        .breadcrumb span { opacity: 0.45; }
+
+        /* ── Card ── */
+        .article-card {
+            background: var(--paper);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 52px 48px;
+            box-shadow: var(--shadow);
+        }
+
+        /* ── Meta ── */
+        .article-meta {
+            display: flex;
+            gap: 14px;
+            font-size: 0.82rem;
+            color: var(--ink-light);
+            margin-bottom: 24px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        .tag {
+            background: var(--accent-light);
+            color: var(--accent);
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-weight: 500;
+            font-size: 0.78rem;
+        }
+
+        /* ── Typo ── */
         h1 {
             font-family: var(--font-heading);
-            font-size: 2.2rem;
-            color: var(--accent);
-            margin-bottom: 1rem;
-            line-height: 1.3;
+            font-size: 2.25rem;
+            line-height: 1.25;
+            color: var(--ink);
+            margin-bottom: 20px;
+            letter-spacing: -0.02em;
         }
         h2 {
             font-family: var(--font-heading);
-            font-size: 1.6rem;
+            font-size: 1.5rem;
             color: var(--ink);
-            margin-top: 2.5rem;
-            margin-bottom: 1rem;
+            margin: 44px 0 16px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--accent-light);
         }
-        p { margin-bottom: 1.2rem; color: var(--ink-light); }
-        ul { margin-left: 1.5rem; margin-bottom: 1.2rem; color: var(--ink-light); }
-        li { margin-bottom: 0.6rem; }
+        h3 {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--ink);
+            margin: 24px 0 10px;
+        }
+        p { color: var(--ink-soft); margin-bottom: 18px; font-size: 1.02rem; }
         strong { color: var(--ink); }
+        a { color: var(--accent); }
+        ul, ol { margin: 0 0 20px 24px; color: var(--ink-soft); }
+        li { margin-bottom: 10px; font-size: 1.02rem; }
+
+        /* ── Image block ── */
+        .img-block {
+            margin: 28px 0;
+            border-radius: var(--radius-sm);
+            overflow: hidden;
+            border: 1px solid var(--border);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+        }
+        .img-block img { width: 100%; display: block; }
+        .img-caption {
+            font-size: 0.82rem;
+            color: var(--ink-light);
+            text-align: center;
+            padding: 8px 14px;
+            background: var(--cream);
+            border-top: 1px solid var(--border);
+        }
+
+        /* ── Réglages visuels ── */
+        .settings-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+            gap: 16px;
+            margin: 20px 0 32px;
+        }
+        .setting-card {
+            background: var(--accent-light);
+            border: 1px solid #c8e8d6;
+            border-radius: var(--radius-sm);
+            padding: 20px;
+        }
+        .setting-card .s-icon { font-size: 1.6rem; margin-bottom: 10px; }
+        .setting-card h3 { margin: 0 0 6px; font-size: 0.95rem; color: var(--accent); }
+        .setting-card p { font-size: 0.87rem; color: var(--ink-soft); margin: 0; }
+
+        /* ── Audiences ── */
+        .audience-row {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin: 20px 0 32px;
+        }
+        .audience-pill {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 18px;
+            background: var(--paper);
+            border: 1px solid var(--border);
+            border-radius: 40px;
+            font-size: 0.9rem;
+            color: var(--ink-soft);
+        }
+        .audience-pill span { font-size: 1.1rem; }
+
+        /* ── Tip box ── */
+        .tip-box {
+            background: linear-gradient(135deg, #f0faf4, #e8f5ee);
+            border-left: 4px solid var(--accent-muted);
+            border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+            padding: 18px 22px;
+            margin: 28px 0;
+        }
+        .tip-box strong {
+            display: block;
+            color: var(--accent);
+            margin-bottom: 6px;
+            font-size: 0.88rem;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+        .tip-box p { margin: 0; font-size: 0.95rem; }
+
+        /* ── Before/After ── */
+        .before-after {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin: 24px 0 32px;
+        }
+        .ba-block {
+            border-radius: var(--radius-sm);
+            overflow: hidden;
+            border: 1px solid var(--border);
+            text-align: center;
+        }
+        .ba-block img { width: 100%; display: block; }
+        .ba-label {
+            padding: 8px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            background: var(--cream);
+            color: var(--ink-light);
+            border-top: 1px solid var(--border);
+        }
+
+        /* ── CTA ── */
+        .cta-block {
+            text-align: center;
+            margin: 44px 0 16px;
+            padding: 40px 32px;
+            background: linear-gradient(135deg, var(--accent-light), #f0faf4);
+            border-radius: var(--radius-sm);
+            border: 1px solid #c8e8d6;
+        }
+        .cta-block p {
+            font-size: 1.05rem;
+            color: var(--ink-soft);
+            margin-bottom: 20px;
+            font-family: var(--font-heading);
+            font-style: italic;
+        }
+        .btn {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 14px 32px;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            box-shadow: 0 6px 20px rgba(46,125,82,0.35);
+            transition: all 0.25s;
+        }
+        .btn:hover {
+            background: #235f3e;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 28px rgba(46,125,82,0.4);
+        }
+        .btn-note { font-size: 0.82rem; color: var(--ink-light); margin-top: 10px; }
+
+        /* ── FAQ ── */
+        .faq-section { margin-top: 48px; }
         .faq-item {
             border-bottom: 1px solid var(--border);
-            padding: 16px 0;
+            padding: 18px 0;
             cursor: pointer;
         }
         .faq-question {
@@ -167,146 +387,288 @@
             justify-content: space-between;
             align-items: center;
             color: var(--ink);
-        }
-        .faq-answer {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease;
-            color: var(--ink-light);
-            font-size: 0.95rem;
-            padding-right: 24px;
-        }
-        .faq-item.open .faq-answer {
-            max-height: 200px;
-            margin-top: 12px;
+            font-size: 1rem;
+            gap: 12px;
         }
         .faq-question::after {
             content: '+';
             font-size: 1.5rem;
             color: var(--accent);
+            flex-shrink: 0;
             transition: transform 0.3s;
+            line-height: 1;
         }
-        .faq-item.open .faq-question::after {
-            transform: rotate(45deg);
+        .faq-item.open .faq-question::after { transform: rotate(45deg); }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.35s ease;
+            color: var(--ink-soft);
+            font-size: 0.96rem;
+            padding-right: 28px;
         }
-        .cta {
-            text-align: center;
-            margin: 2.5rem 0 1rem;
+        .faq-item.open .faq-answer { max-height: 220px; margin-top: 12px; }
+
+        /* ── Articles liés ── */
+        .related {
+            margin-top: 48px;
+            padding-top: 32px;
+            border-top: 1px solid var(--border);
         }
-        .btn {
-            display: inline-block;
-            font-weight: 600;
-            font-size: 1rem;
-            padding: 14px 30px;
-            border-radius: 40px;
-            background: var(--accent);
-            color: white;
+        .related h3 {
+            font-family: var(--font-heading);
+            font-size: 1.2rem;
+            color: var(--ink);
+            margin-bottom: 16px;
+        }
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+            gap: 12px;
+        }
+        .related-link {
+            display: block;
+            padding: 14px 18px;
+            background: var(--cream);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
             text-decoration: none;
-            box-shadow: 0 6px 18px rgba(148,93,59,0.35);
-            transition: all 0.3s;
+            color: var(--ink-soft);
+            font-size: 0.9rem;
+            transition: all 0.2s;
         }
-        .btn:hover {
-            background: #7d4c30;
-            transform: translateY(-2px);
+        .related-link:hover {
+            border-color: var(--accent-muted);
+            color: var(--accent);
+            background: var(--accent-light);
         }
+        .related-link .rl-icon { font-size: 1.2rem; margin-bottom: 6px; display: block; }
+
+        /* ── Footer ── */
         footer {
             text-align: center;
-            margin-top: 40px;
-            padding-top: 20px;
+            margin-top: 48px;
+            padding-top: 24px;
             border-top: 1px solid var(--border);
+            font-size: 0.84rem;
             color: var(--ink-light);
-            font-size: 0.85rem;
         }
-        a { color: var(--accent); }
-        @media (max-width: 600px) {
-            .container { padding: 24px 18px; }
-            h1 { font-size: 1.8rem; }
+        footer a { color: var(--accent); text-decoration: none; }
+        footer a:hover { text-decoration: underline; }
+
+        @media (max-width: 640px) {
+            .article-card { padding: 28px 20px; }
+            h1 { font-size: 1.75rem; }
+            h2 { font-size: 1.3rem; }
+            .settings-grid { grid-template-columns: 1fr 1fr; }
+            .before-after { grid-template-columns: 1fr; }
+            .audience-row { flex-direction: column; }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="logo">Suite<span>Créative</span></div>
+<div class="page">
 
+    <!-- Header -->
+    <header class="site-header">
+        <a href="/fr/" class="logo">Suite<em>Créative</em></a>
+    </header>
+
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb" aria-label="Fil d'Ariane">
+        <a href="/fr/">Accueil</a>
+        <span>›</span>
+        <a href="/fr/blog/">Blog</a>
+        <span>›</span>
+        <span>Coloriage personnalisé gratuit</span>
+    </nav>
+
+    <main class="article-card">
         <article>
-            <h1>Coloriage personnalisé : transformez une photo en dessin à colorier en quelques secondes</h1>
 
-            <p>Quoi de plus amusant que de colorier le portrait de son animal de compagnie ou d'un visage familier ? Le <strong>générateur de coloriage personnalisé</strong> fait exactement cela : il convertit n'importe quelle image en un <strong>dessin au trait noir et blanc</strong> prêt à être imprimé. Idéal pour occuper les enfants, créer un cadeau original ou simplement se détendre, cet outil fonctionne entièrement dans votre navigateur, sans logiciel ni inscription.</p>
-
-            <h2>Comment une photo devient-elle un coloriage ?</h2>
-            <p>La transformation repose sur une série d'opérations mathématiques simples mais efficaces. Dans les grandes lignes, voici ce qui se passe lorsque vous importez votre photo :</p>
-            <ul>
-                <li><strong>Conversion en niveaux de gris :</strong> l'image est d'abord débarrassée de ses couleurs pour ne garder que la luminosité de chaque pixel.</li>
-                <li><strong>Flou léger :</strong> un très léger flou gaussien est appliqué pour atténuer les détails parasites (bruit, poussières). Cela évite d'obtenir un dessin trop chargé.</li>
-                <li><strong>Détection des contours :</strong> un opérateur de Sobel parcourt l'image et calcule l'intensité des changements de luminosité dans toutes les directions. Là où le contraste est fort (un bord, un pli, un contour), la valeur devient élevée.</li>
-                <li><strong>Seuillage :</strong> on ne conserve que les pixels au-dessus d'une certaine intensité, puis on inverse les couleurs pour obtenir un trait noir sur fond blanc.</li>
-            </ul>
-            <p>Le résultat est un dessin épuré, sur lequel les crayons de couleur pourront s'exprimer librement.</p>
-
-            <h2>Les réglages qui changent tout</h2>
-            <p>Pour s'adapter à tous les types d'images et à toutes les envies, l'outil propose trois paramètres clés :</p>
-            <ul>
-                <li><strong>Détail des contours :</strong> un curseur permet de choisir le niveau de sensibilité de la détection. Plus le seuil est bas, plus on obtient de traits fins et détaillés (parfait pour une image riche). Plus il est haut, plus le dessin se simplifie, ce qui convient mieux aux jeunes enfants.</li>
-                <li><strong>Lissage :</strong> avant la détection, l'image peut être plus ou moins floutée. Un lissage élevé gomme les petits défauts et ne garde que les contours principaux, donnant un rendu proche du dessin animé.</li>
-                <li><strong>Épaisseur du trait :</strong> une fois le trait de base obtenu, il est possible de l'élargir légèrement pour faciliter le coloriage des plus petits, ou au contraire de l'affiner pour un rendu plus précis.</li>
-            </ul>
-
-            <h2>Quel type de photo fonctionne le mieux ?</h2>
-            <p>Pour un coloriage réussi, privilégiez une image avec un <strong>sujet principal net et bien éclairé</strong>. Les photos d'animaux (chiens, chats, lapins), les portraits de face ou même les objets au contour marqué donnent d'excellents résultats. Évitez les arrière-plans trop chargés ou les images floues : ils génèrent beaucoup de traits parasites qui rendent le coloriage difficile à lire.</p>
-            <p>Un petit conseil : si votre photo a un fond uni (blanc, ciel bleu), le contour du sujet ressortira parfaitement, et le coloriage ressemblera à une véritable page de cahier.</p>
-
-            <h2>Du coloriage à l'impression</h2>
-            <p>Une fois satisfait du résultat, vous pouvez télécharger votre création au format <strong>PNG</strong> (pour le web ou une retouche rapide) ou <strong>PDF</strong> haute résolution, directement imprimable en A4. C'est la solution idéale pour préparer une activité manuelle en quelques minutes, sans bouger de chez soi.</p>
-
-            <h2>Respect de la vie privée : un point non négociable</h2>
-            <p>Comme tous les outils de Suite Créative, le générateur de coloriage <strong>traite votre photo intégralement dans le navigateur</strong>. Aucune donnée n'est envoyée sur un serveur distant. Vous pouvez donc transformer des images personnelles – vos enfants, votre maison, votre animal – en toute confidentialité.</p>
-
-            <div class="cta">
-                <a href="https://www.suitecreative.fintoolsbox.com/fr/generateur-coloriage/" class="btn">Essayer le générateur de coloriage →</a>
+            <div class="article-meta">
+                <span class="tag">Activité créative</span>
+                <span>⏱ 4 min de lecture</span>
+                <span>Mis à jour le 23 mai 2026</span>
             </div>
+
+            <h1>Créer un coloriage personnalisé gratuit à partir d'une photo — prêt à imprimer</h1>
+
+            <p>Transformer n'importe quelle photo en coloriage à imprimer est possible en quelques secondes grâce au <strong>générateur de coloriage gratuit de Suite Créative</strong>. Photo de votre chien, portrait de famille, illustration personnelle : l'outil convertit votre image en dessin au trait noir et blanc, téléchargeable en PNG ou PDF. Sans inscription, sans logiciel, sans que votre photo quitte votre appareil.</p>
+
+            <!-- Avant/Après -->
+            <div class="before-after">
+                <div class="ba-block">
+                    <img src="/images/coloriage-avant.webp"
+                         alt="Photo originale d'un chat avant transformation en coloriage"
+                         width="400" height="320" loading="eager">
+                    <div class="ba-label">📷 Photo originale</div>
+                </div>
+                <div class="ba-block">
+                    <img src="/images/coloriage-apres.webp"
+                         alt="Résultat coloriage : dessin au trait noir et blanc du même chat prêt à imprimer"
+                         width="400" height="320" loading="eager">
+                    <div class="ba-label">🖊 Coloriage généré</div>
+                </div>
+            </div>
+
+            <h2>Pour qui est fait cet outil ?</h2>
+            <p>Le générateur de coloriage s'adapte à tous les profils et toutes les occasions :</p>
+
+            <div class="audience-row">
+                <div class="audience-pill"><span>👧</span> Parents et enseignants</div>
+                <div class="audience-pill"><span>🎂</span> Activité anniversaire enfant</div>
+                <div class="audience-pill"><span>🐾</span> Amoureux des animaux</div>
+                <div class="audience-pill"><span>🎨</span> Artistes et illustrateurs</div>
+                <div class="audience-pill"><span>🎁</span> Idée cadeau originale</div>
+                <div class="audience-pill"><span>🧘</span> Coloriage adulte anti-stress</div>
+            </div>
+
+            <div class="tip-box">
+                <strong>💡 Idée activité</strong>
+                <p>Pour un anniversaire enfant, transformez la photo de chaque invité en coloriage et imprimez-les. Chacun repart avec son propre dessin à colorier — zéro achat, effet mémorable garanti.</p>
+            </div>
+
+            <h2>Comment ça marche — la transformation expliquée simplement</h2>
+            <p>Quand vous importez une photo, l'outil effectue quatre opérations en quelques millisecondes, entièrement dans votre navigateur :</p>
+            <ol>
+                <li><strong>Conversion en niveaux de gris :</strong> les couleurs sont supprimées, seule la luminosité de chaque pixel est conservée.</li>
+                <li><strong>Flou gaussien léger :</strong> un léger adoucissement élimine le bruit numérique et les détails parasites pour éviter un dessin trop chargé.</li>
+                <li><strong>Détection de contours (opérateur de Sobel) :</strong> l'algorithme analyse les changements brusques de luminosité dans toutes les directions. Là où le contraste est fort — un bord, un contour, un pli — un trait est tracé.</li>
+                <li><strong>Seuillage et inversion :</strong> seuls les pixels au-dessus d'une intensité donnée sont conservés, puis inversés pour obtenir un trait noir sur fond blanc.</li>
+            </ol>
+            <p>Le résultat est un dessin propre, avec des contours nets, prêt à être imprimé et colorié.</p>
+
+            <div class="img-block">
+                <img src="/images/coloriage-interface.webp"
+                     alt="Interface du générateur de coloriage Suite Créative avec les curseurs de réglage visibles"
+                     width="800" height="450" loading="lazy">
+                <p class="img-caption">L'interface du générateur — trois curseurs suffisent pour adapter le dessin à votre photo et à l'âge de l'utilisateur</p>
+            </div>
+
+            <h2>Les trois réglages qui font toute la différence</h2>
+            <p>L'outil n'est pas un simple filtre figé. Trois paramètres permettent d'adapter le dessin à votre photo et à l'âge du futur coloriste :</p>
+
+            <div class="settings-grid">
+                <div class="setting-card">
+                    <div class="s-icon">🔍</div>
+                    <h3>Niveau de détail</h3>
+                    <p>Seuil bas → traits fins et photo détaillée. Seuil haut → dessin simplifié, idéal pour les jeunes enfants.</p>
+                </div>
+                <div class="setting-card">
+                    <div class="s-icon">💧</div>
+                    <h3>Lissage</h3>
+                    <p>Efface les petits défauts et ne garde que les contours principaux. Résultat proche du dessin animé à fort lissage.</p>
+                </div>
+                <div class="setting-card">
+                    <div class="s-icon">✏️</div>
+                    <h3>Épaisseur du trait</h3>
+                    <p>Trait épais = facile à colorier pour les petits. Trait fin = rendu précis pour les adultes et illustrateurs.</p>
+                </div>
+            </div>
+
+            <h2>Quelle photo choisir pour un beau coloriage ?</h2>
+            <p>La qualité du coloriage dépend directement de la photo de départ. Voici ce qui fonctionne le mieux :</p>
+            <ul>
+                <li><strong>Fond uni ou épuré :</strong> un ciel, un mur blanc ou un arrière-plan flouté permettent au contour du sujet de ressortir sans parasites.</li>
+                <li><strong>Bon éclairage uniforme :</strong> les ombres dures créent des traits parasites. Préférez une lumière douce et diffuse.</li>
+                <li><strong>Sujet net et bien cadré :</strong> portraits d'animaux de face, visages d'enfants, objets simples — tout ce qui a un contour marqué.</li>
+                <li><strong>Image haute résolution :</strong> plus la photo est nette, plus le dessin au trait sera précis et agréable à colorier.</li>
+            </ul>
+
+            <div class="tip-box">
+                <strong>🖨 Conseil impression</strong>
+                <p>Pour imprimer votre coloriage, téléchargez-le en <strong>PDF</strong> plutôt qu'en PNG. Le PDF est calibré pour une impression A4 sans perte de qualité. Utilisez du papier 90g minimum pour éviter que les feutres ne traversent.</p>
+            </div>
+
+            <h2>Utilisations au-delà de la simple feuille à colorier</h2>
+            <p>Une fois votre dessin au trait généré, il peut servir bien au-delà de l'activité coloriage classique :</p>
+            <ul>
+                <li><strong>Cahier de coloriage personnalisé :</strong> générez plusieurs coloriages de vos photos de vacances et reliez-les en mini-carnet.</li>
+                <li><strong>Décoration chambre d'enfant :</strong> imprimez le portrait de l'animal de compagnie en grand format et encadrez-le une fois colorié.</li>
+                <li><strong>Activité thérapeutique :</strong> le coloriage adulte est reconnu comme outil de relaxation — personnalisez-le avec vos propres souvenirs.</li>
+                <li><strong>Support d'illustration :</strong> les artistes peuvent utiliser le dessin au trait comme base de tracé ou gabarit d'encrage.</li>
+                <li><strong>Cadeau personnalisé :</strong> offrez le coloriage avec les crayons assortis — cadeau original à moins de 5 €.</li>
+            </ul>
+
+            <h2>Confidentialité : vos photos ne quittent jamais votre appareil</h2>
+            <p>Contrairement à la majorité des outils en ligne qui envoient votre image vers un serveur distant pour la traiter, le générateur de coloriage de Suite Créative <strong>fonctionne entièrement dans votre navigateur</strong>. Aucune donnée n'est transmise, stockée ni analysée. Vous pouvez transformer en toute sérénité des photos de vos enfants, de votre famille ou de vos animaux.</p>
+
+            <!-- CTA -->
+            <div class="cta-block">
+                <p>"Votre photo préférée en coloriage à imprimer — en 30 secondes, gratuitement."</p>
+                <a href="https://suitecreative.fintoolsbox.com/fr/generateur-coloriage/" class="btn">Créer mon coloriage personnalisé gratuit →</a>
+                <p class="btn-note">Sans inscription · PDF haute résolution · Traitement 100 % local</p>
+            </div>
+
         </article>
 
-        <section class="faq-section" style="margin-top: 3rem;">
-            <h2 style="font-family: var(--font-heading); font-size: 1.8rem; margin-bottom: 1.5rem;">Questions fréquentes</h2>
+        <!-- FAQ -->
+        <section class="faq-section">
+            <h2>Questions fréquentes</h2>
+
             <div class="faq-item">
-                <div class="faq-question">Comment fonctionne le générateur de coloriage ?</div>
-                <div class="faq-answer">Importez une photo, l'outil la convertit en niveaux de gris, applique un filtre de détection de contours (Sobel) puis seuille l'image pour obtenir un dessin au trait noir et blanc. Vous pouvez ensuite télécharger le coloriage en PNG ou PDF.</div>
+                <div class="faq-question">Comment transformer une photo en coloriage gratuitement ?</div>
+                <div class="faq-answer">Importez votre photo dans le générateur de coloriage de Suite Créative. L'outil détecte automatiquement les contours, génère un dessin au trait noir et blanc et vous permet de télécharger le résultat en PNG ou PDF. C'est gratuit, sans inscription et sans que votre photo quitte votre appareil.</div>
             </div>
             <div class="faq-item">
-                <div class="faq-question">Quels types d'images utilisent le mieux ?</div>
-                <div class="faq-answer">Les photos avec un sujet bien contrasté et un fond plutôt uni donnent les meilleurs résultats. Les portraits d'animaux, de personnes ou d'objets simples se transforment très bien en coloriage.</div>
+                <div class="faq-question">Quels types de photos donnent le meilleur coloriage ?</div>
+                <div class="faq-answer">Les photos avec un sujet net sur fond uni donnent les meilleurs résultats : portraits d'animaux, visages de face, objets simples. Évitez les images floues ou les arrière-plans très chargés qui génèrent des traits parasites.</div>
             </div>
             <div class="faq-item">
-                <div class="faq-question">Puis-je imprimer le coloriage directement ?</div>
-                <div class="faq-answer">Oui, vous pouvez télécharger le résultat en PDF haute résolution, prêt à être imprimé sur une feuille A4. Le format PNG est également disponible.</div>
+                <div class="faq-question">Peut-on imprimer le coloriage directement ?</div>
+                <div class="faq-answer">Oui. Le générateur propose un téléchargement en PDF haute résolution, directement imprimable en A4. Le format PNG est également disponible pour une utilisation numérique ou une retouche.</div>
             </div>
             <div class="faq-item">
-                <div class="faq-question">Est-ce que l'outil respecte ma vie privée ?</div>
-                <div class="faq-answer">Absolument. Tout le traitement s'effectue dans votre navigateur. Aucune image n'est envoyée sur un serveur. Vos photos restent sur votre appareil.</div>
+                <div class="faq-question">Le générateur de coloriage fonctionne-t-il pour les enfants ?</div>
+                <div class="faq-answer">Absolument. Le curseur d'épaisseur de trait permet d'obtenir des contours larges et bien visibles, idéaux pour les enfants. Vous pouvez aussi réduire les détails pour simplifier le dessin selon l'âge.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Mes photos sont-elles envoyées sur un serveur ?</div>
+                <div class="faq-answer">Non. Tout le traitement s'effectue directement dans votre navigateur. Aucune image n'est transmise à un serveur distant — vos photos personnelles restent sur votre appareil.</div>
             </div>
         </section>
-        <section class="related-articles">
 
-        <h3> Articles liés</h3>
-
-        <ul>
-        <li><a href="/fr/blog/generateur-coloriage/">Transformer une photo en coloriage</a></li>
-        <li><a href="/fr/blog/generateur-meckup/">Créer des vidéos produit TikTok</a></li>
-        <li><a href="/fr/blog/generateur-peluche/">Créer un portrait style vitrail</a></li>
-        </ul>
-
+        <!-- Articles liés -->
+        <section class="related">
+            <h3>Autres outils créatifs gratuits</h3>
+            <div class="related-grid">
+                <a href="/fr/blog/sticker-maker/" class="related-link">
+                    <span class="rl-icon">🏷️</span>
+                    Créer un sticker personnalisé gratuit
+                </a>
+                <a href="/fr/blog/generateur-peluche/" class="related-link">
+                    <span class="rl-icon">🐻</span>
+                    Peluche personnalisée — idée cadeau
+                </a>
+                <a href="/fr/blog/portrait-animal/" class="related-link">
+                    <span class="rl-icon">🐾</span>
+                    Portrait artistique de votre animal
+                </a>
+                <a href="/fr/blog/vitrail-mosaique/" class="related-link">
+                    <span class="rl-icon">🎨</span>
+                    Effet vitrail sur vos photos
+                </a>
+            </div>
         </section>
+
+        <!-- Footer -->
         <footer>
-            <p>© 2025 Suite Créative – <a href="/">Accueil</a> – <a href="https://suitecreative.fintoolsbox.com/fr/confidentialite/">Confidentialité</a> – <a href="https://www.suitecreative.fintoolsbox.com/fr/mentions-legales/">Mentions légales</a></p>
+            <p>© 2026 Suite Créative —
+                <a href="/fr/">Accueil</a> ·
+                <a href="/fr/blog/">Blog</a> ·
+                <a href="https://suitecreative.fintoolsbox.com/fr/confidentialite/">Confidentialité</a> ·
+                <a href="https://suitecreative.fintoolsbox.com/fr/mentions-legales/">Mentions légales</a>
+            </p>
         </footer>
-    </div>
 
-    <script>
-        document.querySelectorAll('.faq-item').forEach(item => {
-            item.addEventListener('click', () => {
-                item.classList.toggle('open');
-            });
-        });
-    </script>
+    </main>
+</div>
+
+<script>
+    document.querySelectorAll('.faq-item').forEach(item => {
+        item.addEventListener('click', () => item.classList.toggle('open'));
+    });
+</script>
 </body>
 </html>
