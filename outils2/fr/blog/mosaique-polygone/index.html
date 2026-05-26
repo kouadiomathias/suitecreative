@@ -1,42 +1,1010 @@
-<article style="max-width: 800px; margin: 0 auto; font-family: 'Inter', system-ui, sans-serif; line-height: 1.8; color: #2c2416; padding: 20px;">
-    <h1 style="font-family: 'Playfair Display', Georgia, serif; font-size: 2.2rem; color: #945d3b; margin-bottom: 1rem;">La mosaïque polygone : quand la photo rencontre la géométrie</h1>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Effet vitrail photo gratuit — mosaïque polygone en ligne</title>
+    <meta name="description" content="Transformez votre photo en vitrail numérique ou mosaïque polygone gratuitement. Choisissez le nombre de cellules, l'épaisseur du trait, téléchargez en PNG haute résolution. Sans inscription, 100 % privé.">
+    <meta name="keywords" content="effet vitrail photo, mosaïque polygone gratuit, transformer photo en vitrail, low poly art gratuit, portrait géométrique, vitrail numérique, générateur mosaïque, photo effet vitrail en ligne">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://suitecreative.fintoolsbox.com/fr/blog/vitrail-mosaique/">
 
-    <p>Vous avez sans doute déjà croisé ces portraits éclatés en centaines de petites facettes colorées, à mi-chemin entre le <strong>vitrail</strong> et le <strong>low poly art</strong>. Derrière cet effet visuel saisissant se cache une technique étonnamment accessible, même sans logiciel complexe. On l’appelle <strong>mosaïque polygone</strong> – ou parfois “effet vitrail numérique” – et elle permet de transformer n’importe quelle photo en composition géométrique.</p>
+    <meta property="og:title" content="Effet vitrail photo gratuit — mosaïque polygone en ligne">
+    <meta property="og:description" content="Transformez n'importe quelle photo en vitrail numérique ou mosaïque polygone. Gratuit, sans inscription, PNG haute résolution.">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://suitecreative.fintoolsbox.com/images/og-vitrail.png">
+    <meta property="og:url" content="https://suitecreative.fintoolsbox.com/fr/blog/vitrail-mosaique/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Effet vitrail photo gratuit — mosaïque polygone en ligne">
+    <meta name="twitter:description" content="Photo → vitrail numérique en quelques secondes. Gratuit, sans inscription, PNG haute résolution.">
+    <meta name="twitter:image" content="https://suitecreative.fintoolsbox.com/images/og-vitrail.png">
+    <meta name="theme-color" content="#f5f0e8">
 
-    <h2 style="font-size: 1.6rem; margin-top: 2rem; color: #5e5340;">Qu’est-ce qu’une mosaïque polygone ?</h2>
-    <p>L’idée est simple : remplacer les pixels d’une image par des <strong>polygones irréguliers</strong> (souvent issus d’une triangulation ou d’un diagramme de Voronoï), puis colorer chaque cellule avec la teinte dominante de la zone correspondante. On obtient alors un rendu proche du <strong>vitrail traditionnel</strong>, où les joints noirs évoquent les baguettes de plomb qui séparent les morceaux de verre.</p>
-    <p>Les artistes numériques utilisent depuis longtemps cette approche pour créer des <strong>portraits géométriques</strong> ou des illustrations au style épuré. Mais grâce aux progrès du calcul côté client (JavaScript, Canvas), il est désormais possible d’obtenir le même résultat en quelques secondes, directement depuis un navigateur web.</p>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
 
-    <h2 style="font-size: 1.6rem; margin-top: 2rem; color: #5e5340;">Comment une photo devient-elle une mosaïque ?</h2>
-    <p>La transformation repose sur trois grandes étapes :</p>
-    <ul>
-        <li><strong>1. Segmentation de l’image :</strong> on génère un maillage de points aléatoires répartis sur la surface. Chaque point deviendra le “centre” d’une cellule. La forme des polygones est déterminée par le <em>diagramme de Voronoï</em>, qui attribue chaque pixel au point le plus proche.</li>
-        <li><strong>2. Calcul de la couleur moyenne :</strong> pour chaque cellule, on analyse les couleurs de tous les pixels qu’elle contient. On en extrait une teinte unique (moyenne arithmétique des composantes RVB) qui remplira toute la facette.</li>
-        <li><strong>3. Tracé des contours :</strong> une fois les polygones coloriés, on dessine un trait noir (ou de la couleur de son choix) le long des frontières entre cellules. Cela renforce l’effet “vitrail” ou “mosaïque”.</li>
-    </ul>
-    <p>Ce traitement était autrefois réservé aux logiciels de retouche comme Photoshop ou Illustrator. Aujourd’hui, un <strong>générateur de mosaïque en ligne</strong> peut effectuer ces calculs en local, sans jamais envoyer votre photo sur un serveur. C’est à la fois rapide, gratuit et respectueux de la vie privée.</p>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2CEE6GDLC2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-2CEE6GDLC2');
+    </script>
 
-    <h2 style="font-size: 1.6rem; margin-top: 2rem; color: #5e5340;">Les réglages qui font la différence</h2>
-    <p>Pour obtenir un résultat qui ressemble vraiment à un vitrail ou à une œuvre low poly, deux paramètres sont essentiels :</p>
-    <ul>
-        <li><strong>Le nombre de cellules :</strong> plus il est élevé, plus le rendu sera détaillé. Avec 100 polygones, le sujet reste reconnaissable mais très stylisé. À 500 ou 800, la mosaïque se rapproche d’une photo tout en conservant l’aspect géométrique.</li>
-        <li><strong>L’épaisseur des joints :</strong> un trait fin donne un effet “cristal”, tandis qu’un trait épais accentue le côté vitrail traditionnel. Certains outils permettent même de désactiver complètement les lignes pour un effet “dégradé géométrique” plus doux.</li>
-    </ul>
-    <p>D’autres options, comme l’ajout d’un fond blanc ou la modification de la couleur des contours, permettent d’adapter la mosaïque à différents usages : affiche, carte postale, fond d’écran, ou même motif de broderie.</p>
+    <!-- Schema : BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://suitecreative.fintoolsbox.com/fr/" },
+            { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://suitecreative.fintoolsbox.com/fr/blog/" },
+            { "@type": "ListItem", "position": 3, "name": "Effet vitrail photo gratuit", "item": "https://suitecreative.fintoolsbox.com/fr/blog/vitrail-mosaique/" }
+        ]
+    }
+    </script>
 
-    <h2 style="font-size: 1.6rem; margin-top: 2rem; color: #5e5340;">Quelles photos se prêtent le mieux à l’exercice ?</h2>
-    <p>Les <strong>portraits d’animaux ou de visages</strong> donnent des résultats spectaculaires, car les zones d’ombre et de lumière y sont bien marquées. Une photo de votre chien ou chat, prise de face avec un éclairage doux, se transformera en une œuvre géométrique pleine de caractère. Les <strong>paysages</strong> et les <strong>natures mortes</strong> fonctionnent aussi très bien, à condition d’avoir un contraste suffisant.</p>
-    <p>Évitez les images trop floues ou surchargées de détails minuscules : la simplification par polygones risque de perdre l’essentiel du sujet. Préférez une composition simple, avec un sujet principal bien détaché de l’arrière-plan.</p>
+    <!-- Schema : Article -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Effet vitrail photo gratuit — mosaïque polygone en ligne",
+        "description": "Transformez votre photo en vitrail numérique ou mosaïque polygone gratuitement. Choisissez le nombre de cellules, l'épaisseur du trait, téléchargez en PNG haute résolution.",
+        "author": {
+            "@type": "Organization",
+            "name": "Suite Créative",
+            "url": "https://suitecreative.fintoolsbox.com/fr/"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Suite Créative",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://suitecreative.fintoolsbox.com/logo.png"
+            }
+        },
+        "image": "https://suitecreative.fintoolsbox.com/images/og-vitrail.png",
+        "datePublished": "2025-04-08",
+        "dateModified": "2026-05-23",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://suitecreative.fintoolsbox.com/fr/blog/vitrail-mosaique/"
+        }
+    }
+    </script>
 
-    <h2 style="font-size: 1.6rem; margin-top: 2rem; color: #5e5340;">Créer votre propre mosaïque gratuitement</h2>
-    <p>Inutile d’installer un logiciel ou de s’inscrire à un service payant. Des outils comme le <strong>générateur de portrait style vitrail</strong> de Suite Créative (disponible directement sur ce site) vous permettent d’importer une image, de choisir le nombre de cellules et l’épaisseur du trait, puis de télécharger le résultat en PNG haute résolution. Tout le calcul s’effectue dans votre navigateur : votre photo ne quitte jamais votre appareil, ce qui garantit une confidentialité totale.</p>
-    <p>Essayez avec une photo de votre animal de compagnie, un portrait de famille ou même un objet du quotidien. Vous serez surpris de voir à quel point la géométrie peut révéler la beauté cachée d’une image.</p>
+    <!-- Schema : FAQPage -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Comment transformer une photo en vitrail gratuitement ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Importez votre photo dans le générateur vitrail de Suite Créative, choisissez le nombre de cellules et l'épaisseur du trait, puis téléchargez le résultat en PNG. C'est gratuit, sans inscription et sans que votre photo quitte votre appareil."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Quelle est la différence entre vitrail, mosaïque et low poly ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "L'effet vitrail imite les baguettes de plomb avec un trait noir épais entre les cellules. La mosaïque utilise des cellules plus régulières avec un joint fin. Le low poly art crée des triangles géométriques très stylisés. Notre outil permet d'obtenir les trois rendus en jouant sur le nombre de cellules et l'épaisseur du trait."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Combien de cellules choisir pour un bon résultat ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Entre 100 et 200 cellules pour un effet très stylisé proche du low poly. Entre 300 et 500 pour un équilibre entre géométrie et lisibilité du sujet. Au-delà de 600, le rendu se rapproche d'une photo tout en conservant l'aspect mosaïque."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Peut-on imprimer le résultat en grand format ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Oui. Le PNG téléchargé conserve la résolution de votre photo originale. Pour une impression en A2 ou A1, utilisez une photo source d'au moins 3000 pixels de large."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Quelles photos donnent le meilleur effet vitrail ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Les portraits d'animaux ou de visages de face avec un bon éclairage donnent des résultats spectaculaires. Les paysages avec un ciel contrasté fonctionnent aussi très bien. Évitez les images floues ou trop chargées en détails minuscules."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Ma photo est-elle envoyée sur un serveur ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Non. Tout le traitement s'effectue localement dans votre navigateur via JavaScript. Aucune image n'est transmise à un serveur — vos photos restent sur votre appareil."
+                }
+            }
+        ]
+    }
+    </script>
 
-    <h2 style="font-size: 1.6rem; margin-top: 2rem; color: #5e5340;">Pourquoi cet effet séduit autant ?</h2>
-    <p>La mosaïque polygone touche à la fois à l’art numérique et à l’artisanat traditionnel. Elle évoque les <strong>vitraux des cathédrales</strong> tout en restant résolument moderne. C’est aussi un formidable moyen d’expliquer visuellement des concepts mathématiques comme la division de l’espace ou les algorithmes de coloration. Pour les créatifs, c’est une source inépuisable de personnalisation : changez la palette de couleurs, superposez plusieurs calques, ou imprimez le résultat sur un support transparent pour un effet “faux vitrail” bluffant.</p>
-    <p>Alors, prêt à transformer vos souvenirs en œuvres géométriques ?</p>
+    <style>
+        :root {
+            --bg: #f3efe8;
+            --paper: #fefcf7;
+            --ink: #1a1510;
+            --ink-soft: #3d3626;
+            --ink-light: #7a7060;
+            --accent: #6b3fa0;
+            --accent-light: #f0eaf8;
+            --accent-muted: #9b6ec8;
+            --accent2: #c44b1a;
+            --accent2-light: #fceee7;
+            --border: #e0d8c4;
+            --radius-lg: 28px;
+            --radius-sm: 12px;
+            --shadow: 0 14px 48px rgba(20,15,8,0.08);
+            --font-body: 'DM Sans', system-ui, sans-serif;
+            --font-heading: 'Lora', Georgia, serif;
+        }
 
-    <p style="margin-top: 2rem; font-size: 0.9rem; color: #5e5340; border-top: 1px solid #d9cdb0; padding-top: 1rem;">
-        <em>Article rédigé dans le respect des principes E-E-A-T (Expertise, Expérience, Autorité, Fiabilité). L’outil mentionné est développé par Suite Créative et fonctionne entièrement sans collecte de données.</em>
-    </p>
-</article>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: var(--font-body);
+            background: var(--bg);
+            color: var(--ink);
+            line-height: 1.8;
+            padding: 32px 20px 60px;
+        }
+
+        .page { max-width: 880px; margin: 0 auto; }
+
+        /* ── Header ── */
+        .site-header { text-align: center; margin-bottom: 40px; }
+        .logo {
+            font-family: var(--font-heading);
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--accent);
+            text-decoration: none;
+        }
+        .logo em { color: var(--accent2); font-style: normal; }
+
+        /* ── Breadcrumb ── */
+        .breadcrumb {
+            font-size: 0.82rem;
+            color: var(--ink-light);
+            margin-bottom: 28px;
+            display: flex;
+            gap: 6px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .breadcrumb a { color: var(--accent); text-decoration: none; }
+        .breadcrumb a:hover { text-decoration: underline; }
+        .breadcrumb span { opacity: 0.4; }
+
+        /* ── Card ── */
+        .article-card {
+            background: var(--paper);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 52px 48px;
+            box-shadow: var(--shadow);
+        }
+
+        /* ── Meta ── */
+        .article-meta {
+            display: flex;
+            gap: 14px;
+            font-size: 0.82rem;
+            color: var(--ink-light);
+            margin-bottom: 24px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        .tag {
+            background: var(--accent-light);
+            color: var(--accent);
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.76rem;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+
+        /* ── Typo ── */
+        h1 {
+            font-family: var(--font-heading);
+            font-size: 2.3rem;
+            line-height: 1.22;
+            color: var(--ink);
+            margin-bottom: 20px;
+            letter-spacing: -0.02em;
+        }
+        h2 {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            color: var(--ink);
+            margin: 48px 0 16px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--accent-light);
+        }
+        h3 { font-size: 1.05rem; font-weight: 600; color: var(--ink); margin: 24px 0 10px; }
+        p { color: var(--ink-soft); margin-bottom: 18px; font-size: 1.02rem; }
+        strong { color: var(--ink); }
+        a { color: var(--accent); }
+        ul, ol { margin: 0 0 20px 24px; color: var(--ink-soft); }
+        li { margin-bottom: 10px; font-size: 1.02rem; }
+
+        /* ── Before/After ── */
+        .before-after {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            gap: 12px;
+            align-items: center;
+            margin: 28px 0 36px;
+        }
+        .ba-block {
+            border-radius: var(--radius-sm);
+            overflow: hidden;
+            border: 1px solid var(--border);
+            box-shadow: 0 4px 14px rgba(0,0,0,0.07);
+        }
+        .ba-block img { width: 100%; display: block; }
+        .ba-label {
+            font-size: 0.82rem;
+            font-weight: 600;
+            text-align: center;
+            padding: 8px;
+            background: var(--bg);
+            color: var(--ink-light);
+            border-top: 1px solid var(--border);
+        }
+        .ba-arrow { font-size: 2rem; color: var(--accent-muted); text-align: center; }
+
+        /* ── CTA inline ── */
+        .cta-inline {
+            text-align: center;
+            margin: 36px 0;
+            padding: 28px 24px;
+            background: var(--accent-light);
+            border: 1px solid #d4bef0;
+            border-radius: var(--radius-sm);
+        }
+        .cta-inline p { margin-bottom: 16px; color: var(--ink-soft); font-size: 1rem; }
+        .btn {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 13px 30px;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.98rem;
+            box-shadow: 0 6px 20px rgba(107,63,160,0.35);
+            transition: all 0.25s;
+        }
+        .btn:hover { background: #532d82; transform: translateY(-2px); }
+        .btn-sm {
+            padding: 10px 22px;
+            font-size: 0.88rem;
+        }
+
+        /* ── Comparatif cellules ── */
+        .cells-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 14px;
+            margin: 20px 0 32px;
+        }
+        .cell-card {
+            border-radius: var(--radius-sm);
+            overflow: hidden;
+            border: 1px solid var(--border);
+            text-align: center;
+        }
+        .cell-card img { width: 100%; display: block; }
+        .cell-label {
+            padding: 10px 8px;
+            background: var(--bg);
+            border-top: 1px solid var(--border);
+        }
+        .cell-label strong { display: block; color: var(--accent); font-size: 1rem; }
+        .cell-label span { font-size: 0.78rem; color: var(--ink-light); }
+
+        /* ── Comparatif trait ── */
+        .trait-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            margin: 20px 0 32px;
+        }
+        .trait-card {
+            border-radius: var(--radius-sm);
+            overflow: hidden;
+            border: 1px solid var(--border);
+        }
+        .trait-card img { width: 100%; display: block; }
+        .trait-label {
+            padding: 10px 14px;
+            background: var(--bg);
+            border-top: 1px solid var(--border);
+        }
+        .trait-label strong { display: block; color: var(--ink); font-size: 0.92rem; }
+        .trait-label span { font-size: 0.80rem; color: var(--ink-light); }
+
+        /* ── Tableau comparatif styles ── */
+        .compare-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0 32px;
+            font-size: 0.94rem;
+        }
+        .compare-table th {
+            background: var(--accent);
+            color: white;
+            padding: 12px 16px;
+            text-align: left;
+            font-weight: 600;
+        }
+        .compare-table th:first-child { border-radius: 8px 0 0 0; }
+        .compare-table th:last-child { border-radius: 0 8px 0 0; }
+        .compare-table td {
+            padding: 11px 16px;
+            border-bottom: 1px solid var(--border);
+            color: var(--ink-soft);
+            vertical-align: top;
+        }
+        .compare-table tr:nth-child(even) td { background: var(--accent-light); }
+        .compare-table tr:last-child td { border-bottom: none; }
+        .compare-table td:first-child { font-weight: 600; color: var(--ink); }
+
+        /* ── Steps tuto ── */
+        .steps-list { list-style: none; margin: 0 0 28px; padding: 0; }
+        .steps-list li {
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+            padding: 16px 0;
+            border-bottom: 1px solid var(--border);
+        }
+        .steps-list li:last-child { border-bottom: none; }
+        .step-num {
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            background: var(--accent);
+            color: white;
+            font-weight: 700;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+        .step-body strong { display: block; color: var(--ink); margin-bottom: 4px; }
+        .step-body span { font-size: 0.95rem; color: var(--ink-soft); }
+
+        /* ── Usages grid ── */
+        .usages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+            gap: 14px;
+            margin: 20px 0 32px;
+        }
+        .usage-card {
+            background: var(--paper);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            padding: 18px;
+            transition: border-color 0.2s;
+        }
+        .usage-card:hover { border-color: var(--accent-muted); }
+        .usage-card .u-icon { font-size: 1.6rem; margin-bottom: 10px; }
+        .usage-card h3 { font-size: 0.93rem; margin: 0 0 6px; color: var(--ink); }
+        .usage-card p { font-size: 0.85rem; color: var(--ink-soft); margin: 0; }
+
+        /* ── Tip box ── */
+        .tip-box {
+            background: linear-gradient(135deg, #f5eeff, #ede0fa);
+            border-left: 4px solid var(--accent-muted);
+            border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+            padding: 18px 22px;
+            margin: 28px 0;
+        }
+        .tip-box strong {
+            display: block;
+            color: var(--accent);
+            margin-bottom: 6px;
+            font-size: 0.86rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .tip-box p { margin: 0; font-size: 0.95rem; }
+
+        /* ── Galerie ── */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 14px;
+            margin: 20px 0 32px;
+        }
+        .gallery-item {
+            border-radius: var(--radius-sm);
+            overflow: hidden;
+            border: 1px solid var(--border);
+            position: relative;
+        }
+        .gallery-item img { width: 100%; display: block; }
+        .gallery-caption {
+            position: absolute;
+            bottom: 0; left: 0; right: 0;
+            background: linear-gradient(transparent, rgba(20,15,10,0.7));
+            color: white;
+            font-size: 0.8rem;
+            padding: 20px 12px 10px;
+        }
+
+        /* ── Image block ── */
+        .img-block {
+            margin: 28px 0;
+            border-radius: var(--radius-sm);
+            overflow: hidden;
+            border: 1px solid var(--border);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+        }
+        .img-block img { width: 100%; display: block; }
+        .img-caption {
+            font-size: 0.82rem;
+            color: var(--ink-light);
+            text-align: center;
+            padding: 8px 14px;
+            background: var(--bg);
+            border-top: 1px solid var(--border);
+        }
+
+        /* ── Privacy ── */
+        .privacy-block {
+            display: flex;
+            gap: 18px;
+            align-items: flex-start;
+            background: #eef8f4;
+            border: 1px solid #b8ddd0;
+            border-radius: var(--radius-sm);
+            padding: 20px 22px;
+            margin: 28px 0;
+        }
+        .privacy-block .p-icon { font-size: 1.8rem; flex-shrink: 0; margin-top: 2px; }
+        .privacy-block h3 { color: #2e7d52; margin: 0 0 5px; font-size: 0.98rem; }
+        .privacy-block p { margin: 0; font-size: 0.93rem; color: var(--ink-soft); }
+
+        /* ── CTA final ── */
+        .cta-block {
+            text-align: center;
+            margin: 48px 0 16px;
+            padding: 44px 36px;
+            background: linear-gradient(135deg, #1a1020, #2c1a40);
+            border-radius: var(--radius-sm);
+            position: relative;
+            overflow: hidden;
+        }
+        .cta-block::before {
+            content: '';
+            position: absolute;
+            top: -40px; right: -40px;
+            width: 220px; height: 220px;
+            background: radial-gradient(circle, rgba(107,63,160,0.4), transparent 70%);
+            pointer-events: none;
+        }
+        .cta-block .cta-sup {
+            font-size: 0.78rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--accent-muted);
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        .cta-block h3 {
+            font-family: var(--font-heading);
+            font-size: 1.7rem;
+            color: white;
+            margin: 0 0 8px;
+            letter-spacing: -0.02em;
+        }
+        .cta-block .cta-sub { color: #9080a8; font-size: 0.95rem; margin-bottom: 28px; }
+        .btn-white {
+            display: inline-block;
+            background: white;
+            color: var(--accent);
+            padding: 14px 34px;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+            transition: all 0.25s;
+        }
+        .btn-white:hover { transform: translateY(-2px); box-shadow: 0 12px 32px rgba(0,0,0,0.3); }
+        .btn-note { font-size: 0.8rem; color: #7060a0; margin-top: 12px; }
+
+        /* ── FAQ ── */
+        .faq-section { margin-top: 52px; }
+        .faq-item {
+            border-bottom: 1px solid var(--border);
+            padding: 18px 0;
+            cursor: pointer;
+        }
+        .faq-question {
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--ink);
+            font-size: 1rem;
+            gap: 12px;
+        }
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--accent);
+            flex-shrink: 0;
+            transition: transform 0.3s;
+            line-height: 1;
+        }
+        .faq-item.open .faq-question::after { transform: rotate(45deg); }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.35s ease;
+            color: var(--ink-soft);
+            font-size: 0.96rem;
+            padding-right: 28px;
+        }
+        .faq-item.open .faq-answer { max-height: 220px; margin-top: 12px; }
+
+        /* ── Related ── */
+        .related {
+            margin-top: 52px;
+            padding-top: 32px;
+            border-top: 1px solid var(--border);
+        }
+        .related h3 {
+            font-family: var(--font-heading);
+            font-size: 1.2rem;
+            color: var(--ink);
+            margin-bottom: 16px;
+        }
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+            gap: 12px;
+        }
+        .related-link {
+            display: block;
+            padding: 14px 18px;
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            text-decoration: none;
+            color: var(--ink-soft);
+            font-size: 0.9rem;
+            transition: all 0.2s;
+        }
+        .related-link:hover { border-color: var(--accent-muted); color: var(--accent); background: var(--accent-light); }
+        .related-link .rl-icon { font-size: 1.2rem; margin-bottom: 6px; display: block; }
+
+        /* ── Footer ── */
+        footer {
+            text-align: center;
+            margin-top: 48px;
+            padding-top: 24px;
+            border-top: 1px solid var(--border);
+            font-size: 0.84rem;
+            color: var(--ink-light);
+        }
+        footer a { color: var(--accent); text-decoration: none; }
+        footer a:hover { text-decoration: underline; }
+
+        @media (max-width: 640px) {
+            .article-card { padding: 28px 20px; }
+            h1 { font-size: 1.75rem; }
+            h2 { font-size: 1.28rem; }
+            .before-after { grid-template-columns: 1fr; }
+            .ba-arrow { transform: rotate(90deg); }
+            .cells-grid { grid-template-columns: 1fr; }
+            .trait-grid { grid-template-columns: 1fr; }
+            .gallery { grid-template-columns: 1fr; }
+            .compare-table { font-size: 0.82rem; }
+            .compare-table th, .compare-table td { padding: 8px 10px; }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+
+    <header class="site-header">
+        <a href="/fr/" class="logo">Suite<em>Créative</em></a>
+    </header>
+
+    <nav class="breadcrumb" aria-label="Fil d'Ariane">
+        <a href="/fr/">Accueil</a>
+        <span>›</span>
+        <a href="/fr/blog/">Blog</a>
+        <span>›</span>
+        <span>Effet vitrail photo gratuit</span>
+    </nav>
+
+    <main class="article-card">
+        <article>
+
+            <div class="article-meta">
+                <span class="tag">Art numérique</span>
+                <span>⏱ 5 min de lecture</span>
+                <span>Mis à jour le 23 mai 2026</span>
+            </div>
+
+            <h1>Créer un effet vitrail ou mosaïque polygone gratuit à partir d'une photo</h1>
+
+            <p>Transformer une photo en vitrail numérique ou en composition low poly est possible en quelques secondes grâce au <strong>générateur vitrail mosaïque gratuit de Suite Créative</strong>. Choisissez le nombre de cellules, l'épaisseur du trait, et téléchargez votre création en PNG haute résolution. Sans inscription, sans logiciel, sans que votre photo quitte votre appareil.</p>
+
+            <!-- Avant/Après -->
+            <div class="before-after">
+                <div class="ba-block">
+                    <img src="/images/vitrail-avant.webp"
+                         alt="Photo originale d'un chat avant transformation en effet vitrail mosaïque"
+                         width="380" height="300" loading="eager">
+                    <div class="ba-label">📷 Photo originale</div>
+                </div>
+                <div class="ba-arrow">→</div>
+                <div class="ba-block">
+                    <img src="/images/vitrail-apres.webp"
+                         alt="Résultat : même photo transformée en mosaïque polygone style vitrail avec cellules colorées et joints noirs"
+                         width="380" height="300" loading="eager">
+                    <div class="ba-label">🔷 Effet vitrail généré</div>
+                </div>
+            </div>
+
+            <!-- CTA 1 — haut de page -->
+            <div class="cta-inline">
+                <p>Prêt à transformer votre photo ? L'outil est gratuit et fonctionne directement dans votre navigateur.</p>
+                <a href="https://suitecreative.fintoolsbox.com/fr/vitrail-mosaique/" class="btn btn-sm">Essayer le générateur vitrail gratuit →</a>
+            </div>
+
+            <h2>Vitrail, mosaïque ou low poly — quelle est la différence ?</h2>
+            <p>Ces trois termes désignent des rendus visuels proches mais distincts. Voici comment les différencier et lequel choisir selon l'effet recherché :</p>
+
+            <table class="compare-table">
+                <thead>
+                    <tr>
+                        <th>Style</th>
+                        <th>Cellules</th>
+                        <th>Joint</th>
+                        <th>Rendu</th>
+                        <th>Idéal pour</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>🔷 Low poly</td>
+                        <td>50 – 150</td>
+                        <td>Fin ou absent</td>
+                        <td>Triangles très géométriques, très stylisé</td>
+                        <td>Avatar, logo, affiche moderne</td>
+                    </tr>
+                    <tr>
+                        <td>🪟 Vitrail</td>
+                        <td>150 – 400</td>
+                        <td>Épais, noir</td>
+                        <td>Facettes colorées, joints marqués, effet cathédrale</td>
+                        <td>Décoration, cadeau, impression</td>
+                    </tr>
+                    <tr>
+                        <td>🔲 Mosaïque</td>
+                        <td>400 – 800+</td>
+                        <td>Fin</td>
+                        <td>Détaillé, proche de la photo mais géométrisé</td>
+                        <td>Portrait artistique, grand format</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p>Notre outil permet d'obtenir les trois rendus en faisant simplement varier le nombre de cellules et l'épaisseur du trait — pas besoin de changer d'outil.</p>
+
+            <h2>Comment ça marche — la technique en 3 étapes</h2>
+            <p>Derrière cet effet visuel se cachent des algorithmes mathématiques issus de la géométrie computationnelle :</p>
+            <ul>
+                <li><strong>Segmentation par diagramme de Voronoï :</strong> des points sont distribués aléatoirement sur l'image. Chaque pixel est attribué au point le plus proche, formant des cellules organiques aux contours irréguliers — bien différentes des carrés d'une mosaïque classique.</li>
+                <li><strong>Calcul de la couleur moyenne :</strong> pour chaque cellule, l'outil analyse tous les pixels qu'elle contient et calcule leur teinte moyenne (moyenne des composantes RVB). Cette couleur unique remplit toute la facette.</li>
+                <li><strong>Tracé des joints :</strong> un trait est dessiné le long des frontières entre cellules. Son épaisseur et sa couleur sont réglables — noir épais pour l'effet vitrail, fin ou transparent pour le low poly.</li>
+            </ul>
+
+            <div class="tip-box">
+                <strong>💡 Pourquoi Voronoï et pas des triangles ?</strong>
+                <p>Le diagramme de Voronoï génère des cellules aux formes organiques et irrégulières, ce qui imite mieux le découpage artisanal d'un vrai vitrail. Les triangulations (comme la triangulation de Delaunay) donnent un rendu plus géométrique et anguleux, caractéristique du style low poly.</p>
+            </div>
+
+            <h2>Combien de cellules choisir ?</h2>
+            <p>C'est le réglage le plus important. Voici trois exemples avec la même photo pour vous aider à choisir :</p>
+
+            <div class="cells-grid">
+                <div class="cell-card">
+                    <img src="/images/vitrail-100.jpg"
+                         alt="Mosaïque avec 100 cellules : rendu très stylisé proche du low poly art"
+                         width="260" height="260" loading="lazy">
+                    <div class="cell-label">
+                        <strong>100 cellules</strong>
+                        <span>Très stylisé — style low poly</span>
+                    </div>
+                </div>
+                <div class="cell-card">
+                    <img src="/images/vitrail-350.webp"
+                         alt="Mosaïque avec 350 cellules : équilibre parfait entre géométrie et lisibilité"
+                         width="260" height="260" loading="lazy">
+                    <div class="cell-label">
+                        <strong>350 cellules</strong>
+                        <span>Équilibre — style vitrail</span>
+                    </div>
+                </div>
+                <div class="cell-card">
+                    <img src="/images/vitrail-700.webp"
+                         alt="Mosaïque avec 700 cellules : rendu détaillé proche de la photo originale"
+                         width="260" height="260" loading="lazy">
+                    <div class="cell-label">
+                        <strong>700 cellules</strong>
+                        <span>Très détaillé — style mosaïque</span>
+                    </div>
+                </div>
+            </div>
+
+            <h2>L'épaisseur du trait — deux ambiances très différentes</h2>
+            <p>Le deuxième réglage essentiel. Le même nombre de cellules donne deux résultats radicalement différents selon l'épaisseur du joint :</p>
+
+            <div class="trait-grid">
+                <div class="trait-card">
+                    <img src="/images/vitrail-trait-fin.webp"
+                         alt="Mosaïque avec trait fin : effet cristal, les couleurs se fondent doucement"
+                         width="380" height="280" loading="lazy">
+                    <div class="trait-label">
+                        <strong>Trait fin — effet cristal</strong>
+                        <span>Les couleurs dominent, les joints s'effacent. Idéal pour les fonds d'écran et les avatars.</span>
+                    </div>
+                </div>
+                <div class="trait-card">
+                    <img src="/images/vitrail-trait-fin.webp"
+                         alt="Mosaïque avec trait épais : effet vitrail cathédrale avec joints noirs marqués"
+                         width="380" height="280" loading="lazy">
+                    <div class="trait-label">
+                        <strong>Trait épais — effet vitrail cathédrale</strong>
+                        <span>Les joints noirs marqués évoquent les baguettes de plomb. Parfait pour l'impression et la décoration.</span>
+                    </div>
+                </div>
+            </div>
+
+            <h2>Comment créer votre vitrail — tutoriel pas à pas</h2>
+
+            <ol class="steps-list">
+                <li>
+                    <div class="step-num">1</div>
+                    <div class="step-body">
+                        <strong>Choisissez votre photo</strong>
+                        <span>Portrait d'animal, visage, paysage ou objet — idéalement avec un bon éclairage et un sujet bien détaché du fond. JPEG ou PNG, toute résolution acceptée.</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="step-num">2</div>
+                    <div class="step-body">
+                        <strong>Ouvrez le générateur</strong>
+                        <span>Rendez-vous sur <a href="https://suitecreative.fintoolsbox.com/fr/vitrail-mosaique/">le générateur vitrail mosaïque</a>. Aucun compte requis, l'outil se charge instantanément.</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="step-num">3</div>
+                    <div class="step-body">
+                        <strong>Importez votre image</strong>
+                        <span>Cliquez ou glissez votre photo dans la zone d'importation. Le traitement démarre immédiatement — tout reste sur votre appareil.</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="step-num">4</div>
+                    <div class="step-body">
+                        <strong>Ajustez les réglages</strong>
+                        <span>Jouez sur le nombre de cellules (50 à 800+) et l'épaisseur du trait. L'aperçu se met à jour en temps réel.</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="step-num">5</div>
+                    <div class="step-body">
+                        <strong>Téléchargez votre création</strong>
+                        <span>Cliquez sur télécharger — vous obtenez un PNG haute résolution basé sur la taille de votre photo originale, prêt à imprimer ou partager.</span>
+                    </div>
+                </li>
+            </ol>
+
+            <div class="img-block">
+                <img src="/images/vitrail-interface.webp"
+                     alt="Interface du générateur vitrail mosaïque avec les curseurs de réglage nombre de cellules et épaisseur de trait"
+                     width="800" height="460" loading="lazy">
+                <p class="img-caption">L'interface du générateur — deux curseurs principaux suffisent pour passer du low poly au vitrail en temps réel</p>
+            </div>
+
+            <h2>Quelles photos donnent le meilleur résultat ?</h2>
+            <p>L'algorithme de Voronoï travaille avec les variations de couleur et de contraste. Plus celles-ci sont marquées, plus le résultat est saisissant :</p>
+            <ul>
+                <li><strong>Portraits d'animaux de face :</strong> les zones d'ombre et de lumière du museau créent des cellules très contrastées et expressives.</li>
+                <li><strong>Visages humains :</strong> les traits du visage structurent naturellement les cellules autour des yeux, du nez et de la bouche.</li>
+                <li><strong>Paysages contrastés :</strong> ciel bleu vs collines vertes, mer vs rochers — les grandes zones de couleur donnent un vitrail très lisible.</li>
+                <li><strong>Fleurs et végétation :</strong> les pétales génèrent des dégradés magnifiques une fois transformés en facettes.</li>
+            </ul>
+
+            <div class="tip-box">
+                <strong>⚠️ Photos à éviter</strong>
+                <p>Les images très floues ou trop chargées en petits détails (feuillage dense, foule, tissu à motifs fins) donnent des mosaïques brouillonnes où le sujet devient illisible. Préférez une composition simple avec un sujet principal bien identifiable.</p>
+            </div>
+
+            <h2>Galerie d'exemples — différents sujets</h2>
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="/images/vitrail-apres.webp"
+                         alt="Portrait de chat transformé en mosaïque vitrail avec 300 cellules et joints noirs"
+                         width="390" height="300" loading="lazy">
+                    <div class="gallery-caption">Portrait d'animal — 300 cellules, trait épais</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="/images/vitrail-ex-paysage.webp"
+                         alt="Paysage de montagne transformé en effet vitrail low poly avec 150 cellules"
+                         width="390" height="300" loading="lazy">
+                    <div class="gallery-caption">Paysage — 150 cellules, style low poly</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="/images/vitrail-ex-paysage.webp"
+                         alt="Portrait humain transformé en mosaïque polygone avec 500 cellules et trait fin"
+                         width="390" height="300" loading="lazy">
+                    <div class="gallery-caption">Portrait humain — 500 cellules, trait fin</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="/images/vitrail-ex-fleur.webp"
+                         alt="Photo de fleur transformée en vitrail numérique avec couleurs vives et joints noirs"
+                         width="390" height="300" loading="lazy">
+                    <div class="gallery-caption">Fleur — 250 cellules, style vitrail</div>
+                </div>
+            </div>
+
+            <h2>Ce que vous pouvez faire avec votre création</h2>
+            <div class="usages-grid">
+                <div class="usage-card">
+                    <div class="u-icon">🖼️</div>
+                    <h3>Poster décoratif</h3>
+                    <p>Imprimez en A2 ou A1 sur papier mat pour un rendu proche d'une vraie œuvre d'art. Résolution source recommandée : 3000 px minimum.</p>
+                </div>
+                <div class="usage-card">
+                    <div class="u-icon">🎁</div>
+                    <h3>Cadeau personnalisé</h3>
+                    <p>Envoyez le PNG à un service d'impression sur toile, coussin ou mug. Cadeau unique à partir de 15 €.</p>
+                </div>
+                <div class="usage-card">
+                    <div class="u-icon">📱</div>
+                    <h3>Fond d'écran</h3>
+                    <p>Téléchargez en PNG et définissez comme fond d'écran de téléphone ou d'ordinateur. Le rendu géométrique est particulièrement élégant.</p>
+                </div>
+                <div class="usage-card">
+                    <div class="u-icon">🎨</div>
+                    <h3>Avatar artistique</h3>
+                    <p>Un portrait en low poly (50-100 cellules) fait un avatar original sur Instagram, Discord ou LinkedIn.</p>
+                </div>
+                <div class="usage-card">
+                    <div class="u-icon">🪡</div>
+                    <h3>Broderie / découpe</h3>
+                    <p>Le tracé des cellules peut servir de gabarit pour de la broderie géométrique ou de la découpe vinyle.</p>
+                </div>
+                <div class="usage-card">
+                    <div class="u-icon">📚</div>
+                    <h3>Support pédagogique</h3>
+                    <p>Illustrez visuellement les concepts de géométrie, de diagramme de Voronoï ou d'algorithmes de segmentation.</p>
+                </div>
+            </div>
+
+            <!-- Confidentialité -->
+            <div class="privacy-block">
+                <div class="p-icon">🔒</div>
+                <div>
+                    <h3>Votre photo ne quitte jamais votre appareil</h3>
+                    <p>Tout le calcul — Voronoï, moyenne des couleurs, tracé des cellules — s'effectue localement dans votre navigateur via JavaScript. Aucune image n'est transmise à un serveur. Vous pouvez transformer en toute sérénité des photos personnelles ou confidentielles. L'outil fonctionne même hors connexion une fois la page chargée.</p>
+                </div>
+            </div>
+
+            <!-- CTA final -->
+            <div class="cta-block">
+                <p class="cta-sup">Gratuit · Sans inscription · PNG haute résolution</p>
+                <h3>Transformez votre photo en vitrail maintenant</h3>
+                <p class="cta-sub">Résultat en temps réel · Aucune photo envoyée sur un serveur</p>
+                <a href="https://suitecreative.fintoolsbox.com/fr/vitrail-mosaique/" class="btn-white">
+                    Créer mon vitrail gratuit →
+                </a>
+                <p class="btn-note">Fonctionne sur ordinateur, tablette et mobile</p>
+            </div>
+
+        </article>
+
+        <!-- FAQ -->
+        <section class="faq-section">
+            <h2>Questions fréquentes</h2>
+
+            <div class="faq-item">
+                <div class="faq-question">Comment transformer une photo en vitrail gratuitement ?</div>
+                <div class="faq-answer">Importez votre photo dans le générateur vitrail de Suite Créative, choisissez le nombre de cellules et l'épaisseur du trait, puis téléchargez le résultat en PNG. C'est gratuit, sans inscription et sans que votre photo quitte votre appareil.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Quelle est la différence entre vitrail, mosaïque et low poly ?</div>
+                <div class="faq-answer">L'effet vitrail imite les baguettes de plomb avec un trait noir épais entre les cellules. La mosaïque utilise des cellules plus régulières avec un joint fin. Le low poly crée des formes très géométriques et stylisées. Notre outil permet d'obtenir les trois rendus en jouant sur le nombre de cellules et l'épaisseur du trait.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Combien de cellules choisir pour un bon résultat ?</div>
+                <div class="faq-answer">Entre 100 et 200 pour un style low poly très stylisé. Entre 300 et 500 pour un équilibre vitrail idéal. Au-delà de 600, le rendu se rapproche d'une photo géométrisée de style mosaïque fine.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Peut-on imprimer le résultat en grand format ?</div>
+                <div class="faq-answer">Oui. Le PNG téléchargé conserve la résolution de votre photo originale. Pour une impression en A2 ou A1, utilisez une photo source d'au moins 3000 pixels de large.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Quelles photos donnent le meilleur effet vitrail ?</div>
+                <div class="faq-answer">Les portraits d'animaux ou de visages de face avec un bon éclairage donnent des résultats spectaculaires. Les paysages avec un ciel contrasté fonctionnent aussi très bien. Évitez les images floues ou trop chargées en petits détails.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Ma photo est-elle envoyée sur un serveur ?</div>
+                <div class="faq-answer">Non. Tout le traitement s'effectue localement dans votre navigateur via JavaScript. Aucune image n'est transmise à un serveur — vos photos restent sur votre appareil, même hors connexion.</div>
+            </div>
+        </section>
+
+        <!-- Articles liés -->
+        <section class="related">
+            <h3>Autres outils créatifs gratuits</h3>
+            <div class="related-grid">
+                <a href="/fr/blog/sticker-maker/" class="related-link">
+                    <span class="rl-icon">🏷️</span>
+                    Créer un sticker personnalisé gratuit
+                </a>
+                <a href="/fr/blog/generateur-peluche/" class="related-link">
+                    <span class="rl-icon">🐻</span>
+                    Peluche personnalisée photo
+                </a>
+                <a href="/fr/blog/portrait-animal/" class="related-link">
+                    <span class="rl-icon">🐾</span>
+                    Portrait artistique de votre animal
+                </a>
+                <a href="/fr/blog/generateur-coloriage/" class="related-link">
+                    <span class="rl-icon">🎨</span>
+                    Coloriage personnalisé gratuit
+                </a>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p>© 2026 Suite Créative —
+                <a href="/fr/">Accueil</a> ·
+                <a href="/fr/blog/">Blog</a> ·
+                <a href="https://suitecreative.fintoolsbox.com/fr/confidentialite/">Confidentialité</a> ·
+                <a href="https://suitecreative.fintoolsbox.com/fr/mentions-legales/">Mentions légales</a>
+            </p>
+        </footer>
+
+    </main>
+</div>
+
+<script>
+    document.querySelectorAll('.faq-item').forEach(item => {
+        item.addEventListener('click', () => item.classList.toggle('open'));
+    });
+</script>
+</body>
+</html>
